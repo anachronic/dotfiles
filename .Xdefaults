@@ -1,0 +1,61 @@
+URxvt.foreground: #dddddd
+URxvt.background: #111111
+URxvt.foreground_bold: #a8a19f
+URxvt.cursor: #a8a19f
+
+!! black
+URxvt.color0: #1b1918
+URxvt.color8: #766e6b
+!! red
+URxvt.color1: #f22c40
+URxvt.color9: #f22c40
+!! green
+URxvt.color2: #5ab738
+URxvt.color10: #5ab738
+!! yellow
+URxvt.color3: #d5911a
+URxvt.color11: #d5911a
+!! blue
+URxvt.color4: #407ee7
+URxvt.color12: #407ee7
+!! magenta
+URxvt.color5: #6666ea
+URxvt.color13: #6666ea
+!! cyan
+URxvt.color6: #00ad9c
+URxvt.color14: #00ad9c
+!! white
+URxvt.color7: #a8a19f
+URxvt.color15: #f1efee
+
+URxvt.intensityStyles:	false
+URxvt.depth:		32
+URxvt.font: 		xft:monospace:size=11
+URxvt.scrollBar:	false
+URxvt.cursorColor:	white
+URxvt.letterSpace:      -1
+URxvt.iso14755 : false
+
+!! Extensions
+URxvt.perl-ext-common: default,clipboard,url-select,matcher,bell-command
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+URxvt.bell-command: canberra-gtk-play -i bell
+
+!! Also copy with ctrl+shift
+URxvt.keysym.C-C: perl:clipboard:copy
+URxvt.keysym.C-V: perl:clipboard:paste
+
+!! Rofi
+rofi.color-enabled:	true
+rofi.color-window:	#000, #000, #000
+rofi.color-normal:	#111, #819396, #222, #008ed4, #ffffff
+rofi.color-active:	#002b37, #008ed4, #003643, #008ed4, #66c6ff
+rofi.color-urgent:	#002b37, #da4281, #003643, #008ed4, #890661
+
+rofi.fake-transparency:	true
+rofi.lines:		3
+rofi.bw:		0
+rofi.opacity:		"10"
+rofi.hide-scrollbar:	true
+rofi.width:		30
