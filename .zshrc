@@ -31,8 +31,8 @@ zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' stagedstr '%B%F{green}*%f%b'
 zstyle ':vcs_info:*' unstagedstr '%B%F{red}*%f%b'
 zstyle ':vcs_info:git+set-message:*' hooks git-untracked
-zstyle ':vcs_info:git*:*' formats '%B%F{003}[%f%F{074}%b%f%%b|%m%c%u%B%F{003}]%f%%b '
-zstyle ':vcs_info:git*:*' actionformats '%B%F{003}[%f%F{074}%b%f%%b|%%a%m%c%u%B%F{003}]%f%%b '
+zstyle ':vcs_info:git*:*' formats '%B%F{003}[%f%F{074}%b%f%%b|%c%u%B%F{003}]%f%%b '
+zstyle ':vcs_info:git*:*' actionformats '%B%F{003}[%f%F{074}%b%f%%b|%a%c%u%B%F{003}]%f%%b '
 
 function +vi-git-untracked() {
   emulate -L zsh
