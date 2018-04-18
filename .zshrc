@@ -1,48 +1,55 @@
 # .zshrc
-export RANGER_LOAD_DEFAULT_RC=FALSE
+# Sanity for this century
+unsetopt flow_control
 
-# zsh completion
+# Completion
 autoload -Uz compinit
 zstyle ':completion:*' menu select
 compinit
 
-# redefs
-alias e='nvim'
-alias vi='nvim'
-alias vim='nvim'
+# Prompt. what a headache
+# This is stolen from @wincent. Show as many dollars/hashes depending on the
+# level of the shell
+local LVL=$(($SHLVL - 1))
 
-# Navigation
-alias ls='ls --color=auto'
-alias l='ls --color=auto -lF'
-alias la='ls --color=auto -alF'
-alias ..='cd ..'
+if [[ $EUID -eq 0 ]]; then
+    local SUFFIX=$(printf '#%.0s' {1..$LVL})
+else
+    local SUFFIX=$(printf '$%.0s' {1..$LVL})
+fi
+setopt prompt_subst
 
-# git and any vc commands
-alias gcl='git clone'
-alias gst='git status'
-alias gc='git commit --verbose'
-alias gup='git pull --rebase'
-alias gp='git push'
-alias gco='git checkout'
+# Next is version control
+autoload -Uz vcs_info
+precmd() {
+    vcs_info
+}
 
-# pacman & AUR
-alias pacin='sudo pacman -S'
-alias pacrem='sudo pacman -R'
-alias pacloc='pacman -Q'
-alias pacupg='sudo pacman -Syu'
-alias pacupd='sudo pacman -Sy'
-alias pacq='pacman -Ss'
-alias aurin='aurman -S --noedit'
-alias aurq='aurman --aur -Ss'
+# This is mostly stolen from wincent's
+zstyle ':vcs_info:*' use_simple true
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' stagedstr '%B%F{green}*%f%b'
+zstyle ':vcs_info:*' unstagedstr '%B%F{red}*%f%b'
+zstyle ':vcs_info:git+set-message:*' hooks git-untracked
+zstyle ':vcs_info:git*:*' formats '%B%F{003}[%f%F{074}%b%f%%b|%m%c%u%B%F{003}]%f%%b '
+zstyle ':vcs_info:git*:*' actionformats '%B%F{003}[%f%F{074}%b%f%%b|%%a%m%c%u%B%F{003}]%f%%b '
 
-# configs
-alias i3c='vim ~/.config/i3/config'
-alias brc='vim ~/.bashrc'
-alias xdef='vim ~/.Xdefaults'
-alias pcfg='vim ~/.config/polybar/config'
-alias vcd='cd ~/.config/nvim/'
-alias vrc='vim ~/.config/nvim/init.vim'
-alias rrc='vim ~/.config/ranger/rc.conf'
+function +vi-git-untracked() {
+  emulate -L zsh
+  if [[ -n $(git ls-files --exclude-standard --others 2> /dev/null) ]]; then
+    hook_com[unstaged]+="%B%F{blue}*%f%b"
+  fi
+}
 
-# reloads
-alias so='source ~/.zshrc'
+# It's worth saying the sources of this:
+# colors from https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg
+# codes from http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html
+PROMPT='%F{177}%~%f ${vcs_info_msg_0_}%B%F{131}%(?..!)%f%F{blue}$SUFFIX%f%b '
+RPROMPT='%F{006}%n%f@%F{041}%m'
+
+# Application-needed exports
+export FZF_DEFAULT_COMMAND="rg --hidden -g '!.git' -l ''"
+export RANGER_LOAD_DEFAULT_RC=FALSE
+
+# Aliases
+source ~/.zsh/aliases
