@@ -4,14 +4,14 @@ Good ol' dotfiles.
 
 ## Things that need to be done
 
-* Add battery/bluetooth support for laptops
 * Move to zsh from bash
 * Solve the search engine problem (chromium ext, surfraw, something...)
-* Add custom pkgbuild for caps2esc
 * **MAIL**
 * RSS reader
 * Automate install
 * tmux
+* ~Add custom pkgbuild for caps2esc~
+* ~Add battery/bluetooth support for laptops~
 
 ## OS
 
