@@ -1,8 +1,31 @@
+" My vimrc for neovim.
+
+" Need to set this before plugin initialization.
+let mapleader = "\<Space>"
+
+" Architecture mostly copied from Chris Toomey's
+function! s:SourceConfigFilesIn(directory)
+  let directory_splat = '~/.config/nvim/' . a:directory . '/*'
+  for config_file in split(glob(directory_splat), '\n')
+    if filereadable(config_file)
+      execute 'source' config_file
+    endif
+  endfor
+endfunction
+
+" First we load the plugins
+call plug#begin('~/.config/nvim/plugged')
+call s:SourceConfigFilesIn('rcplugins')
+call plug#end()
+
+" Then we load own configs.
+" I may move this to their separate files if the config gets too big
 set relativenumber
 set clipboard+=unnamedplus
 color dracula
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
-let mapleader = "\<Space>"
+
 
 " Leader remaps
 nnoremap <leader>w :w<CR>
