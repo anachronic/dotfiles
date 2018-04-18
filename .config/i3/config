@@ -30,6 +30,8 @@ set $voldown pamixer -d 10
 
 # startup scripts
 exec --no-startup-id nm-applet
+exec --no-startup-id blueberry-tray
+exec --no-startup-id pactl load-module module-bluetooth-discover
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
 exec_always --no-startup-id ~/dotfiles/scripts/polybarlaunch.sh
 exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg
