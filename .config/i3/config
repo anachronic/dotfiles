@@ -22,6 +22,13 @@ floating_modifier $mod
 set $term /usr/bin/st
 set $browser /usr/bin/chromium
 
+# gaps and windows definitions
+for_window [class="^.*"] border pixel 3
+gaps inner 10
+gaps outer 5
+smart_gaps on
+smart_borders on
+
 # audio commands
 set $mute pamixer -t
 set $realmute pamixer -m
@@ -56,6 +63,11 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 bindsym $mod+r exec $term -e ranger
 bindsym $mod+Shift+r restart
+
+bindsym $mod+Shift+y resize shrink width 10px or 10ppt
+bindsym $mod+Shift+u resize shrink height 10px or 10ppt
+bindsym $mod+Shift+i resize grow height 10px or 10ppt
+bindsym $mod+Shift+o resize grow width 10px or 10ppt
 
 bindsym $mod+i exec $term -e htop
 
