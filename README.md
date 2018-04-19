@@ -4,12 +4,12 @@ Good ol' dotfiles.
 
 ## Things that need to be done
 
-* Move to zsh from bash
 * Solve the search engine problem (chromium ext, surfraw, something...)
 * **MAIL**
 * RSS reader
 * Automate install
-* tmux
+* ~tmux~
+* ~Move to zsh from bash~
 * ~Add custom pkgbuild for caps2esc~
 * ~Add battery/bluetooth support for laptops~
 
