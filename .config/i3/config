@@ -19,7 +19,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # applications
-set $term /usr/bin/urxvt
+set $term /usr/bin/st
 set $browser /usr/bin/chromium
 
 # audio commands
@@ -27,6 +27,9 @@ set $mute pamixer -t
 set $realmute pamixer -m
 set $volup pamixer -i 10
 set $voldown pamixer -d 10
+set $musicpause playerctl play-pause
+set $musicnext playerctl next
+set $musicprev playerctl previous
 
 # startup scripts
 exec --no-startup-id nm-applet
@@ -51,7 +54,12 @@ bindsym $mod+Shift+w exec $browser
 bindsym $mod+e layout toggle split
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
+bindsym $mod+r exec $term -e ranger
 bindsym $mod+Shift+r restart
+
+bindsym $mod+i exec $term -e htop
+
+bindsym $mod+p exec $musicprev
 
 bindsym $mod+Shift+s split toggle
 
@@ -72,6 +80,10 @@ bindsym $mod+Shift+k move up
 
 bindsym $mod+l focus right
 bindsym $mod+Shift+l move right
+
+bindsym $mod+n exec $musicnext
+
+bindsym $mod+Shift+m exec $musicpause
 
 
 # toggle tiling / floating
@@ -131,10 +143,10 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 # XF86 keys
-bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPlay exec $musicpause
 bindsym XF86AudioPause exec playerctl pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioNext exec $musicnext
+bindsym XF86AudioPrev exec $musicprev
 bindsym XF86AudioMute exec $mute
 bindsym XF86AudioLowerVolume exec $voldown
 bindsym XF86AudioRaiseVolume exec $volup
