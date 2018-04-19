@@ -7,6 +7,9 @@ autoload -Uz compinit
 zstyle ':completion:*' menu select
 compinit
 
+# Using emacs mode
+bindkey -e
+
 # Prompt. what a headache
 # This is stolen from @wincent. Show as many dollars/hashes depending on the
 # level of the shell
