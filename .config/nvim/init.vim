@@ -25,8 +25,6 @@ set clipboard+=unnamedplus
 color dracula
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
-
-
 " Leader remaps
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
