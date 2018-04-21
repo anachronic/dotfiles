@@ -1,0 +1,1 @@
+Plug 'carlitux/deoplete-ternjs'
