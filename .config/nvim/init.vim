@@ -20,10 +20,21 @@ call plug#end()
 
 " Then we load own configs.
 " I may move this to their separate files if the config gets too big
+filetype plugin indent on
+set termguicolors
 set relativenumber
+set scrolloff=3
+set number
 set clipboard+=unnamedplus
-color dracula
-let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+
+" Still can't believe these are not default
+set nojoinspaces
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+" Theme config
+colorscheme jellybeans
 
 " Leader remaps
 nnoremap <leader>w :w<CR>
