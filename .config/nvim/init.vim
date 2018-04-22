@@ -26,6 +26,16 @@ set relativenumber
 set scrolloff=3
 set number
 set clipboard+=unnamedplus
+set hidden
+
+" This remap allows execution of macros on visual lines
+" Taken from https://medium.com/@schtoeffel/you-don-t-need-more-than-one-cursor-in-vim-2c44117d51db
+xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
+
+function! ExecuteMacroOverVisualRange()
+  echo "@".getcmdline()
+  execute ":'<,'>normal @".nr2char(getchar())
+endfunction
 
 " Still can't believe these are not default
 set nojoinspaces
@@ -51,3 +61,5 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-s> :w<CR>
+nnoremap <C-g> <C-[>
+inoremap <C-g> <C-[>
