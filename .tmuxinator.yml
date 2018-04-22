@@ -1,0 +1,7 @@
+name: dotfiles
+root: ~/dotfiles
+
+windows:
+  - VIM: vim
+  - git/shell:
+  - ranger: ranger

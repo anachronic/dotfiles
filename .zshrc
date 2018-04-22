@@ -57,5 +57,11 @@ export EDITOR=nvim
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 export PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
 
+# Tmuxinator support
+if which tmuxinator &> /dev/null
+then
+    source ~/.zsh/tmuxinator.zsh
+fi
+
 # Aliases
 source ~/.zsh/aliases
