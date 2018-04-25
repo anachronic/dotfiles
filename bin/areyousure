@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Usage
+# areyousure "Do you want to reboot" "reboot"
+
+[ $(echo -e "No\nYes" | rofi -dmenu -p "$1") == "Yes" ] && $2
