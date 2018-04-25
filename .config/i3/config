@@ -96,6 +96,8 @@ bindsym $mod+Shift+k move up
 bindsym $mod+l focus right
 bindsym $mod+Shift+l move right
 
+bindsym $mod+Shift+x exec /home/nsalas/dotfiles/bin/areyousure "Really reboot?" "reboot"
+
 bindsym $mod+n exec $musicnext
 
 bindsym $mod+Shift+m exec $musicpause
@@ -119,6 +121,9 @@ bindsym $mod+Shift+Up move up
 
 bindsym $mod+Right focus right
 bindsym $mod+Shift+Right move right
+
+# Shutdown
+bindsym $mod+Shift+BackSpace exec /home/nsalas/dotfiles/bin/areyousure "Really shut down?" "shutdown -h now"
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
