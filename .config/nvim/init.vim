@@ -53,7 +53,7 @@ nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>o :on<CR>
 nnoremap <leader>k :bd<CR>
-nnoremap <leader><leader> <C-6>
+nnoremap <leader><leader> <C-^>
 
 " Meta remaps
 nnoremap <A-j> :m .+1<CR>==

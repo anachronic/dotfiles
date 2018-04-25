@@ -6,6 +6,7 @@ let $FZF_DEFAULT_COMMAND="rg --hidden -g '!.git' -l ''"
 
 " Mappings
 nnoremap <C-p> :Files<CR>
+nnoremap <leader>a :Ag<space>
 
 " A special rg command, not really sure on its use yet since it matches file
 " names, but could be useful with some tweaks.
