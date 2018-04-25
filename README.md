@@ -13,6 +13,25 @@ Good ol' dotfiles.
 * ~Add custom pkgbuild for caps2esc~
 * ~Add battery/bluetooth support for laptops~
 
+## Symlinks
+
+### Folders
+
+* .zsh
+* All directories in .config to their names
+
+### Files
+
+* .tmux.conf
+* .zshrc
+* .zshenv
+* .bashrc (legacy)
+
+## Installs
+
+* ruby and rubygems
+* tmux
+
 ## OS
 
 These dotfiles should work pretty well with Arch Linux provided you install some
@@ -37,3 +56,4 @@ Ranger should work pretty well with `neovim`, `zathura` and `feh`.
 ## Music
 
 `spotify`(AUR) with `playerctl`.
+
