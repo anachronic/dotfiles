@@ -1,0 +1,56 @@
+# Account settings
+set folder = "~/.mail/gmail"
+set spoolfile = "~/.mail/gmail/Inbox"
+set postponed = "~/.mutt/gmail/Drafts"
+set trash = "+trash"
+set record = ""
+mailboxes =gmail =Tests =Google\ Scholar =Inbox =boletas =emacs-help =Personal =archlinux =Work =promoz =U-Cursos =Tesis =Accounts =bancario =git =[Gmail] =Sent\ Messages =Deleted\ Messages
+
+# SMTP
+set from = "nikosalas@gmail.com"
+set realname = "Nicolás Salas V."
+set use_envelope_from = yes
+set sendmail="/usr/bin/msmtp -a gmail"
+
+# Display settings
+set sort=reverse-date-sent
+set smart_wrap=yes
+set wrap=80
+set markers=no
+set sidebar_visible=yes
+set mail_check_stats=yes
+set sidebar_format="%B%?F? [%F]?%* %?N?%N/?%S"
+
+# Start remappings
+bind index,pager i noop
+bind index,pager g noop
+bind index \Cf noop
+
+# Replying
+set fast_reply=yes
+set include=yes
+
+# Remappings from voidrice
+bind editor <space> noop
+bind index G last-entry
+bind index gg first-entry
+bind pager j next-line
+bind pager k previous-line
+bind attach,index,pager \CD next-page
+bind attach,index,pager \CU previous-page
+bind pager gg top
+bind pager G bottom
+bind index d half-down
+bind index u half-up
+bind index D delete-message
+bind index U undelete-message
+bind index F search
+bind index,pager R group-reply
+
+# Sidebar mappings
+bind index,pager \Ck sidebar-prev
+bind index,pager \Cj sidebar-next
+bind index,pager \Co sidebar-open
+
+# sources
+source configs/colors

@@ -1,0 +1,2 @@
+text/html; chromium --new-window %s; nametemplate=%s.html; copiousoutput;
+application/pdf; zathura %s; copiousoutput;

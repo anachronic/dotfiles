@@ -38,6 +38,9 @@ set $musicpause playerctl play-pause
 set $musicnext playerctl next
 set $musicprev playerctl previous
 
+# Applications
+set $mail neomutt
+
 # startup scripts
 exec --no-startup-id nm-applet
 exec --no-startup-id blueberry-tray
@@ -47,7 +50,7 @@ exec_always --no-startup-id ~/dotfiles/scripts/polybarlaunch.sh
 exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg
 
 # Keyboard
-# exec_always --no-startup-id "setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl -option ctrl:nocaps"
+exec_always --no-startup-id "setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl -option ctrl:nocaps"
 # exec --no-startup-id "xcape -e 'Control_L=Escape'"
 
 # Key bindings
@@ -100,6 +103,7 @@ bindsym $mod+Shift+x exec /home/nsalas/dotfiles/bin/areyousure "Really reboot?" 
 
 bindsym $mod+n exec $musicnext
 
+bindsym $mod+m exec $mail
 bindsym $mod+Shift+m exec $musicpause
 
 
