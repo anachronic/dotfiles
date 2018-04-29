@@ -60,7 +60,13 @@ Ranger should work pretty well with `neovim`, `zathura` and `feh`.
 ## Mail auth and related
 
 We'll be handling key stuff with `gnupg` and `PAM`. There is a 
-[https://github.com/cruegge/pam-gnupg](very nice package) that ties these two
+[very nice package](https://github.com/cruegge/pam-gnupg) that ties these two
 funcionalities together, allowing us to use pam with gnupg and assume the
 passwords are known when user is logged in. We can also kill the `gpg-agent`
 when screen is locked. Works flawlessly with the instructions.
+
+## External drives
+
+External drives are automounted with
+[udiskie](https://github.com/coldfix/udiskie), files can then be browsed with
+[ranger](https://github.com/ranger/ranger) in `/run/media/$USER`.

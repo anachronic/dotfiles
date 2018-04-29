@@ -41,13 +41,17 @@ set $musicprev playerctl previous
 # Applications
 set $mail neomutt
 
+# locking
+set $lock i3lock -n ~/Pictures/lock.png
+
 # startup scripts
 exec --no-startup-id nm-applet
 exec --no-startup-id blueberry-tray
 exec --no-startup-id pactl load-module module-bluetooth-discover
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
+exec --no-startup-id udiskie --tray
 exec_always --no-startup-id ~/dotfiles/scripts/polybarlaunch.sh
-exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg
+exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper.png
 
 # Keyboard
 exec_always --no-startup-id "setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl -option ctrl:nocaps"
@@ -100,6 +104,8 @@ bindsym $mod+l focus right
 bindsym $mod+Shift+l move right
 
 bindsym $mod+Shift+x exec /home/nsalas/dotfiles/bin/areyousure "Really reboot?" "reboot"
+
+bindsym $mod+Shift+c exec --no-startup-id $lock
 
 bindsym $mod+n exec $musicnext
 
