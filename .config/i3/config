@@ -103,7 +103,7 @@ bindsym $mod+Shift+x exec /home/nsalas/dotfiles/bin/areyousure "Really reboot?" 
 
 bindsym $mod+n exec $musicnext
 
-bindsym $mod+m exec $mail
+bindsym $mod+m exec $term -e $mail
 bindsym $mod+Shift+m exec $musicpause
 
 
