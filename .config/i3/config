@@ -47,7 +47,7 @@ exec --no-startup-id blueberry-tray
 exec --no-startup-id pactl load-module module-bluetooth-discover
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
 exec_always --no-startup-id ~/dotfiles/scripts/polybarlaunch.sh
-exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg
+exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg
 
 # Keyboard
 exec_always --no-startup-id "setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl -option ctrl:nocaps"
