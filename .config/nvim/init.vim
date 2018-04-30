@@ -45,8 +45,7 @@ set expandtab
 
 " Theme config
 " colorscheme jellybeans
-set background=light
-set background=dark
+colorscheme base16-tomorrow-night
 
 " Leader remaps
 nnoremap <leader>w :w<CR>
