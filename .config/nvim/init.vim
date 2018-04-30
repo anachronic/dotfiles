@@ -42,10 +42,11 @@ set nojoinspaces
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set mouse=a
 
 " Theme config
-" colorscheme jellybeans
 colorscheme base16-tomorrow-night
+set cursorline
 
 " Leader remaps
 nnoremap <leader>w :w<CR>
