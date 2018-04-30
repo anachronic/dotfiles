@@ -54,6 +54,7 @@ nnoremap <leader>q :q<CR>
 nnoremap <leader>o :on<CR>
 nnoremap <leader>k :bd<CR>
 nnoremap <leader><leader> <C-^>
+nnoremap <leader>gh :noh<CR>
 
 " Meta remaps
 nnoremap <A-j> :m .+1<CR>==
