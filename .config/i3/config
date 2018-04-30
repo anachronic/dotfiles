@@ -177,4 +177,11 @@ bindsym XF86AudioMute exec $mute
 bindsym XF86AudioLowerVolume exec $voldown
 bindsym XF86AudioRaiseVolume exec $volup
 
+# Assignments
+assign [class="Chromium"] $ws2
+
+# Typical assignment doesn't work for spotify.
+# See https://github.com/i3/i3/issues/2060
+for_window [class="Spotify"] move to workspace $ws10
+
 # vim:ft=i3
