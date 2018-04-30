@@ -54,7 +54,7 @@ exec_always --no-startup-id ~/dotfiles/scripts/polybarlaunch.sh
 exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper.png
 
 # Keyboard
-exec_always --no-startup-id "setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl -option ctrl:nocaps"
+exec_always --no-startup-id "setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl"
 # exec --no-startup-id "xcape -e 'Control_L=Escape'"
 
 # Key bindings
