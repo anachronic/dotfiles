@@ -42,7 +42,7 @@ set $musicprev playerctl previous
 set $mail neomutt
 
 # locking
-set $lock i3lock -n ~/Pictures/lock.png
+set $lock i3lock -i ~/Pictures/lock.png
 
 # startup scripts
 exec --no-startup-id nm-applet
