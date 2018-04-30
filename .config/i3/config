@@ -21,6 +21,8 @@ floating_modifier $mod
 # applications
 set $term /usr/bin/st
 set $browser /usr/bin/chromium
+set $mail neomutt
+set $lock i3lock -i ~/Pictures/lock.png
 
 # gaps and windows definitions
 for_window [class="^.*"] border pixel 3
@@ -37,12 +39,6 @@ set $voldown pamixer -d 10
 set $musicpause playerctl play-pause
 set $musicnext playerctl next
 set $musicprev playerctl previous
-
-# Applications
-set $mail neomutt
-
-# locking
-set $lock i3lock -i ~/Pictures/lock.png
 
 # startup scripts
 exec --no-startup-id nm-applet
