@@ -18,6 +18,7 @@ alias gp='git push'
 alias gco='git checkout'
 alias gc='git commit'
 alias groot='cd $(git rev-parse --show-toplevel)'
+alias glog='git log --pretty=oneline --abbrev-commit'
 
 # pacman & AUR
 alias pacin='sudo pacman -S'
