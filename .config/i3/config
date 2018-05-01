@@ -40,12 +40,18 @@ set $musicpause playerctl play-pause
 set $musicnext playerctl next
 set $musicprev playerctl previous
 
+# backlight
+set $backlightinc xbacklight -inc 10
+set $backlightdec xbacklight -dec 10
+set $kblightinc ~/dotfiles/bin/kblight.py --up
+set $kblightdec ~/dotfiles/bin/kblight.py --down
+
 # startup scripts
 exec --no-startup-id nm-applet
 exec --no-startup-id blueberry-tray
 exec --no-startup-id pactl load-module module-bluetooth-discover
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
-exec --no-startup-id udiskie --tray
+exec --no-startup-id udiskie --smart-tray
 exec_always --no-startup-id ~/dotfiles/scripts/polybarlaunch.sh
 exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper.png
 
@@ -176,6 +182,10 @@ bindsym XF86AudioPrev exec $musicprev
 bindsym XF86AudioMute exec $mute
 bindsym XF86AudioLowerVolume exec $voldown
 bindsym XF86AudioRaiseVolume exec $volup
+bindsym XF86MonBrightnessUp exec --no-startup-id $backlightinc
+bindsym XF86MonBrightnessDown exec --no-startup-id $backlightdec
+bindsym XF86KbdBrightnessUp exec --no-startup-id $kblightinc
+bindsym XF86KbdBrightnessDown exec --no-startup-id $kblightdec
 
 # Assignments
 assign [class="Chromium"] $ws2
