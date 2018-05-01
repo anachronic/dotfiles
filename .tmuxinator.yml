@@ -3,5 +3,5 @@ root: ~/dotfiles
 
 windows:
   - VIM: vim
-  - git/shell:
+  - git/shell: git status
   - ranger: ranger
