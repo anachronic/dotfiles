@@ -52,6 +52,7 @@ exec --no-startup-id blueberry-tray
 exec --no-startup-id pactl load-module module-bluetooth-discover
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
 exec --no-startup-id udiskie --smart-tray
+exec --no-startup-id xss-lock -- i3lock -n -i ~/Pictures/lock.png
 exec_always --no-startup-id polybarlaunch.sh
 exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper.png
 
