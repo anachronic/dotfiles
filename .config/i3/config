@@ -43,8 +43,8 @@ set $musicprev playerctl previous
 # backlight
 set $backlightinc xbacklight -inc 10
 set $backlightdec xbacklight -dec 10
-set $kblightinc ~/dotfiles/bin/kblight.py --up
-set $kblightdec ~/dotfiles/bin/kblight.py --down
+set $kblightinc kblight.py --up
+set $kblightdec kblight.py --down
 
 # startup scripts
 exec --no-startup-id nm-applet
@@ -105,7 +105,7 @@ bindsym $mod+Shift+k move up
 bindsym $mod+l focus right
 bindsym $mod+Shift+l move right
 
-bindsym $mod+Shift+x exec /home/nsalas/dotfiles/bin/areyousure "Really reboot?" "reboot"
+bindsym $mod+Shift+x exec areyousure "Really reboot?" "reboot"
 
 bindsym $mod+Shift+c exec --no-startup-id $lock
 
@@ -135,7 +135,7 @@ bindsym $mod+Right focus right
 bindsym $mod+Shift+Right move right
 
 # Shutdown
-bindsym $mod+Shift+BackSpace exec /home/nsalas/dotfiles/bin/areyousure "Really shut down?" "shutdown -h now"
+bindsym $mod+Shift+BackSpace exec areyousure "Really shut down?" "shutdown -h now"
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
