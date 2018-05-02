@@ -52,7 +52,7 @@ exec --no-startup-id blueberry-tray
 exec --no-startup-id pactl load-module module-bluetooth-discover
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
 exec --no-startup-id udiskie --smart-tray
-exec_always --no-startup-id ~/dotfiles/scripts/polybarlaunch.sh
+exec_always --no-startup-id polybarlaunch.sh
 exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper.png
 
 # Keyboard
@@ -136,6 +136,9 @@ bindsym $mod+Shift+Right move right
 
 # Shutdown
 bindsym $mod+Shift+BackSpace exec areyousure "Really shut down?" "shutdown -h now"
+
+# F-keys bindings
+bindsym $mod+Shift+F8 exec setlayout.sh
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
