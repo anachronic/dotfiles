@@ -52,5 +52,8 @@ bind index,pager \Ck sidebar-prev
 bind index,pager \Cj sidebar-next
 bind index,pager \Co sidebar-open
 
+# URLview
+macro pager \cb <pipe-entry>'urlview'<enter> 'Follow links with urlview'
+
 # sources
 source configs/colors
