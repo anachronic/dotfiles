@@ -38,13 +38,12 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = FontAwesome:pixelsize=12;0
-font-1 = DejaVu Sans Mono:pixelsize=12;1
-font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-0 = Material Design Icons:pixelsize=14;0
+font-1 = Cantarell:pixelsize=12:weight=bold;1
 
 modules-left = i3 playerctl
 modules-center = 
-modules-right = volume xbacklight memory cpu wlan eth battery datedate datetime
+modules-right = volume xbacklight wlan eth battery datetime
 
 tray-position = right
 tray-padding = 2
@@ -70,7 +69,7 @@ type = custom/script
 exec = ~/dotfiles/scripts/playerctlstatus.sh
 interval = 2
 
-label =  %output%
+label =  %output%
 
 [module/xwindow]
 type = internal/xwindow
@@ -158,8 +157,13 @@ label-urgent-padding = ${module/bspwm.label-urgent-padding}
 [module/xbacklight]
 type = internal/xbacklight
 
-format = <label> <bar>
-label = BL
+format = <ramp> <label>
+label = %percentage%%
+format-underline = #ffffff
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
 
 bar-width = 10
 bar-indicator = |
@@ -200,19 +204,18 @@ interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
 format-connected-underline = #9f78e1
-label-connected =  %essid:0:15:...% %local_ip%
+label-connected = %local_ip%
 
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
+format-disconnected =  <label-disconnected>
+format-disconnected-underline = #9f78e1
+label-disconnected = no wifi
+label-disconnected-foreground = ${colors.foreground-alt}
 
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
+ramp-signal-0 = 冷
+ramp-signal-1 = 爛
+ramp-signal-2 = 嵐
+ramp-signal-3 = 襤
+ramp-signal-4 = 蠟
 ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
@@ -231,40 +234,36 @@ format-disconnected =
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
-[module/datedate]
-type = internal/date
-interval = 5
-
-date = "%d-%m-%Y"
-
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
-
-label = %date%
-
 [module/datetime]
 type = internal/date
 interval = 5
 
-time = %H:%M
+date = "%d %B %Y"
+time = "%H:%M"
 
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #0a6cf5
 
-label = %time%
+label = %date% -- %time%
+date-alt = %A, %d %B %Y
+time-alt = %H:%M:%S
 
 [module/volume]
 type = internal/volume
 
-format-volume = <label-volume> <bar-volume>
-label-volume = VOL
+format-volume = <ramp-volume> <label-volume>
+format-volume-underline = #5eb56f
+label-volume = %percentage%%
 label-volume-foreground = ${root.foreground}
 
-format-muted-prefix = " "
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
 format-muted-foreground = ${colors.foreground-alt}
-label-muted = sound muted
+label-muted =  muted
+label-muted-underline = #5eb56f
 
 bar-volume-width = 10
 bar-volume-foreground-0 = #55aa55
@@ -289,7 +288,7 @@ battery = BAT0
 adapter = ADP1
 full-at = 98
 
-format-charging =  <label-charging>
+format-charging =  <label-charging>
 format-charging-underline = #ffb52a
 
 format-discharging = <ramp-capacity> <label-discharging>
@@ -298,11 +297,16 @@ format-discharging-underline = ${self.format-charging-underline}
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-5 = 
+ramp-capacity-6 = 
+ramp-capacity-7 = 
+ramp-capacity-8 = 
+ramp-capacity-9 = 
 ramp-capacity-foreground = ${colors.foreground-alt}
 
 [settings]
