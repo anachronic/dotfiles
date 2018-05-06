@@ -53,6 +53,7 @@ exec --no-startup-id pactl load-module module-bluetooth-discover
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
 exec --no-startup-id udiskie --smart-tray
 exec --no-startup-id xss-lock -- i3lock -n -i ~/Pictures/lock.png
+exec --no-startup-id albert
 exec_always --no-startup-id polybarlaunch.sh
 exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper.png
 
@@ -86,13 +87,17 @@ bindsym $mod+i exec $term -e htop
 
 bindsym $mod+p exec $musicprev
 
+# Don't modify this!
+# mod+a is used by albert
+# bindsym $mod+a nop
+
 bindsym $mod+Shift+s split toggle
 
 bindsym $mod+d exec rofi -modi drun -show-icons -show drun -lines 10
 
 bindsym $mod+f fullscreen toggle
 
-bindsym $mod+g workspace prev
+bindsym $mod+g workspace back_and_forth
 
 bindsym $mod+h focus left
 bindsym $mod+Shift+h move left
