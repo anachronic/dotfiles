@@ -4,7 +4,7 @@ set spoolfile = "~/.mail/gmail/Inbox"
 set postponed = "~/.mutt/gmail/Drafts"
 set trash = "+trash"
 set record = ""
-mailboxes =gmail =Tests =Google\ Scholar =Inbox =boletas =emacs-help =Personal =archlinux =Work =promoz =U-Cursos =Tesis =Accounts =bancario =git =[Gmail] =Sent\ Messages =Deleted\ Messages
+mailboxes =Inbox =Tests =Google\ Scholar =boletas =emacs-help =Personal =archlinux =Work =promoz =U-Cursos =Tesis =Accounts =bancario =git =Sent\ Messages
 
 # SMTP
 set from = "nikosalas@gmail.com"
@@ -29,6 +29,7 @@ bind index \Cf noop
 # Replying
 set fast_reply=yes
 set include=yes
+set edit_headers=yes
 
 # Remappings from voidrice
 bind editor <space> noop
