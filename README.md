@@ -2,17 +2,6 @@
 
 Good ol' dotfiles.
 
-## Things that need to be done
-
-* Solve the search engine problem (chromium ext, surfraw, something...)
-* Automate install
-* ~RSS reader~
-* ~**MAIL**~
-* ~tmux~
-* ~Move to zsh from bash~
-* ~Add custom pkgbuild for caps2esc~
-* ~Add battery/bluetooth support for laptops~
-
 ## Symlinks
 
 ### Folders
@@ -44,6 +33,13 @@ Keyboard layout is US with altgr-intl option.
 
 `i3wm` with `i3-gaps`. Bar on top is `polybar`, network is ran by
 `NetworkManager`.
+
+## Launcher
+
+I considered [rofi](https://github.com/DaveDavenport/rofi) at first and it
+worked great. In fact I still have it bound in my i3 config. I've recently
+discovered [albert](https://albertlauncher.github.io/), which has many plugins
+and most of all, solves my search problem, so i'll be using that instead.
 
 ## Neovim
 
