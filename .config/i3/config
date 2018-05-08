@@ -54,12 +54,16 @@ exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
 exec --no-startup-id udiskie --smart-tray
 exec --no-startup-id xss-lock -- i3lock -n -i ~/Pictures/lock.png
 exec --no-startup-id albert
+exec --no-startup-id dropbox
+exec --no-startup-id copyq
 exec_always --no-startup-id polybarlaunch.sh
 exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper.png
 
-# Keyboard: US intl-altgr, caps => ctrl + esc and menu => super
-exec_always --no-startup-id "setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl"
-exec --no-startup-id xmodmap -e "keysym Menu = Super_R"
+# Keyboard: US intl-altgr, trying only caps on control for now
+exec_always --no-startup-id "setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl -option caps:escape"
+
+# Doesn't really seem to work. Will come back later
+exec_always xmodmap ~/.xmodmaprc
 
 # Key bindings
 bindsym $mod+Return exec $term
