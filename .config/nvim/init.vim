@@ -43,6 +43,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set mouse=a
+set splitright
 
 " Theme config
 colorscheme base16-tomorrow-night
