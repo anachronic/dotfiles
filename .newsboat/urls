@@ -1,5 +1,8 @@
+# Linux
 http://feeds.feedburner.com/LinuxAdictos "linux"
 
+https://wincent.com/blog.rss "misc"
 
-#tech
-http://rss.nytimes.com/services/xml/rss/nyt/Technology.xml "tech"
+# News
+http://rss.nytimes.com/services/xml/rss/nyt/Technology.xml "news"
+https://news.ycombinator.com/rss "news"

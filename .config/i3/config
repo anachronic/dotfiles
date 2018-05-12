@@ -60,7 +60,7 @@ exec_always --no-startup-id polybarlaunch.sh
 exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper.png
 
 # Keyboard: US intl-altgr, trying only caps on control for now
-exec_always --no-startup-id "setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl -option caps:escape"
+exec_always --no-startup-id "setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl -option ctrl:nocaps"
 
 # Doesn't really seem to work. Will come back later
 exec_always xmodmap ~/.xmodmaprc
