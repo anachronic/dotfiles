@@ -1,0 +1,10 @@
+#!/bin/bash
+
+LINK="$1"
+
+if [ -z "$LINK" ]; then
+  echo "Error: need magnet link"
+  exit 1
+fi
+
+areyousure "Are you sure you want to add this torrent" "transmission-remote --add $LINK"
