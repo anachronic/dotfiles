@@ -1,3 +1,4 @@
+# -*- mode: sh; -*-
 # vim redefs
 alias vi='nvim'
 alias vim='nvim'
@@ -27,8 +28,14 @@ alias pacloc='pacman -Qs'
 alias pacupg='sudo pacman -Syu'
 alias pacupd='sudo pacman -Sy'
 alias pacq='pacman -Ss'
+
+## AUR with AURMAN
 alias aurin='aurman -S --noedit'
 alias aurq='aurman --aur -Ss'
+
+## AUR with YAY
+alias yayin='yay -S'
+alias yayq='yay -Ss'
 
 # configs
 alias i3c='vim ~/.config/i3/config'
