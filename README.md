@@ -131,7 +131,84 @@ applications we can run:
 ```
 $ xdg-mime default ranger.desktop inode/directory
 $ xdg-mime default org.pwmt.zathura.desktop application/pdf
+$ xdg-mime default transmission-remote-magnet.desktop x-scheme-handler/magnet
 ```
 
 Note that processes that have already picked up the database won't notice these
 changes. You might need to restart them. Most crucial example here is Albert.
+
+### A word on magnet links
+
+Magnet is a little bit complicated on torrents because we're running a daemon on
+the background which handles all magnet links (`transmission-daemon` provided by
+the `transmission-cli` package). We need to create a desktop file which can
+redirect magnet links to `transmission-remote` in order to add magnet links. For
+this to work we only require that `~/dotfiles/bin/` is in the path and symbolic
+or hard links to the `.config` and `.local` folders are created. It works very
+well when `transmission-daemon` is already running, but behavior might be
+unexpected when that's not running.
+
+## Git caching
+
+Caching is a bit of a pain in the ass when it comes to ssh keys. This
+is what I expect to happen with this:
+
+1. I want to have my private ssh key encrypted on disk
+2. I want to *only* enter my password one time
+3. Value should remain cached for at least 2 hours.
+
+There are two scenarios where I want this to happen:
+
+1. zsh
+2. Magit
+
+The setup described below allows me to share cached ssh keys between
+those two.
+
+### For `zsh`
+
+There are instructions in the Arch Wiki for this
+[here](https://wiki.archlinux.org/index.php/SSH_keys#SSH_agents), but
+they are a little convoluted, so here's how to do it.
+
+First, spawn **one** and only one `ssh-agent` when the WM/DE is
+started. The following is in my `.profile`:
+
+``` shell
+if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+    ssh-agent > ~/.ssh-agent-thing
+fi
+if [[ "$SSH_AGENT_PID" == "" ]]; then
+    eval "$(<~/.ssh-agent-thing)"
+fi
+```
+
+Next we need to tell `ssh-agent` that we want to cache our password,
+but this is tricky. I don't want to unlock my password at the start of
+the session. Instead, I'd like it to be cached from the moment I enter
+it for the first time onwards. This can be achieved by adding the
+following line to `~/.ssh/config`:
+
+``` shell
+AddKeysToAgent yes
+```
+
+That would be it for shell. Still need a way to figure out the time
+caching, but this solves my most urgent problem for now.
+
+### For `magit`
+
+Oh boy, was this one hard to tackle.
+
+All we ever need is `exec-path-from-shell` package and to get the
+variables set by the ssh onto the shell into emacs. That's done via
+these lines:
+
+``` emacs-lisp
+(exec-path-from-shell-copy-env "SSH_AGENT_PID")
+(exec-path-from-shell-copy-env "SSH_AUTH_SOCK")
+```
+
+This works **as long as the `ssh-agent` process was started by a
+parent of the current emacs process**. In my case, that would be `i3`,
+which executed albert, which is how I usually open emacs.
