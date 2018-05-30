@@ -100,6 +100,29 @@ wiki]]. =kblight.py= is in the =PATH= variable in =.profile= so it
 should work out of the box provided that I install =upower= and
 =python-dbus= from the official repositories.
 
+** Screen backlight
+
+   I was previously using kernel parameters and setting the screen
+   backlight through direct communication with the acpi. It works but
+   doesn't play nice with polybar. In order to do that we need to use
+   =xbacklight=.
+
+   Usually we should have =xorg-xbacklight= installed but if that's
+   not the case, just grab it from the official repositories.
+
+   Then append or create this into =/etc/X11/xorg.conf=:
+
+#+BEGIN_SRC
+Section "Device"
+    Identifier  "Card0"
+    Driver      "intel"
+    Option      "Backlight"  "intel_backlight"
+EndSection
+#+END_SRC
+
+After all this, =XF86= keys and polybar brightness indicator should
+work just fine
+
 ** OS
 
 These dotfiles should work pretty well with Arch Linux provided you
