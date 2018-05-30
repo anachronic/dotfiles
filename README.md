@@ -2,24 +2,93 @@
 
 Good ol' dotfiles.
 
+## After cloning this repository
+
+Take any notes about the things you do to make everything work and put them
+here
+
+## `xdg` directories
+
+Install `xdg-user-dirs` from `pacman` and run
+
+``` shell
+$ xdg-user-dirs-update
+```
+
+## Touchpad
+
+The touchpad physical click seems to have stopped working or, rather, works
+badly. To fix that I have decided to train myself to just use tap to click. For
+`libinput`, which is what I use, I did this to make it work
+
+```shell
+$ xinput list
+$ xinput list-props 14  # that's the elantech touchpad
+$ xinput set-prop 14 277 1  # 277 is tapping enabled
+```
+
+That, however, will only last for the session; in order to have it as the
+default setting, create the file `/etc/X11/xorg.conf.d/30-touchpad.conf` and
+write this:
+
+```conf
+Section "InputClass"
+  Identifier "MyTouchpad"
+  MatchIsTouchpad "on"
+  Driver "libinput"
+  Option "Tapping" "on"
+EndSection
+```
+
+That should do it for the tap to click behavior on the laptop.
+
+## Audio
+
+Generally audio is kind of a pain in the ass, especially with an external audio
+card (which is the case of my desktop computer). I use `pulseaudio` with
+`ALSA`. Works ok when set up correctly.
+
+### Unmute
+
+First of all unmute and raise the volume of the master channel. That can be
+done with the `alsamixer` tool which comes from the `alsa-utils` package. The
+`m` key can be used to unmute a channel. Honestly I don't remember the way of
+doing this on my desktop computer, so I'll come back on that one.
+
+### Volume control
+
+This is done with `pamixer`, whose package has the same name.
+
+### Bluetooth
+
+I usually only use bluetooth with my headphones on my laptop. The bluetooth
+headset article from the arch wiki is pretty much enough for setting it up.
+I'll just go over the caveats here
+
+## Polybar
+
+It can be a pain to set up polybar with this repo. Get
+`cantarell-fonts` from the official repositories and
+`ttf-material-design-icons-git` from the AUR and everthing should work
+alright
+
 ## Symlinks
 
-### Folders
+Should be pretty obvious by looking at the files in this repo with `ls -la`.
 
-* .zsh
-* All directories in .config to their names
+## Some packages
 
-### Files
+`networkmanager network-manager-applet ranger feh i3 neovim vim lightdm lightdm-gtk-greeter`
 
-* .tmux.conf
-* .zshrc
-* .zshenv
-* .bashrc (legacy)
+I'll mention some of the others later in this document.
 
-## Installs
+## Keyboard backlight
 
-* ruby and rubygems
-* tmux
+See [the arch
+wiki](https://wiki.archlinux.org/index.php/Keyboard_backlight). `kblight.py`
+is in the `PATH` variable in `.profile` so it should work out of the
+box provided that I install `upower` and `python-dbus` from the
+official repositories.
 
 ## OS
 
