@@ -42,7 +42,7 @@ font-0 = Material Design Icons:pixelsize=14;0
 font-1 = Cantarell:pixelsize=12:weight=bold;1
 
 modules-left = i3 playerctl
-modules-center = 
+modules-center =
 modules-right = volume xbacklight wlan eth battery datetime
 
 tray-position = right
@@ -199,7 +199,7 @@ label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = wifi1
+interface = wlp2s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
