@@ -331,14 +331,14 @@ they are a little convoluted, so here's how to do it.
 First, spawn *one* and only one =ssh-agent= when the WM/DE is started.
 The following is in my =.profile=:
 
-#+BEGIN_EXAMPLE
+#+BEGIN_SRC sh
     if ! pgrep -u "$USER" ssh-agent > /dev/null; then
         ssh-agent > ~/.ssh-agent-thing
     fi
     if [[ "$SSH_AGENT_PID" == "" ]]; then
         eval "$(<~/.ssh-agent-thing)"
     fi
-#+END_EXAMPLE
+#+END_SRC
 
 Next we need to tell =ssh-agent= that we want to cache our password, but
 this is tricky. I don't want to unlock my password at the start of the
