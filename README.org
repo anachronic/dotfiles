@@ -123,13 +123,57 @@ EndSection
 After all this, =XF86= keys and polybar brightness indicator should
 work just fine
 
-** OS
+** Video on laptop
 
-These dotfiles should work pretty well with Arch Linux provided you
-install some deps (I might be missing some):
-=zathura, nodejs, npm, rxvt-unicode, urxvt-perls, zsh, ranger, neovim, feh=.
+   Video on laptop has been a real pain to handle for me.
 
-Keyboard layout is US with altgr-intl option.
+   First install these packages
+
+   #+BEGIN_EXAMPLE
+   # pacman -S nvidia nvidia-utils lib32-nvidia-utils mesa bumblebee mesa bbswitch lib32-virtualgl
+   #+END_EXAMPLE
+
+   Add myself to the =bumblebee= group:
+
+   #+BEGIN_EXAMPLE
+   # gpasswd -a nsalas bumblebee
+   #+END_EXAMPLE
+
+   Enable the bumblebee service
+
+   #+BEGIN_EXAMPLE
+   # systemctl enable bumblebeed.service
+   #+END_EXAMPLE
+
+   That should normally work, but my laptop being somewhat of a
+   nightmare, it doesn't suffice. Add this to kernel parameters:
+
+   #+BEGIN_EXAMPLE
+   pcie_port_pm=off
+   #+END_EXAMPLE
+
+   That will disable the annoying =pcieport= messages from the kernel
+   and according to the ASUS laptop page on Arch Linux that line *is
+   required* to make =bbswitch= work.
+
+   However, that doesn't really make it all good yet. After waking
+   from suspend, =optirun= will not work. For that to work again we
+   have to issue this command *every time we wake up the laptop*
+
+   #+BEGIN_EXAMPLE
+   $ echo 1 > /sys/bus/pci/rescan
+   #+END_EXAMPLE
+
+   It might need =sudo= privileges, don't remember. Thing is if you
+   need to do that use =bash -c "..."= instead of just sudoing that
+   last command.
+
+   That should be it.
+
+   On a last note: it's very possible that the graphics card is *OFF*
+   after waking from sleep even though issuing =cat
+   /proc/acpi/bbswitch= could say it's on. I'm not sure though, but
+   the battery life is higher when using that instead of jut =nouveau=.
 
 ** WM
 
