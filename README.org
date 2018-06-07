@@ -50,9 +50,6 @@ external audio card (which is the case of my desktop computer). I use
 =pulseaudio= with =ALSA=. Works ok when set up correctly.
 
 *** Unmute
-    :PROPERTIES:
-    :CUSTOM_ID: unmute
-    :END:
 
 First of all unmute and raise the volume of the master channel. That can
 be done with the =alsamixer= tool which comes from the =alsa-utils=
@@ -61,16 +58,10 @@ remember the way of doing this on my desktop computer, so I'll come back
 on that one.
 
 *** Volume control
-    :PROPERTIES:
-    :CUSTOM_ID: volume-control
-    :END:
 
 This is done with =pamixer=, whose package has the same name.
 
 *** Bluetooth
-    :PROPERTIES:
-    :CUSTOM_ID: bluetooth
-    :END:
 
 I usually only use bluetooth with my headphones on my laptop. The
 bluetooth headset article from the arch wiki is pretty much enough for
@@ -206,11 +197,28 @@ requires =zsh= to be installed if you use the =S= key.
 We'll be handling key stuff with =gnupg= and =PAM= with this
 [[https://github.com/cruegge/pam-gnupg][very nice package]].
 
+If you (I) haven't yet created a public-private key pair, then do so:
+
 #+BEGIN_EXAMPLE
-    $ aurin pam-gnupg-git  # aurin is alias for favorite AUR manager
-    $ echo YOURPASSWORD > ~/.mailpass  # set your mail password
-    $ gnupg -r YOURKEYS@E.MAIL --encrypt ~/.mailpass  # encrypt it
-    $ shred -u ~/.mailpass  # get rid of it
+$ gpg --full-gen-key
+#+END_EXAMPLE
+
+RSA and RSA with 2048 is fine. Expiration time really depends on the
+use you make of your key. Indefinite time is okay for me. *Remember to
+insert a /real/ email* as you'll be using it later.
+
+Once the pair is created:
+
+1. Install =pam-gnupg-git= from the AUR (here we use =yay=).
+2. Put your plaintext password in a file to encrypt it
+3. Encrypt it using =gpg= for yourself.
+4. Shred the file so that there is no trace of your plaintext password.
+
+#+BEGIN_EXAMPLE
+    $ yay -S pam-gnupg-git
+    $ echo YOURPASSWORD > ~/.mailpass
+    $ gpg -r YOURKEYS@E.MAIL --encrypt ~/.mailpass
+    $ shred -u ~/.mailpass
 #+END_EXAMPLE
 
 Then edit =/etc/pam.d/lightdm= and add:
