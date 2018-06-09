@@ -49,6 +49,14 @@ Generally audio is kind of a pain in the ass, especially with an
 external audio card (which is the case of my desktop computer). I use
 =pulseaudio= with =ALSA=. Works ok when set up correctly.
 
+*** Fix audio on desktop with a sound card (Asus Xonar DGX)
+
+This problem is solved by simply going into =alsamixer= in a shell and
+searching for the =Multichannel= keyword in Analog Output. It might
+also be necessary to select 5.1 audio + Analog Input in =pavucontrol=.
+
+The config seems to stick around.
+
 *** Unmute
 
 First of all unmute and raise the volume of the master channel. That can
