@@ -42,6 +42,13 @@ Create Both
 Expunge Both
 SyncState *
 
+Channel gmail-drafts
+Master :gmail-remote:"[Gmail]/Drafts"
+Slave :gmail-local:"drafts"
+Create Both
+Expunge Both
+SyncState *
+
 Channel gmail-starred
 Master :gmail-remote:"[Gmail]/Starred"
 Slave :gmail-local:"starred"
@@ -55,3 +62,4 @@ Channel gmail-sent
 Channel gmail-trash
 Channel gmail-all
 Channel gmail-starred
+Channel gmail-drafts
