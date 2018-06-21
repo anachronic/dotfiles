@@ -15,7 +15,6 @@ Path ~/.mail/gmail/
 Inbox ~/.mail/gmail/Inbox
 
 Channel gmail-inbox
-Patterns "INBOX"
 Master :gmail-remote:"INBOX"
 Slave :gmail-local:"Inbox"
 Create Both
