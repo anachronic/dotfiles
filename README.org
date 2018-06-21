@@ -244,6 +244,13 @@ Then for your screen lock (mine in =/etc/pam.d/i3lock=):
     auth     optional  pam_gnupg.so
 #+END_EXAMPLE
 
+For =GNOME=, we should add this to =/etc/pam.d/gdm-password=
+
+#+BEGIN_EXAMPLE
+    auth     optional  pam_gnupg.so
+    session  optional  pam_gnupg.so
+#+END_EXAMPLE
+
 For ubiquitous availability, create =~/.gnupg/gpg-agent.conf= if it
 doesn't exist and add the line (again, if it doesn't exist)
 
