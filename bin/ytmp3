@@ -1,0 +1,2 @@
+#!/bin/bash
+mkdir -p ~/Downloads/music-inbox/ && cd ~/Downloads/music-inbox && youtube-dl --extract-audio --audio-format mp3 $1
