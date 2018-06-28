@@ -7,6 +7,9 @@ autoload -Uz compinit
 zstyle ':completion:*' menu select
 compinit
 
+# Case insensitive completion
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
 # Using emacs mode
 bindkey -e
 
