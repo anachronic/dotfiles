@@ -5,8 +5,8 @@ alias vim='nvim'
 
 # Navigation
 alias ls='ls --color=auto'
-alias l='ls --color=auto -lF'
-alias la='ls --color=auto -alF'
+alias l='ls --color=auto -lhF'
+alias la='ls --color=auto -alhF'
 alias ..='cd ..'
 alias goback='cd $OLDPWD'
 

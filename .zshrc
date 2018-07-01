@@ -2,6 +2,19 @@
 # Sanity for this century
 unsetopt flow_control
 
+# From aaron bieber's config
+# For tramp et al., don't do anything fancy.
+if [[ "$TERM" == "dumb"  ]]
+then
+  unsetopt zle
+  unsetopt prompt_cr
+  unsetopt prompt_subst
+  unfunction precmd
+  unfunction preexec
+  PS1='$ '
+  return
+fi
+
 # Completion
 autoload -Uz compinit
 zstyle ':completion:*' menu select
@@ -50,7 +63,7 @@ function +vi-git-untracked() {
 # It's worth saying the sources of this:
 # colors from https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg
 # codes from http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html
-PROMPT='%F{177}%~%f ${vcs_info_msg_0_}%B%F{131}%(?..!)%f%F{blue}$SUFFIX%f%b '
+PROMPT='%F{177}%(5~|…/%3~|%~)%f ${vcs_info_msg_0_}%B%F{131}%(?..!)%f%F{blue}$SUFFIX%f%b '
 RPROMPT='%F{006}%n%f@%F{041}%m'
 
 # Tmuxinator support
