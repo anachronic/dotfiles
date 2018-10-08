@@ -37,6 +37,13 @@ alias aurq='aurman --aur -Ss'
 alias yayin='yay -S'
 alias yayq='yay -Ss'
 
+## Ubuntu & Ubuntu-based
+alias aptin='sudo apt install'
+alias aptupd='sudo apt update'
+alias aptupg='sudo apt upgrade'
+alias aptq='apt-cache search'
+alias aptlist='apt list --installed'
+
 # configs
 alias i3c='vim ~/.config/i3/config'
 alias brc='vim ~/.bashrc'
