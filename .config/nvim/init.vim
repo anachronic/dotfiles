@@ -58,8 +58,16 @@ nnoremap <leader><leader> <C-^>
 nnoremap <leader>gh :noh<CR>
 nnoremap <leader>; :
 
+" This is mostly taken from christoomey's vimrc
+" Convenience
 nnoremap j gj
 nnoremap k gk
+nnoremap <Esc> <Esc>:noh<CR>
+
+" Swap 0 and ^. I tend to want to jump to the first non-whitespace character
+" so make that the easier one to do.
+nnoremap 0 ^
+nnoremap ^ 0
 
 " Meta remaps
 nnoremap <A-j> :m .+1<CR>==
