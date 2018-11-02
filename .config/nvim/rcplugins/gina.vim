@@ -1,0 +1,1 @@
+Plug 'lambdalisue/gina.vim'
