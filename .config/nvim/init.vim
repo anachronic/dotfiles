@@ -51,11 +51,11 @@ set cursorline
 
 " Leader remaps
 nnoremap <leader>w :w<CR>
+nnoremap <leader>W :wq<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>o :on<CR>
 nnoremap <leader>k :bd<CR>
 nnoremap <leader><leader> <C-^>
-nnoremap <leader>gh :noh<CR>
 nnoremap <leader>; :
 
 " This is mostly taken from christoomey's vimrc
