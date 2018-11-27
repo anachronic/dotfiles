@@ -8,7 +8,6 @@ alias ls='ls --color=auto'
 alias l='ls --color=auto -lhF'
 alias la='ls --color=auto -alhF'
 alias ..='cd ..'
-alias goback='cd $OLDPWD'
 
 # git and any vc commands
 alias gcl='git clone'
@@ -44,6 +43,10 @@ alias aptupd='sudo apt update'
 alias aptupg='sudo apt upgrade'
 alias aptq='apt-cache search'
 alias aptlist='apt list --installed'
+alias aptrem='sudo apt remove'
+
+# Emacs!
+alias emt='emacsclient -t'
 
 # configs
 alias i3c='vim ~/.config/i3/config'
