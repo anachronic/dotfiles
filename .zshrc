@@ -26,6 +26,19 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 # Using emacs mode
 bindkey -e
 
+my-backward-delete-word() {
+    local WORDCHARS=${WORDCHARS/\//}
+    zle backward-delete-word
+}
+zle -N my-backward-delete-word
+bindkey '^W' my-backward-delete-word
+
+# go ahead and use some history. christ
+HISTFILE=~/.zhistory
+HISTSIZE=SAVEHIST=10000
+setopt sharehistory
+setopt extendedhistory
+
 # Prompt. what a headache
 # This is stolen from @wincent. Show as many dollars/hashes depending on the
 # level of the shell
@@ -64,7 +77,7 @@ function +vi-git-untracked() {
 # colors from https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg
 # codes from http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html
 # shorten prompt from https://unix.stackexchange.com/a/273567
-PROMPT='%B%F{010}%n@%m%f%b:%F{177}%1d%f ${vcs_info_msg_0_}%B%F{131}%(?..!)%f%F{blue}$SUFFIX%f%b '
+PROMPT='%B%F{010}%n@%m%f%b:%F{177}%1~%f ${vcs_info_msg_0_}%B%F{131}%(?..!)%f%F{blue}$SUFFIX%f%b '
 RPROMPT='%F{013}%/%f'
 
 # Tmuxinator support
