@@ -2,19 +2,6 @@
 # Sanity for this century
 unsetopt flow_control
 
-# From aaron bieber's config
-# For tramp et al., don't do anything fancy.
-if [[ "$TERM" == "dumb"  ]]
-then
-  unsetopt zle
-  unsetopt prompt_cr
-  unsetopt prompt_subst
-  unfunction precmd
-  unfunction preexec
-  PS1='$ '
-  return
-fi
-
 # Completion
 autoload -Uz compinit
 zstyle ':completion:*' menu select
@@ -106,3 +93,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 [ -f /usr/local/bin/virtualenvwrapper.sh ] && source /usr/local/bin/virtualenvwrapper.sh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
