@@ -1,0 +1,58 @@
+{
+    "telemetry.enableTelemetry": false,
+    "window.newWindowDimensions": "inherit",
+    "window.titleBarStyle": "custom",
+    "vim.enableNeovim": true,
+    "workbench.colorTheme": "Min Light",
+    "vim.useSystemClipboard": true,
+    "python.jediEnabled": false,
+    "editor.fontFamily": "'Fira Code', 'DejaVu Sans Mono', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.minimap.enabled": false,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "explorer.confirmDragAndDrop": false,
+    "debug.node.autoAttach": "on",
+    "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "w"],
+      "commands": [":w"]
+    },
+    {
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
+    },
+    {
+      "before": ["j"],
+      "after": ["g", "j"]
+    },
+    {
+      "before": ["k"],
+      "after": ["g", "k"]
+    },
+    {
+      "before": ["<leader>", "g", "g"],
+      "commands": ["workbench.view.scm"]
+    }
+  ],
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-k>": false,
+    "<C-b>": false
+  },
+  "latex-workshop.view.pdf.viewer": "tab",
+  "editor.cursorBlinking": "solid",
+  "editor.fontLigatures": true,
+  "gitlens.keymap": "none",
+  "mocha.sideBarOptions": {
+    "lens": false,
+    "decoration": true,
+    "autoUpdateTime": 2000,
+    "showDebugTestStatus": true
+  },
+  "files.exclude": {
+    "**/.nyc_output": true,
+    "**/coverage": true,
+    "**/node_modules": true
+  },
+  "vim.foldfix": true,
+}
