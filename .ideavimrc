@@ -1,0 +1,36 @@
+set clipboard+=unnamed
+set surround
+set multiple-cursors
+set ignorecase
+set visualbell
+set relativenumber
+set number
+
+let mapleader = " "
+
+" General remaps not involving leader
+nnoremap gb :action ToggleLineBreakpoint<CR>
+nnoremap <C-p> :action RecentFiles<CR>
+
+" Leader remaps
+nnoremap <leader><leader> :action RecentFiles<CR>
+
+nnoremap <Leader>w :action SaveAll<CR>
+nnoremap <Leader>q :action CloseContent<CR>
+nnoremap <Leader>n <C-w>v
+nnoremap <Leader>u :action UpdateRunningApplication<CR>
+nnoremap <Leader>o :action UnsplitAll<CR>
+nnoremap <Leader>v :action SplitVertically<CR>
+nnoremap <Leader>z :action HideAllWindows<CR>
+nnoremap <Leader>j :action GotoRelated<CR>
+
+nnoremap <Leader>gg :action SelectIn<CR>
+nnoremap <Leader>gc :action CheckinProject<CR>
+nnoremap <Leader>gu :action Vcs.UpdateProject<CR>
+nnoremap <Leader>gh :action Vcs.History<CR>
+
+" Window remaps
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
