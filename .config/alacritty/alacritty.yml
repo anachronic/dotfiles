@@ -92,7 +92,7 @@ tabspaces: 8
 font:
   # Normal (roman) font face
   normal:
-    family: Fira Mono
+    family: Fira Code
     # The `style` can be specified to pick a specific face.
     #style: Regular
 
@@ -138,7 +138,7 @@ colors:
   # Default colors
   primary:
     background: '0x333333'
-    foreground: '0xf4f4f4'
+    foreground: '0xf2f2f2'
 
     # Bright and dim foreground colors
     #
@@ -158,8 +158,8 @@ colors:
 
   # Normal colors
   normal:
-    black:   '0x515151'
-    red:     '0xD42626'
+    black:   '0x333333'
+    red:     '0xcc0000'
     green:   '0x4e9a06'
     yellow:  '0xc4a000'
     blue:    '0x3465a4'
