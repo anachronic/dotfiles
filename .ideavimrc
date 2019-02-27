@@ -24,6 +24,9 @@ nnoremap <Leader>v :action SplitVertically<CR>
 nnoremap <Leader>z :action HideAllWindows<CR>
 nnoremap <Leader>j :action GotoRelated<CR>
 
+nnoremap <C-o> :action Back<CR>
+nnoremap <C-i> :action Forward<CR>
+
 nnoremap <Leader>gg :action SelectIn<CR>
 nnoremap <Leader>gc :action CheckinProject<CR>
 nnoremap <Leader>gu :action Vcs.UpdateProject<CR>
