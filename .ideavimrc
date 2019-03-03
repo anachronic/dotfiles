@@ -10,7 +10,11 @@ let mapleader = " "
 
 " General remaps not involving leader
 nnoremap gb :action ToggleLineBreakpoint<CR>
-nnoremap <C-p> :action RecentFiles<CR>
+nnoremap <C-p> :action GotoFile<CR>
+nnoremap <C-S-p> :action RecentFiles<CR>
+
+nnoremap <C-o> :action Back<CR>
+nnoremap <C-i> :action Forward<CR>
 
 " Leader remaps
 nnoremap <leader><leader> :action RecentFiles<CR>
