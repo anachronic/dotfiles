@@ -24,13 +24,41 @@ nnoremap <Leader>v :action SplitVertically<CR>
 nnoremap <Leader>z :action HideAllWindows<CR>
 nnoremap <Leader>j :action GotoRelated<CR>
 
-nnoremap <C-o> :action Back<CR>
-nnoremap <C-i> :action Forward<CR>
-
 nnoremap <Leader>gg :action SelectIn<CR>
 nnoremap <Leader>gc :action CheckinProject<CR>
 nnoremap <Leader>gu :action Vcs.UpdateProject<CR>
 nnoremap <Leader>gh :action Vcs.History<CR>
+
+" Remapping 0 and caret.
+nnoremap 0 ^
+nnoremap ^ 0
+
+" IdeaVim isn't as clever as vim with cc, or c<motion> for that matter
+nnoremap cc ^C
+
+" Back and forth
+nnoremap <C-o> :action Back<CR>
+nnoremap <C-i> :action Forward<CR>
+
+" Remap quote shortcuts
+nnoremap ciq ci"
+nnoremap caq ca"
+nnoremap viq vi"
+nnoremap vaq va"
+nnoremap diq di"
+nnoremap daq da"
+nnoremap yiq yi"
+nnoremap yaq ya"
+
+" Remap paren shortcuts
+nnoremap ci0 ci)
+nnoremap ca0 ca)
+nnoremap vi0 vi)
+nnoremap va0 va)
+nnoremap di0 di)
+nnoremap da0 da)
+nnoremap yi0 yi)
+nnoremap ya0 ya)
 
 " Window remaps
 nnoremap <C-h> <C-w>h
