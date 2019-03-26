@@ -47,6 +47,7 @@ set splitright
 
 " Theme config
 set background=light
+colorscheme PaperColor
 set cursorline
 
 " Leader remaps
@@ -55,7 +56,6 @@ nnoremap <leader>W :wq<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>o :on<CR>
 nnoremap <leader>k :bd<CR>
-nnoremap <leader><leader> <C-^>
 nnoremap <leader>; :
 
 " This is mostly taken from christoomey's vimrc
@@ -79,5 +79,6 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-s> :w<CR>
-nnoremap <C-g> <C-[>
-inoremap <C-g> <C-[>
+
+" Insert renamps
+inoremap <C-v> <C-o>P
