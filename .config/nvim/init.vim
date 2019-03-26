@@ -46,7 +46,7 @@ set mouse=a
 set splitright
 
 " Theme config
-colorscheme base16-tomorrow-night
+set background=light
 set cursorline
 
 " Leader remaps
