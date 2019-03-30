@@ -44,6 +44,7 @@ set shiftwidth=4
 set expandtab
 set mouse=a
 set splitright
+set noswapfile
 
 " Theme config
 set background=light
