@@ -3,5 +3,5 @@ Plug 'junegunn/fzf.vim'
 
 nnoremap <C-p> :Files<CR>
 nnoremap <Leader><Leader> :Buffers<CR>
-nnoremap <Leader>a :Rg
+nnoremap <Leader>a :Rg<Space>
 
