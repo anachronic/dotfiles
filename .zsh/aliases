@@ -45,17 +45,19 @@ alias aptq='apt-cache search'
 alias aptlist='apt list --installed'
 alias aptrem='sudo apt remove'
 
+## macOS
+alias brewin="brew install"
+
 # Emacs!
 alias emt='emacsclient -t'
 
 # configs
-alias i3c='vim ~/.config/i3/config'
-alias brc='vim ~/.bashrc'
-alias xdef='vim ~/.Xdefaults'
-alias pcfg='vim ~/.config/polybar/config'
-alias vcd='cd ~/.config/nvim/'
-alias vrc='vim ~/.config/nvim/init.vim'
-alias rrc='vim ~/.config/ranger/rc.conf'
+alias dotfiles='cd ~/dotfiles'
+alias forks='cd ~/forks'
+alias calcef='cd ~/forks/calce-plataform-frontend'
+
+## Tmuxinator
+alias mux='tmuxinator'
 
 # reloads
 alias so='source ~/.zshrc'
