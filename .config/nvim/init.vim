@@ -37,6 +37,10 @@ function! ExecuteMacroOverVisualRange()
   execute ":'<,'>normal @".nr2char(getchar())
 endfunction
 
+" Hopefully this ends up always showing vim in english
+set langmenu=en_US
+let $LANG = 'en_US'
+
 " Still can't believe these are not default
 set nojoinspaces
 set tabstop=4
