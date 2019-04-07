@@ -4,9 +4,9 @@ alias vi='nvim'
 alias vim='nvim'
 
 # Navigation
-alias ls='ls --color=auto'
-alias l='ls --color=auto -lhF'
-alias la='ls --color=auto -alhF'
+alias ls='ls'
+alias l='ls -lhF'
+alias la='ls -alhF'
 alias ..='cd ..'
 
 # git and any vc commands
