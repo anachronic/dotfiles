@@ -11,5 +11,31 @@ endif
 
 nnoremap <C-p> :Files<CR>
 nnoremap <Leader><Leader> :Buffers<CR>
-nnoremap <Leader>a :Rg<Space>
 
+" The quickfix from Ack.vim is way better than :Rg from fzf. :(
+Plug 'mileszs/ack.vim'
+
+" Prefer ag over default
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
+" Prefer ripgrep over anything
+if executable('rg')
+  let g:ackprg = 'rg --vimgrep --no-heading'
+endif
+
+" Regular old ack
+nnoremap <Leader>a :Ack<Space>
+
+" From the amazing Chris Toomey
+function! s:VisualAck()
+  let temp = @"
+  normal! gvy
+  let escaped_pattern = escape(@", "[]().*")
+  let @" = temp
+  execute "Ack! '" . escaped_pattern . "'"
+endfunction
+
+nnoremap K :Ack! '<C-r><C-w>'<cr>
+vnoremap K :<C-u>call <sid>VisualAck()<cr>
