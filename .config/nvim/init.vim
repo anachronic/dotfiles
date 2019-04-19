@@ -18,6 +18,8 @@ call plug#begin('~/.config/nvim/plugged')
 call s:SourceConfigFilesIn('rcplugins')
 call plug#end()
 
+call s:SourceConfigFilesIn('snippets')
+
 " Then we load own configs.
 " I may move this to their separate files if the config gets too big
 filetype plugin indent on
