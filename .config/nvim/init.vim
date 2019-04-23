@@ -3,6 +3,11 @@
 " Need to set this before plugin initialization.
 let mapleader = "\<Space>"
 
+" Fish people suggest that we do this
+if &shell =~# 'fish$'
+    set shell=sh
+endif
+
 " Architecture mostly copied from Chris Toomey's
 function! s:SourceConfigFilesIn(directory)
   let directory_splat = '~/.config/nvim/' . a:directory . '/*'
