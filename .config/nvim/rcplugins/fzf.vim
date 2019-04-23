@@ -6,6 +6,7 @@ if has("unix")
         Plug '/usr/local/opt/fzf'
     else
         Plug '~/forks/fzf'
+        Plug '~/.fzf'
     endif
 endif
 
