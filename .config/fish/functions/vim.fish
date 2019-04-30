@@ -1,7 +1,7 @@
 function vim
     if which nvim > /dev/null 2>&1
-        nvim
+        nvim $argv
     else
-        vim
+        vim $argv
     end
 end

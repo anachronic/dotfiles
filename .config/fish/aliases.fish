@@ -10,6 +10,7 @@ alias gc "git commit --verbose"
 alias ga "git add"
 alias gcl "git clone"
 alias gco "git checkout"
+alias gst "git status"
 
 # Ubuntu & Ubuntu-based
 alias aptin 'sudo apt install'

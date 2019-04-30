@@ -62,6 +62,10 @@ set background=light
 colorscheme PaperColor
 set cursorline
 
+" Folding
+set foldmethod=indent
+set foldlevel=99
+
 " Leader remaps
 nnoremap <leader>w :w<CR>
 nnoremap <leader>W :wq<CR>
