@@ -105,3 +105,9 @@ export SDKMAN_DIR="/home/desarrollo/.sdkman"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.rvm/scripts/rvm ] && source ~/.rvm/scripts/rvm
+
+# jumping around with z
+[ -e ~/.z ] || touch ~/.z
+[ -f ~/dotfiles/.zsh/z.sh ] && source ~/dotfiles/.zsh/z.sh
+
+
