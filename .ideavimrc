@@ -3,7 +3,7 @@ set surround
 set multiple-cursors
 set ignorecase
 set visualbell
-set relativenumber
+" set relativenumber
 set number
 
 let mapleader = " "
@@ -27,6 +27,8 @@ nnoremap <Leader>o :action UnsplitAll<CR>
 nnoremap <Leader>v :action SplitVertically<CR>
 nnoremap <Leader>z :action HideAllWindows<CR>
 nnoremap <Leader>j :action GotoRelated<CR>
+nnoremap <Leader>e :action RecentLocations<CR>
+nnoremap <Leader>d :action ToggleDistractionFreeMode<CR>
 
 nnoremap <Leader>gg :action SelectIn<CR>
 nnoremap <Leader>gc :action CheckinProject<CR>
