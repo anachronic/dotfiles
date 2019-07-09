@@ -3,11 +3,6 @@
 " Need to set this before plugin initialization.
 let mapleader = "\<Space>"
 
-" Fish people suggest that we do this
-if &shell =~# 'fish$'
-    set shell=sh
-endif
-
 " Architecture mostly copied from Chris Toomey's
 function! s:SourceConfigFilesIn(directory)
   let directory_splat = '~/.config/nvim/' . a:directory . '/*'
@@ -59,8 +54,7 @@ set noswapfile
 
 " Theme config
 set background=light
-colorscheme PaperColor
-set cursorline
+colorscheme solarized8
 
 " Folding
 set foldmethod=indent
@@ -97,4 +91,5 @@ nnoremap <C-l> <C-w>l
 nnoremap <C-s> :w<CR>
 
 " Insert renamps
-inoremap <C-v> <C-o>P
+inoremap <C-v> <C-o>P:noh
+
