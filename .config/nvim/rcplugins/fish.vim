@@ -1,1 +1,0 @@
-Plug 'dag/vim-fish'
