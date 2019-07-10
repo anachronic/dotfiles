@@ -93,3 +93,22 @@ nnoremap <C-s> :w<CR>
 " Insert renamps
 inoremap <C-v> <C-o>P:noh
 
+" Remap quote shortcuts
+nnoremap ciq ci"
+nnoremap caq ca"
+nnoremap viq vi"
+nnoremap vaq va"
+nnoremap diq di"
+nnoremap daq da"
+nnoremap yiq yi"
+nnoremap yaq ya"
+
+" Remap paren shortcuts
+nnoremap ci0 ci)
+nnoremap ca0 ca)
+nnoremap vi0 vi)
+nnoremap va0 va)
+nnoremap di0 di)
+nnoremap da0 da)
+nnoremap yi0 yi)
+nnoremap ya0 ya)
