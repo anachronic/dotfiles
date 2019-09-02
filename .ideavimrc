@@ -1,6 +1,7 @@
 set clipboard+=unnamed
 set surround
 set multiple-cursors
+set commentary
 set ignorecase
 set visualbell
 " set relativenumber
@@ -40,7 +41,7 @@ nnoremap 0 ^
 nnoremap ^ 0
 
 " IdeaVim isn't as clever as vim with cc, or c<motion> for that matter
-nnoremap cc ^C
+" nnoremap cc ^C
 
 " Back and forth
 nnoremap <C-o> :action Back<CR>
