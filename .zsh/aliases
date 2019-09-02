@@ -4,9 +4,9 @@ alias vi='nvim'
 alias vim='nvim'
 
 # Navigation
-alias ls='ls'
-alias l='ls -lhF'
-alias la='ls -alhF'
+alias ls='ls -G'
+alias l='ls -lhFG'
+alias la='ls -alhFG'
 alias ..='cd ..'
 
 # git and any vc commands
@@ -15,11 +15,14 @@ alias gst='git status'
 alias gc='git commit --verbose'
 alias gup='git pull --rebase'
 alias gp='git push'
+alias gpf='git push --force'
 alias gco='git checkout'
 alias gc='git commit'
+alias gca='git commit --amend'
 alias groot='cd $(git rev-parse --show-toplevel)'
 alias glog='git log --pretty=oneline --abbrev-commit'
 alias ga='git add'
+alias gaa='git add -A'
 
 # pacman & AUR
 alias pacin='sudo pacman -S'
@@ -61,5 +64,8 @@ alias mux='tmuxinator'
 
 # reloads
 alias so='source ~/.zshrc'
+
+# utils
+alias pcat='pygmentize'
 
 #vim:ft=sh
