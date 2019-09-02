@@ -54,7 +54,7 @@ set noswapfile
 
 " Theme config
 set background=light
-colorscheme solarized8
+colorscheme PaperColor
 
 " Folding
 set foldmethod=indent
