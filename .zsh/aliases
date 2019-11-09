@@ -1,7 +1,7 @@
 # -*- mode: sh; -*-
 # vim redefs
 alias vi='nvim'
-alias vim='nvim'
+alias vim='LC_ALL=en_US.UTF-8 nvim'
 
 # Navigation
 alias ls='ls -G'
