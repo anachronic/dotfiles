@@ -112,3 +112,6 @@ nnoremap di0 di)
 nnoremap da0 da)
 nnoremap yi0 yi)
 nnoremap ya0 ya)
+
+" This doesn't work in the plugin file...
+call lexima#add_rule({'char': '<CR>', 'at': '>\%#<', 'input_after': '<CR>'})
