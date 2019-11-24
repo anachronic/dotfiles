@@ -114,3 +114,6 @@ export SDKMAN_DIR="$HOME/.sdkman"
 if [ "$(uname)" = "Darwin" ]; then
     export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/opt/openssl/lib/"
 fi
+
+# Rbenv!
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
