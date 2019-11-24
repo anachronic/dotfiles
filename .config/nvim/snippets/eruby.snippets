@@ -1,0 +1,17 @@
+snippet lt
+	<%= link_to "${1:link text}"${0} %>
+
+snippet % "<% ${0} %>" i
+	<% ${0} %>
+
+snippet = "<%= ${0} %>" i
+	<%= ${0} %>
+
+snippet end "<% end %>" i
+	<% end %>
+
+snippet each "Iteration over array" i
+options indent
+	<% ${1:collection}.each do |${2:varname}| %>
+		${0}
+	<% end %>

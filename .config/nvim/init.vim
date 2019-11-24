@@ -18,8 +18,6 @@ call plug#begin('~/.config/nvim/plugged')
 call s:SourceConfigFilesIn('rcplugins')
 call plug#end()
 
-call s:SourceConfigFilesIn('snippets')
-
 " Then we load own configs.
 " I may move this to their separate files if the config gets too big
 filetype plugin indent on
@@ -115,3 +113,9 @@ nnoremap ya0 ya)
 
 " This doesn't work in the plugin file...
 call lexima#add_rule({'char': '<CR>', 'at': '>\%#<', 'input_after': '<CR>'})
+
+imap <expr><tab>
+  \ neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" :
+  \ emmet#isExpandable() ? "\<Plug>(emmet-expand-abbr)" :
+  \ pumvisible() ? "\<C-n>" :
+  \ "\<tab>"
