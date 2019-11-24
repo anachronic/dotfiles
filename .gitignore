@@ -1,3 +1,4 @@
 .git
 .directory
 nohup.out
+.config/.DS_Store
