@@ -55,7 +55,7 @@ set background=light
 colorscheme PaperColor
 
 " Folding
-set foldmethod=indent
+set foldmethod=syntax
 set foldlevel=99
 
 " Leader remaps
@@ -112,7 +112,6 @@ nnoremap yi0 yi)
 nnoremap ya0 ya)
 
 " This doesn't work in the plugin file...
-call lexima#add_rule({'char': '<CR>', 'at': '>\%#<', 'input_after': '<CR>'})
 
 imap <expr><tab>
   \ neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" :
