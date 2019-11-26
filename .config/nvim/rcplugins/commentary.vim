@@ -1,1 +1,1 @@
-Plug 'tpope/vim-commentary'
+Plug 'tomtom/tcomment_vim'
