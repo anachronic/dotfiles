@@ -52,7 +52,7 @@ set noswapfile
 
 " Theme config
 set background=light
-colorscheme one
+silent! colorscheme one
 
 " Folding
 set foldmethod=syntax
@@ -110,8 +110,6 @@ nnoremap di0 di)
 nnoremap da0 da)
 nnoremap yi0 yi)
 nnoremap ya0 ya)
-
-" This doesn't work in the plugin file...
 
 imap <expr><tab>
   \ neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" :
