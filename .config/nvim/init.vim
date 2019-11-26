@@ -52,7 +52,7 @@ set noswapfile
 
 " Theme config
 set background=light
-colorscheme PaperColor
+colorscheme one
 
 " Folding
 set foldmethod=syntax
