@@ -8,6 +8,6 @@ windows:
         -
         - git status
   - neovim conf:
-      root: .config/vim
+      root: .config/nvim
       panes:
         - nvim
