@@ -19,6 +19,7 @@ _tmuxinator() {
 
 compdef _tmuxinator tmuxinator mux
 alias mux="tmuxinator"
+alias tx="tmuxinator start --suppress-tmux-version-warning"
 
 # Local Variables:
 # mode: Shell-Script
