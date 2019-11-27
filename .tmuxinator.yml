@@ -2,6 +2,12 @@ name: dotfiles
 root: ~/dotfiles
 
 windows:
-  - VIM: vim
-  - git/shell: git status
-  - ranger: ranger
+  - shell:
+      layout: main-vertical
+      panes:
+        -
+        - git status
+  - neovim conf:
+      root: .config/vim
+      panes:
+        - nvim
