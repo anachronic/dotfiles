@@ -21,6 +21,8 @@ let g:projectionist_heuristics = {
       \     'tests/unit/*.spec.js': {
       \       'alternate': [
       \         'src/{dirname}/{basename}.vue',
+      \         'src/{dirname}/{basename}.ts',
+      \         'src/{dirname}/{basename}.js',
       \       ],
       \       'type': 'jest'
       \     },
