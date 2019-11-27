@@ -1,4 +1,13 @@
 {
     "suggest.noselect": false,
-    "coc.preferences.formatOnSaveFiletypes": ["typescript", "vue", "javascript"]
+    "coc.preferences.formatOnSaveFiletypes": ["typescript", "vue", "javascript"],
+    "python.venvPath": "~/.virtualenvs",
+    "eslint.filetypes": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "vue",
+        "typescriptreact"
+    ]
 }
