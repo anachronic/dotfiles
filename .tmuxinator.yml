@@ -3,7 +3,7 @@ root: ~/dotfiles
 
 windows:
   - shell:
-      layout: main-vertical
+      layout: even-horizontal
       panes:
         -
         - git status
