@@ -21,3 +21,16 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
+
+" Default extensions
+let g:coc_global_extensions = [
+  \ 'coc-tsserver',
+  \ 'coc-eslint', 
+  \ 'coc-prettier', 
+  \ 'coc-json', 
+  \ 'coc-vetur', 
+  \ 'coc-css', 
+  \ 'coc-html', 
+  \ 'coc-solargraph', 
+  \ 'coc-python', 
+  \ ]
