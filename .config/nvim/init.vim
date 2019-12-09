@@ -51,8 +51,8 @@ set splitright
 set noswapfile
 
 " Theme config
-set background=light
-silent! colorscheme one
+set background=dark
+silent! colorscheme base16-default-dark
 
 " Folding
 set foldmethod=syntax

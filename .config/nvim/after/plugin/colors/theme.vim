@@ -1,1 +1,1 @@
-call one#highlight('String', '58962B', '', 'none')
+silent! call one#highlight('String', '58962B', '', 'none')
