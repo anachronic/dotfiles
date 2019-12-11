@@ -64,8 +64,8 @@ function +vi-git-untracked() {
 # colors from https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg
 # codes from http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html
 # shorten prompt from https://unix.stackexchange.com/a/273567
-PROMPT='%B%F{010}%n@%m%f%b:%F{5}%1~%f ${vcs_info_msg_0_}%B%F{131}%(?..!)%f%F{blue}$SUFFIX%f%b '
-RPROMPT='%F{013}%/%f'
+PROMPT='%B%F{005}%n@%m%f%b:%F{13}%1~%f ${vcs_info_msg_0_}%B%F{131}%(?..!)%f%F{blue}$SUFFIX%f%b '
+RPROMPT='%F{176}%/%f'
 
 # Tmuxinator support
 if which tmuxinator &> /dev/null
