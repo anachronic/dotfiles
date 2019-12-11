@@ -1,7 +1,13 @@
 {
     "suggest.noselect": false,
-    "coc.preferences.formatOnSaveFiletypes": ["typescript", "vue", "javascript"],
+    "coc.preferences.formatOnSaveFiletypes": [
+        "typescript",
+        "vue",
+        "javascript"
+    ],
     "python.venvPath": "~/.virtualenvs",
+    "python.formatting.provider": "black",
+    "python.jediEnabled": false,
     "vetur.format.defaultFormatter.html": "prettier",
     "eslint.filetypes": [
         "javascript",

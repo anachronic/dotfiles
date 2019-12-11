@@ -34,3 +34,8 @@ let g:coc_global_extensions = [
   \ 'coc-solargraph', 
   \ 'coc-python', 
   \ ]
+
+nnoremap <F6> :CocAction<CR>
+
+command! -nargs=0 Format :call CocAction('format')
+nnoremap <leader><CR> :Format<CR>
