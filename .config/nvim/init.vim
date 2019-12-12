@@ -49,6 +49,7 @@ set expandtab
 set mouse=a
 set splitright
 set noswapfile
+set wildcharm=<C-z>
 
 " Theme config
 set background=light
