@@ -48,6 +48,7 @@ set shiftwidth=4
 set expandtab
 set mouse=a
 set splitright
+set splitbelow
 set noswapfile
 set wildcharm=<C-z>
 
