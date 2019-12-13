@@ -26,6 +26,17 @@ HISTSIZE=SAVEHIST=10000
 setopt sharehistory
 setopt extendedhistory
 
+# tmux create/attach to session with name $PWD
+function t() {
+    local dirname=$(basename $PWD)
+
+    if tmux has-session -t $dirname; then
+        tmux attach -t $dirname
+    else
+        tmux new -s $dirname
+    fi
+}
+
 # Prompt. what a headache
 # This is stolen from @wincent. Show as many dollars/hashes depending on the
 # level of the shell
