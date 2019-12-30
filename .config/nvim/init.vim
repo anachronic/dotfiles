@@ -96,6 +96,10 @@ nnoremap <C-s> :w<CR>
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
 
+" Quickfix maps
+nnoremap <Down> :cnext<CR>
+nnoremap <Up> :cprevious<CR>
+
 " Stolen from wincent!
 " `<Tab>`/`<S-Tab>` to move between matches without leaving incremental search.
 " Note dependency on `'wildcharm'` being set to `<C-z>` in order for this to
