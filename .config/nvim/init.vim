@@ -55,8 +55,10 @@ set wildcharm=<C-z>
 set wildmode=longest:full,full
 
 " Theme config
-set background=light
-silent! colorscheme solarized8
+" set background=light
+" silent! colorscheme solarized8
+set background=dark
+silent! colorscheme dracula
 
 " Folding
 set foldmethod=syntax
