@@ -37,6 +37,10 @@ function! ExecuteMacroOverVisualRange()
   execute ":'<,'>normal @".nr2char(getchar())
 endfunction
 
+function! CopyFilePathToClipboard()
+  let @+=expand("%")
+endfunction
+
 " Hopefully this ends up always showing vim in english
 set langmenu=en_US
 let $LANG = 'en_US'
@@ -73,6 +77,7 @@ nnoremap <leader>o :on<CR>
 nnoremap <leader>k :bd<CR>
 nnoremap <leader>; :
 nnoremap <leader>c *Ncgn
+nnoremap <leader>y :call CopyFilePathToClipboard()<CR>
 
 " This is mostly taken from christoomey's vimrc
 " Convenience
