@@ -90,6 +90,8 @@ function GetPythonIndent(lnum)
     " i = (a
     "       + b
     "       + c)
+    "
+    " THIS IS THE MOTHERFUCKING LINE THAT'S DRIVING ME INSANE
     call cursor(a:lnum, 1)
     let p = searchpair('(\|{\|\[', '', ')\|}\|\]', 'bW',
             \ "line('.') < " . (a:lnum - s:maxoff) . " ? dummy :"
@@ -107,7 +109,7 @@ function GetPythonIndent(lnum)
         if pp > 0
           return indent(plnum) + (exists("g:pyindent_nested_paren") ? eval(g:pyindent_nested_paren) : shiftwidth())
         endif
-        return indent(plnum) + (exists("g:pyindent_open_paren") ? eval(g:pyindent_open_paren) : (shiftwidth() * 2))
+        return indent(plnum) + (exists("g:pyindent_open_paren") ? eval(g:pyindent_open_paren) : shiftwidth())
       endif
       if plnumstart == p
         return indent(plnum)
