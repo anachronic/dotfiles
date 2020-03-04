@@ -20,5 +20,6 @@
         "typescriptreact"
     ],
     "coc.source.around.enable": false,
-    "coc.source.buffer.enable": false
+    "coc.source.buffer.enable": false,
+    "suggest.floatEnable": false
 }
