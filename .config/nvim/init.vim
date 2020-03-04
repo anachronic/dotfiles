@@ -57,8 +57,9 @@ set wildmode=longest:full,full
 " Theme config
 " set background=light
 " silent! colorscheme solarized8
+" silent! colorscheme dracula
+silent! colorscheme onehalfdark
 set background=dark
-silent! colorscheme dracula
 
 " Folding
 set foldmethod=syntax
