@@ -71,6 +71,7 @@ nnoremap <leader>q :q<CR>
 nnoremap <leader>o :on<CR>
 nnoremap <leader>k :bd<CR>
 nnoremap <leader>; :
+nnoremap <leader>c *Ncgn
 
 " This is mostly taken from christoomey's vimrc
 " Convenience
