@@ -9,3 +9,6 @@ Plug 'tmhedberg/SimpylFold'
 
 " isort
 Plug 'fisadev/vim-isort'
+
+" fix the annoying default python indent
+Plug 'Vimjas/vim-python-pep8-indent'
