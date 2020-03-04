@@ -5,5 +5,5 @@ func! Multiple_cursors_before()
 endfunc
 
 func! Multiple_cursors_after()
-    let b:lexima_enabled = 1
+    let b:lexima_disabled = 0
 endfunc
