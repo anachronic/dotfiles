@@ -9,7 +9,7 @@ let g:lightline = {
       \ 'component_function': {
       \   'gitbranch': 'fugitive#head',
       \   'filename': 'LightLineFilename',
-      \   'cocstatus': 'coc#status',
+      \   'cocstatus': 'ach#coc#status',
       \   'currentfunction': 'CocCurrentFunction'
       \ },
       \ }
