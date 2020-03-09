@@ -38,5 +38,9 @@ let g:projectionist_heuristics = {
       \       'alternate': '{dirname}/{basename}.py',
       \       'type': 'test'
       \     },
+      \     '**/tests/views/test_*.py': {
+      \       'alternate': '{dirname}/views/{basename}.py',
+      \       'type': 'test'
+      \     },
       \   }
       \ }
