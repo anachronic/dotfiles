@@ -1,0 +1,1 @@
+Plug 'gisphm/vim-gitignore'
