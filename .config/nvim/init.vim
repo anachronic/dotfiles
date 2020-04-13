@@ -57,6 +57,7 @@ set splitbelow
 set noswapfile
 set wildcharm=<C-z>
 set wildmode=longest:full,full
+set cursorline
 
 " Theme config
 " set background=light
