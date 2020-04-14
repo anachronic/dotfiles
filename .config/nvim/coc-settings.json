@@ -35,5 +35,5 @@
     ],
 
     "diagnostic.virtualText": true,
-
+    "diagnostic.virtualTextLineSeparator": " || "
 }
