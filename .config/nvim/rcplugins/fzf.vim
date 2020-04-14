@@ -39,7 +39,6 @@ endfunction
 nnoremap <Leader>a :RF<cr>
 
 nnoremap K :RF! <C-r><C-w><cr>
-vnoremap K :<C-u>call <sid>VisualAck()<cr>
 nnoremap <leader>h :Help<CR>
 
 function! s:build_quickfix_list(lines)
