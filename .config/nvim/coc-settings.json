@@ -35,5 +35,7 @@
     ],
 
     "diagnostic.virtualText": true,
-    "diagnostic.virtualTextLineSeparator": " || "
+    "diagnostic.virtualTextLineSeparator": " || ",
+
+    "git.addGBlameToBufferVar": true
 }

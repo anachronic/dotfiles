@@ -34,6 +34,7 @@ let g:coc_global_extensions = [
   \ 'coc-html', 
   \ 'coc-solargraph', 
   \ 'coc-python', 
+  \ 'coc-git', 
   \ ]
 
 nnoremap <F6> :CocAction<CR>
