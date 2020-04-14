@@ -7,6 +7,7 @@ nmap <silent> gr <Plug>(coc-references)
 
 set signcolumn=yes
 set shortmess+=c
+set updatetime=300
 
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)

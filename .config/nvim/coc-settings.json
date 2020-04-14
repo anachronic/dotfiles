@@ -1,16 +1,30 @@
 {
     "suggest.noselect": false,
+    "suggest.floatEnable": false,
+
+    "coc.source.around.enable": false,
+    "coc.source.buffer.enable": false,
+    "coc.preferences.snippets.enable": false,
     "coc.preferences.formatOnSaveFiletypes": [
         "typescript",
         "vue",
         "javascript"
     ],
+
     "python.venvPath": "~/.virtualenvs",
     "python.formatting.provider": "black",
     "python.linting.flake8Enabled": true,
     "python.linting.pylintEnabled": false,
     "python.jediEnabled": false,
+
     "vetur.format.defaultFormatter.html": "prettier",
+    "vetur.completion.useScaffoldSnippets": false,
+    "vetur.completion.scaffoldSnippetSources": {
+        "workspace": "",
+        "user": "",
+        "vetur": ""
+    },
+
     "eslint.filetypes": [
         "javascript",
         "javascriptreact",
@@ -19,7 +33,7 @@
         "vue",
         "typescriptreact"
     ],
-    "coc.source.around.enable": false,
-    "coc.source.buffer.enable": false,
-    "suggest.floatEnable": false
+
+    "diagnostic.virtualText": true,
+
 }
