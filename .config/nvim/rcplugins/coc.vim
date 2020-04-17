@@ -1,4 +1,5 @@
 Plug 'neoclide/coc.nvim',  {'do': { -> coc#util#install()}}
+Plug 'antoinemadec/coc-fzf'
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)

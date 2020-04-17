@@ -1,0 +1,33 @@
+snippet desc "describe() block" b
+describe('${1}', () => {
+	${0}
+});
+endsnippet
+
+snippet aft "after() block" b
+afterEach(() => {
+	${0}
+});
+endsnippet
+
+snippet bef "before() block" b
+beforeEach(() => {
+	${0}
+});
+endsnippet
+
+snippet it "it() block" b
+it('${1}', () => {
+	${0}
+});
+endsnippet
+
+snippet it "it() block with async test" b
+it('${1}', async () => {
+	${0}
+});
+endsnippet
+
+snippet ex "expect() assertion" b
+expect(${1})${2}.to${3}();
+endsnippet
