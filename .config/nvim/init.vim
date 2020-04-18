@@ -66,8 +66,6 @@ set expandtab
 " Use the mouse. It's 2020, for christ's sake
 set mouse=a
 
-set noswapfile
-
 " Substitute for <Tab> in macros. Has to do with tab completion in command
 " mode I think
 set wildcharm=<C-z>
@@ -99,6 +97,35 @@ set background=dark
 " Always try syntax unless specified in /after
 set foldmethod=syntax
 set foldlevel=99
+
+" This next section until the leader remaps is stolen from wincent's
+if exists('$SUDO_USER')
+    " don't create root-owned files
+    set noswapfile
+else
+    set directory=~/.config/nvim/tmp/swap//     " keep swap files out of the way
+endif
+
+if has('persistent_undo')
+    " don't create root-owned files
+    if exists('$SUDO_USER')
+        set noundofile
+    else
+        " keep undo files out of the way
+        set undodir=~/.config/nvim/tmp/undo
+        " actually use undo files
+        set undofile
+    endif
+endif
+
+if has('mksession')
+    " override ~/.vim/view default
+    set viewdir=~/.config/nvim/tmp/view
+
+    " save/restore just these (with `:{mk,load}view`)
+    set viewoptions=cursor,folds
+endif
+
 
 " Leader remaps
 nnoremap <leader>w :w<CR>
