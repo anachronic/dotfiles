@@ -2,9 +2,9 @@
     "suggest.noselect": false,
     "suggest.floatEnable": false,
 
-    "coc.source.around.enable": false,
+    "coc.source.around.enable": true,
     "coc.source.buffer.enable": false,
-    "coc.preferences.snippets.enable": false,
+    "coc.preferences.snippets.enable": true,
     "coc.preferences.formatOnSaveFiletypes": [
         "typescript",
         "vue",
