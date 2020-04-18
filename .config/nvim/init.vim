@@ -21,11 +21,19 @@ call plug#end()
 " Then we load own configs.
 " I may move this to their separate files if the config gets too big
 filetype plugin indent on
+
+" True color
 set termguicolors
+
+" Line numbers
+set number
 set relativenumber
 set scrolloff=3
-set number
+
+" Use the system clipboard
 set clipboard+=unnamedplus
+
+" Allow to hide buffer with unsaved changes without being prompted
 set hidden
 
 " This remap allows execution of macros on visual lines
@@ -45,28 +53,50 @@ endfunction
 set langmenu=en_US
 let $LANG = 'en_US'
 
-" Still can't believe these are not default
+" Don't autoinsert two spaces when joining
 set nojoinspaces
+
+" Indent to 4, use spaces over tabs
+" These could be overriden by editorconfig or lang specific settings
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+
+" Use the mouse. It's 2020, for christ's sake
 set mouse=a
+
+set noswapfile
+
+" Substitute for <Tab> in macros. Has to do with tab completion in command
+" mode I think
+set wildcharm=<C-z>
+
+" allow <BS>/h/l/<Left>/<Right>/<Space>, ~ to cross line boundaries
+set whichwrap=b,h,l,s,<,>,[,],~
+
+set wildmode=longest:full,full
+
+" shortmess, I'll comment each one
+set shortmess+=A " Never print annoying swapfile messages
+set shortmess+=I " No splash screen
+
+" Split to right and below always
+" can't believe there are not default
 set splitright
 set splitbelow
-set noswapfile
-set wildcharm=<C-z>
-set wildmode=longest:full,full
+
+" Highlight the line where the cursor is at
 set cursorline
 
+" Allow unrestricted backspacing
+set backspace=indent,start,eol
+
 " Theme config
-" set background=light
-" silent! colorscheme solarized8
-" silent! colorscheme dracula
 silent! colorscheme onehalfdark
 set background=dark
 
-" Folding
+" Always try syntax unless specified in /after
 set foldmethod=syntax
 set foldlevel=99
 
@@ -139,8 +169,3 @@ nnoremap di0 di)
 nnoremap da0 da)
 nnoremap yi0 yi)
 nnoremap ya0 ya)
-
-" imap <expr><tab>
-"   \ neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" :
-"   \ pumvisible() ? "\<C-n>" :
-"   \ "\<tab>"
