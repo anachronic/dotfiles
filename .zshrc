@@ -26,6 +26,9 @@ HISTSIZE=SAVEHIST=10000
 setopt sharehistory
 setopt extendedhistory
 
+# Don't put commands that start with a space into history
+setopt histignorespace
+
 # tmux create/attach to session with name $PWD
 function t() {
     local dirname=$(basename $PWD)
