@@ -1,4 +1,5 @@
 extends html
+extends javascript
 
 snippet vif "v-if" w
 v-if="${0}"
@@ -10,4 +11,12 @@ endsnippet
 
 snippet vfor "v-for" w
 v-for="${0}"
+endsnippet
+
+snippet	script "script tag" b
+<script>
+export default {
+  ${0}
+}
+</script>
 endsnippet
