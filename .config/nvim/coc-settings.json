@@ -8,7 +8,8 @@
     "coc.preferences.formatOnSaveFiletypes": [
         "typescript",
         "vue",
-        "javascript"
+        "javascript",
+        "javascript.jest"
     ],
 
     "python.venvPath": "~/.virtualenvs",
@@ -31,7 +32,8 @@
         "typescript",
         "typescriptreact",
         "vue",
-        "typescriptreact"
+        "typescriptreact",
+        "javascript.jest"
     ],
 
     "diagnostic.virtualText": true,

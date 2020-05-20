@@ -42,3 +42,9 @@ nnoremap <F6> :CocAction<CR>
 
 command! -nargs=0 Format :call CocAction('format')
 nnoremap <leader><CR> :Format<CR>
+
+let g:coc_filetype_map = {
+    \ 'javascript.jest': 'javascript',
+    \ 'typescript.jest': 'typescript'
+    \ }
+
