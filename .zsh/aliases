@@ -3,6 +3,9 @@
 alias vi='nvim'
 alias vim='LC_ALL=en_US.UTF-8 nvim'
 
+# SSH. I've been suffering with this lately
+alias ssh='TERM=xterm-256color ssh'
+
 # Navigation
 alias ls='ls -G'
 alias l='ls -lhFG'
