@@ -38,7 +38,6 @@ endfunction
 " Regular old ack
 nnoremap <Leader>a :RF<cr>
 
-nnoremap K :RF! <C-r><C-w><cr>
 nnoremap <leader>h :Help<CR>
 
 function! s:build_quickfix_list(lines)
