@@ -142,6 +142,7 @@ nnoremap <leader>y :call CopyFilePathToClipboard()<CR>
 nnoremap j gj
 nnoremap k gk
 nnoremap <Esc> <Esc>:execute "normal \<Plug>(LoupeClearHighlight)"<CR>
+nnoremap Y y$
 
 " Swap 0 and ^. I tend to want to jump to the first non-whitespace character
 " so make that the easier one to do.
