@@ -71,4 +71,7 @@ alias so='source ~/.zshrc'
 # utils
 alias pcat='pygmentize'
 
+# python shortcuts
+alias pac='source env/bin/activate'
+
 #vim:ft=sh
