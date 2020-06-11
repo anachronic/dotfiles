@@ -26,9 +26,13 @@ let g:projectionist_heuristics = {
       \       ],
       \       'type': 'jest'
       \     },
-      \     '*.test.js': {
-      \       'alternate': '{basename}.js',
-      \       'type': 'test',
+      \     'src/*.js': {
+      \       'alternate': [
+      \         'tests/unit/{dirname}/{basename}.spec.js',
+      \         'tests/unit/{dirname}/{basename}.spec.ts',
+      \         '{dirname}/{basename}.test.js',
+      \       ],
+      \       'type': 'source'
       \     },
       \     '*.py': {
       \       'alternate': '{dirname}/tests/test_{basename}.py',
