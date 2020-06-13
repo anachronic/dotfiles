@@ -23,7 +23,6 @@
     "vetur.completion.scaffoldSnippetSources": {
         "workspace": "",
         "user": "",
-        "vetur": ""
     },
 
     "eslint.filetypes": [
