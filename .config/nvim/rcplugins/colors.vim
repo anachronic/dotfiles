@@ -17,6 +17,8 @@ function! AnachronicHighlights() abort
 
     highlight CocWarningSign  ctermfg=Brown guifg=#d75f00
     highlight CocWarningVirtualText gui=italic cterm=italic ctermfg=Brown guifg=#ff922b
+
+    highlight LoupeCurrent guibg=#bf361b
 endfunction
 
 augroup AnachronicColors
