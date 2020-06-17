@@ -6,4 +6,4 @@ set sts=4
 set tabstop=4
 
 " Isort mapping
-nnoremap <buffer> <leader>i :Isort<CR>
+nnoremap <buffer> <leader>i :CocCommand python.sortImports<CR>
