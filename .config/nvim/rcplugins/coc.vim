@@ -1,4 +1,4 @@
-Plug 'neoclide/coc.nvim',  {'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'antoinemadec/coc-fzf'
 
 nmap <silent> gd <Plug>(coc-definition)
@@ -36,9 +36,11 @@ let g:coc_global_extensions = [
   \ 'coc-solargraph', 
   \ 'coc-python', 
   \ 'coc-git', 
+  \ 'coc-actions', 
   \ ]
 
 nnoremap <F6> :CocAction<CR>
+nnoremap <C-n> :CocCommand actions.open<CR>
 
 command! -nargs=0 Format :call CocAction('format')
 nnoremap <leader><CR> :Format<CR>
