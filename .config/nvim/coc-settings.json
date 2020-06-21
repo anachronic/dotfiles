@@ -22,7 +22,7 @@
     "vetur.completion.useScaffoldSnippets": false,
     "vetur.completion.scaffoldSnippetSources": {
         "workspace": "",
-        "user": "",
+        "user": ""
     },
 
     "eslint.filetypes": [
