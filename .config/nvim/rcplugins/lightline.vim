@@ -12,6 +12,9 @@ let g:lightline = {
       \   'cocstatus': 'ach#coc#status',
       \   'currentfunction': 'CocCurrentFunction'
       \ },
+      \ 'component': {
+      \   'fileencoding': '%{&fenc!=#""?&fenc:&enc}%<',
+      \ }
       \ }
 
 
