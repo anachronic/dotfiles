@@ -42,6 +42,9 @@ let g:coc_global_extensions = [
 nnoremap <F6> :CocAction<CR>
 nnoremap <C-n> :CocCommand actions.open<CR>
 
+" Trigger autocomplete with C-q
+inoremap <silent><expr> <c-q> coc#refresh()
+
 command! -nargs=0 Format :call CocAction('format')
 nnoremap <leader><CR> :Format<CR>
 
