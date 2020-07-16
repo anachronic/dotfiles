@@ -23,7 +23,8 @@ alias aptrem 'sudo apt remove'
 # configs
 alias dotfiles 'cd ~/dotfiles'
 alias forks 'cd ~/forks'
-alias calcef 'cd ~/forks/calce-plataform-frontend'
 
-# Utils
-alias ccat 'pygmentize -g'
+# Node
+alias rst 'BROWSER=none yarn start'
+alias nrs 'npm run serve --'
+alias nrt 'npm run test --'

@@ -60,6 +60,9 @@ function fish_prompt --description 'Write out the prompt'
         set -g __fish_prompt_normal (set_color normal)
     end
 
+    set -g __fish_git_prompt_color_prefix yellow --bold
+    set -g __fish_git_prompt_color_suffix yellow --bold
+
     set -l color_cwd
     set -l prefix
     set -l suffix
@@ -76,12 +79,24 @@ function fish_prompt --description 'Write out the prompt'
             set suffix '$'
     end
 
+    # virtualfish
+    if set -q VIRTUAL_ENV
+        set_color red --bold
+        printf "("
+        set_color normal
+        printf (basename "$VIRTUAL_ENV")
+        set_color red --bold
+        printf ")"
+        set_color normal
+        printf " "
+    end
+
     # PWD
     set_color $color_cwd
     echo -n (prompt_pwd)
     set_color normal
 
-    printf '%s ' (__fish_vcs_prompt)
+    printf '%s ' (fish_git_prompt " [%s]")
 
     if not test $last_status -eq 0
         set_color $fish_color_error
