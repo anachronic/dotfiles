@@ -54,24 +54,19 @@ alias aptrem='sudo apt remove'
 ## macOS
 alias brewin="brew install"
 
-# Emacs!
-alias emt='emacsclient -t'
-
 # configs
 alias dotfiles='cd ~/dotfiles'
 alias forks='cd ~/forks'
-alias calcef='cd ~/forks/calce-plataform-frontend'
-
-## Tmuxinator
-alias mux='tmuxinator'
 
 # reloads
 alias so='source ~/.zshrc'
 
-# utils
-alias pcat='pygmentize'
-
 # python shortcuts
 alias pac='source env/bin/activate'
+
+# Node
+alias rst='BROWSER=none yarn start'
+alias nrt='npm run test -- '
+alias nrd='npm run dev -- '
 
 #vim:ft=sh
