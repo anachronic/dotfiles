@@ -10,6 +10,9 @@ Plug 'dracula/vim'
 " onehalf
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
 
+" night owl
+Plug 'haishanh/night-owl.vim'
+
 function! AnachronicHighlights() abort
     highlight Folded gui=NONE guibg=#313640 guifg=#5c6370
     highlight CocErrorVirtualText gui=italic cterm=italic guifg=#cc6666

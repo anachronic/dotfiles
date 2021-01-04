@@ -91,7 +91,7 @@ set cursorline
 set backspace=indent,start,eol
 
 " Theme config
-silent! colorscheme onehalfdark
+silent! colorscheme night-owl
 set background=dark
 
 " Always try syntax unless specified in /after

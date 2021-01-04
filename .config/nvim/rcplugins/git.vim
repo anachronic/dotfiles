@@ -1,4 +1,5 @@
 Plug 'tpope/vim-fugitive'
+Plug 'sodapopcan/vim-twiggy'
 
 nnoremap <Leader>gg :Gstatus<CR>
 
