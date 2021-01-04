@@ -137,3 +137,5 @@ if [ -f /Users/nsalas/.tnsrc ]; then
     source /Users/nsalas/.tnsrc 
 fi
 ###-tns-completion-end-###
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
