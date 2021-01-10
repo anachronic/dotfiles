@@ -4,6 +4,7 @@
 
     "coc.source.around.enable": true,
     "coc.source.buffer.enable": false,
+    "coc.preferences.formatOnType": true,
     "coc.preferences.snippets.enable": true,
     "coc.preferences.formatOnSaveFiletypes": [
         "typescript",
@@ -21,6 +22,7 @@
     "python.jediEnabled": false,
 
     "vetur.format.defaultFormatter.html": "prettier",
+    "vetur.validation.style": false,
     "vetur.completion.useScaffoldSnippets": false,
     "vetur.completion.scaffoldSnippetSources": {
         "workspace": "",
@@ -43,4 +45,5 @@
     "diagnostic.virtualTextLineSeparator": " || ",
 
     "javascript.suggestionActions.enabled": false
+
 }
