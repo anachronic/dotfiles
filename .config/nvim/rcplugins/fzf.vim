@@ -11,8 +11,6 @@ if has("unix")
     endif
 endif
 
-nnoremap <C-p> :Files<CR>
-nnoremap <Leader><Leader> :Buffers<CR>
 
 " Make RF, which works like counsel-rg from emacs!
 function! RipgrepFzf(query, fullscreen)
@@ -37,8 +35,6 @@ endfunction
 "
 " Regular old ack
 nnoremap <Leader>a :RF<cr>
-
-nnoremap <leader>h :Help<CR>
 
 function! s:build_quickfix_list(lines)
   call setqflist(map(copy(a:lines), '{ "filename": v:val }'))
