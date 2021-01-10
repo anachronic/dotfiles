@@ -3,6 +3,9 @@
 alias vi='nvim'
 alias vim='LC_ALL=en_US.UTF-8 nvim'
 
+# TUI shortcuts
+alias lg='lazygit'
+
 # SSH. I've been suffering with this lately
 alias ssh='TERM=xterm-256color ssh'
 
