@@ -126,6 +126,12 @@ if has('mksession')
     set viewoptions=cursor,folds
 endif
 
+" Complete opts
+set completeopt=menuone,noinsert
+
+" Show errors in the number column
+set signcolumn=number
+
 
 " Leader remaps
 nnoremap <leader>w :w<CR>
