@@ -37,8 +37,11 @@ let g:coc_global_extensions = [
   \ 'coc-python', 
   \ 'coc-git', 
   \ 'coc-actions', 
+  \ 'coc-tailwindcss', 
+  \ 'coc-pairs', 
   \ ]
 
+" \ 'coc-pairs', 
 nnoremap <F6> :CocAction<CR>
 nnoremap <C-n> :CocCommand actions.open<CR>
 
