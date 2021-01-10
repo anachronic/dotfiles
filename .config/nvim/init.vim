@@ -202,3 +202,6 @@ nnoremap di0 di)
 nnoremap da0 da)
 nnoremap yi0 yi)
 nnoremap ya0 ya)
+
+" Start moving to lua soon!
+lua require('ach_lsp')
