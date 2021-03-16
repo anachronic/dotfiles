@@ -32,5 +32,8 @@
   (setq company-flx-limit 75))
 
 
+(use-package flycheck
+  :ensure t)
+
 
 (provide 'init-lsp)

@@ -103,5 +103,14 @@ point reaches the beginning or end of the buffer, stop there."
   :config
   (editorconfig-mode 1))
 
+;; anzu search
+(use-package anzu
+  :diminish anzu-mode
+  :ensure t
+  :init
+  (global-anzu-mode)
+  :config
+  (setq anzu-cons-mode-line-p nil))
+
 
 (provide 'init-editor)
