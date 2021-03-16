@@ -1,6 +1,7 @@
 ;; write lisp like a decent human being with paredit ;)
 (use-package paredit
   :ensure t
+  :diminish paredit-mode
   :init
   (add-hook 'emacs-lisp-mode-hook       #'enable-paredit-mode)
   (add-hook 'eval-expression-minibuffer-setup-hook #'enable-paredit-mode)

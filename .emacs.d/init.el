@@ -31,8 +31,13 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansi-color-names-vector
+   ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
+ '(custom-enabled-themes '(sanityinc-tomorrow-night))
+ '(custom-safe-themes
+   '("06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" default))
  '(package-selected-packages
-   '(exec-path-from-shell lsp-mode which-key typescript-mode typescript flx treemacs fullframe magit counsel projectile smex company company-mode crux paredit multiple-cursors undo-tree expand-region ivy use-package)))
+   '(color-theme-sanityinc-tomorrow company-flx diminish editorconfig exec-path-from-shell lsp-mode which-key typescript-mode typescript flx treemacs fullframe magit counsel projectile smex company company-mode crux paredit multiple-cursors undo-tree expand-region ivy use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

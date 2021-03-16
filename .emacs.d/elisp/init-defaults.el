@@ -43,7 +43,12 @@
 (unless (package-installed-p 'use-package)
   (package-install 'use-package))
 
+(package-install 'diminish)
+
+(require 'diminish)
 (require 'use-package)
+
+(diminish 'eldoc-mode)
 
 (setq use-package-always-ensure t)
 

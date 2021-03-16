@@ -11,12 +11,25 @@
 
 ;; I'm gonna move this here since it should pretty only use LSP
 (use-package company
+  :ensure t
+  :diminish company-mode
   :init
   (add-hook 'after-init-hook 'global-company-mode)
   :config
   (setq company-minimum-prefix-length 1)
   (setq company-idle-delay 0.0)
+  (dolist (backend '(company-eclim company-semantic company-dabbrev))
+      (delq backend company-backends))
   )
+
+;; Will be trying company-flx for a while.
+(use-package company-flx
+  :ensure t
+  :after flx
+  :init
+  (company-flx-mode +1)
+  :config
+  (setq company-flx-limit 75))
 
 
 

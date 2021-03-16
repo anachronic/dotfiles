@@ -7,6 +7,7 @@
 ;; Also required by evil
 (use-package undo-tree
   :ensure t
+  :diminish undo-tree-mode
   :init
   (global-undo-tree-mode 1)
   :bind (("C-/" . nil)
@@ -19,13 +20,13 @@
 (electric-pair-mode)
 
 ;; Pending delete mode.
-(pending-delete-mode 1)
+(delete-selection-mode 1)
 
 ;; hl line
-(hl-line-mode 1)
+(global-hl-line-mode 1)
 
 ;; display line numbers
-(display-line-numbers-mode 1)
+(global-display-line-numbers-mode 1)
 
 ;; No dired. Instead use it for multiple cursors
 (global-unset-key (kbd "s-D"))
@@ -42,10 +43,12 @@
 ;; WLR is really a must. Can't do without this
 (use-package whole-line-or-region
   :ensure t
+  :diminish whole-line-or-region-local-mode
   :bind (("s-S-<backspace>" . whole-line-or-region-kill-region)
 	 ("s-c" . whole-line-or-region-kill-ring-save))
   :init
-  (add-hook 'after-init-hook 'whole-line-or-region-global-mode))
+  (add-hook 'after-init-hook 'whole-line-or-region-global-mode)
+  )
 
 ;; Handling annoying buffers
 (global-set-key (kbd "C-q") 'bury-buffer)
@@ -90,7 +93,15 @@ point reaches the beginning or end of the buffer, stop there."
   :bind (("s-S-<return>" . crux-smart-open-line-above)
 	 ("s-<return>" . crux-smart-open-line)))
 
+;; Everything seems cluttered without this
 (setq-default line-spacing 2)
+
+;; Editorconfig
+(use-package editorconfig
+  :ensure t
+  :diminish editorconfig-mode
+  :config
+  (editorconfig-mode 1))
 
 
 (provide 'init-editor)
