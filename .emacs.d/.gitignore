@@ -7,3 +7,7 @@ transient
 auto-save-list/
 .lsp-eslint-choices
 eshell/history
+.lsp-session-v1
+projectile-bookmarks.eld
+recentf
+.mc-lists.el
