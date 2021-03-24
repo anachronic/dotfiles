@@ -86,6 +86,7 @@ point reaches the beginning or end of the buffer, stop there."
 (global-set-key (kbd "s-<right>") 'move-end-of-line)
 (global-set-key (kbd "s-<up>") 'beginning-of-buffer)
 (global-set-key (kbd "s-<down>") 'end-of-buffer)
+(global-set-key (kbd "s-<backspace>") 'crux-kill-line-backwards)
 
 ;; Rather have crux define the functions than have to write them myself
 (use-package crux

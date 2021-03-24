@@ -6,7 +6,7 @@
   :init
   (ivy-mode 1)
   :config
-  :config
+  (setq ivy-use-virtual-buffers t)
   (setq ivy-re-builders-alist
         '((swiper . ivy--regex-plus)
           (counsel-git-grep . ivy--regex-plus)

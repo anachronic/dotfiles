@@ -16,6 +16,8 @@
 
 (require 'init-ui)
 
+(require 'init-recentf)
+
 ;; This file is for internal emacs setup
 (require 'init-dev)
 
@@ -38,10 +40,10 @@
  '(custom-safe-themes
    '("06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" default))
  '(package-selected-packages
-   '(yaml-mode flycheck anzu spaceline graphql-mode color-theme-sanityinc-tomorrow company-flx diminish editorconfig exec-path-from-shell lsp-mode which-key typescript-mode typescript flx treemacs fullframe magit counsel projectile smex company company-mode crux paredit multiple-cursors undo-tree expand-region ivy use-package)))
+   '(eglot company-lsp dockerfile-mode yaml-mode flycheck anzu spaceline graphql-mode color-theme-sanityinc-tomorrow company-flx diminish editorconfig exec-path-from-shell lsp-mode which-key typescript-mode typescript flx treemacs fullframe magit counsel projectile smex company company-mode crux paredit multiple-cursors undo-tree expand-region ivy use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(lsp-face-highlight-read ((t (:inherit highlight :underline nil)))))
