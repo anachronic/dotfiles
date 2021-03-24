@@ -16,9 +16,4 @@
   (color-theme-sanityinc-tomorrow-night)
   )
 
-(use-package spaceline
-  :ensure t
-  :init
-  (spaceline-spacemacs-theme))
-
 (provide 'init-ui)
