@@ -1,2 +1,2 @@
-" Plug 'Raimondi/delimitMate'
-Plug 'jiangmiao/auto-pairs'
+Plug 'Raimondi/delimitMate'
+" Plug 'jiangmiao/auto-pairs'

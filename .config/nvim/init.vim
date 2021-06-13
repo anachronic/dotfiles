@@ -18,6 +18,9 @@ call plug#begin('~/.config/nvim/plugged')
 call s:SourceConfigFilesIn('rcplugins')
 call plug#end()
 
+lua require('ach_lsp')
+lua require('ach_telescope')
+
 " Then we load own configs.
 " I may move this to their separate files if the config gets too big
 filetype plugin indent on
@@ -127,13 +130,16 @@ if has('mksession')
 endif
 
 " Complete opts
-set completeopt=menuone,noinsert
+" set completeopt=menuone,noinsert
+set completeopt=menuone,noselect
 
 " Show errors in the number column
 set signcolumn=number
 
+" Allow lua << EOF like syntax highlighting
+let g:vimsyn_embed= 'l'
 
-" Leader remaps
+"Leader remaps
 nnoremap <leader>w :w<CR>
 nnoremap <leader>W :wq<CR>
 nnoremap <leader>q :q<CR>
@@ -180,28 +186,4 @@ nnoremap <Up> :cprevious<CR>
 cnoremap <expr> <Tab> getcmdtype() == '/' \|\| getcmdtype() == '?' ? '<CR>/<C-r>/' : '<C-z>'
 cnoremap <expr> <S-Tab> getcmdtype() == '/' \|\| getcmdtype() == '?' ? '<CR>?<C-r>/' : '<S-Tab>'
 
-" Insert renamps
-inoremap <C-v> <C-o>P:noh
-
-" Remap quote shortcuts
-nnoremap ciq ci"
-nnoremap caq ca"
-nnoremap viq vi"
-nnoremap vaq va"
-nnoremap diq di"
-nnoremap daq da"
-nnoremap yiq yi"
-nnoremap yaq ya"
-
-" Remap paren shortcuts
-nnoremap ci0 ci)
-nnoremap ca0 ca)
-nnoremap vi0 vi)
-nnoremap va0 va)
-nnoremap di0 di)
-nnoremap da0 da)
-nnoremap yi0 yi)
-nnoremap ya0 ya)
-
 " Start moving to lua soon!
-lua require('ach_lsp')
