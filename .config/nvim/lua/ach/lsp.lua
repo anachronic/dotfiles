@@ -44,11 +44,11 @@ end
 
 -- efm
 -- brew install efm-langserver
+-- will need eslint, flake8 and prettier
 require'lspconfig'.efm.setup{
     on_attach = on_attach_efm,
 }
 
--- npm i -g vuels tsserver pyright diagnostic-languageserver
 local function organize_imports()
     local params = {
         command = "_typescript.organizeImports",

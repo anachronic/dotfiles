@@ -1,1 +1,0 @@
-Plug 'justinmk/vim-sneak'

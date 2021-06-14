@@ -1,4 +1,12 @@
 local actions = require('telescope.actions')
+local util = require('ach.util')
+
+local map = util.map
+
+map('n', '<leader>h', '<cmd>Telescope help_tags<CR>')
+map('n', '<C-p>', '<cmd>Telescope find_files<CR>')
+map('n', '<leader>b', '<cmd>Telescope buffers<cr>')
+map('n', '<leader>a', '<cmd>Telescope live_grep<cr>')
 
 require('telescope').setup{
   defaults = {
@@ -44,9 +52,6 @@ require('telescope').setup{
     file_previewer = require'telescope.previewers'.vim_buffer_cat.new,
     grep_previewer = require'telescope.previewers'.vim_buffer_vimgrep.new,
     qflist_previewer = require'telescope.previewers'.vim_buffer_qflist.new,
-
-    -- Developer configurations: Not meant for general override
-    -- buffer_previewer_maker = require'telescope.previewers'.buffer_previewer_maker,
 
     mappings = {
       i = {
