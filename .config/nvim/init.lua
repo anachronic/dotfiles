@@ -1,51 +1,48 @@
-vim.cmd 'packadd paq-nvim'
+vim.fn['plug#begin'](vim.fn.expand('~/.config/nvim/plugged'))
+vim.cmd([[Plug 'neovim/nvim-lspconfig']])
+vim.cmd([[Plug 'hrsh7th/nvim-compe']])
+vim.cmd([[Plug 'TimUntersberger/neogit']]);                 -- finally some magic around git
+vim.cmd([[Plug 'tpope/vim-fugitive']]);                     -- still quite useful despite a little dated
 
-require 'paq-nvim' {
-    'savq/paq-nvim';
+vim.cmd([[Plug 'scrooloose/nerdtree']])
 
-    'neovim/nvim-lspconfig';
-    'hrsh7th/nvim-compe';
-    'TimUntersberger/neogit';                  -- finally some magic around git
-    'tpope/vim-fugitive';                      -- still quite useful despite a little dated
+vim.cmd([[Plug 'nvim-lua/popup.nvim']])
+vim.cmd([[Plug 'nvim-lua/plenary.nvim']])
+vim.cmd([[Plug 'nvim-telescope/telescope.nvim']])
+vim.cmd([[Plug 'wincent/terminus']]);                       -- focus report
 
-    'scrooloose/nerdtree';
+vim.cmd([[Plug 'hoob3rt/lualine.nvim']])
+vim.cmd([[Plug 'junegunn/seoul256.vim']])
 
-    'nvim-lua/popup.nvim';
-    'nvim-lua/plenary.nvim';
-    'nvim-telescope/telescope.nvim';
-    'wincent/terminus';                        -- focus report
+vim.cmd([[Plug 'tpope/vim-eunuch']])
+vim.cmd([[Plug 'tpope/vim-abolish']])                      -- coerce casing
+vim.cmd([[Plug 'tpope/vim-repeat']])
+vim.cmd([[Plug 'tpope/vim-surround']])
+vim.cmd([[Plug 'tpope/vim-unimpaired']])
+vim.cmd([[Plug 'tpope/vim-dispatch']])
+vim.cmd([[Plug 'tpope/vim-speeddating']])
+vim.cmd([[Plug 'kshenoy/vim-signature']])
+vim.cmd([[Plug 'justinmk/vim-sneak']])
 
-    'hoob3rt/lualine.nvim';
-    'junegunn/seoul256.vim';
+vim.cmd([[Plug 'tomtom/tcomment_vim']])
+vim.cmd([[Plug 'editorconfig/editorconfig-vim']])
+vim.cmd([[Plug 'godlygeek/tabular']]);                      -- alignment
+vim.cmd([[Plug 'wincent/loupe']])
+vim.cmd([[Plug 'mtth/scratch.vim']])
+vim.cmd([[Plug 'windwp/nvim-autopairs']])
 
-    'tpope/vim-eunuch';
-    'tpope/vim-abolish';                       -- coerce casing
-    'tpope/vim-repeat';
-    'tpope/vim-surround';
-    'tpope/vim-unimpaired';
-    'tpope/vim-dispatch';
-    'tpope/vim-speeddating';
-    'kshenoy/vim-signature';
-    'justinmk/vim-sneak';
+vim.cmd([[Plug 'HerringtonDarkholme/yats.vim']])           -- typescript
+vim.cmd([[Plug 'cespare/vim-toml']])
+vim.cmd([[Plug 'posva/vim-vue']])
+vim.cmd([[Plug 'pangloss/vim-javascript']])
+vim.cmd([[Plug 'maxmellon/vim-jsx-pretty']]);               -- jsx
+vim.cmd([[Plug 'styled-components/vim-styled-components']])
+vim.cmd([[Plug 'jparise/vim-graphql']])
+vim.cmd([[Plug 'cakebaker/scss-syntax.vim']])
+vim.cmd([[Plug 'anachronic/vim-gitignore']])
+vim.cmd([[Plug 'plasticboy/vim-markdown']])
 
-    'tomtom/tcomment_vim';
-    'editorconfig/editorconfig-vim';
-    'godlygeek/tabular';                       -- alignment
-    'wincent/loupe';
-    'mtth/scratch.vim';
-    'windwp/nvim-autopairs';
-
-    'HerringtonDarkholme/yats.vim';            -- typescript
-    'cespare/vim-toml';
-    'posva/vim-vue';
-    'pangloss/vim-javascript';
-    'maxmellon/vim-jsx-pretty';                -- jsx
-    'styled-components/vim-styled-components';
-    'jparise/vim-graphql';
-    'cakebaker/scss-syntax.vim';
-    'anachronic/vim-gitignore';
-    'plasticboy/vim-markdown';
-}
+vim.fn['plug#end']()
 
 vim.o.termguicolors = true                -- its 2021, cmon
 vim.wo.number = true                      -- show line numbers
