@@ -1,3 +1,6 @@
+-- stop dispatch from creating mappings
+vim.g.dispatch_no_maps = 1
+
 vim.fn['plug#begin'](vim.fn.expand('~/.config/nvim/plugged'))
 vim.cmd([[Plug 'neovim/nvim-lspconfig']])
 vim.cmd([[Plug 'hrsh7th/nvim-compe']])
