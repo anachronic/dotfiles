@@ -1,6 +1,9 @@
 local actions = require('telescope.actions')
 local util = require('ach.util')
 
+-- Load highlighting from lspconfig
+require('vim.lsp.diagnostic')._define_default_signs_and_highlights()
+
 local map = util.map
 
 map('n', '<leader>h', '<cmd>Telescope help_tags<CR>')
