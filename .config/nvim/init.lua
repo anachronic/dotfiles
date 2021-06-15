@@ -91,8 +91,7 @@ end
 
 -- configs
 require('ach.lualine')
--- require('ach.lsp')
-require'nvim-autopairs'.setup()
+require('ach.autopairs')
 
 -- MAPPINGS
 local utils = require('ach.util')
