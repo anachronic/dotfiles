@@ -92,6 +92,7 @@ end
 -- configs
 require('ach.lualine')
 require('ach.autopairs')
+require('ach.vue')
 
 -- MAPPINGS
 local utils = require('ach.util')
