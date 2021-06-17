@@ -17,6 +17,7 @@ vim.cmd([[Plug 'wincent/terminus']]);                       -- focus report
 
 vim.cmd([[Plug 'hoob3rt/lualine.nvim']])
 vim.cmd([[Plug 'junegunn/seoul256.vim']])
+vim.cmd([[Plug 'bluz71/vim-nightfly-guicolors']])
 
 vim.cmd([[Plug 'tpope/vim-eunuch']])
 vim.cmd([[Plug 'tpope/vim-abolish']])                      -- coerce casing
@@ -101,8 +102,11 @@ local map = utils.map
 vim.g.mapleader = " " -- leader is space
 
 -- colors
-vim.g.seoul256_background = 233
-vim.cmd('colo seoul256')
+-- vim.g.seoul256_background = 233 -- darkest seoul
+-- vim.cmd('colo seoul256')
+vim.cmd('silent! colorscheme nightfly')
+vim.highlight.create('LspDiagnosticsDefaultError', {ctermbg=0, guifg='#a50c3a'}, false)
+vim.highlight.create('LspDiagnosticsDefaultHint', {ctermbg=0, guifg='#536b54'}, false)
 
 -- Regular vim stuff
 map('n', '<leader>w', ':w<CR>')
