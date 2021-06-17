@@ -1,5 +1,10 @@
 -- stop dispatch from creating mappings
 vim.g.dispatch_no_maps = 1
+vim.g.nvim_tree_show_icons = {
+    git = 0,
+    files = 1,
+    folders = 1
+}
 
 vim.fn['plug#begin'](vim.fn.expand('~/.config/nvim/plugged'))
 vim.cmd([[Plug 'neovim/nvim-lspconfig']])
@@ -9,7 +14,9 @@ vim.cmd([[Plug 'TimUntersberger/neogit']]);                   -- finally some ma
 vim.cmd([[Plug 'tpope/vim-fugitive']]);                       -- still quite useful despite a little dated
 vim.cmd([[Plug 'lewis6991/gitsigns.nvim']]);                  -- git gutter signs
 
-vim.cmd([[Plug 'scrooloose/nerdtree']])
+-- vim.cmd([[Plug 'scrooloose/nerdtree']])
+vim.cmd([[Plug 'kyazdani42/nvim-tree.lua']])
+vim.cmd([[Plug 'kyazdani42/nvim-web-devicons']])
 
 vim.cmd([[Plug 'nvim-lua/popup.nvim']])
 vim.cmd([[Plug 'nvim-lua/plenary.nvim']])
@@ -100,6 +107,7 @@ require('ach.lualine')
 require('ach.autopairs')
 require('ach.vue')
 require('ach.gitsigns')
+require('nvim-web-devicons').setup{}
 -- require('ach.snippets.setup')
 
 -- MAPPINGS
@@ -140,10 +148,6 @@ map('n', '<Up>', '<cmd>cprevious<CR>')
 map('n', 'j', 'gj')
 map('n', 'k', 'gk')
 map('n', 'Y', 'y$')
-
--- NERDTree
-map('n', '<A-1>', '<cmd>NERDTreeToggle<CR>')
-map('n', '<leader>j', '<cmd>NERDTreeFind<CR>')
 
 -- command
 map('c', '<C-a>', '<Home>')
