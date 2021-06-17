@@ -5,22 +5,23 @@ vim.fn['plug#begin'](vim.fn.expand('~/.config/nvim/plugged'))
 vim.cmd([[Plug 'neovim/nvim-lspconfig']])
 vim.cmd([[Plug 'glepnir/lspsaga.nvim']])
 vim.cmd([[Plug 'hrsh7th/nvim-compe']])
-vim.cmd([[Plug 'TimUntersberger/neogit']]);                 -- finally some magic around git
-vim.cmd([[Plug 'tpope/vim-fugitive']]);                     -- still quite useful despite a little dated
+vim.cmd([[Plug 'TimUntersberger/neogit']]);                   -- finally some magic around git
+vim.cmd([[Plug 'tpope/vim-fugitive']]);                       -- still quite useful despite a little dated
+vim.cmd([[Plug 'lewis6991/gitsigns.nvim']]);                  -- git gutter signs
 
 vim.cmd([[Plug 'scrooloose/nerdtree']])
 
 vim.cmd([[Plug 'nvim-lua/popup.nvim']])
 vim.cmd([[Plug 'nvim-lua/plenary.nvim']])
 vim.cmd([[Plug 'nvim-telescope/telescope.nvim']])
-vim.cmd([[Plug 'wincent/terminus']]);                       -- focus report
+vim.cmd([[Plug 'wincent/terminus']]);                         -- focus report
 
 vim.cmd([[Plug 'hoob3rt/lualine.nvim']])
 vim.cmd([[Plug 'junegunn/seoul256.vim']])
 vim.cmd([[Plug 'bluz71/vim-nightfly-guicolors']])
 
 vim.cmd([[Plug 'tpope/vim-eunuch']])
-vim.cmd([[Plug 'tpope/vim-abolish']])                      -- coerce casing
+vim.cmd([[Plug 'tpope/vim-abolish']])                         -- coerce casing
 vim.cmd([[Plug 'tpope/vim-repeat']])
 vim.cmd([[Plug 'tpope/vim-surround']])
 vim.cmd([[Plug 'tpope/vim-unimpaired']])
@@ -31,16 +32,16 @@ vim.cmd([[Plug 'justinmk/vim-sneak']])
 
 vim.cmd([[Plug 'tomtom/tcomment_vim']])
 vim.cmd([[Plug 'editorconfig/editorconfig-vim']])
-vim.cmd([[Plug 'godlygeek/tabular']]);                      -- alignment
+vim.cmd([[Plug 'godlygeek/tabular']]);                        -- alignment
 vim.cmd([[Plug 'wincent/loupe']])
 vim.cmd([[Plug 'mtth/scratch.vim']])
 vim.cmd([[Plug 'windwp/nvim-autopairs']])
 
-vim.cmd([[Plug 'HerringtonDarkholme/yats.vim']])           -- typescript
+vim.cmd([[Plug 'HerringtonDarkholme/yats.vim']])              -- typescript
 vim.cmd([[Plug 'cespare/vim-toml']])
 vim.cmd([[Plug 'posva/vim-vue']])
 vim.cmd([[Plug 'pangloss/vim-javascript']])
-vim.cmd([[Plug 'maxmellon/vim-jsx-pretty']]);               -- jsx
+vim.cmd([[Plug 'maxmellon/vim-jsx-pretty']]);                 -- jsx
 vim.cmd([[Plug 'styled-components/vim-styled-components']])
 vim.cmd([[Plug 'jparise/vim-graphql']])
 vim.cmd([[Plug 'cakebaker/scss-syntax.vim']])
@@ -98,6 +99,8 @@ end
 require('ach.lualine')
 require('ach.autopairs')
 require('ach.vue')
+require('ach.gitsigns')
+-- require('ach.snippets.setup')
 
 -- MAPPINGS
 local utils = require('ach.util')
