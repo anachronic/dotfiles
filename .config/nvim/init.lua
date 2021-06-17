@@ -3,6 +3,7 @@ vim.g.dispatch_no_maps = 1
 
 vim.fn['plug#begin'](vim.fn.expand('~/.config/nvim/plugged'))
 vim.cmd([[Plug 'neovim/nvim-lspconfig']])
+vim.cmd([[Plug 'glepnir/lspsaga.nvim']])
 vim.cmd([[Plug 'hrsh7th/nvim-compe']])
 vim.cmd([[Plug 'TimUntersberger/neogit']]);                 -- finally some magic around git
 vim.cmd([[Plug 'tpope/vim-fugitive']]);                     -- still quite useful despite a little dated
