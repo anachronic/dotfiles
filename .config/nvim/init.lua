@@ -46,6 +46,9 @@ vim.cmd([[Plug 'jparise/vim-graphql']])
 vim.cmd([[Plug 'cakebaker/scss-syntax.vim']])
 vim.cmd([[Plug 'anachronic/vim-gitignore']])
 vim.cmd([[Plug 'plasticboy/vim-markdown']])
+vim.cmd([[Plug 'Vimjas/vim-python-pep8-indent']])             -- indent python correctly, god.
+vim.cmd([[Plug 'tmhedberg/SimpylFold']])                      -- python folding...
+vim.cmd([[Plug 'vim-python/python-syntax']])                  -- python syntax
 
 vim.fn['plug#end']()
 
