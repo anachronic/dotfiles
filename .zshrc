@@ -78,8 +78,21 @@ function +vi-git-untracked() {
 # colors from https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg
 # codes from http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html
 # shorten prompt from https://unix.stackexchange.com/a/273567
-PROMPT='%B%F{005}%n@%m%f%b:%F{13}%1~%f ${vcs_info_msg_0_}%B%F{131}%(?..!)%f%F{blue}$SUFFIX%f%b '
+PROMPT='%B%F{005}%n@%m%f%b:%F{13}%1~%f ${vcs_info_msg_0_}%B%F{003}%(1j.&.)%f%F{131}%(?..!)%f%F{blue}$SUFFIX%f%b '
 RPROMPT='%F{176}%/%f'
+
+# From wincent's
+# I've started to C-z neovim a lot lately
+# Make CTRL-Z background things and unbackground them.
+function fg-bg() {
+  if [[ $#BUFFER -eq 0 ]]; then
+    fg
+  else
+    zle push-input
+  fi
+}
+zle -N fg-bg
+bindkey '^Z' fg-bg
 
 # Tmuxinator support
 if which tmuxinator &> /dev/null
