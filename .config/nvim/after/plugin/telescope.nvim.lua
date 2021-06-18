@@ -41,7 +41,7 @@ require('telescope').setup{
     -- file_sorter =  require'telescope.sorters'.get_fuzzy_file,
     file_sorter =  require'telescope.sorters'.get_fzy_sorter,
     file_ignore_patterns = {},
-    generic_sorter =  require'telescope.sorters'.get_eneric_fuzzy_sorter,
+    generic_sorter =  require'telescope.sorters'.get_fzy_sorter,
     shorten_path = true,
     winblend = 0,
     width = 0.75,
