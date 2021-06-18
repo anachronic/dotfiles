@@ -104,6 +104,7 @@ end
 
 -- configs
 require('ach.lualine')
+require('ach.telescope')
 require('ach.autopairs')
 require('ach.vue')
 require('ach.gitsigns')
