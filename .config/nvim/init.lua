@@ -102,6 +102,11 @@ else
     vim.o.directory = vim.fn.expand('~/.config/nvim/tmp/swap//')
 end
 
+-- MAPPINGS
+local utils = require('ach.util')
+local map = utils.map
+vim.g.mapleader = " " -- leader is space
+
 -- configs
 require('ach.lualine')
 require('ach.telescope')
@@ -110,11 +115,6 @@ require('ach.vue')
 require('ach.gitsigns')
 require('nvim-web-devicons').setup{}
 -- require('ach.snippets.setup')
-
--- MAPPINGS
-local utils = require('ach.util')
-local map = utils.map
-vim.g.mapleader = " " -- leader is space
 
 -- colors
 -- vim.g.seoul256_background = 233 -- darkest seoul
