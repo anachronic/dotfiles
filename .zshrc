@@ -48,7 +48,7 @@ local LVL=$(($SHLVL - 1))
 if [[ $EUID -eq 0 ]]; then
     local SUFFIX=$(printf '#%.0s' {1..$LVL})
 else
-    local SUFFIX=$(printf '$%.0s' {1..$LVL})
+    local SUFFIX=$(printf '❯%.0s' {1..$LVL})
 fi
 setopt prompt_subst
 
