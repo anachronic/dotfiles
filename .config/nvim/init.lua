@@ -112,6 +112,7 @@ require('ach.lualine')
 require('ach.telescope')
 require('ach.autopairs')
 require('ach.vue')
+require('ach.scratch')
 require('ach.gitsigns')
 require('nvim-web-devicons').setup{}
 -- require('ach.snippets.setup')
