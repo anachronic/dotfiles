@@ -76,12 +76,6 @@ require'lspconfig'.tsserver.setup{
     }
 }
 
--- pyright
--- npm i -g pyright
--- require'lspconfig'.pyright.setup{
---     on_attach = on_attach
--- }
-
 -- jedi language server
 -- pipx install jedi-language-server?
 require'lspconfig'.jedi_language_server.setup{
