@@ -6,4 +6,8 @@ function util.map(mode, lhs, rhs, opts)
     vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
+function util.plug(repository)
+    vim.cmd("Plug '" .. repository .. "'")
+end
+
 return util
