@@ -7,56 +7,56 @@ vim.g.nvim_tree_show_icons = {
 }
 
 vim.fn['plug#begin'](vim.fn.expand('~/.config/nvim/plugged'))
-vim.cmd([[Plug 'neovim/nvim-lspconfig']])
-vim.cmd([[Plug 'glepnir/lspsaga.nvim']])
-vim.cmd([[Plug 'hrsh7th/nvim-compe']])
-vim.cmd([[Plug 'TimUntersberger/neogit']]);                   -- finally some magic around git
-vim.cmd([[Plug 'tpope/vim-fugitive']]);                       -- still quite useful despite a little dated
-vim.cmd([[Plug 'lewis6991/gitsigns.nvim']]);                  -- git gutter signs
+vim.cmd([[Plug 'neovim/nvim-lspconfig']])                   -- LSP
+vim.cmd([[Plug 'glepnir/lspsaga.nvim']])                    -- UI Improvements for LSP, not using it much though
+vim.cmd([[Plug 'hrsh7th/nvim-compe']])                      -- fast as hell completion
+vim.cmd([[Plug 'TimUntersberger/neogit']]);                 -- finally some magic around git
+vim.cmd([[Plug 'tpope/vim-fugitive']]);                     -- still quite useful despite a little dated
+vim.cmd([[Plug 'lewis6991/gitsigns.nvim']]);                -- git gutter signs
 
--- vim.cmd([[Plug 'scrooloose/nerdtree']])
-vim.cmd([[Plug 'kyazdani42/nvim-tree.lua']])
-vim.cmd([[Plug 'kyazdani42/nvim-web-devicons']])
+                                                            -- vim.cmd([[Plug 'scrooloose/nerdtree']])
+vim.cmd([[Plug 'kyazdani42/nvim-tree.lua']])                -- Great NERDTree replacement
+vim.cmd([[Plug 'kyazdani42/nvim-web-devicons']])            -- Required for tree to work, kind of a hassle
 
-vim.cmd([[Plug 'nvim-lua/popup.nvim']])
-vim.cmd([[Plug 'nvim-lua/plenary.nvim']])
-vim.cmd([[Plug 'nvim-telescope/telescope.nvim']])
-vim.cmd([[Plug 'wincent/terminus']]);                         -- focus report
+vim.cmd([[Plug 'nvim-lua/popup.nvim']])                     -- Telescope dep
+vim.cmd([[Plug 'nvim-lua/plenary.nvim']])                   -- Telescope dep
+vim.cmd([[Plug 'nvim-telescope/telescope.nvim']])           -- Live grep, find files, buffers, etc. Unusable without fzy algorithm
+vim.cmd([[Plug 'wincent/terminus']]);                       -- focus report
 
-vim.cmd([[Plug 'hoob3rt/lualine.nvim']])
-vim.cmd([[Plug 'junegunn/seoul256.vim']])
-vim.cmd([[Plug 'bluz71/vim-nightfly-guicolors']])
+vim.cmd([[Plug 'hoob3rt/lualine.nvim']])                    -- great statusline
+vim.cmd([[Plug 'junegunn/seoul256.vim']])                   -- Not currently being used. TODO: remove?
+vim.cmd([[Plug 'bluz71/vim-nightfly-guicolors']])           -- Current color scheme, works for me
 
-vim.cmd([[Plug 'tpope/vim-eunuch']])
-vim.cmd([[Plug 'tpope/vim-abolish']])                         -- coerce casing
-vim.cmd([[Plug 'tpope/vim-repeat']])
-vim.cmd([[Plug 'tpope/vim-surround']])
-vim.cmd([[Plug 'tpope/vim-unimpaired']])
-vim.cmd([[Plug 'tpope/vim-dispatch']])
-vim.cmd([[Plug 'tpope/vim-speeddating']])
-vim.cmd([[Plug 'kshenoy/vim-signature']])
-vim.cmd([[Plug 'justinmk/vim-sneak']])
+vim.cmd([[Plug 'tpope/vim-eunuch']])                        -- frequently use :Delete and :Rename
+vim.cmd([[Plug 'tpope/vim-abolish']])                       -- coerce casing
+vim.cmd([[Plug 'tpope/vim-repeat']])                        -- dot repetitions
+vim.cmd([[Plug 'tpope/vim-surround']])                      -- ysiw and cs'. I use this a lot
+vim.cmd([[Plug 'tpope/vim-unimpaired']])                    -- Haven't been using qf a lot lately. TODO: check if should be removed
+vim.cmd([[Plug 'tpope/vim-dispatch']])                      -- Also haven't been using it. TODO: maybe remove?
+vim.cmd([[Plug 'tpope/vim-speeddating']])                   -- Seems useful but haven't used it
+vim.cmd([[Plug 'kshenoy/vim-signature']])                   -- Marks, haven't been using it but I should
+vim.cmd([[Plug 'justinmk/vim-sneak']])                      -- TODO: Maybe replace with ggandor/lightspeed.nvim
 
-vim.cmd([[Plug 'tomtom/tcomment_vim']])
-vim.cmd([[Plug 'editorconfig/editorconfig-vim']])
-vim.cmd([[Plug 'godlygeek/tabular']]);                        -- alignment
-vim.cmd([[Plug 'wincent/loupe']])
-vim.cmd([[Plug 'mtth/scratch.vim']])
-vim.cmd([[Plug 'windwp/nvim-autopairs']])
+vim.cmd([[Plug 'tomtom/tcomment_vim']])                     -- Best comments out there. Don't even wanna try anything else
+vim.cmd([[Plug 'editorconfig/editorconfig-vim']])           -- Using this at work
+vim.cmd([[Plug 'godlygeek/tabular']]);                      -- :Tab for alignment. Works surprisingly well. also dep for markdown
+vim.cmd([[Plug 'wincent/loupe']])                           -- Better search. I find this plugin beautiful
+vim.cmd([[Plug 'mtth/scratch.vim']])                        -- Scratch buffer via gs. Nice plugin
+vim.cmd([[Plug 'windwp/nvim-autopairs']])                   -- This one doesn't really work all that well. TODO: find something better
 
-vim.cmd([[Plug 'HerringtonDarkholme/yats.vim']])              -- typescript
-vim.cmd([[Plug 'cespare/vim-toml']])
-vim.cmd([[Plug 'posva/vim-vue']])
-vim.cmd([[Plug 'pangloss/vim-javascript']])
-vim.cmd([[Plug 'maxmellon/vim-jsx-pretty']]);                 -- jsx
-vim.cmd([[Plug 'styled-components/vim-styled-components']])
-vim.cmd([[Plug 'jparise/vim-graphql']])
-vim.cmd([[Plug 'cakebaker/scss-syntax.vim']])
-vim.cmd([[Plug 'anachronic/vim-gitignore']])
-vim.cmd([[Plug 'plasticboy/vim-markdown']])
-vim.cmd([[Plug 'Vimjas/vim-python-pep8-indent']])             -- indent python correctly, god.
-vim.cmd([[Plug 'tmhedberg/SimpylFold']])                      -- python folding...
-vim.cmd([[Plug 'vim-python/python-syntax']])                  -- python syntax
+vim.cmd([[Plug 'HerringtonDarkholme/yats.vim']])            -- I believe this syntax is better
+vim.cmd([[Plug 'cespare/vim-toml']])                        -- Been using TOML files for some projects
+vim.cmd([[Plug 'posva/vim-vue']])                           -- Vue...
+vim.cmd([[Plug 'pangloss/vim-javascript']])                 -- js indentation
+vim.cmd([[Plug 'maxmellon/vim-jsx-pretty']]);               -- jsx. React
+vim.cmd([[Plug 'styled-components/vim-styled-components']]) -- Styled components syntax
+vim.cmd([[Plug 'jparise/vim-graphql']])                     -- Graphql syntax
+vim.cmd([[Plug 'cakebaker/scss-syntax.vim']])               -- SCSS. Haven't been using. TODO: remove??
+vim.cmd([[Plug 'anachronic/vim-gitignore']])                -- gitignore syntax. Forked because original has a bunch of snippets
+vim.cmd([[Plug 'plasticboy/vim-markdown']])                 -- Markdown. This one gives expr folding I believe
+vim.cmd([[Plug 'Vimjas/vim-python-pep8-indent']])           -- 21st century python indentation
+vim.cmd([[Plug 'tmhedberg/SimpylFold']])                    -- python syntax folding
+vim.cmd([[Plug 'vim-python/python-syntax']])                -- Better python syntax highlighting
 
 vim.fn['plug#end']()
 
