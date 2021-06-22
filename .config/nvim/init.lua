@@ -64,8 +64,8 @@ plug('vim-python/python-syntax')                -- Better python syntax highligh
 vim.fn['plug#end']()
 
 vim.o.termguicolors = true                -- its 2021, cmon
-vim.wo.number = true                      -- show line numbers
-vim.wo.relativenumber = true              -- relative numbers
+vim.o.number = true                      -- show line numbers
+vim.o.relativenumber = true              -- relative numbers
 vim.o.scrolloff = 3                       -- a little room for zt and zb
 vim.o.clipboard= "unnamedplus"            -- Use global clipboard, I don't mind
 vim.o.hidden = true                       -- allow hiding buffers with unsaved changes
