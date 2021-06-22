@@ -82,6 +82,7 @@ vim.o.completeopt = 'menuone,noselect'    -- vim compe requires completeopt to b
 vim.wo.signcolumn = 'number'              -- display errors in number column
 vim.g.vimsyn_embed = 'lPr'                -- support embed python lua and ruby
 vim.o.whichwrap = 'b,h,l,s,<,>,[,],~'     -- allow <BS>/h/l/<Left>/<Right>/<Space>, ~ to cross line boundaries
+vim.o.formatoptions = "jql"               -- Stop expanding comments with o, O and <CR>
 
 
 -- use spaces and indent to 4 by default
