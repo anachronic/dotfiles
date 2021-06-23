@@ -47,43 +47,49 @@ plug('wincent/loupe')                           -- Better search. I find this pl
 plug('mtth/scratch.vim')                        -- Scratch buffer via gs. Nice plugin
 plug('windwp/nvim-autopairs')                   -- This one doesn't really work all that well. TODO: find something better
 
-plug('HerringtonDarkholme/yats.vim')            -- I believe this syntax is better
-plug('cespare/vim-toml')                        -- Been using TOML files for some projects
-plug('posva/vim-vue')                           -- Vue...
-plug('pangloss/vim-javascript')                 -- js indentation
-plug('maxmellon/vim-jsx-pretty')                -- jsx. React
-plug('styled-components/vim-styled-components') -- Styled components syntax
-plug('jparise/vim-graphql')                     -- Graphql syntax
-plug('cakebaker/scss-syntax.vim')               -- SCSS. Haven't been using. TODO: remove??
-plug('anachronic/vim-gitignore')                -- gitignore syntax. Forked because original has a bunch of snippets
-plug('plasticboy/vim-markdown')                 -- Markdown. This one gives expr folding I believe
-plug('Vimjas/vim-python-pep8-indent')           -- 21st century python indentation
-plug('tmhedberg/SimpylFold')                    -- python syntax folding
-plug('vim-python/python-syntax')                -- Better python syntax highlighting
+-- Treesitter seems to do way better than any other plugin.
+vim.cmd([[Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}]])
+
+-- TODO: Remove the following block
+-- plug('HerringtonDarkholme/yats.vim')            -- I believe this syntax is better
+-- plug('cespare/vim-toml')                        -- Been using TOML files for some projects
+-- plug('posva/vim-vue')                           -- Vue...
+-- plug('pangloss/vim-javascript')                 -- js indentation
+-- plug('maxmellon/vim-jsx-pretty')                -- jsx. React
+-- plug('styled-components/vim-styled-components') -- Styled components syntax
+-- plug('jparise/vim-graphql')                     -- Graphql syntax
+-- plug('cakebaker/scss-syntax.vim')               -- SCSS. Haven't been using. TODO: remove??
+-- plug('anachronic/vim-gitignore')                -- gitignore syntax. Forked because original has a bunch of snippets
+-- plug('plasticboy/vim-markdown')                 -- Markdown. This one gives expr folding I believe
+-- plug('Vimjas/vim-python-pep8-indent')           -- 21st century python indentation
+-- plug('tmhedberg/SimpylFold')                    -- python syntax folding
+-- plug('vim-python/python-syntax')                -- Better python syntax highlighting
 
 vim.fn['plug#end']()
 
-vim.o.termguicolors = true                -- its 2021, cmon
-vim.o.number = true                      -- show line numbers
-vim.o.relativenumber = true              -- relative numbers
-vim.o.scrolloff = 3                       -- a little room for zt and zb
-vim.o.clipboard= "unnamedplus"            -- Use global clipboard, I don't mind
-vim.o.hidden = true                       -- allow hiding buffers with unsaved changes
-vim.o.mouse = 'a'                         -- use the mouse
-vim.o.joinspaces = false                  -- don't join spaces with J
-vim.o.shortmess = vim.o.shortmess .. 'AI' -- No swapfile messages, no splash screen
+vim.o.termguicolors = true             -- its 2021, cmon
+vim.o.number = true                    -- show line numbers
+vim.o.relativenumber = true            -- relative numbers
+vim.o.scrolloff = 3                    -- a little room for zt and zb
+vim.o.clipboard= "unnamedplus"         -- Use global clipboard, I don't mind
+vim.o.hidden = true                    -- allow hiding buffers with unsaved changes
+vim.o.mouse = 'a'                      -- use the mouse
+vim.o.joinspaces = false               -- don't join spaces with J
+vim.o.shortmess = 'filmnrxoOtTAIcF'    -- noswapfile, nosplash, mostly defaults
 vim.o.splitright = true
 vim.o.splitbelow = true
-vim.wo.cursorline = true                  -- highlight cursor line
-vim.o.backspace = 'indent,eol,start'      -- allow unrestricted backspacing
-vim.wo.foldmethod = 'syntax'              -- always try syntax folding
-vim.wo.foldlevel = 99                     -- don't let folding get in the way
-vim.o.completeopt = 'menuone,noselect'    -- vim compe requires completeopt to be set to these
-vim.wo.signcolumn = 'number'              -- display errors in number column
-vim.g.vimsyn_embed = 'lPr'                -- support embed python lua and ruby
-vim.o.whichwrap = 'b,h,l,s,<,>,[,],~'     -- allow <BS>/h/l/<Left>/<Right>/<Space>, ~ to cross line boundaries
-vim.o.formatoptions = "jql"               -- Stop expanding comments with o, O and <CR>
+vim.wo.cursorline = true               -- highlight cursor line
+vim.o.backspace = 'indent,eol,start'   -- allow unrestricted backspacing
+vim.wo.foldlevel = 99                  -- don't let folding get in the way
+vim.o.completeopt = 'menuone,noselect' -- vim compe requires completeopt to be set to these
+vim.wo.signcolumn = 'number'           -- display errors in number column
+vim.g.vimsyn_embed = 'lPr'             -- support embed python lua and ruby
+vim.o.whichwrap = 'b,h,l,s,<,>,[,],~'  -- allow <BS>/h/l/<Left>/<Right>/<Space>, ~ to cross line boundaries
+vim.o.showmode = false                 -- Don't show -- INSERT -- below. It's in the statusline
 
+-- Folding with tree sitter
+vim.o.foldmethod = 'expr'                            -- treesitter needs expr folding, but should be like syntax
+vim.wo.foldexpr='nvim_treesitter#foldexpr()' -- always try syntax folding
 
 -- use spaces and indent to 4 by default
 vim.o.expandtab = true
@@ -116,6 +122,7 @@ require('ach.autopairs')
 require('ach.vue')
 require('ach.scratch')
 require('ach.gitsigns')
+require('ach.treesitter')
 require('nvim-web-devicons').setup{}
 -- require('ach.snippets.setup')
 
