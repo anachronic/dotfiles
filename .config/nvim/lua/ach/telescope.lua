@@ -46,7 +46,8 @@ require('telescope').setup{
             '--with-filename',
             '--line-number',
             '--column',
-            '--smart-case'
+            '--smart-case',
+            '--hidden',
         },
         prompt_position = "bottom",
         prompt_prefix = "> ",
