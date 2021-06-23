@@ -134,10 +134,10 @@ vim.highlight.create('LspDiagnosticsDefaultError', {ctermbg=0, guifg='#a50c3a'},
 vim.highlight.create('LspDiagnosticsDefaultHint', {ctermbg=0, guifg='#536b54'}, false)
 
 -- Regular vim stuff
-map('n', '<leader>w', ':w<CR>')
-map('n', '<leader>q', ':q<CR>')
-map('n', '<leader>o', ':o<CR>')
-map('n', '<leader>k', ':bd<CR>')
+map('n', '<leader>w', ':write<CR>')
+map('n', '<leader>q', ':quit<CR>')
+map('n', '<leader>o', ':only<CR>')
+map('n', '<leader>k', ':bdelete<CR>')
 map('n', '<leader>;', ':')
 map('n', '<leader>c', '*Ncgn')
 
