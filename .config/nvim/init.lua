@@ -46,6 +46,7 @@ plug('godlygeek/tabular')                       -- :Tab for alignment. Works sur
 plug('wincent/loupe')                           -- Better search. I find this plugin beautiful
 plug('mtth/scratch.vim')                        -- Scratch buffer via gs. Nice plugin
 plug('windwp/nvim-autopairs')                   -- This one doesn't really work all that well. TODO: find something better
+plug('SirVer/ultisnips')                        -- I'd like to get out of python world, but this is the best
 
 -- Treesitter seems to do way better than any other plugin.
 vim.cmd([[Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}]])
@@ -119,6 +120,7 @@ vim.g.mapleader = " " -- leader is space
 require('ach.lualine')
 require('ach.telescope')
 require('ach.autopairs')
+require('ach.ultisnips')
 require('ach.vue')
 require('ach.scratch')
 require('ach.gitsigns')
