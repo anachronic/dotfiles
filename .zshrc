@@ -2,6 +2,9 @@
 # Sanity for this century
 unsetopt flow_control
 
+# Use UTF-8 locale
+export LC_ALL=en_US.UTF-8
+
 # Completion
 autoload -Uz compinit
 zstyle ':completion:*' menu select
