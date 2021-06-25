@@ -32,10 +32,9 @@ local map = util.map
 -- }
 
 map('n', '<leader>h', '<cmd>Telescope help_tags<CR>')
-map('n', '<C-p>', "<cmd>lua require('telescope.builtin').find_files({hidden=true})<CR>")
+map('n', '<C-p>', "<cmd>lua require('telescope.builtin').find_files({hidden=true, previewer=false})<CR>")
 map('n', '<leader>b', '<cmd>Telescope buffers<cr>')
-map('n', '<leader>a', '<cmd>Telescope live_grep<cr>')
-
+map('n', '<leader>a', "<cmd>lua require('telescope.builtin').live_grep({ previewer=false })<cr>")
 
 require('telescope').setup{
     defaults = {
