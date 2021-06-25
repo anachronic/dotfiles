@@ -30,6 +30,9 @@ alias glog='git log --pretty=oneline --abbrev-commit'
 alias ga='git add'
 alias gaa='git add -A'
 
+# npm
+alias nls='npm list --depth=0'
+
 # pacman & AUR
 alias pacin='sudo pacman -S'
 alias pacrem='sudo pacman -R'
@@ -53,9 +56,6 @@ alias aptupg='sudo apt upgrade'
 alias aptq='apt-cache search'
 alias aptlist='apt list --installed'
 alias aptrem='sudo apt remove'
-
-## macOS
-alias brewin="brew install"
 
 # configs
 alias dotfiles='cd ~/dotfiles'
