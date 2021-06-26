@@ -48,6 +48,13 @@ local on_attach_efm = function(client, bufnr)
     end
 end
 
+local on_attach_tsserver = function(client, bufnr)
+    -- EFM will handle formatting for tsserver.
+    client.resolved_capabilities.document_formatting = false
+    client.resolved_capabilities.document_range_formatting = false
+    on_attach(client, bufnr)
+end
+
 -- efm
 -- brew install efm-langserver
 -- will need eslint, flake8 and prettier
