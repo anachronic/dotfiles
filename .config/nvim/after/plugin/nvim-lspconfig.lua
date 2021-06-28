@@ -74,7 +74,7 @@ end
 -- tsserver
 -- npm i -g tsserver
 require'lspconfig'.tsserver.setup{
-    on_attach = on_attach,
+    on_attach = on_attach_tsserver,
     commands = {
         OrganizeImports = {
             organize_imports,
