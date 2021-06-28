@@ -51,6 +51,8 @@ plug('hrsh7th/vim-vsnip')                       -- Annoying JSON snippets that d
 -- Treesitter seems to do way better than any other plugin.
 vim.cmd([[Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}]])
 
+plug('tpope/vim-rails') -- Rails for vim
+
 -- TODO: Remove the following block
 -- plug('HerringtonDarkholme/yats.vim')            -- I believe this syntax is better
 -- plug('cespare/vim-toml')                        -- Been using TOML files for some projects
