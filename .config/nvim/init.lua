@@ -46,7 +46,7 @@ plug('godlygeek/tabular')                       -- :Tab for alignment. Works sur
 plug('wincent/loupe')                           -- Better search. I find this plugin beautiful
 plug('mtth/scratch.vim')                        -- Scratch buffer via gs. Nice plugin
 plug('windwp/nvim-autopairs')                   -- This one doesn't really work all that well. TODO: find something better
-plug('SirVer/ultisnips')                        -- I'd like to get out of python world, but this is the best
+plug('hrsh7th/vim-vsnip')                       -- Annoying JSON snippets that don't depend on python. they're ok
 
 -- Treesitter seems to do way better than any other plugin.
 vim.cmd([[Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}]])
@@ -120,13 +120,13 @@ vim.g.mapleader = " " -- leader is space
 require('ach.lualine')
 require('ach.telescope')
 require('ach.autopairs')
-require('ach.ultisnips')
 require('ach.vue')
 require('ach.scratch')
 require('ach.gitsigns')
 require('ach.treesitter')
+require('ach.tab')
+require('ach.vsnip')
 require('nvim-web-devicons').setup{}
--- require('ach.snippets.setup')
 
 -- colors
 -- vim.g.seoul256_background = 233 -- darkest seoul
@@ -134,6 +134,13 @@ require('nvim-web-devicons').setup{}
 vim.cmd('silent! colorscheme nightfly')
 vim.highlight.create('LspDiagnosticsDefaultError', {ctermbg=0, guifg='#a50c3a'}, false)
 vim.highlight.create('LspDiagnosticsDefaultHint', {ctermbg=0, guifg='#536b54'}, false)
+
+-- Remap tab for compe/vsnip
+map('i', '<Tab>', 'v:lua.tab_complete()', { expr=true })
+map('s', '<Tab>', 'v:lua.tab_complete()', { expr=true })
+map('i', '<S-Tab>', 'v:lua.s_tab_complete()', { expr=true })
+map('s', '<S-Tab>', 'v:lua.s_tab_complete()', { expr=true })
+
 
 -- Regular vim stuff
 map('n', '<leader>w', ':write<CR>')
