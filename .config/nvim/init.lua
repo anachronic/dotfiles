@@ -26,6 +26,7 @@ plug('nvim-lua/plenary.nvim')                   -- Telescope dep
 plug('nvim-telescope/telescope.nvim')           -- Live grep, find files, buffers, etc. Unusable without fzy algorithm
 plug('wincent/terminus')                        -- focus report
 
+plug('wincent/pinnacle')                        -- better highlighting?
 plug('hoob3rt/lualine.nvim')                    -- great statusline
 plug('junegunn/seoul256.vim')                   -- Not currently being used. TODO: remove?
 plug('bluz71/vim-nightfly-guicolors')           -- Current color scheme, works for me
@@ -128,14 +129,8 @@ require('ach.gitsigns')
 require('ach.treesitter')
 require('ach.tab')
 require('ach.vsnip')
+require('ach.colors')
 require('nvim-web-devicons').setup{}
-
--- colors
--- vim.g.seoul256_background = 233 -- darkest seoul
--- vim.cmd('colo seoul256')
-vim.cmd('silent! colorscheme nightfly')
-vim.highlight.create('LspDiagnosticsDefaultError', {ctermbg=0, guifg='#a50c3a'}, false)
-vim.highlight.create('LspDiagnosticsDefaultHint', {ctermbg=0, guifg='#536b54'}, false)
 
 -- Remap tab for compe/vsnip
 map('i', '<Tab>', 'v:lua.tab_complete()', { expr=true })
