@@ -89,6 +89,11 @@ require'lspconfig'.jedi_language_server.setup{
     on_attach = on_attach
 }
 
+-- gem install solargraph
+require'lspconfig'.solargraph.setup{
+    on_attach = on_attach
+}
+
 -- Also set up compe
 require'compe'.setup {
     enabled = true;
