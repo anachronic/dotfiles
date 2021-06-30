@@ -48,6 +48,7 @@ plug('wincent/loupe')                           -- Better search. I find this pl
 plug('mtth/scratch.vim')                        -- Scratch buffer via gs. Nice plugin
 plug('windwp/nvim-autopairs')                   -- This one doesn't really work all that well. TODO: find something better
 plug('hrsh7th/vim-vsnip')                       -- Annoying JSON snippets that don't depend on python. they're ok
+plug('mattn/emmet-vim')                         -- Emmet
 
 -- Treesitter seems to do way better than any other plugin.
 vim.cmd([[Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}]])
@@ -130,6 +131,7 @@ require('ach.treesitter')
 require('ach.tab')
 require('ach.vsnip')
 require('ach.colors')
+require('ach.emmet')
 require('nvim-web-devicons').setup{}
 
 -- Remap tab for compe/vsnip
