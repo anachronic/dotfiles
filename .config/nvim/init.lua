@@ -65,7 +65,7 @@ plug('tpope/vim-rails') -- Rails for vim
 -- plug('jparise/vim-graphql')                     -- Graphql syntax
 -- plug('cakebaker/scss-syntax.vim')               -- SCSS. Haven't been using. TODO: remove??
 -- plug('anachronic/vim-gitignore')                -- gitignore syntax. Forked because original has a bunch of snippets
--- plug('plasticboy/vim-markdown')                 -- Markdown. This one gives expr folding I believe
+plug('plasticboy/vim-markdown')                 -- Markdown. This one gives expr folding I believe
 -- plug('Vimjas/vim-python-pep8-indent')           -- 21st century python indentation
 -- plug('tmhedberg/SimpylFold')                    -- python syntax folding
 -- plug('vim-python/python-syntax')                -- Better python syntax highlighting
