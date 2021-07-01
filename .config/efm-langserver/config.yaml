@@ -211,6 +211,10 @@ languages:
     - <<: *javascript-eslint
     - <<: *javascript-prettier
 
+  vue:
+    - <<: *javascript-eslint
+    - <<: *javascript-prettier
+
   php:
     - <<: *php-phpstan
     - <<: *php-psalm
