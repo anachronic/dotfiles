@@ -1,0 +1,14 @@
+{
+  "scaffold vue2 component": {
+    "prefix": "v2",
+    "body": [
+      "<template>",
+      "</template>",
+      "",
+      "<script>",
+      "$0",
+      "</script>"
+    ],
+    "description": "scaffold vue2 component"
+  }
+}
