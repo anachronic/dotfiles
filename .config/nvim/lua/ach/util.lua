@@ -10,4 +10,9 @@ function util.plug(repository)
     vim.cmd("Plug '" .. repository .. "'")
 end
 
+function util.indent(num)
+    vim.bo.shiftwidth = 4
+    vim.bo.tabstop = 4
+end
+
 return util
