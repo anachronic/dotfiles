@@ -1,9 +1,15 @@
 require'nvim-treesitter.configs'.setup {
-    ensure_installed = 'maintained',
+    ensure_installed = {
+        'query', 'javascript', 'typescript', 'tsx', 'python', 'html',
+        'graphql', 'lua', 'yaml', 'css', 'bash', 'ruby'
+    },
     indent = {
-        enable = true,
+        enable = false,
     },
     highlight = {
         enable = true,
     },
+    autotag = {
+        enable = true,
+    }
 }

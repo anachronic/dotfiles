@@ -52,6 +52,7 @@ plug('mattn/emmet-vim')                         -- Emmet
 
 -- Treesitter seems to do way better than any other plugin.
 vim.cmd([[Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}]])
+plug('windwp/nvim-ts-autotag') -- more treesitter goodness
 plug('leafOfTree/vim-vue-plugin') -- treesitter vue messes up the indentation, so need this...
 
 plug('tpope/vim-rails') -- Rails for vim
