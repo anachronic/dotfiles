@@ -25,6 +25,7 @@ plug('nvim-lua/popup.nvim')                     -- Telescope dep
 plug('nvim-lua/plenary.nvim')                   -- Telescope dep
 plug('nvim-telescope/telescope.nvim')           -- Live grep, find files, buffers, etc. Unusable without fzy algorithm
 plug('wincent/terminus')                        -- focus report
+plug('knubie/vim-kitty-navigator')              -- Navigate kitty and neovim with the same shortcuts
 
 plug('wincent/pinnacle')                        -- better highlighting?
 plug('hoob3rt/lualine.nvim')                    -- great statusline
@@ -153,10 +154,10 @@ map('n', '<leader>;', ':')
 map('n', '<leader>c', '*Ncgn')
 
 -- Window navigation
-map('n', '<C-h>', '<C-w>h')
-map('n', '<C-j>', '<C-w>j')
-map('n', '<C-k>', '<C-w>k')
-map('n', '<C-l>', '<C-w>l')
+-- map('n', '<C-h>', '<C-w>h')
+-- map('n', '<C-j>', '<C-w>j')
+-- map('n', '<C-k>', '<C-w>k')
+-- map('n', '<C-l>', '<C-w>l')
 
 -- swap 0 and ^
 map('n', '0', '^')
