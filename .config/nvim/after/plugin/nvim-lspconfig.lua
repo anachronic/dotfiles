@@ -94,6 +94,22 @@ require'lspconfig'.solargraph.setup{
     on_attach = on_attach
 }
 
+-- npm i -g vuels
+require'lspconfig'.vuels.setup{
+    on_attach = on_attach,
+    init_options = {
+        config = {
+            vetur = {
+                completion = {
+                    autoImport = true,
+                    tagCasing = 'kebab',
+                    useScaffoldSnippets = true
+                }
+            }
+        }
+    }
+}
+
 -- Also set up compe
 require'compe'.setup {
     enabled = true;
