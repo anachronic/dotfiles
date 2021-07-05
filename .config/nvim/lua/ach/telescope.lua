@@ -54,7 +54,6 @@ require('telescope').setup{
             '-g',
             '!poetry.lock',
         },
-        prompt_position = "bottom",
         prompt_prefix = "> ",
         selection_caret = "> ",
         entry_prefix = "  ",
@@ -62,14 +61,6 @@ require('telescope').setup{
         selection_strategy = "reset",
         sorting_strategy = "descending",
         layout_strategy = "horizontal",
-        layout_defaults = {
-            horizontal = {
-                mirror = false,
-            },
-            vertical = {
-                mirror = false,
-            },
-        },
         -- file_sorter =  require'telescope.sorters'.get_fuzzy_file,
         file_sorter =  require'telescope.sorters'.get_fzy_sorter,
         file_ignore_patterns = {
@@ -80,10 +71,6 @@ require('telescope').setup{
         generic_sorter =  require'telescope.sorters'.get_fzy_sorter,
         shorten_path = true,
         winblend = 0,
-        width = 0.75,
-        preview_cutoff = 120,
-        results_height = 1,
-        results_width = 0.8,
         border = {},
         borderchars = { '─', '│', '─', '│', '╭', '╮', '╯', '╰' },
         color_devicons = true,
