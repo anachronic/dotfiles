@@ -58,7 +58,7 @@ plug('leafOfTree/vim-vue-plugin') -- treesitter vue messes up the indentation, s
 plug('tpope/vim-rails') -- Rails for vim
 
 -- TODO: Remove the following block
--- plug('HerringtonDarkholme/yats.vim')            -- I believe this syntax is better
+plug('HerringtonDarkholme/yats.vim')            -- I believe this syntax is better
 -- plug('cespare/vim-toml')                        -- Been using TOML files for some projects
 -- plug('posva/vim-vue')                           -- Vue...
 -- plug('pangloss/vim-javascript')                 -- js indentation
