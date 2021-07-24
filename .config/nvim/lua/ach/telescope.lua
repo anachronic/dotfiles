@@ -69,7 +69,7 @@ require('telescope').setup{
             '.git',
         },
         generic_sorter =  require'telescope.sorters'.get_fzy_sorter,
-        shorten_path = true,
+        -- shorten_path = true,
         winblend = 0,
         border = {},
         borderchars = { '─', '│', '─', '│', '╭', '╮', '╯', '╰' },
