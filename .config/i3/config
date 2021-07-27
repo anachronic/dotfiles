@@ -25,7 +25,7 @@ font pango:monospace 12
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork --color=000000
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -54,6 +54,9 @@ bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+q kill
+
+# Emoji
+bindsym $mod+Control+space exec --no-startup-id rofi -show emoji
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
@@ -120,13 +123,13 @@ bindsym $mod+a focus parent
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1: nav"
 set $ws2 "2: term"
-set $ws3 "3"
-set $ws4 "4"
+set $ws3 "3: telegram"
+set $ws4 "4: discord"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
+set $ws8 "8: mail"
+set $ws9 "9: spot"
 set $ws10 "10"
 
 # switch to workspace
