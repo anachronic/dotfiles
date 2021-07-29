@@ -66,6 +66,7 @@ modules-right = btsink filesystem pulseaudio xkeyboard memory cpu wlan eth tempe
 
 tray-position = right
 tray-padding = 2
+tray-maxsize = 32
 ;tray-background = #0063ff
 
 ;wm-restack = bspwm
