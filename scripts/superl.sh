@@ -1,10 +1,10 @@
 #!/bin/bash
 
 ACTIVE_WINDOW=$(xdotool getactivewindow)
-FIREFOX_WINDOWS=$(xdotool search --class firefox)
+CHROMIUM_WINDOWS=$(xdotool search --class chromium)
 
 if [ -n "${ACTIVE_WINDOW}" ]; then
-  if [[ "${FIREFOX_WINDOWS[@]}" =~ "${ACTIVE_WINDOW}" ]]; then
+  if [[ "${CHROMIUM_WINDOWS[@]}" =~ "${ACTIVE_WINDOW}" ]]; then
     xdotool key --delay 0 --clearmodifiers ctrl+l
   else
     xdotool key --delay 0 --clearmodifiers super+l

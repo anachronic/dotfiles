@@ -58,8 +58,12 @@ bindsym $mod+q kill
 # Emoji
 bindsym $mod+Control+space exec --no-startup-id rofi -show emoji
 
-# start dmenu (a program launcher)
+# Keep dmenu for now
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+
+# Use rofi mostly
+bindsym $mod+space exec --no-startup-id rofi -modi drun#run -show drun
+
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -74,7 +78,7 @@ bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 bindsym --release $mod+l exec --no-startup-id $HOME/dotfiles/scripts/superl.sh
 
-# alternatively, you can use the cursor keys:
+# This is fine for now, can use Mod+Space+{hjkl} for focus
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
@@ -103,15 +107,16 @@ bindsym --release $mod+v exec --no-startup-id $HOME/dotfiles/scripts/superv.sh
 # bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+bindsym $mod+s layout tabbed
+# bindsym $mod+s layout stacking
+# bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+# bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -123,7 +128,7 @@ bindsym $mod+a focus parent
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1: nav"
 set $ws2 "2: term"
-set $ws3 "3: telegram"
+set $ws3 "3: dev"
 set $ws4 "4: discord"
 set $ws5 "5"
 set $ws6 "6"
@@ -192,16 +197,16 @@ bindsym $mod+r mode "resize"
 
 # Window rules
 for_window [title="Picture-in-Picture"] sticky enable # Want PIP in all workspaces
+for_window [class="kruler"] floating enable # Float KRuler cause otherwise it's useless
 # for_window [class=".*"] border pixel 0
+
+# Auto assign workspaces
+for_window [class="Spotify"] move to workspace $ws9
+for_window [class="TelegramDesktop"] move to workspace $ws8
+for_window [class="Evolution"] move to workspace $ws8
 
 # Gap rules
 smart_gaps on # gaps only on >1 container
 smart_borders no_gaps # no gaps => no borders
 gaps outer -10 # outer is all around a container
 gaps inner 10 # outer is - this value. to avoid stupid gaps overall
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-# bar {
-#         status_command i3status
-# }
