@@ -60,9 +60,9 @@ font-4 = feather:style=Medium:size=12;3
 ; font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 ; font-2 = siji:pixelsize=14;1
 
-modules-left = i3 xwindow demo
+modules-left = i3 xwindow
 modules-center =
-modules-right = filesystem pulseaudio xkeyboard memory cpu wlan eth temperature dunst date
+modules-right = btsink filesystem pulseaudio xkeyboard memory cpu wlan eth temperature dunst date
 
 tray-position = right
 tray-padding = 2
@@ -302,14 +302,14 @@ hook-0 = "bash ~/.config/polybar/dunst-polybar.sh"
 
 click-left = dunstctl set-paused toggle && polybar-msg -p %pid% hook dunst 1
 
-[module/demo]
+[module/btsink]
 type = custom/ipc
-hook-0 = echo foobar
-hook-1 = date +%s
-hook-2 = whoami
 initial = 1
-click-left = polybar-msg -p %pid% hook demo 1
-click-right = polybar-msg -p %pid% hook demo 2
-double-click-left = polybar-msg -p %pid% hook demo 3
+format-foreground = ${colors.yellow}
+format-underline = #fc8403
+
+hook-0 = "~/.config/polybar/sink.rb"
+
+click-left = ruby ~/.config/polybar/sink.rb toggle && polybar-msg -p %pid% hook btsink 1
 
 ; vim:ft=dosini
