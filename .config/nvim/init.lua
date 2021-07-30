@@ -60,6 +60,7 @@ plug('tpope/vim-rails') -- Rails for vim
 
 -- TODO: Remove the following block
 plug('HerringtonDarkholme/yats.vim')            -- I believe this syntax is better
+plug('arrufat/vala.vim')                        -- No treesitter for vala. w/e
 -- plug('cespare/vim-toml')                        -- Been using TOML files for some projects
 -- plug('posva/vim-vue')                           -- Vue...
 -- plug('pangloss/vim-javascript')                 -- js indentation

@@ -94,6 +94,13 @@ require'lspconfig'.solargraph.setup{
     on_attach = on_attach
 }
 
+
+-- yay -S vala-language-server
+-- No need in macOS because this is linux-specific
+require'lspconfig'.vala_ls.setup{
+    on_attach = on_attach,
+}
+
 -- npm i -g vuels
 require'lspconfig'.vuels.setup{
     on_attach = on_attach,
