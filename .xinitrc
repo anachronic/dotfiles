@@ -11,4 +11,10 @@ dunst &
 eval $(gnome-keyring-daemon --start)
 export SSH_AUTH_SOCK
 
+# xsecurelock opts
+xset s 300 5
+export XSECURELOCK_PASSWORD_PROMPT=time_hex
+export XSECURELOCK_SHOW_DATETIME=1
+
 exec i3
+# vim: set ft=sh ts=2 sw=0 et:
