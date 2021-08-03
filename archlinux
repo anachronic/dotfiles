@@ -13,8 +13,11 @@ dmenu
 dunst
 xorg
 xorg-xinit
+xss-lock
+xsecurelock
 git
 networkmanager
+network-manager-applet
 playerctl
 neofetch
 postgresql
@@ -23,8 +26,14 @@ zsh
 zsh-completions
 picom
 rofi
+rofi-emoji
 wget
 curl
+efm-langserver
+lsd
+jre-openjdk-headless
+ruby
+vala
 
 mesa
 mesa-vdpau
