@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# TODO: execute this script when new bluetooth headphones are plugged in
 
 def match_or_fail(str, regex)
   match = str.match(regex)
@@ -8,12 +9,22 @@ def match_or_fail(str, regex)
   match[1]
 end
 
+def check_bluetooth(cards)
+  # TODO: Maybe receive device alias from args or env var or stdin?
+  cards.each do |card|
+    match1 = card.match(/\t\tdevice\.bus = "bluetooth"/)
+    match2 = card.match(/\t\tdevice\.alias = "Bose AE2 SoundLink"/)
+    return card unless match1.nil? || match2.nil?
+  end
+
+  exit 1
+end
+
 def get_bluetooth_card_spec
   cards = `pactl list cards`
   cards = cards.split "\n\n"
 
-  # TODO: Fetch the bluetooth card correctly
-  cards[2]
+  check_bluetooth cards
 end
 
 def bluetooth_card_name(spec)
@@ -55,6 +66,6 @@ def main
   end
 end
 
-if __FILE__ == $0
+if __FILE__ == $PROGRAM_NAME
   main
 end
