@@ -34,6 +34,15 @@ lsd
 jre-openjdk-headless
 ruby
 vala
+atool
+graphicsmagic
+ffmpeg
+ghostscript
+ueberzug
+zathura
+zathura-pdf-poppler
+zathura-ps
+zathura-djvu
 
 mesa
 mesa-vdpau
@@ -64,3 +73,5 @@ screenkey
 file-roller
 eog
 evince
+sysstat
+jq
