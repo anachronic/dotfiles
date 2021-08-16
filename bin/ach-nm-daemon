@@ -1,0 +1,10 @@
+#!/bin/sh
+
+nmcli monitor |
+    while IFS='' read -r output; do
+        case $output in
+            *" is now the primary connection" | "Connectivity is now"*)
+                pkill -RTMIN+9 dwmblocks
+                ;;
+        esac
+    done

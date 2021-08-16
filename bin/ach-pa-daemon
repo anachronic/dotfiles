@@ -1,0 +1,11 @@
+#!/bin/sh
+
+pactl subscribe |
+    while IFS='' read -r output; do
+        case $output in
+            *" sink "*)
+                pkill -RTMIN+8 dwmblocks
+                pkill -RTMIN+3 dwmblocks
+                ;;
+        esac
+    done
