@@ -1,0 +1,11 @@
+#!/bin/sh
+
+case $BUTTON in
+    1) dunstctl set-paused toggle ;;
+esac
+
+if [ "$(dunstctl is-paused)" = "false" ]; then
+    echo "🔔"
+else
+    echo "🔕"
+fi

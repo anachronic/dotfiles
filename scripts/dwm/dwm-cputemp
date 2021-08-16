@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# This really depends on what to look at and cpu. Not sure...
+block="k10temp-pci-00c3"
+relevant_temp="Tccd1"
+temp=$(sensors | grep -A 4 "$block" | awk -v t="$relevant_temp" '$0 ~ t {print $2}' | tr -d '+')
+
+# Strip the plus/minus sign at the start
+echo "🌡️ $temp"

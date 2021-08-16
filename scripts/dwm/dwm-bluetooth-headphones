@@ -1,0 +1,16 @@
+#!/bin/sh
+
+case $BUTTON in
+    1) ruby ~/.config/polybar/sink.rb toggle ;;
+esac
+
+bluetooth_sink="bluez_output"
+
+if [[ $(pactl get-default-sink) = "$bluetooth_sink"* ]]; then
+    output=$(ruby ~/.config/polybar/sink.rb)
+else
+    output="no bt headphones"
+fi
+
+printf "🎧 ${output}"
+

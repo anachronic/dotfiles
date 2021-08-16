@@ -1,0 +1,21 @@
+#!/bin/sh
+
+get_ip_for_device() {
+    nmcli device show "$1" | awk '/IP4.ADDRESS/ {print $2}' | awk -F "/" '{print $1}'
+}
+
+# Assumes NetworkManager. I actually don't know anything else
+connected_devices=$(nmcli --color no device | grep -E '^(enp|wlan|wlp|eth)' | grep connected)
+
+connected_ethernet=$(echo "$connected_devices" | grep ethernet)
+connected_wifi=$(echo "$connected_devices" | grep wifi)
+
+if [ -n "$connected_ethernet" ]; then
+    ethernet_device=$(echo "$connected_ethernet" | head -n1 | awk '{print $1}')
+    printf "🌐 %s" $(get_ip_for_device "$ethernet_device")
+elif [ -n "$connected_wifi" ]; then
+    wifi_device=$(echo "$connected_wifi" | head -n1 | awk '{print $1}')
+    printf "📶 %s" $(get_ip_for_device "$wifi_device")
+else
+    echo "🚫 no connection"
+fi
