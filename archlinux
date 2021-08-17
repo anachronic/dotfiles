@@ -43,6 +43,9 @@ zathura
 zathura-pdf-poppler
 zathura-ps
 zathura-djvu
+clipmenu
+sysstat
+jq
 
 mesa
 mesa-vdpau
@@ -73,5 +76,3 @@ screenkey
 file-roller
 eog
 evince
-sysstat
-jq
