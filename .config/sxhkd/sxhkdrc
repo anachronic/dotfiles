@@ -29,3 +29,6 @@ super + shift + E
 
 super + shift + R
     prompt "Are you sure you want to exit to tty?" "killall xinit"
+
+super + alt + v
+    clipmenuinsert
