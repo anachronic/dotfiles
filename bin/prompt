@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Well, this is ridiculous, sh apparently doesn't take \n unlike zsh, so this
+# stupid syntax hack has to be done for this script to work
+
+# Usage: ./prompt "Are you sure?" "killall xinit"
+# This will execute "killall xinit" if user selects yes.
+
+yesorno="No
+Yes"
+
+echo "$yesorno" | [[ $(dmenu -i -p "$1") == "Yes" ]] && $2
