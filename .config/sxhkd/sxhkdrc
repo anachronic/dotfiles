@@ -1,0 +1,31 @@
+# Reload sxhkd
+super + Escape
+    pkill -USR1 -x sxhkd
+
+# Assume pulseaudio/pipewire
+XF86Audio{Raise,Lower}Volume
+    pactl set-sink-volume @DEFAULT_SINK@ {+,-}10%
+
+XF86AudioMute 
+    pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# Playerctl for audio controls
+XF86Audio{Play,Next,Prev}
+    playerctl {play-pause,next,previous}
+
+# Super+v emulates macOS paste
+~super + @v
+    /home/nsalas/dotfiles/scripts/superv.sh
+
+# Super+l is Ctrl+L only in chromium, Super+L otherwise
+~super + @l
+    /home/nsalas/dotfiles/scripts/superl.sh
+
+super + ctrl + q
+    xset s activate
+
+super + shift + E
+    prompt "Are you sure you want to restart dwm?" "killall dwm"
+
+super + shift + R
+    prompt "Are you sure you want to exit to tty?" "killall xinit"
