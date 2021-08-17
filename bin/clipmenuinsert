@@ -1,0 +1,6 @@
+#!/bin/sh
+
+font="NotoSansMono Nerd Font:pixelsize=30"
+prompt="Clipboard >"
+
+clipmenu -c -l 40 -fn "$font" -p "$prompt" && $HOME/dotfiles/scripts/superv.sh
