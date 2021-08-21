@@ -14,20 +14,28 @@ XF86Audio{Play,Next,Prev}
     playerctl {play-pause,next,previous}
 
 # Super+v emulates macOS paste
-~super + @v
-    /home/nsalas/dotfiles/scripts/superv.sh
+# Commented out because sxhkd is not great with @
+# This was moved to dwm and will be kept in i3 (if I ever come back to it anyway)
+# super + @v
+#     /home/nsalas/dotfiles/scripts/superv.sh
 
 # Super+l is Ctrl+L only in chromium, Super+L otherwise
-~super + @l
+super + @l
     /home/nsalas/dotfiles/scripts/superl.sh
 
 super + ctrl + q
     xset s activate
 
-super + shift + E
-    prompt "Are you sure you want to restart dwm?" "killall dwm"
+super + ctrl + space
+    dmenu-emoji
+
+super + ctrl + k
+    dmenu-kill
 
 super + shift + R
+    prompt "Are you sure you want to restart dwm?" "killall dwm"
+
+super + shift + E
     prompt "Are you sure you want to exit to tty?" "killall xinit"
 
 super + alt + v
