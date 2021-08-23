@@ -2,4 +2,4 @@
 
 " Stop auto commenting everywhere
 " needs autocmd because neovim builtins explicitly set formatoptions
-autocmd FileType * set formatoptions=jql
+autocmd FileType * set formatoptions=jqlt
