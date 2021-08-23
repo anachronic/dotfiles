@@ -56,6 +56,7 @@ plug('windwp/nvim-ts-autotag') -- more treesitter goodness
 plug('leafOfTree/vim-vue-plugin') -- treesitter vue messes up the indentation, so need this...
 
 plug('tpope/vim-rails') -- Rails for vim
+plug('kristijanhusak/orgmode.nvim') -- Try orgmode?
 
 -- TODO: Remove the following block
 plug('HerringtonDarkholme/yats.vim')            -- I believe this syntax is better
@@ -137,6 +138,7 @@ require('ach.tab')
 require('ach.vsnip')
 require('ach.colors')
 require('ach.emmet')
+require('ach.orgmode')
 require('nvim-web-devicons').setup{}
 
 -- Remap tab for compe/vsnip
