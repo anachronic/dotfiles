@@ -89,9 +89,24 @@ vim.o.completeopt = 'menuone,noselect' -- vim compe requires completeopt to be s
 vim.wo.signcolumn = 'number'           -- display errors in number column
 vim.g.vimsyn_embed = 'lPr'             -- support embed python lua and ruby
 vim.o.whichwrap = 'b,h,l,s,<,>,[,],~'  -- allow <BS>/h/l/<Left>/<Right>/<Space>, ~ to cross line boundaries
-vim.o.showmode = false                 -- Don't show -- INSERT -- below. It's in the statusline
+vim.o.showmode = false                 -- Don't show "INSERT" below. It's in the statusline
 vim.o.inccommand = 'split'             -- Preview replacements in a split!
 vim.o.foldmethod = 'syntax'            -- treesitter needs expr folding, but should be like syntax
+vim.opt.list = true                    -- show whitespace
+
+vim.opt.listchars = {                  -- Fails if using vim.o, I think vim.opt is better overall
+  nbsp = '⦸',                          -- CIRCLED REVERSE SOLIDUS (U+29B8, UTF-8: E2 A6 B8)
+  extends = '»',                       -- RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK (U+00BB, UTF-8: C2 BB)
+  precedes = '«',                      -- LEFT-POINTING DOUBLE ANGLE QUOTATION MARK (U+00AB, UTF-8: C2 AB)
+  tab = '▷⋯',                          -- WHITE RIGHT-POINTING TRIANGLE (U+25B7, UTF-8: E2 96 B7) + MIDLINE HORIZONTAL ELLIPSIS (U+22EF, UTF-8: E2 8B AF)
+  trail = '•',                         -- BULLET (U+2022, UTF-8: E2 80 A2)
+}
+vim.opt.fillchars = {
+  diff = '∙',                          -- BULLET OPERATOR (U+2219, UTF-8: E2 88 99)
+  eob = ' ',                           -- NO-BREAK SPACE (U+00A0, UTF-8: C2 A0) to suppress ~ at EndOfBuffer
+  fold = '·',                          -- MIDDLE DOT (U+00B7, UTF-8: C2 B7)
+  vert = '┃',                          -- BOX DRAWINGS HEAVY VERTICAL (U+2503, UTF-8: E2 94 83)
+}
 
 -- use spaces and indent to 4 by default
 vim.o.expandtab = true
