@@ -131,6 +131,11 @@ require('ach.emmet')
 require('ach.orgmode')
 require('nvim-web-devicons').setup{}
 
+-- The wincent hack for <Tab> folding
+-- This requires additional term configuration
+map('n', '<Tab>', 'za')
+map('n', '<F6>', '<C-i>')
+
 -- Remap tab for compe/vsnip
 map('i', '<Tab>', 'v:lua.tab_complete()', { expr=true })
 map('s', '<Tab>', 'v:lua.tab_complete()', { expr=true })
