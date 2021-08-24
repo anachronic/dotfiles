@@ -173,3 +173,6 @@ map('n', 'Y', 'y$')
 -- command
 map('c', '<C-a>', '<Home>')
 map('c', '<C-e>', '<End>')
+
+-- get rid of ex mode
+map('n', 'Q', '<nop>')
