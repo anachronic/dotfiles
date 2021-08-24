@@ -46,34 +46,28 @@ plug('editorconfig/editorconfig-vim')           -- Using this at work
 plug('godlygeek/tabular')                       -- :Tab for alignment. Works surprisingly well. also dep for markdown
 plug('wincent/loupe')                           -- Better search. I find this plugin beautiful
 plug('mtth/scratch.vim')                        -- Scratch buffer via gs. Nice plugin
-plug('windwp/nvim-autopairs')                   -- This one doesn't really work all that well. TODO: find something better
+plug('windwp/nvim-autopairs')                   -- I guess this is the best lua one. It's mostly fine
 plug('hrsh7th/vim-vsnip')                       -- Annoying JSON snippets that don't depend on python. they're ok
 plug('mattn/emmet-vim')                         -- Emmet
 
--- Treesitter seems to do way better than any other plugin.
-vim.cmd([[Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}]])
-plug('windwp/nvim-ts-autotag') -- more treesitter goodness
-plug('leafOfTree/vim-vue-plugin') -- treesitter vue messes up the indentation, so need this...
+plug('leafOfTree/vim-vue-plugin')               -- treesitter vue messes up the indentation, so need this...
 
-plug('tpope/vim-rails') -- Rails for vim
-plug('kristijanhusak/orgmode.nvim') -- Try orgmode?
+plug('tpope/vim-rails')                         -- Rails for vim
+plug('kristijanhusak/orgmode.nvim')             -- Try orgmode?
 
--- TODO: Remove the following block
 plug('HerringtonDarkholme/yats.vim')            -- I believe this syntax is better
 plug('arrufat/vala.vim')                        -- No treesitter for vala. w/e
 plug('vim-crystal/vim-crystal')
--- plug('cespare/vim-toml')                        -- Been using TOML files for some projects
--- plug('posva/vim-vue')                           -- Vue...
--- plug('pangloss/vim-javascript')                 -- js indentation
--- plug('maxmellon/vim-jsx-pretty')                -- jsx. React
--- plug('styled-components/vim-styled-components') -- Styled components syntax
--- plug('jparise/vim-graphql')                     -- Graphql syntax
--- plug('cakebaker/scss-syntax.vim')               -- SCSS. Haven't been using. TODO: remove??
--- plug('anachronic/vim-gitignore')                -- gitignore syntax. Forked because original has a bunch of snippets
+plug('pangloss/vim-javascript')                 -- js indentation
+plug('maxmellon/vim-jsx-pretty')                -- jsx. React
+plug('styled-components/vim-styled-components') -- Styled components syntax
+plug('jparise/vim-graphql')                     -- Graphql syntax
+plug('cakebaker/scss-syntax.vim')               -- SCSS. Haven't been using. TODO: remove??
+plug('anachronic/vim-gitignore')                -- gitignore syntax. Forked because original has a bunch of snippets
 plug('plasticboy/vim-markdown')                 -- Markdown. This one gives expr folding I believe
--- plug('Vimjas/vim-python-pep8-indent')           -- 21st century python indentation
--- plug('tmhedberg/SimpylFold')                    -- python syntax folding
--- plug('vim-python/python-syntax')                -- Better python syntax highlighting
+plug('Vimjas/vim-python-pep8-indent')           -- 21st century python indentation
+plug('tmhedberg/SimpylFold')                    -- python syntax folding
+plug('vim-python/python-syntax')                -- Better python syntax highlighting
 
 vim.fn['plug#end']()
 
@@ -97,10 +91,7 @@ vim.g.vimsyn_embed = 'lPr'             -- support embed python lua and ruby
 vim.o.whichwrap = 'b,h,l,s,<,>,[,],~'  -- allow <BS>/h/l/<Left>/<Right>/<Space>, ~ to cross line boundaries
 vim.o.showmode = false                 -- Don't show -- INSERT -- below. It's in the statusline
 vim.o.inccommand = 'split'             -- Preview replacements in a split!
-
--- Folding with tree sitter
-vim.o.foldmethod = 'expr'                            -- treesitter needs expr folding, but should be like syntax
-vim.wo.foldexpr='nvim_treesitter#foldexpr()' -- always try syntax folding
+vim.o.foldmethod = 'syntax'            -- treesitter needs expr folding, but should be like syntax
 
 -- use spaces and indent to 4 by default
 vim.o.expandtab = true
@@ -133,7 +124,6 @@ require('ach.autopairs')
 require('ach.vue')
 require('ach.scratch')
 require('ach.gitsigns')
-require('ach.treesitter')
 require('ach.tab')
 require('ach.vsnip')
 require('ach.colors')
