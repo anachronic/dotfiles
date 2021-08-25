@@ -1,7 +1,7 @@
 # -*- mode: sh; -*-
 # vim redefs
 alias vi='nvim'
-alias vim='LC_ALL=en_US.UTF-8 nvim'
+alias vim='nvim'
 
 # TUI shortcuts
 alias lg='lazygit'
@@ -10,9 +10,11 @@ alias lg='lazygit'
 alias ssh='TERM=xterm-256color ssh'
 
 # Navigation
-alias ls='ls -G'
-alias l='ls -lhFG'
-alias la='ls -alhFG'
+# Turns out macOS uses BSD version of ls and Linux uses GNU. I'm gonna set the
+# CLICOLOR variable in .zshenv for mac and keep the --color=auto for Linux
+alias ls='ls --color=auto'
+alias l='ls -lhF --color=auto'
+alias la='ls -alhF --color=auto'
 alias ..='cd ..'
 
 # git and any vc commands
