@@ -100,12 +100,6 @@ function fg-bg() {
 zle -N fg-bg
 bindkey '^Z' fg-bg
 
-# Tmuxinator support
-if which tmuxinator &> /dev/null
-then
-    source ~/.zsh/tmuxinator.zsh
-fi
-
 # colors in man/less
 man() {
     LESS_TERMCAP_md=$'\e[01;31m' \
