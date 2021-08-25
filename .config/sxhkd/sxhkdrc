@@ -16,12 +16,15 @@ XF86Audio{Play,Next,Prev}
 # Super+v emulates macOS paste
 # Commented out because sxhkd is not great with @
 # This was moved to dwm and will be kept in i3 (if I ever come back to it anyway)
-# super + @v
-#     /home/nsalas/dotfiles/scripts/superv.sh
+@super + @v
+    /home/nsalas/dotfiles/scripts/superv.sh
 
 # Super+l is Ctrl+L only in chromium, Super+L otherwise
 super + @l
     /home/nsalas/dotfiles/scripts/superl.sh
+
+super + Return
+    kitty
 
 super + ctrl + q
     xset s activate
