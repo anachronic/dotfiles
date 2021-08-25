@@ -80,6 +80,12 @@ function +vi-git-untracked() {
   fi
 }
 
+# wincent's
+# Use "cbt" capability ("back_tab", as per `man terminfo`), if we have it:
+if tput cbt &> /dev/null; then
+  bindkey "$(tput cbt)" reverse-menu-complete # make Shift-tab go to previous completion
+fi
+
 # It's worth saying the sources of this:
 # colors from https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg
 # codes from http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html
