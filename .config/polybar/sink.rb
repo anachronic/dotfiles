@@ -17,7 +17,7 @@ def check_bluetooth(cards)
     return card unless match1.nil? || match2.nil?
   end
 
-  exit 1
+  return nil
 end
 
 def get_bluetooth_card_spec
@@ -37,6 +37,9 @@ end
 
 def toggle
   spec_before = get_bluetooth_card_spec
+
+  return if spec_before.nil?
+
   profile_before = bluetooth_card_profile(spec_before)
 
   case profile_before
@@ -58,11 +61,17 @@ end
 def main
   if ARGV.empty?
     spec = get_bluetooth_card_spec
-    puts bluetooth_card_profile(spec)
+
+    if spec.nil?
+      puts '🎧 No bt headphones'
+      exit 0
+    end
+
+    puts "🎧 #{bluetooth_card_profile(spec)}"
   elsif ARGV.length == 1 && ARGV[0] == 'toggle'
     toggle
   else
-    exit 1
+    puts '🎧 No bt headphones'
   end
 end
 
