@@ -37,6 +37,12 @@ map('n', '<leader>b', '<cmd>Telescope buffers<cr>')
 map('n', '<leader>a', "<cmd>lua require('telescope.builtin').live_grep({ previewer=false })<cr>")
 
 require('telescope').setup{
+    pickers = {
+        buffers = {
+            sort_lastused = true,
+            previewer = false,
+        },
+    },
     defaults = {
         vimgrep_arguments = {
             'rg',
