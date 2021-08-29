@@ -32,6 +32,9 @@ super + ctrl + q
 super + ctrl + space
     dmenu-emoji
 
+super + space
+    rofi -show run
+
 super + ctrl + k
     dmenu-kill
 
