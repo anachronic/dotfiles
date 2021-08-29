@@ -4,8 +4,10 @@ pactl subscribe |
     while IFS='' read -r output; do
         case $output in
             *" sink "*)
-                pkill -RTMIN+8 dwmblocks
-                pkill -RTMIN+3 dwmblocks
+                # Not using dwmblocks anymore
+                # pkill -RTMIN+8 dwmblocks
+                # pkill -RTMIN+3 dwmblocks
+                polybar-msg hook btsink 1
                 ;;
         esac
     done
