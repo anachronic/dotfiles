@@ -10,6 +10,9 @@ export EDITOR='nvim'
 # Pager: less
 export PAGER='less'
 
+# Terminal is kitty
+export TERMINAL='kitty'
+
 # macOS colored ls
 export CLICOLOR=1
 
