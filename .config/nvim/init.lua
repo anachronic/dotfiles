@@ -54,6 +54,7 @@ plug('leafOfTree/vim-vue-plugin')               -- treesitter vue messes up the 
 
 plug('tpope/vim-rails')                         -- Rails for vim
 plug('kristijanhusak/orgmode.nvim')             -- Try orgmode?
+plug('tpope/vim-endwise')                       -- Need this for lua/ruby/shell
 
 plug('HerringtonDarkholme/yats.vim')            -- I believe this syntax is better
 plug('arrufat/vala.vim')                        -- No treesitter for vala. w/e
