@@ -4,7 +4,9 @@ nmcli monitor |
     while IFS='' read -r output; do
         case $output in
             *" is now the primary connection" | "Connectivity is now"*)
-                pkill -RTMIN+9 dwmblocks
+                # Not using dwmblocks
+                # pkill -RTMIN+9 dwmblocks
+                polybar-msg hook ach-pa-daemon 1
                 ;;
         esac
     done
