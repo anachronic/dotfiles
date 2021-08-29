@@ -2,7 +2,7 @@
 
 if $(dunstctl is-paused)
 then
-    echo ""
+    echo "🔕"
 else
-    echo ""
+    echo "🔔"
 fi
