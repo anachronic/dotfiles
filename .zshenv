@@ -1,5 +1,7 @@
 # Application-needed exports
 export FZF_DEFAULT_COMMAND="rg --hidden -g '!.git' -l ''"
+export SKIM_DEFAULT_COMMAND="rg --hidden -g '!.git' -l ''"
+export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/.ripgreprc"
 
 # This should be removed soon
 export RANGER_LOAD_DEFAULT_RC=FALSE
