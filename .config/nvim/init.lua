@@ -11,6 +11,9 @@ vim.g.nvim_tree_show_icons = {
 }
 
 vim.fn['plug#begin'](vim.fn.expand('~/.config/nvim/plugged'))
+plug('nvim-lua/popup.nvim')                     -- Common dependency
+plug('nvim-lua/plenary.nvim')                   -- Common dependency
+
 plug('neovim/nvim-lspconfig')                   -- LSP
 plug('glepnir/lspsaga.nvim')                    -- UI Improvements for LSP, not using it much though
 plug('hrsh7th/nvim-compe')                      -- fast as hell completion
@@ -21,9 +24,8 @@ plug('lewis6991/gitsigns.nvim')                 -- git gutter signs
 plug('kyazdani42/nvim-tree.lua')                -- Great NERDTree replacement
 plug('kyazdani42/nvim-web-devicons')            -- Required for tree to work, kind of a hassle
 
-plug('nvim-lua/popup.nvim')                     -- Telescope dep
-plug('nvim-lua/plenary.nvim')                   -- Telescope dep
-plug('nvim-telescope/telescope.nvim')           -- Live grep, find files, buffers, etc. Unusable without fzy algorithm
+plug('ibhagwan/fzf-lua')                        -- Way better than telescope. Requires skim
+plug('vijaymarupudi/nvim-fzf')
 plug('wincent/terminus')                        -- focus report
 
 plug('wincent/pinnacle')                        -- better highlighting?
@@ -135,7 +137,7 @@ vim.g.mapleader = " " -- leader is space
 
 -- configs
 require('ach.lualine')
-require('ach.telescope')
+require('ach.fzf')
 require('ach.autopairs')
 require('ach.vue')
 require('ach.scratch')
