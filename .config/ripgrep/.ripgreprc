@@ -1,0 +1,24 @@
+# Don't exclude hidden paths
+--hidden
+
+# Exclude lock filed
+--glob
+!{package-lock.json,yarn.lock,poetry.lock,Gemfile.lock}
+
+# Exclude annoying pycache folders
+--glob
+!__pycache__/*
+
+# Exclude more annoying python files
+--glob
+!*.pyc
+
+# Exclude git folder
+--glob
+!.git
+
+# Exclude node_modules because we'd go crazy otherwise
+--glob
+!node_modules
+
+# vim: ft=conf
