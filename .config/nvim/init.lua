@@ -55,7 +55,7 @@ plug('preservim/vimux')                         -- Vim + tmux, seems sensible
 
 plug('tpope/vim-rails')                         -- Rails for vim
 plug('kristijanhusak/orgmode.nvim')             -- Try orgmode?
-plug('tpope/vim-endwise')                       -- Need this for lua/ruby/shell
+-- plug('tpope/vim-endwise')                       -- Need this for lua/ruby/shell
 
 plug('leafOfTree/vim-vue-plugin')               -- Vue is a mess everywhere other than vscode. jeez
 plug('HerringtonDarkholme/yats.vim')            -- I believe this syntax is better
