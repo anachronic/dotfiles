@@ -38,7 +38,6 @@ plug('tpope/vim-abolish')                       -- coerce casing
 plug('tpope/vim-repeat')                        -- dot repetitions
 plug('tpope/vim-surround')                      -- ysiw and cs'. I use this a lot
 plug('tpope/vim-unimpaired')                    -- Haven't been using qf a lot lately. TODO: check if should be removed
-plug('tpope/vim-dispatch')                      -- Also haven't been using it. TODO: maybe remove?
 plug('tpope/vim-speeddating')                   -- Seems useful but haven't used it
 plug('kshenoy/vim-signature')                   -- Marks, haven't been using it but I should
 plug('justinmk/vim-sneak')                      -- TODO: Maybe replace with ggandor/lightspeed.nvim
@@ -52,14 +51,15 @@ plug('windwp/nvim-autopairs')                   -- I guess this is the best lua 
 plug('hrsh7th/vim-vsnip')                       -- Annoying JSON snippets that don't depend on python. they're ok
 plug('mattn/emmet-vim')                         -- Emmet
 
-plug('leafOfTree/vim-vue-plugin')               -- treesitter vue messes up the indentation, so need this...
+plug('preservim/vimux')                         -- Vim + tmux, seems sensible
 
 plug('tpope/vim-rails')                         -- Rails for vim
 plug('kristijanhusak/orgmode.nvim')             -- Try orgmode?
 plug('tpope/vim-endwise')                       -- Need this for lua/ruby/shell
 
+plug('leafOfTree/vim-vue-plugin')               -- Vue is a mess everywhere other than vscode. jeez
 plug('HerringtonDarkholme/yats.vim')            -- I believe this syntax is better
-plug('arrufat/vala.vim')                        -- No treesitter for vala. w/e
+plug('arrufat/vala.vim')                        -- Vala. I don't think I'll be using this a lot
 plug('vim-crystal/vim-crystal')
 plug('pangloss/vim-javascript')                 -- js indentation
 plug('maxmellon/vim-jsx-pretty')                -- jsx. React
