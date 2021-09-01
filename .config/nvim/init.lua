@@ -71,6 +71,7 @@ plug('plasticboy/vim-markdown')                 -- Markdown. This one gives expr
 plug('Vimjas/vim-python-pep8-indent')           -- 21st century python indentation
 plug('tmhedberg/SimpylFold')                    -- python syntax folding
 plug('vim-python/python-syntax')                -- Better python syntax highlighting
+plug('cespare/vim-toml')                        -- TOML
 
 vim.fn['plug#end']()
 
