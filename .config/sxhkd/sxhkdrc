@@ -11,12 +11,12 @@ XF86AudioMute
 
 # Playerctl for audio controls
 XF86Audio{Play,Next,Prev}
-    playerctl {play-pause,next,previous}
+    playerctl --player=spotify,%any {play-pause,next,previous}
 
 # Super+v emulates macOS paste
 # Commented out because sxhkd is not great with @
 # This was moved to dwm and will be kept in i3 (if I ever come back to it anyway)
-@super + @v
+super + @v
     /home/nsalas/dotfiles/scripts/superv.sh
 
 # Super+l is Ctrl+L only in chromium, Super+L otherwise
