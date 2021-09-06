@@ -39,7 +39,7 @@ setopt histignorespace
 function t() {
     local dirname=$(basename $PWD)
 
-    if tmux has-session -t $dirname; then
+    if tmux has-session -t $dirname 2>/dev/null 1>/dev/null ; then
         tmux attach -t $dirname
     else
         tmux new -s $dirname
