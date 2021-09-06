@@ -3,6 +3,16 @@
 alias vi='nvim'
 alias vim='nvim'
 
+list() {
+    os=$(uname)
+
+    case $os in
+        "Darwin") ls -G "$@" ;;
+        "Linux") ls --color=auto "$@" ;;
+        *) ls "$@" ;;
+    esac
+}
+
 # TUI shortcuts
 alias lg='lazygit'
 
@@ -10,11 +20,12 @@ alias lg='lazygit'
 alias ssh='TERM=xterm-256color ssh'
 
 # Navigation
-# Turns out macOS uses BSD version of ls and Linux uses GNU. I'm gonna set the
-# CLICOLOR variable in .zshenv for mac and keep the --color=auto for Linux
-alias ls='ls --color=auto'
-alias l='ls -lhF --color=auto'
-alias la='ls -alhF --color=auto'
+# This uses the "list" function defined above that determines if we should use
+# --color=auto or -G depending on Linux/Darwin. Could probably be used for BSD
+# but since I don't use that, I'm not gonna worry about it
+alias ls='list'
+alias l='list -lhF'
+alias la='list -alhF'
 alias ..='cd ..'
 
 # git and any vc commands
