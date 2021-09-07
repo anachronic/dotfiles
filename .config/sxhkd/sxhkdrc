@@ -30,7 +30,7 @@ super + ctrl + q
     xset s activate
 
 super + ctrl + space
-    dmenu-emoji
+    ach-emoji
 
 super + space
     rofi -show run
