@@ -46,6 +46,11 @@ zathura-djvu
 clipmenu
 sysstat
 jq
+isync
+gnupg
+cronie
+skim
+stow
 
 mesa
 mesa-vdpau
