@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Well, this is ridiculous, sh apparently doesn't take \n unlike zsh, so this
 # stupid syntax hack has to be done for this script to work
@@ -9,4 +9,4 @@
 yesorno="No
 Yes"
 
-echo "$yesorno" | [[ $(dmenu -i -p "$1") == "Yes" ]] && $2
+echo "$yesorno" | [[ $(rofi -dmenu -i -p "$1") == "Yes" ]] && $2
