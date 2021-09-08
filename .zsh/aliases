@@ -2,7 +2,7 @@
 # vim redefs
 alias vi='nvim'
 alias vim='nvim'
-alias vgs='nvim ":Neogit"'
+alias vgs='nvim -c ":Neogit"'
 
 list() {
     os=$(uname)
