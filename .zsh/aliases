@@ -17,6 +17,14 @@ list() {
 # TUI shortcuts
 alias lg='lazygit'
 
+lf() {
+    if which lf-ueberzug >/dev/null 2>/dev/null; then
+        command lf-ueberzug
+    else
+        command lf
+    fi
+}
+
 # SSH. I've been suffering with this lately
 alias ssh='TERM=xterm-256color ssh'
 
@@ -86,4 +94,4 @@ alias rst='BROWSER=none yarn start'
 alias nrt='npm run test -- '
 alias nrd='npm run dev -- '
 
-#vim:ft=sh
+# vim:ft=sh
