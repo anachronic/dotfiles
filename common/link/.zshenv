@@ -26,7 +26,7 @@ export LC_ALL=en_US.UTF-8
 typeset -U path
 
 # First party paths
-path+=($HOME/.local/bin $HOME/dotfiles/bin)
+path+=($HOME/.local/bin)
 
 # Vendor paths
 export WORKON_HOME=$HOME/.virtualenvs
