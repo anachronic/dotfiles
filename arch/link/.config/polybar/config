@@ -377,7 +377,7 @@ margin-bottom = 5
 type = custom/ipc
 initial = 1
 
-hook-0 = "bash ~/.config/polybar/dunst-polybar.sh"
+hook-0 = "bash ~/.config/polybar/polybar-dunst"
 
 click-left = dunstctl set-paused toggle && polybar-msg -p %pid% hook dunst 1
 
@@ -393,6 +393,6 @@ click-left = ruby ~/.config/polybar/sink.rb toggle && polybar-msg -p %pid% hook 
 type = custom/ipc
 initial = 1
 
-hook-0 = "~/dotfiles/scripts/dwm/dwm-internet"
+hook-0 = "~/.config/polybar/polybar-internet"
 
 ; vim:ft=dosini

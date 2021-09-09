@@ -3,4 +3,4 @@
 prompt="Clipboard >"
 
 # Settings are set in launch-dwm
-clipmenu -dmenu -p "$prompt" && $HOME/dotfiles/scripts/superv.sh
+clipmenu -dmenu -p "$prompt" && superv.sh

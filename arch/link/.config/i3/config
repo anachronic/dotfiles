@@ -73,7 +73,7 @@ bindsym $super+d exec --no-startup-id i3-dmenu-desktop
 # Use rofi mostly
 bindsym $super+space exec --no-startup-id rofi -modi drun#run -show drun
 
-bindsym --release $mod+l exec --no-startup-id $HOME/dotfiles/scripts/superl.sh
+bindsym --release $mod+l exec --no-startup-id $HOME/.local/bin/superl.sh
 
 # Move with Mod+shift+arrows (which is triggerable with SpaceFN)
 bindsym $super+$shift+Left focus left
@@ -91,7 +91,7 @@ bindsym $super+$alt+Right move right
 # bindsym $mod+h split h
 
 # Some mac-like bindings
-bindsym --release $super+v exec --no-startup-id $HOME/dotfiles/scripts/superv.sh
+bindsym --release $super+v exec --no-startup-id $HOME/.local/bin/superv.sh
 # bindsym --release $mod+c exec --no-startup-id $HOME/dotfiles/scripts/superc.sh
 
 # enter fullscreen mode for the focused container
