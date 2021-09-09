@@ -28,12 +28,12 @@ URxvt.color14: #00ad9c
 URxvt.color7: #a8a19f
 URxvt.color15: #f1efee
 
-URxvt.intensityStyles:	false
-URxvt.depth:		32
-URxvt.font: 		xft:monospace:size=12
-URxvt.scrollBar:	false
-URxvt.cursorColor:	white
-URxvt.letterSpace:      -1
+URxvt.intensityStyles:  false
+URxvt.depth: 32
+URxvt.font: xft:monospace:size=12
+URxvt.scrollBar: false
+URxvt.cursorColor: white
+URxvt.letterSpace: -1
 URxvt.iso14755 : false
 
 !! Extensions
@@ -47,15 +47,8 @@ URxvt.keysym.C-C: perl:clipboard:copy
 URxvt.keysym.C-V: perl:clipboard:paste
 
 !! Rofi
-rofi.color-enabled:	true
-rofi.color-window:	#000, #000, #000
-rofi.color-normal:	#111, #819396, #222, #008ed4, #ffffff
-rofi.color-active:	#002b37, #008ed4, #003643, #008ed4, #66c6ff
-rofi.color-urgent:	#002b37, #da4281, #003643, #008ed4, #890661
-
-rofi.fake-transparency:	true
-rofi.lines:		3
-rofi.bw:		0
-rofi.opacity:		"10"
-rofi.hide-scrollbar:	true
-rofi.width:		30
+! rofi.color-enabled: true
+! rofi.color-window: #000, #000, #000
+! rofi.color-normal: #111, #819396, #222, #008ed4, #ffffff
+! rofi.color-active: #002b37, #008ed4, #003643, #008ed4, #66c6ff
+! rofi.color-urgent: #002b37, #da4281, #003643, #008ed4, #890661
