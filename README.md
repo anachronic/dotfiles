@@ -1,35 +1,23 @@
 # dotfiles
 
-Here be dragons
+Ok, yet another dotfiles repo. Here's the deal
 
-- neovim
-- efm langserver
-- tmux
-- zsh
-- fish (being used occasionally)
-- emacs (Not being used atm)
-- A bunch of legacy stuff that needs to be deleted
-- [ ] kitty
+- I use mostly neovim for **actually editing code**
+- Terminal is kitty, because it has undercurl. Period
+- I use extensively: python stuff, node stuff and soon ruby stuff
+- I have a Linux machine at home. This repo serves as dotfiles for all my
+machines, that means it installs both Linux and macOS dotfiles
+- Installer script is *mostly* updated.
+- There are still legacy packages lying around (like fish). Well, maybe not
+legacy, just not that used, I guess, I still use fish when I need a private
+session as `fish --private` is WAY better than what `zsh` has to offer
 
-## Setup
+## What's still missing to automate
 
-- Install zsh and `chsh` it
-- Install neovim 0.5 (could need LuaJIT)
-- Install efm-langserver
-- Install pipx
-- `pipx install flake8 virtualenvwrapper jedi-language-server`
-- `npm i -g typescript-language-server typescript tree-sitter neovim eslint_d serve`
-- rbenv? (Not quite sure about this one)
-- `gem install solagraph`
-- Go to `flake8`'s venv and install `flake8-efm`
-- Install kitty (honestly in Linux anything is fine, but MacOS needs kitty)
-- Install sauce code pro nerd font (can't remember atm what i did for this)
-- Make symbolic links
+- Brewfile/pacman autoinstall
+- Installation of external tools like dwm/dmenu
+- Installer script should be started after having ruby/stow in the system
+- Extra tools setup: nvm needs to install stuff globally, so do rbenv and pipx.
 
-## Roadmap
-
-- Create a brewfile or whatever to automate OS tools installation
-- Set up configs for both Linux and MacOS (currently being mostly adapted for mac)
-- Use a dotfile organization tool
-- Document what the hell I do when I set up a new machine
-- Maybe do some CI?
+There's still a lot more to do here, but I'm fairly confident that this is
+**better** than what I had before explaining everything.
