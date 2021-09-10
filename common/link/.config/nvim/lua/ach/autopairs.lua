@@ -1,9 +1,16 @@
-require'nvim-autopairs'.setup()
+local npairs = require('nvim-autopairs')
+local rule = require('nvim-autopairs.rule')
+local cond = require('nvim-autopairs.conds')
+
+npairs.setup()
+
+npairs.add_rules({
+    rule('[ ', ' ') -- the regular [] rule will add the missing paren
+})
 
 -- copied from https://github.com/windwp/nvim-autopairs#override-default-values
 
 local remap = vim.api.nvim_set_keymap
-local npairs = require('nvim-autopairs')
 
 _G.MUtils= {}
 
