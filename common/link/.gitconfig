@@ -13,9 +13,9 @@
 [commit]
     excludesfile = ~/.gitignore
 [user]
-	name = Nicolás Salas
-	email = nsalas@fastmail.com
+    name = Nicolás Salas
+    email = nsalas@fastmail.com
 [init]
-	defaultBranch = main
+    defaultBranch = main
 [gpg]
-	program = gpg
+    program = gpg
