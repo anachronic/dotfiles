@@ -1,0 +1,21 @@
+[alias]
+    co = checkout
+    br = branch
+    up = pull --rebase
+    ci = commit
+    st = status
+    root = rev-parse --show-toplevel
+    cl = clone
+    amend = commit --amend --verbose
+    oneline = log --pretty='format:%C(auto)%h%Creset %s%C(auto)%d%Creset %C(magenta bold)(%cr)%Creset %C(cyan)<%aN>%Creset'
+[commit]
+    verbose = true
+[commit]
+    excludesfile = ~/.gitignore
+[user]
+	name = Nicolás Salas
+	email = nsalas@fastmail.com
+[init]
+	defaultBranch = main
+[gpg]
+	program = gpg
