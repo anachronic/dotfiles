@@ -8,7 +8,6 @@ neovim
 ripgrep
 docker
 docker-compose
-i3
 dmenu
 dunst
 xorg
@@ -35,7 +34,7 @@ jre-openjdk-headless
 ruby
 vala
 atool
-graphicsmagic
+graphicsmagick
 ffmpeg
 ghostscript
 ueberzug
@@ -51,6 +50,7 @@ gnupg
 cronie
 skim
 stow
+pcmanfm-qt
 
 mesa
 mesa-vdpau
@@ -76,8 +76,3 @@ chromium
 discord
 telegram-desktop
 screenkey
-
-# Actually check these out carefully, might be better to just install GNOME
-file-roller
-eog
-evince
