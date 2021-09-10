@@ -4,3 +4,4 @@ nohup.out
 .config/.DS_Store
 
 .DS_Store
+mkmf.log

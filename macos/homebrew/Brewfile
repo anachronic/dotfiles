@@ -1,0 +1,102 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+# Securely send things from one computer to another
+brew "croc"
+# Get a file from an HTTP, HTTPS or FTP server
+brew "curl"
+# Command-line tool for DigitalOcean
+brew "doctl"
+# General purpose Language Server
+brew "efm-langserver"
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
+# User-friendly command-line shell for UNIX-like operating systems
+brew "fish"
+# GNU Pretty Good Privacy (PGP) package
+brew "gnupg"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
+# Kubernetes package manager
+brew "helm"
+# User-friendly cURL replacement (command-line HTTP client)
+brew "httpie"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+# Swiss-army knife of markup format conversion
+brew "pandoc"
+# Execute binaries from Python packages in isolated environments
+brew "pipx", link: false
+# Python package management tool
+brew "poetry"
+# Object-relational database system
+brew "postgresql"
+# Persistent key-value database, with built-in net interface
+brew "redis"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# Fuzzy Finder in rust!
+brew "sk"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
+brew "stow"
+# User interface to the TELNET protocol
+brew "telnet"
+# Code-search similar to ack
+brew "the_silver_searcher"
+# Terminal multiplexer
+brew "tmux"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Command-line client for WebSockets
+brew "websocat"
+# Internet file retriever
+brew "wget"
+# UNIX shell (command interpreter)
+brew "zsh"
+# Application launcher and productivity software
+cask "alfred"
+# Desktop password and login vault
+cask "bitwarden"
+# Free and open-source web browser
+cask "chromium"
+# API documentation browser and code snippet manager
+cask "dash5"
+# Databases & SQL IDE
+cask "datagrip"
+# Voice and text chat software
+cask "discord"
+# App to build and share containerized applications and microservices
+cask "docker"
+cask "font-sauce-code-pro-nerd-font"
+# Free and open-source media player
+cask "iina"
+# HTTP and GraphQL Client
+cask "insomnia"
+# Keyboard customizer
+cask "karabiner-elements"
+# GPU-based terminal emulator
+cask "kitty"
+# Controls and monitors all fans on Apple computers
+cask "macs-fan-control"
+# Full TeX Live distribution with GUI applications
+cask "mactex"
+# Reverse proxy, secure introspectable tunnels to localhost
+cask "ngrok"
+# App to write, plan, collaborate, and get organized
+cask "notion"
+# Music streaming service
+cask "spotify"
+# Messaging app with a focus on speed and security
+cask "telegram"
+# Open-source BitTorrent client
+cask "transmission"
+# Video communication and virtual meeting platform
+cask "zoom"
