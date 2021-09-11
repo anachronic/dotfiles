@@ -41,7 +41,7 @@ require'fzf-lua'.setup {
                                         -- by default uses the builtin previewer
   -- provider setup
   files = {
-    previewer         = '',             -- uncomment to override previewer
+    previewer         = false,          -- uncomment to override previewer
     prompt            = 'Files ❯ ',
     cmd               = default_skim_cmd, -- "find . -type f -printf '%P\n'",
     git_icons         = false,           -- show git icons?
@@ -100,7 +100,7 @@ require'fzf-lua'.setup {
     },
   },
   grep = {
-    previewer = '',
+    previewer = false,
     prompt            = 'Rg ❯ ',
     input_prompt      = 'Grep For ❯ ',
     -- cmd               = "rg --vimgrep",
