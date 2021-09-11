@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Copy on linux
+exec xsel --clipboard

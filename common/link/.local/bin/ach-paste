@@ -1,7 +1,0 @@
-#!/bin/sh
-
-if [ "$(uname)" = "Linux" ]; then
-    exec xsel --clipboard
-else
-    exec pbcopy
-fi
