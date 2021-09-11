@@ -1,79 +1,73 @@
--- stop dispatch from creating mappings
 local utils = require('ach.util')
 local map = utils.map
 local plug = utils.plug
 
-vim.g.dispatch_no_maps = 1
 vim.g.nvim_tree_show_icons = {
     git = 0,
     files = 1,
     folders = 1
 }
 
-vim.fn['plug#begin'](vim.fn.expand('~/.config/nvim/plugged'))
-plug('nvim-lua/popup.nvim')                     -- Common dependency
-plug('nvim-lua/plenary.nvim')                   -- Common dependency
+plug('popup.nvim')             -- Common dependency
+plug('plenary.nvim')           -- Common dependency
 
-plug('neovim/nvim-lspconfig')                   -- LSP
-plug('glepnir/lspsaga.nvim')                    -- UI Improvements for LSP, not using it much though
-plug('hrsh7th/nvim-compe')                      -- fast as hell completion
-plug('TimUntersberger/neogit')                  -- finally some magic around git
-plug('tpope/vim-fugitive')                      -- still quite useful despite a little dated
-plug('lewis6991/gitsigns.nvim')                 -- git gutter signs
+plug('nvim-lspconfig')         -- LSP
+plug('lspsaga.nvim')           -- UI Improvements for LSP, not using it much though
+plug('nvim-compe')             -- fast as hell completion
+plug('neogit')                 -- finally some magic around git
+plug('vim-fugitive')           -- still quite useful despite a little dated
+-- plug('gitsigns.nvim')       -- git gutter signs
 
-plug('kyazdani42/nvim-tree.lua')                -- Great NERDTree replacement
-plug('kyazdani42/nvim-web-devicons')            -- Required for tree to work, kind of a hassle
+plug('nvim-tree.lua')          -- Great NERDTree replacement
+plug('nvim-web-devicons')      -- Required for tree to work, kind of a hassle
 
-plug('ibhagwan/fzf-lua')                        -- Way better than telescope. Requires skim
-plug('vijaymarupudi/nvim-fzf')
-plug('wincent/terminus')                        -- focus report
+plug('fzf-lua')                -- Way better than telescope. Requires skim
+plug('nvim-fzf')
+plug('terminus')               -- focus report
 
-plug('wincent/pinnacle')                        -- better highlighting?
-plug('hoob3rt/lualine.nvim')                    -- great statusline
-plug('junegunn/seoul256.vim')                   -- Not currently being used. TODO: remove?
-plug('bluz71/vim-nightfly-guicolors')           -- Current color scheme, works for me
+plug('pinnacle')               -- better highlighting?
+plug('lualine.nvim')           -- great statusline
+plug('seoul256.vim')           -- Not currently being used. TODO: remove?
+plug('vim-nightfly-guicolors') -- Current color scheme, works for me
 
-plug('tpope/vim-eunuch')                        -- frequently use :Delete and :Rename
-plug('tpope/vim-abolish')                       -- coerce casing
-plug('tpope/vim-repeat')                        -- dot repetitions
-plug('tpope/vim-surround')                      -- ysiw and cs'. I use this a lot
-plug('tpope/vim-unimpaired')                    -- Haven't been using qf a lot lately. TODO: check if should be removed
-plug('tpope/vim-speeddating')                   -- Seems useful but haven't used it
-plug('kshenoy/vim-signature')                   -- Marks, haven't been using it but I should
-plug('justinmk/vim-sneak')                      -- TODO: Maybe replace with ggandor/lightspeed.nvim
+plug('vim-eunuch')             -- frequently use :Delete and :Rename
+plug('vim-abolish')            -- coerce casing
+plug('vim-repeat')             -- dot repetitions
+plug('vim-surround')           -- ysiw and cs'. I use this a lot
+plug('vim-unimpaired')         -- Haven't been using qf a lot lately. TODO: check if should be removed
+plug('vim-speeddating')        -- Seems useful but haven't used it
+plug('vim-signature')          -- Marks, haven't been using it but I should
+plug('vim-sneak')              -- TODO: Maybe replace with ggandor/lightspeed.nvim
 
-plug('tomtom/tcomment_vim')                     -- Best comments out there. Don't even wanna try anything else
-plug('editorconfig/editorconfig-vim')           -- Using this at work
-plug('godlygeek/tabular')                       -- :Tab for alignment. Works surprisingly well. also dep for markdown
-plug('wincent/loupe')                           -- Better search. I find this plugin beautiful
-plug('mtth/scratch.vim')                        -- Scratch buffer via gs. Nice plugin
-plug('windwp/nvim-autopairs')                   -- I guess this is the best lua one. It's mostly fine
-plug('hrsh7th/vim-vsnip')                       -- Annoying JSON snippets that don't depend on python. they're ok
-plug('mattn/emmet-vim')                         -- Emmet
+plug('tcomment_vim')           -- Best comments out there. Don't even wanna try anything else
+plug('editorconfig-vim')       -- Using this at work
+plug('tabular')                -- :Tab for alignment. Works surprisingly well. also dep for markdown
+plug('loupe')                  -- Better search. I find this plugin beautiful
+plug('scratch.vim')            -- Scratch buffer via gs. Nice plugin
+plug('nvim-autopairs')         -- I guess this is the best lua one. It's mostly fine
+plug('vim-vsnip')              -- Annoying JSON snippets that don't depend on python. they're ok
+plug('emmet-vim')              -- Emmet
 
-plug('preservim/vimux')                         -- Vim + tmux, seems sensible
+plug('vimux')                  -- Vim + tmux, seems sensible
 
-plug('tpope/vim-rails')                         -- Rails for vim
-plug('kristijanhusak/orgmode.nvim')             -- Try orgmode?
--- plug('tpope/vim-endwise')                       -- Need this for lua/ruby/shell
+plug('vim-rails')              -- Rails for vim
+plug('orgmode.nvim')           -- Try orgmode?
 
-plug('leafOfTree/vim-vue-plugin')               -- Vue is a mess everywhere other than vscode. jeez
-plug('HerringtonDarkholme/yats.vim')            -- I believe this syntax is better
-plug('arrufat/vala.vim')                        -- Vala. I don't think I'll be using this a lot
-plug('vim-crystal/vim-crystal')
-plug('pangloss/vim-javascript')                 -- js indentation
-plug('maxmellon/vim-jsx-pretty')                -- jsx. React
-plug('styled-components/vim-styled-components') -- Styled components syntax
-plug('jparise/vim-graphql')                     -- Graphql syntax
-plug('cakebaker/scss-syntax.vim')               -- SCSS. Haven't been using. TODO: remove??
-plug('anachronic/vim-gitignore')                -- gitignore syntax. Forked because original has a bunch of snippets
-plug('plasticboy/vim-markdown')                 -- Markdown. This one gives expr folding I believe
-plug('Vimjas/vim-python-pep8-indent')           -- 21st century python indentation
-plug('tmhedberg/SimpylFold')                    -- python syntax folding
-plug('vim-python/python-syntax')                -- Better python syntax highlighting
-plug('cespare/vim-toml')                        -- TOML
-
-vim.fn['plug#end']()
+plug('vim-vue-plugin')         -- Vue is a mess everywhere other than vscode. jeez
+plug('yats.vim')               -- I believe this syntax is better
+plug('vala.vim')               -- Vala. I don't think I'll be using this a lot
+plug('vim-crystal')
+plug('vim-javascript')         -- js indentation
+plug('vim-jsx-pretty')         -- jsx. React
+plug('vim-styled-components')  -- Styled components syntax
+plug('vim-graphql')            -- Graphql syntax
+plug('scss-syntax.vim')        -- SCSS. Haven't been using. TODO: remove??
+plug('vim-gitignore')          -- gitignore syntax. Forked because original has a bunch of snippets
+plug('vim-markdown')           -- Markdown. This one gives expr folding I believe
+plug('vim-python-pep8-indent') -- 21st century python indentation
+plug('SimpylFold')             -- python syntax folding
+plug('python-syntax')          -- Better python syntax highlighting
+plug('vim-toml')               -- TOML
 
 vim.o.termguicolors = true             -- its 2021, cmon
 vim.o.number = true                    -- show line numbers
@@ -142,7 +136,7 @@ require('ach.fzf')
 require('ach.autopairs')
 require('ach.vue')
 require('ach.scratch')
-require('ach.gitsigns')
+-- require('ach.gitsigns')
 require('ach.tab')
 require('ach.vsnip')
 require('ach.colors')
