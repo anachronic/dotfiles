@@ -1,0 +1,153 @@
+[submodule "vim-abolish"]
+	path = common/link/.config/nvim/pack/bundle/opt/vim-abolish
+	url = https://github.com/tpope/vim-abolish.git
+[submodule "vim-unimpaired"]
+	path = common/link/.config/nvim/pack/bundle/opt/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired.git
+[submodule "popup.nvim"]
+	path = common/link/.config/nvim/pack/bundle/opt/popup.nvim
+	url = https://github.com/nvim-lua/popup.nvim.git
+[submodule "plenary.nvim"]
+	path = common/link/.config/nvim/pack/bundle/opt/plenary.nvim
+	url = https://github.com/nvim-lua/plenary.nvim.git
+[submodule "nvim-lspconfig"]
+	path = common/link/.config/nvim/pack/bundle/opt/nvim-lspconfig
+	url = https://github.com/neovim/nvim-lspconfig.git
+[submodule "lspsaga.nvim"]
+	path = common/link/.config/nvim/pack/bundle/opt/lspsaga.nvim
+	url = https://github.com/glepnir/lspsaga.nvim.git
+[submodule "nvim-compe"]
+	path = common/link/.config/nvim/pack/bundle/opt/nvim-compe
+	url = https://github.com/hrsh7th/nvim-compe.git
+[submodule "neogit"]
+	path = common/link/.config/nvim/pack/bundle/opt/neogit
+	url = https://github.com/TimUntersberger/neogit.git
+[submodule "vim-fugitive"]
+	path = common/link/.config/nvim/pack/bundle/opt/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "gitsigns.nvim"]
+	path = common/link/.config/nvim/pack/bundle/opt/gitsigns.nvim
+	url = https://github.com/lewis6991/gitsigns.nvim.git
+[submodule "nvim-tree.lua"]
+	path = common/link/.config/nvim/pack/bundle/opt/nvim-tree.lua
+	url = https://github.com/kyazdani42/nvim-tree.lua.git
+[submodule "nvim-web-devicons"]
+	path = common/link/.config/nvim/pack/bundle/opt/nvim-web-devicons
+	url = https://github.com/kyazdani42/nvim-web-devicons.git
+[submodule "fzf-lua"]
+	path = common/link/.config/nvim/pack/bundle/opt/fzf-lua
+	url = https://github.com/ibhagwan/fzf-lua.git
+[submodule "nvim-fzf"]
+	path = common/link/.config/nvim/pack/bundle/opt/nvim-fzf
+	url = https://github.com/vijaymarupudi/nvim-fzf.git
+[submodule "terminus"]
+	path = common/link/.config/nvim/pack/bundle/opt/terminus
+	url = https://github.com/wincent/terminus.git
+[submodule "pinnacle"]
+	path = common/link/.config/nvim/pack/bundle/opt/pinnacle
+	url = https://github.com/wincent/pinnacle.git
+[submodule "lualine.nvim"]
+	path = common/link/.config/nvim/pack/bundle/opt/lualine.nvim
+	url = https://github.com/hoob3rt/lualine.nvim.git
+[submodule "seoul256.vim"]
+	path = common/link/.config/nvim/pack/bundle/opt/seoul256.vim
+	url = https://github.com/junegunn/seoul256.vim.git
+[submodule "vim-nightfly-guicolors"]
+	path = common/link/.config/nvim/pack/bundle/opt/vim-nightfly-guicolors
+	url = https://github.com/bluz71/vim-nightfly-guicolors.git
+[submodule "vim-eunuch"]
+	path = common/link/.config/nvim/pack/bundle/opt/vim-eunuch
+	url = https://github.com/tpope/vim-eunuch.git
+[submodule "vim-repeat"]
+	path = common/link/.config/nvim/pack/bundle/opt/vim-repeat
+	url = https://github.com/tpope/vim-repeat.git
+[submodule "vim-surround"]
+	path = common/link/.config/nvim/pack/bundle/opt/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "vim-speeddating"]
+	path = common/link/.config/nvim/pack/bundle/opt/vim-speeddating
+	url = https://github.com/tpope/vim-speeddating.git
+[submodule "vim-signature"]
+	path = common/link/.config/nvim/pack/bundle/opt/vim-signature
+	url = https://github.com/kshenoy/vim-signature.git
+[submodule "vim-sneak"]
+	path = common/link/.config/nvim/pack/bundle/opt/vim-sneak
+	url = https://github.com/justinmk/vim-sneak.git
+[submodule "tcomment_vim"]
+	path = common/link/.config/nvim/pack/bundle/opt/tcomment_vim
+	url = https://github.com/tomtom/tcomment_vim.git
+[submodule "editorconfig-vim"]
+	path = common/link/.config/nvim/pack/bundle/opt/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim.git
+[submodule "tabular"]
+	path = common/link/.config/nvim/pack/bundle/opt/tabular
+	url = https://github.com/godlygeek/tabular.git
+[submodule "loupe"]
+	path = common/link/.config/nvim/pack/bundle/opt/loupe
+	url = https://github.com/wincent/loupe.git
+[submodule "scratch.vim"]
+	path = common/link/.config/nvim/pack/bundle/opt/scratch.vim
+	url = https://github.com/mtth/scratch.vim.git
+[submodule "nvim-autopairs"]
+	path = common/link/.config/nvim/pack/bundle/opt/nvim-autopairs
+	url = https://github.com/windwp/nvim-autopairs.git
+[submodule "vim-vsnip"]
+	path = common/link/.config/nvim/pack/bundle/opt/vim-vsnip
+	url = https://github.com/hrsh7th/vim-vsnip.git
+[submodule "emmet-vim"]
+	path = common/link/.config/nvim/pack/bundle/opt/emmet-vim
+	url = https://github.com/mattn/emmet-vim.git
+[submodule "vimux"]
+	path = common/link/.config/nvim/pack/bundle/opt/vimux
+	url = https://github.com/preservim/vimux.git
+[submodule "vim-rails"]
+	path = common/link/.config/nvim/pack/bundle/opt/vim-rails
+	url = https://github.com/tpope/vim-rails.git
+[submodule "orgmode.nvim"]
+	path = common/link/.config/nvim/pack/bundle/opt/orgmode.nvim
+	url = https://github.com/kristijanhusak/orgmode.nvim.git
+[submodule "vim-vue-plugin"]
+	path = common/link/.config/nvim/pack/bundle/opt/vim-vue-plugin
+	url = https://github.com/leafOfTree/vim-vue-plugin.git
+[submodule "yats.vim"]
+	path = common/link/.config/nvim/pack/bundle/opt/yats.vim
+	url = https://github.com/HerringtonDarkholme/yats.vim.git
+[submodule "vala.vim"]
+	path = common/link/.config/nvim/pack/bundle/opt/vala.vim
+	url = https://github.com/arrufat/vala.vim.git
+[submodule "vim-crystal"]
+	path = common/link/.config/nvim/pack/bundle/opt/vim-crystal
+	url = https://github.com/vim-crystal/vim-crystal.git
+[submodule "vim-javascript"]
+	path = common/link/.config/nvim/pack/bundle/opt/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git
+[submodule "vim-jsx-pretty"]
+	path = common/link/.config/nvim/pack/bundle/opt/vim-jsx-pretty
+	url = https://github.com/maxmellon/vim-jsx-pretty.git
+[submodule "vim-styled-components"]
+	path = common/link/.config/nvim/pack/bundle/opt/vim-styled-components
+	url = https://github.com/styled-components/vim-styled-components.git
+[submodule "vim-graphql"]
+	path = common/link/.config/nvim/pack/bundle/opt/vim-graphql
+	url = https://github.com/jparise/vim-graphql.git
+[submodule "scss-syntax.vim"]
+	path = common/link/.config/nvim/pack/bundle/opt/scss-syntax.vim
+	url = https://github.com/cakebaker/scss-syntax.vim.git
+[submodule "vim-gitignore"]
+	path = common/link/.config/nvim/pack/bundle/opt/vim-gitignore
+	url = https://github.com/anachronic/vim-gitignore.git
+[submodule "vim-markdown"]
+	path = common/link/.config/nvim/pack/bundle/opt/vim-markdown
+	url = https://github.com/plasticboy/vim-markdown.git
+[submodule "vim-python-pep8-indent"]
+	path = common/link/.config/nvim/pack/bundle/opt/vim-python-pep8-indent
+	url = https://github.com/Vimjas/vim-python-pep8-indent.git
+[submodule "SimpylFold"]
+	path = common/link/.config/nvim/pack/bundle/opt/SimpylFold
+	url = https://github.com/tmhedberg/SimpylFold.git
+[submodule "python-syntax"]
+	path = common/link/.config/nvim/pack/bundle/opt/python-syntax
+	url = https://github.com/vim-python/python-syntax.git
+[submodule "vim-toml"]
+	path = common/link/.config/nvim/pack/bundle/opt/vim-toml
+	url = https://github.com/cespare/vim-toml.git
