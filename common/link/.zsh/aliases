@@ -4,6 +4,11 @@ alias vi='nvim'
 alias vim='nvim'
 alias vgs='nvim -c ":Neogit"'
 
+# vim + sudo
+alias sv="sudoedit"
+alias svi="sudoedit"
+alias svim="sudoedit"
+
 list() {
     os=$(uname)
 
@@ -38,22 +43,10 @@ alias la='list -alhF'
 alias ..='cd ..'
 
 # git and any vc commands
-alias gcl='git clone'
-alias gst='git status'
-alias gc='git commit --verbose'
-alias gup='git pull --rebase'
-alias gp='git push'
-alias gpf='git push --force'
-alias gco='git checkout'
-alias gc='git commit'
-alias gca='git commit --amend'
 alias groot='cd $(git rev-parse --show-toplevel)'
 alias glog='git log --pretty=oneline --abbrev-commit'
 alias ga='git add'
 alias gaa='git add -A'
-
-# npm
-alias nls='npm list --depth=0'
 
 # pacman & AUR
 alias pacin='sudo pacman -S'
@@ -62,22 +55,6 @@ alias pacloc='pacman -Qs'
 alias pacupg='sudo pacman -Syu'
 alias pacupd='sudo pacman -Sy'
 alias pacq='pacman -Ss'
-
-## AUR with AURMAN
-alias aurin='aurman -S --noedit'
-alias aurq='aurman --aur -Ss'
-
-## AUR with YAY
-alias yayin='yay -S'
-alias yayq='yay -Ss'
-
-## Ubuntu & Ubuntu-based
-alias aptin='sudo apt install'
-alias aptupd='sudo apt update'
-alias aptupg='sudo apt upgrade'
-alias aptq='apt-cache search'
-alias aptlist='apt list --installed'
-alias aptrem='sudo apt remove'
 
 # configs
 alias dotfiles='cd ~/dotfiles'
@@ -90,6 +67,7 @@ alias so='source ~/.zshrc'
 alias pac='source env/bin/activate'
 
 # Node
+alias nls='npm list --depth=0'
 alias rst='BROWSER=none yarn start'
 alias nrt='npm run test -- '
 alias nrd='npm run dev -- '
