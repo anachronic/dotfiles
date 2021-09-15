@@ -19,16 +19,14 @@ require'fzf-lua'.setup {
   fzf_layout          = 'list',      -- fzf '--layout='
   fzf_args            = '',             -- adv: fzf extra args, empty unless adv
   fzf_binds           = {               -- fzf '--bind=' options
-      'f2:toggle-preview',
-      'f3:toggle-preview-wrap',
-      'shift-down:preview-page-down',
-      'shift-up:preview-page-up',
-      'ctrl-d:half-page-down',
-      'ctrl-u:half-page-up',
-      'ctrl-f:page-down',
-      'ctrl-b:page-up',
-      'ctrl-a:toggle-all',
-      'ctrl-l:clear-query',
+    ["f2"]            = "toggle-preview",
+    ["f3"]            = "toggle-preview-wrap",
+    ["shift-down"]    = "preview-page-down",
+    ["shift-up"]      = "preview-page-up",
+    ["ctrl-u"]        = "unix-line-discard",
+    ["ctrl-f"]        = "half-page-down",
+    ["ctrl-b"]        = "half-page-up",
+    ["ctrl-a"]        = "toggle-all",
   },
   preview_border      = 'border',       -- border|noborder
   preview_wrap        = 'nowrap',       -- wrap|nowrap
