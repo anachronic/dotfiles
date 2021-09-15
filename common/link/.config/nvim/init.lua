@@ -53,6 +53,9 @@ plug('vimux')                  -- Vim + tmux, seems sensible
 plug('vim-rails')              -- Rails for vim
 plug('orgmode.nvim')           -- Try orgmode?
 
+plug('vim-textobj-user')       -- custom textobjects
+plug('vim-textobj-entire')     -- "entire" textobject. Like yae would copy the entire file
+
 plug('vim-vue-plugin')         -- Vue is a mess everywhere other than vscode. jeez
 plug('yats.vim')               -- I believe this syntax is better
 plug('vala.vim')               -- Vala. I don't think I'll be using this a lot
