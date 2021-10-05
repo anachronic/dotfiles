@@ -31,4 +31,10 @@ system 'mkdir -p ~/.config/karabiner/'
 # Then do link everything before stuff gets the chance to do it before you do
 system 'stow -v -R -t ~ -d ~/dotfiles/macos/link .'
 
+# After that, install the keyboard bundle
+ask_cmd_perm 'sudo mkdir -p "/Library/Keyboard Layouts"'
+
+kb_layout_path = File.join(File.dirname(__FILE__), 'kblayout', 'us-intl-altgr-dead.bundle')
+ask_cmd_perm "sudo cp -R '#{kb_layout_path}' '/Library/Keyboard Layouts'"
+
 # Then go ahead and install everything from brewfile
