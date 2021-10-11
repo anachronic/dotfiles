@@ -37,4 +37,16 @@ ask_cmd_perm 'sudo mkdir -p "/Library/Keyboard Layouts"'
 kb_layout_path = File.join(File.dirname(__FILE__), 'kblayout', 'us-intl-altgr-dead.bundle')
 ask_cmd_perm "sudo cp -R '#{kb_layout_path}' '/Library/Keyboard Layouts'"
 
+# Set defaults
+defaults_bootstrap = File.join(__dir__, 'defaults', 'bootstrap.rb')
+system "ruby #{defaults_bootstrap}"
+
+# Set up terminfo
+terminfo_bootstrap = File.join(__dir__, 'terminfo', 'bootstrap.rb')
+system "ruby #{terminfo_bootstrap}"
+
+# Then go ahead and install nvm
+nvm_bootstrap = File.join(__dir__, 'nvm', 'bootstrap.rb')
+system "ruby #{nvm_bootstrap}"
+
 # Then go ahead and install everything from brewfile
