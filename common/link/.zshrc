@@ -120,9 +120,11 @@ man() {
 # Aliases
 source ~/.zsh/aliases
 
-# Use GPG for ssh key caching. This is crazy
-export GPG_TTY=$(tty)
-gpg-connect-agent updatestartuptty /bye >/dev/null
+if [ $(uname) = "Linux" ]; then
+    # Use GPG for ssh key caching. This is crazy
+    export GPG_TTY=$(tty)
+    gpg-connect-agent updatestartuptty /bye >/dev/null
+fi
 
 export VIRTUALENVWRAPPER_PYTHON=~/.local/pipx/venvs/virtualenvwrapper/bin/python3
 [ -f ~/.local/bin/virtualenvwrapper.sh ] && source ~/.local/bin/virtualenvwrapper.sh
