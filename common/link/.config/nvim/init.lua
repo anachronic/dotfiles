@@ -43,7 +43,6 @@ plug('tcomment_vim')           -- Best comments out there. Don't even wanna try 
 plug('editorconfig-vim')       -- Using this at work
 plug('tabular')                -- :Tab for alignment. Works surprisingly well. also dep for markdown
 plug('loupe')                  -- Better search. I find this plugin beautiful
-plug('scratch.vim')            -- Scratch buffer via gs. Nice plugin
 plug('nvim-autopairs')         -- I guess this is the best lua one. It's mostly fine
 plug('vim-vsnip')              -- Annoying JSON snippets that don't depend on python. they're ok
 plug('emmet-vim')              -- Emmet
@@ -55,6 +54,7 @@ plug('orgmode.nvim')           -- Try orgmode?
 
 plug('vim-textobj-user')       -- custom textobjects
 plug('vim-textobj-entire')     -- "entire" textobject. Like yae would copy the entire file
+plug('vim-sort-motion')        -- sorting mostly because of gemfiles
 
 plug('vim-vue-plugin')         -- Vue is a mess everywhere other than vscode. jeez
 plug('yats.vim')               -- I believe this syntax is better
@@ -138,7 +138,6 @@ require('ach.lualine')
 require('ach.fzf')
 require('ach.autopairs')
 require('ach.vue')
-require('ach.scratch')
 -- require('ach.gitsigns')
 require('ach.tab')
 require('ach.vsnip')
