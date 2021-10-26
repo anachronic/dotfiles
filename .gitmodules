@@ -85,9 +85,6 @@
 [submodule "loupe"]
 	path = common/link/.config/nvim/pack/bundle/opt/loupe
 	url = https://github.com/wincent/loupe.git
-[submodule "scratch.vim"]
-	path = common/link/.config/nvim/pack/bundle/opt/scratch.vim
-	url = https://github.com/mtth/scratch.vim.git
 [submodule "nvim-autopairs"]
 	path = common/link/.config/nvim/pack/bundle/opt/nvim-autopairs
 	url = https://github.com/windwp/nvim-autopairs.git
