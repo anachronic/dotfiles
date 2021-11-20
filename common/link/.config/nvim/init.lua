@@ -54,6 +54,7 @@ plug('orgmode.nvim')           -- Try orgmode?
 
 plug('vim-textobj-user')       -- custom textobjects
 plug('vim-textobj-entire')     -- "entire" textobject. Like yae would copy the entire file
+plug('vim-textobj-rubyblock')  -- a ruby block. Been doing rails a lot lately
 plug('vim-sort-motion')        -- sorting mostly because of gemfiles
 
 plug('vim-vue-plugin')         -- Vue is a mess everywhere other than vscode. jeez

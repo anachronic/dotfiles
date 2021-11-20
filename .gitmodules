@@ -157,3 +157,6 @@
 [submodule "vim-sort-motion"]
 	path = common/link/.config/nvim/pack/bundle/opt/vim-sort-motion
 	url = https://github.com/christoomey/vim-sort-motion
+[submodule "vim-textobj-rubyblock"]
+	path = common/link/.config/nvim/pack/bundle/opt/vim-textobj-rubyblock
+	url = https://github.com/nelstrom/vim-textobj-rubyblock
