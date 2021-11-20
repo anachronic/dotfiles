@@ -141,9 +141,9 @@ export VIRTUALENVWRAPPER_PYTHON=~/.local/pipx/venvs/virtualenvwrapper/bin/python
 [ -e ~/.z ] || touch ~/.z
 [ -f ~/.zsh/z.sh ] && source ~/.zsh/z.sh
 
-if [ "$(uname)" = "Darwin" ]; then
-    export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/opt/openssl/lib/"
-fi
+# if [ "$(uname)" = "Darwin" ]; then
+#     export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/opt/openssl/lib/"
+# fi
 
 # Rbenv!
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
