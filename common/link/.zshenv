@@ -32,3 +32,6 @@ path+=($HOME/.local/bin)
 export WORKON_HOME=$HOME/.virtualenvs
 export NVM_DIR="$HOME/.nvm"
 export SDKMAN_DIR="$HOME/.sdkman"
+
+# I hate to have to do this
+[ -f "$HOME/.zsh/work.sh" ] && source "$HOME/.zsh/work.sh"

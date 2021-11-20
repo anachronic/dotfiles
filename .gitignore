@@ -5,3 +5,5 @@ nohup.out
 
 .DS_Store
 mkmf.log
+
+common/link/.zsh/work.sh
