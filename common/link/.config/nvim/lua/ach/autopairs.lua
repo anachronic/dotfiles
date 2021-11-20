@@ -5,7 +5,8 @@ local cond = require('nvim-autopairs.conds')
 npairs.setup()
 
 npairs.add_rules({
-    rule('[ ', ' ') -- the regular [] rule will add the missing paren
+    rule('[ ', ' '), -- the regular [] rule will add the missing paren
+    rule('{ ', ' ')
 })
 
 -- copied from https://github.com/windwp/nvim-autopairs#override-default-values
