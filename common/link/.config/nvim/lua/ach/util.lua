@@ -11,8 +11,8 @@ function util.plug(package)
 end
 
 function util.indent(num)
-    vim.bo.shiftwidth = 4
-    vim.bo.tabstop = 4
+    vim.bo.shiftwidth = num
+    vim.bo.tabstop = num
 end
 
 return util
