@@ -15,19 +15,21 @@ require'fzf-lua'.setup {
     hl_normal        = 'Normal',        -- window normal color
     hl_border        = 'FloatBorder',   -- window border color
   },
+  keymap              = {               -- fzf '--bind=' options
+    builtin = {
+      ["f2"]          = "toggle-preview",
+      ["f3"]          = "toggle-preview-wrap",
+      ["shift-down"]  = "preview-page-down",
+      ["shift-up"]    = "preview-page-up",
+      ["ctrl-u"]      = "unix-line-discard",
+      ["ctrl-f"]      = "half-page-down",
+      ["ctrl-b"]      = "half-page-up",
+      ["ctrl-a"]      = "toggle-all",
+    }
+  },
   fzf_bin             = 'sk',           -- Jumping into the rust train
   fzf_layout          = 'list',      -- fzf '--layout='
   fzf_args            = '',             -- adv: fzf extra args, empty unless adv
-  fzf_binds           = {               -- fzf '--bind=' options
-    ["f2"]            = "toggle-preview",
-    ["f3"]            = "toggle-preview-wrap",
-    ["shift-down"]    = "preview-page-down",
-    ["shift-up"]      = "preview-page-up",
-    ["ctrl-u"]        = "unix-line-discard",
-    ["ctrl-f"]        = "half-page-down",
-    ["ctrl-b"]        = "half-page-up",
-    ["ctrl-a"]        = "toggle-all",
-  },
   preview_border      = 'border',       -- border|noborder
   preview_wrap        = 'nowrap',       -- wrap|nowrap
   preview_opts        = 'hidden',       -- hidden|nohidden
