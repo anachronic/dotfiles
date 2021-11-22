@@ -16,9 +16,6 @@
 [submodule "lspsaga.nvim"]
 	path = common/link/.config/nvim/pack/bundle/opt/lspsaga.nvim
 	url = https://github.com/glepnir/lspsaga.nvim.git
-[submodule "nvim-compe"]
-	path = common/link/.config/nvim/pack/bundle/opt/nvim-compe
-	url = https://github.com/hrsh7th/nvim-compe.git
 [submodule "neogit"]
 	path = common/link/.config/nvim/pack/bundle/opt/neogit
 	url = https://github.com/TimUntersberger/neogit.git

@@ -7,7 +7,7 @@ plug('plenary.nvim')           -- Common dependency
 
 plug('nvim-lspconfig')         -- LSP
 plug('lspsaga.nvim')           -- UI Improvements for LSP, not using it much though
-plug('nvim-compe')             -- fast as hell completion
+--plug('nvim-compe')             -- fast as hell completion
 plug('neogit')                 -- finally some magic around git
 plug('vim-fugitive')           -- still quite useful despite a little dated
 -- plug('gitsigns.nvim')       -- git gutter signs

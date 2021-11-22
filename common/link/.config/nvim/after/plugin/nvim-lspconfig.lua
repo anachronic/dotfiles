@@ -72,7 +72,7 @@ local function organize_imports()
 end
 
 -- tsserver
--- npm i -g tsserver
+-- npm i -g typescript-language-server typescript
 require'lspconfig'.tsserver.setup{
     on_attach = on_attach_tsserver,
     commands = {
@@ -118,28 +118,28 @@ require'lspconfig'.vuels.setup{
 }
 
 -- Also set up compe
-require'compe'.setup {
-    enabled = true;
-    autocomplete = true;
-    debug = false;
-    min_length = 1;
-    preselect = 'enable';
-    throttle_time = 80;
-    source_timeout = 200;
-    resolve_timeout = 800;
-    incomplete_delay = 400;
-    max_abbr_width = 100;
-    max_kind_width = 100;
-    max_menu_width = 100;
-    documentation = true;
-
-    source = {
-        path = true;
-        buffer = false;
-        calc = true;
-        nvim_lsp = true;
-        nvim_lua = true;
-        vsnip = true;
-        ultisnips = false;
-    };
-}
+-- require'compe'.setup {
+--     enabled = true;
+--     autocomplete = true;
+--     debug = false;
+--     min_length = 1;
+--     preselect = 'enable';
+--     throttle_time = 80;
+--     source_timeout = 200;
+--     resolve_timeout = 800;
+--     incomplete_delay = 400;
+--     max_abbr_width = 100;
+--     max_kind_width = 100;
+--     max_menu_width = 100;
+--     documentation = true;
+--
+--     source = {
+--         path = true;
+--         buffer = false;
+--         calc = true;
+--         nvim_lsp = true;
+--         nvim_lua = true;
+--         vsnip = true;
+--         ultisnips = false;
+--     };
+-- }
