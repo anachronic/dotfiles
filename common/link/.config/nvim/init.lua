@@ -2,12 +2,6 @@ local utils = require('ach.util')
 local map = utils.map
 local plug = utils.plug
 
-vim.g.nvim_tree_show_icons = {
-    git = 0,
-    files = 1,
-    folders = 1
-}
-
 plug('popup.nvim')             -- Common dependency
 plug('plenary.nvim')           -- Common dependency
 
@@ -146,6 +140,7 @@ require('ach.colors')
 require('ach.emmet')
 require('ach.orgmode')
 require('nvim-web-devicons').setup{}
+require('ach.nvimtree')
 
 -- The wincent hack for <Tab> folding
 -- This requires additional term configuration
