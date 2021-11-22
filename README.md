@@ -21,3 +21,22 @@ session as `fish --private` is WAY better than what `zsh` has to offer
 
 There's still a lot more to do here, but I'm fairly confident that this is
 **better** than what I had before explaining everything.
+
+## Notes without a place
+
+### Neovim
+
+I've been using modules for neovim plugins. It makes the checkout process much
+better. But it has some **very** annoying caveats:
+
+- Deleting a plugin
+- Trying out new plugins
+- Updating plugins
+
+> For deleting a plugin: [use this](https://stackoverflow.com/a/36593218).
+
+> For trying out: `git submodule add --name <name> <URL> <path>`
+
+> For update: `git submodule foreach "git pull origin main || git pull origin master"`
+
+That should do it
