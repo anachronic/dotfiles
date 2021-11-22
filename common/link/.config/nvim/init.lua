@@ -7,7 +7,6 @@ plug('plenary.nvim')           -- Common dependency
 
 plug('nvim-lspconfig')         -- LSP
 plug('lspsaga.nvim')           -- UI Improvements for LSP, not using it much though
---plug('nvim-compe')             -- fast as hell completion
 plug('nvim-cmp')
 plug('cmp-nvim-lsp')
 plug('cmp-path')
@@ -150,13 +149,6 @@ require('ach.completion')
 -- This requires additional term configuration
 map('n', '<Tab>', 'za')
 map('n', '<F6>', '<C-i>')
-
--- Remap tab for compe/vsnip
-map('i', '<Tab>', 'v:lua.tab_complete()', { expr=true })
-map('s', '<Tab>', 'v:lua.tab_complete()', { expr=true })
-map('i', '<S-Tab>', 'v:lua.s_tab_complete()', { expr=true })
-map('s', '<S-Tab>', 'v:lua.s_tab_complete()', { expr=true })
-
 
 -- Regular vim stuff
 map('n', '<leader>w', ':write<CR>')
