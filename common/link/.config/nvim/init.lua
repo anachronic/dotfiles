@@ -8,6 +8,10 @@ plug('plenary.nvim')           -- Common dependency
 plug('nvim-lspconfig')         -- LSP
 plug('lspsaga.nvim')           -- UI Improvements for LSP, not using it much though
 --plug('nvim-compe')             -- fast as hell completion
+plug('nvim-cmp')
+plug('cmp-nvim-lsp')
+plug('cmp-path')
+
 plug('neogit')                 -- finally some magic around git
 plug('vim-fugitive')           -- still quite useful despite a little dated
 -- plug('gitsigns.nvim')       -- git gutter signs
@@ -134,13 +138,13 @@ require('ach.fzf')
 require('ach.autopairs')
 require('ach.vue')
 -- require('ach.gitsigns')
-require('ach.tab')
 require('ach.vsnip')
 require('ach.colors')
 require('ach.emmet')
 require('ach.orgmode')
 require('nvim-web-devicons').setup{}
 require('ach.nvimtree')
+require('ach.completion')
 
 -- The wincent hack for <Tab> folding
 -- This requires additional term configuration

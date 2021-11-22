@@ -157,3 +157,12 @@
 [submodule "vim-textobj-rubyblock"]
 	path = common/link/.config/nvim/pack/bundle/opt/vim-textobj-rubyblock
 	url = https://github.com/nelstrom/vim-textobj-rubyblock
+[submodule "nvim-cmp"]
+	path = common/link/.config/nvim/pack/bundle/opt/nvim-cmp
+	url = https://github.com/hrsh7th/nvim-cmp
+[submodule "cmp-nvim-lsp"]
+	path = common/link/.config/nvim/pack/bundle/opt/cmp-nvim-lsp
+	url = https://github.com/hrsh7th/cmp-nvim-lsp
+[submodule "cmp-path"]
+	path = common/link/.config/nvim/pack/bundle/opt/cmp-path
+	url = https://github.com/hrsh7th/cmp-path
