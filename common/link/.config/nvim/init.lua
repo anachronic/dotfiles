@@ -14,7 +14,7 @@ plug('cmp-path')
 
 plug('neogit')                 -- finally some magic around git
 plug('vim-fugitive')           -- still quite useful despite a little dated
--- plug('gitsigns.nvim')       -- git gutter signs
+plug('gitsigns.nvim')          -- git gutter signs
 
 plug('nvim-tree.lua')          -- Great NERDTree replacement
 plug('nvim-web-devicons')      -- Required for tree to work, kind of a hassle
@@ -137,7 +137,7 @@ require('ach.lualine')
 require('ach.fzf')
 require('ach.autopairs')
 require('ach.vue')
--- require('ach.gitsigns')
+require('ach.gitsigns')
 require('ach.vsnip')
 require('ach.colors')
 require('ach.emmet')
