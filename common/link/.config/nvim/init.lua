@@ -70,6 +70,8 @@ plug('SimpylFold')             -- python syntax folding
 plug('python-syntax')          -- Better python syntax highlighting
 plug('vim-toml')               -- TOML
 
+plug('nvim-treesitter')
+
 vim.o.termguicolors = true             -- its 2021, cmon
 vim.o.number = true                    -- show line numbers
 vim.o.relativenumber = true            -- relative numbers
@@ -144,6 +146,7 @@ require('ach.orgmode')
 require('nvim-web-devicons').setup{}
 require('ach.nvimtree')
 require('ach.completion')
+require('ach.treesitter')
 
 -- The wincent hack for <Tab> folding
 -- This requires additional term configuration

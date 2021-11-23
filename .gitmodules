@@ -167,3 +167,6 @@
 	path = common/link/.config/nvim/pack/bundle/opt/lspsaga.nvim
 	url = https://github.com/tami5/lspsaga.nvim
 	branch = nvim51
+[submodule "nvim-treesitter"]
+	path = common/link/.config/nvim/pack/bundle/opt/nvim-treesitter
+	url = https://github.com/nvim-treesitter/nvim-treesitter
