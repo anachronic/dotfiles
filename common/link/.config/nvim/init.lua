@@ -41,7 +41,7 @@ plug('editorconfig-vim')       -- Using this at work
 plug('tabular')                -- :Tab for alignment. Works surprisingly well. also dep for markdown
 plug('loupe')                  -- Better search. I find this plugin beautiful
 plug('nvim-autopairs')         -- I guess this is the best lua one. It's mostly fine
-plug('vim-vsnip')              -- Annoying JSON snippets that don't depend on python. they're ok
+-- plug('vim-vsnip')              -- Annoying JSON snippets that don't depend on python. they're ok
 plug('emmet-vim')              -- Emmet
 
 plug('vimux')                  -- Vim + tmux, seems sensible
@@ -139,7 +139,7 @@ require('ach.fzf')
 require('ach.autopairs')
 require('ach.vue')
 require('ach.gitsigns')
-require('ach.vsnip')
+-- require('ach.vsnip')
 require('ach.colors')
 require('ach.emmet')
 require('ach.orgmode')
