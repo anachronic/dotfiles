@@ -41,7 +41,7 @@ plug('editorconfig-vim')       -- Using this at work
 plug('tabular')                -- :Tab for alignment. Works surprisingly well. also dep for markdown
 plug('loupe')                  -- Better search. I find this plugin beautiful
 plug('nvim-autopairs')         -- I guess this is the best lua one. It's mostly fine
--- plug('vim-vsnip')              -- Annoying JSON snippets that don't depend on python. they're ok
+plug('nvim-snippy')            -- Lua snippets, finally
 plug('emmet-vim')              -- Emmet
 
 plug('vimux')                  -- Vim + tmux, seems sensible

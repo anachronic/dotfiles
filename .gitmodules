@@ -167,3 +167,6 @@
 [submodule "nvim-treesitter"]
 	path = common/link/.config/nvim/pack/bundle/opt/nvim-treesitter
 	url = https://github.com/nvim-treesitter/nvim-treesitter
+[submodule "nvim-snippy"]
+	path = common/link/.config/nvim/pack/bundle/opt/nvim-snippy
+	url = https://github.com/dcampos/nvim-snippy
