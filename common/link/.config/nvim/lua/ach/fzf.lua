@@ -25,6 +25,9 @@ require'fzf-lua'.setup {
       ["ctrl-f"]      = "half-page-down",
       ["ctrl-b"]      = "half-page-up",
       ["ctrl-a"]      = "toggle-all",
+    },
+    fzf = {
+        ["ctrl-a"] = "toggle-all"
     }
   },
   fzf_bin             = 'sk',           -- Jumping into the rust train
