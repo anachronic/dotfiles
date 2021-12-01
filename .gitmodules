@@ -13,6 +13,13 @@
 [submodule "nvim-lspconfig"]
 	path = common/link/.config/nvim/pack/bundle/opt/nvim-lspconfig
 	url = https://github.com/neovim/nvim-lspconfig.git
+[submodule "lspsaga.nvim"]
+	path = common/link/.config/nvim/pack/bundle/opt/lspsaga.nvim
+	url = https://github.com/glepnir/lspsaga.nvim.git
+	ignore = dirty
+[submodule "nvim-compe"]
+	path = common/link/.config/nvim/pack/bundle/opt/nvim-compe
+	url = https://github.com/hrsh7th/nvim-compe.git
 [submodule "neogit"]
 	path = common/link/.config/nvim/pack/bundle/opt/neogit
 	url = https://github.com/TimUntersberger/neogit.git
@@ -82,6 +89,10 @@
 [submodule "nvim-autopairs"]
 	path = common/link/.config/nvim/pack/bundle/opt/nvim-autopairs
 	url = https://github.com/windwp/nvim-autopairs.git
+	ignore = dirty
+[submodule "vim-vsnip"]
+	path = common/link/.config/nvim/pack/bundle/opt/vim-vsnip
+	url = https://github.com/hrsh7th/vim-vsnip.git
 [submodule "emmet-vim"]
 	path = common/link/.config/nvim/pack/bundle/opt/emmet-vim
 	url = https://github.com/mattn/emmet-vim.git
@@ -94,6 +105,7 @@
 [submodule "orgmode.nvim"]
 	path = common/link/.config/nvim/pack/bundle/opt/orgmode.nvim
 	url = https://github.com/kristijanhusak/orgmode.nvim.git
+	ignore = dirty
 [submodule "vim-vue-plugin"]
 	path = common/link/.config/nvim/pack/bundle/opt/vim-vue-plugin
 	url = https://github.com/leafOfTree/vim-vue-plugin.git
@@ -136,6 +148,7 @@
 [submodule "python-syntax"]
 	path = common/link/.config/nvim/pack/bundle/opt/python-syntax
 	url = https://github.com/vim-python/python-syntax.git
+	ignore = dirty
 [submodule "vim-toml"]
 	path = common/link/.config/nvim/pack/bundle/opt/vim-toml
 	url = https://github.com/cespare/vim-toml.git
@@ -145,6 +158,7 @@
 [submodule "vim-textobj-entire"]
 	path = common/link/.config/nvim/pack/bundle/opt/vim-textobj-entire
 	url = https://github.com/kana/vim-textobj-entire.git
+	ignore = dirty
 [submodule "vim-sort-motion"]
 	path = common/link/.config/nvim/pack/bundle/opt/vim-sort-motion
 	url = https://github.com/christoomey/vim-sort-motion
