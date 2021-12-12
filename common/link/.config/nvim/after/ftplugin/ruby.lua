@@ -1,2 +1,4 @@
-vim.wo.foldmethod = 'expr'
-vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
+local util = require('ach.util')
+
+util.indent(2)
+util.ts_folding()

@@ -55,11 +55,11 @@ plug('vim-textobj-rubyblock')  -- a ruby block. Been doing rails a lot lately
 plug('vim-sort-motion')        -- sorting mostly because of gemfiles
 
 plug('vim-vue-plugin')         -- Vue is a mess everywhere other than vscode. jeez
-plug('yats.vim')               -- I believe this syntax is better
+-- plug('yats.vim')               -- I believe this syntax is better
 plug('vala.vim')               -- Vala. I don't think I'll be using this a lot
 plug('vim-crystal')
-plug('vim-javascript')         -- js indentation
-plug('vim-jsx-pretty')         -- jsx. React
+-- plug('vim-javascript')         -- js indentation
+-- plug('vim-jsx-pretty')         -- jsx. React
 plug('vim-styled-components')  -- Styled components syntax
 plug('vim-graphql')            -- Graphql syntax
 plug('scss-syntax.vim')        -- SCSS. Haven't been using. TODO: remove??
