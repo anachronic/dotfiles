@@ -1,0 +1,10 @@
+#!/bin/sh
+
+if [ "$1" = "" ]; then
+    echo 'Pass me a submodule name'
+    exit 1
+fi
+
+git submodule deinit -f "common/link/.config/nvim/pack/bundle/opt/$1"
+rm -rf ".git/modules/$1"
+git rm -f "common/link/.config/nvim/pack/bundle/opt/$1"
