@@ -21,4 +21,8 @@
 --glob
 !node_modules
 
+# Exclude everything from dotfiles submodules
+--glob
+!common/link/.config/nvim/pack/bundle/opt/**
+
 # vim: ft=conf
