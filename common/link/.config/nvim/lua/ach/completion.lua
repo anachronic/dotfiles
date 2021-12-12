@@ -7,7 +7,11 @@ local has_words_before = function()
 end
 
 cmp.setup({
-    snippet = nil,
+    snippet = {
+        expand = function(args)
+            snippy.expand_snippet(args.body)
+        end
+    },
     mapping = {
         ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
         ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
