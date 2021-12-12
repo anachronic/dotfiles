@@ -155,6 +155,19 @@ tools:
       - mix.lock
       - mix.exs
 
+  rubocop-lint: &rubocop-lint
+    lint-command: 'bundle exec rubocop --format emacs --force-exclusion --stdin ${INPUT}'
+    lint-ignore-exit-code: true
+    lint-stdin: true
+    lint-formats:
+      - '%f:%l:%c: %t: %m'
+    root-markers:
+      - .rubocop.yml
+
+  rubocop-format: &rubocop-format
+    format-command: 'bundle exec rubocop -A -f quiet --stderr -s ${INPUT}'
+    format-stdin: true
+
   any-excitetranslate: &any-excitetranslate
     hover-command: 'excitetranslate'
     hover-stdin: true
@@ -224,6 +237,10 @@ languages:
 
   css:
     - <<: *css-prettier
+
+  ruby:
+    - <<: *rubocop-lint
+    - <<: *rubocop-format
 
   json:
     - <<: *json-jq
