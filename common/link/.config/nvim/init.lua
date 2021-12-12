@@ -6,7 +6,7 @@ plug('popup.nvim')             -- Common dependency
 plug('plenary.nvim')           -- Common dependency
 
 plug('nvim-lspconfig')         -- LSP
-plug('lspsaga.nvim')           -- UI Improvements for LSP, not using it much though
+--plug('lspsaga.nvim')           -- UI Improvements for LSP, not using it much though
 plug('nvim-cmp')
 plug('cmp-nvim-lsp')
 plug('cmp-path')

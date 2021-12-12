@@ -13,10 +13,6 @@
 [submodule "nvim-lspconfig"]
 	path = common/link/.config/nvim/pack/bundle/opt/nvim-lspconfig
 	url = https://github.com/neovim/nvim-lspconfig.git
-[submodule "lspsaga.nvim"]
-	path = common/link/.config/nvim/pack/bundle/opt/lspsaga.nvim
-	url = https://github.com/glepnir/lspsaga.nvim.git
-	ignore = dirty
 [submodule "nvim-compe"]
 	path = common/link/.config/nvim/pack/bundle/opt/nvim-compe
 	url = https://github.com/hrsh7th/nvim-compe.git
@@ -174,10 +170,6 @@
 [submodule "cmp-path"]
 	path = common/link/.config/nvim/pack/bundle/opt/cmp-path
 	url = https://github.com/hrsh7th/cmp-path
-[submodule "lspsaga.nvim"]
-	path = common/link/.config/nvim/pack/bundle/opt/lspsaga.nvim
-	url = https://github.com/tami5/lspsaga.nvim
-	branch = nvim51
 [submodule "nvim-treesitter"]
 	path = common/link/.config/nvim/pack/bundle/opt/nvim-treesitter
 	url = https://github.com/nvim-treesitter/nvim-treesitter

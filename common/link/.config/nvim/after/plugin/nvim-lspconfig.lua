@@ -1,10 +1,10 @@
-require'lspsaga'.init_lsp_saga {
-    code_action_prompt = {
-        enable = true,       -- do want code actions
-        sign = false,        -- don't hint code actions in sign column
-        virtual_text = false -- don't hint code actions in virtual text
-    }
-}
+-- require'lspsaga'.init_lsp_saga {
+--     code_action_prompt = {
+--         enable = true,       -- do want code actions
+--         sign = false,        -- don't hint code actions in sign column
+--         virtual_text = false -- don't hint code actions in virtual text
+--     }
+-- }
 
 local on_attach = function(client, bufnr)
     local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
