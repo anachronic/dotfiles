@@ -61,6 +61,14 @@ end
 -- will need eslint, flake8 and prettier
 require'lspconfig'.efm.setup{
     on_attach = on_attach_efm,
+    filetypes = {
+        'ruby',
+        'javascript',
+        'typescript',
+        'javascriptreact',
+        'typescriptreact',
+        'vue',
+    }
 }
 
 local function organize_imports()
