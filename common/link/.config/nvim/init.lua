@@ -62,7 +62,7 @@ plug('vim-crystal')
 -- plug('vim-jsx-pretty')         -- jsx. React
 plug('vim-styled-components')  -- Styled components syntax
 plug('vim-graphql')            -- Graphql syntax
-plug('scss-syntax.vim')        -- SCSS. Haven't been using. TODO: remove??
+-- plug('scss-syntax.vim')        -- SCSS. Haven't been using. TODO: remove??
 plug('vim-gitignore')          -- gitignore syntax. Forked because original has a bunch of snippets
 plug('vim-markdown')           -- Markdown. This one gives expr folding I believe
 plug('vim-python-pep8-indent') -- 21st century python indentation
