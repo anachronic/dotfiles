@@ -1,10 +1,11 @@
--- require'lspsaga'.init_lsp_saga {
---     code_action_prompt = {
---         enable = true,       -- do want code actions
---         sign = false,        -- don't hint code actions in sign column
---         virtual_text = false -- don't hint code actions in virtual text
---     }
--- }
+require'lspsaga'.init_lsp_saga {
+    use_saga_diagnostic_sign = false,
+    code_action_prompt = {
+        enable = true,       -- do want code actions
+        sign = false,        -- don't hint code actions in sign column
+        virtual_text = false -- don't hint code actions in virtual text
+    }
+}
 
 local on_attach = function(client, bufnr)
     local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
@@ -13,16 +14,16 @@ local on_attach = function(client, bufnr)
     local opts = { noremap=true, silent=true }
     buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
     buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
-    buf_set_keymap('n', 'K', "<Cmd>lua require'lspsaga.hover'.render_hover_doc()<CR>", opts)
+    buf_set_keymap('n', 'K', "<Cmd>Lspsaga hover_doc<CR>", opts)
     buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
     -- buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
     buf_set_keymap('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
     buf_set_keymap('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
     buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
     -- buf_set_keymap('n', '<space>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
-    buf_set_keymap('n', '[d', "<cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_prev()<CR>", opts)
-    buf_set_keymap('n', ']d', "<cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_next()<CR>", opts)
-    buf_set_keymap('n', '<leader>.', "<cmd>lua require('lspsaga.codeaction').code_action()<CR>", opts)
+    buf_set_keymap('n', '[d', "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
+    buf_set_keymap('n', ']d', "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
+    buf_set_keymap('n', '<leader>.', "<cmd>Lspsaga code_action<CR>", opts)
 
     -- buf_set_keymap('n', '<space>.', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
 
