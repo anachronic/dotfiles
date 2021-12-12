@@ -41,6 +41,9 @@ local on_attach_efm = function(client, bufnr)
     -- Mappings.
     local opts = { noremap=true, silent=true }
 
+    buf_set_keymap('n', '[d', "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
+    buf_set_keymap('n', ']d', "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
+
     -- Set some keybinds conditional on server capabilities
     if client.resolved_capabilities.document_formatting then
         buf_set_keymap("n", "<leader><CR>", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
