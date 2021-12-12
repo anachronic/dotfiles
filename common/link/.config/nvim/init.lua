@@ -54,15 +54,10 @@ plug('vim-textobj-entire')     -- "entire" textobject. Like yae would copy the e
 plug('vim-textobj-rubyblock')  -- a ruby block. Been doing rails a lot lately
 plug('vim-sort-motion')        -- sorting mostly because of gemfiles
 
--- plug('vim-vue-plugin')         -- Vue is a mess everywhere other than vscode. jeez
--- plug('yats.vim')               -- I believe this syntax is better
 plug('vala.vim')               -- Vala. I don't think I'll be using this a lot
 plug('vim-crystal')
--- plug('vim-javascript')         -- js indentation
--- plug('vim-jsx-pretty')         -- jsx. React
 plug('vim-styled-components')  -- Styled components syntax
 plug('vim-graphql')            -- Graphql syntax
--- plug('scss-syntax.vim')        -- SCSS. Haven't been using. TODO: remove??
 plug('vim-gitignore')          -- gitignore syntax. Forked because original has a bunch of snippets
 plug('vim-markdown')           -- Markdown. This one gives expr folding I believe
 plug('vim-python-pep8-indent') -- 21st century python indentation
@@ -137,9 +132,7 @@ vim.g.mapleader = " " -- leader is space
 require('ach.lualine')
 require('ach.fzf')
 require('ach.autopairs')
-require('ach.vue')
 require('ach.gitsigns')
--- require('ach.vsnip')
 require('ach.colors')
 require('ach.emmet')
 require('ach.orgmode')
