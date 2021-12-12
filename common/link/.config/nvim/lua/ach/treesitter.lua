@@ -9,6 +9,9 @@ configs.setup({
         'jsonc',
         'json',
         'lua',
+        'vue',
+        'css',
+        'scss',
     },
     highlight = {
         enable = true
