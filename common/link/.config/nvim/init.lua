@@ -173,6 +173,9 @@ map('n', 'j', 'gj')
 map('n', 'k', 'gk')
 map('n', 'Y', 'y$')
 
+-- insert mode
+map('i', '<C-e>', '<End>')
+
 -- command
 map('c', '<C-a>', '<Home>')
 map('c', '<C-e>', '<End>')
