@@ -72,4 +72,8 @@ alias rst='BROWSER=none yarn start'
 alias nrt='npm run test -- '
 alias nrd='npm run dev -- '
 
+# conflict in a hurry
+alias gitconflicts="git diff --name-status --diff-filter=U"
+alias gresolve="git diff --name-status --diff-filter=U | awk '{print \$2}' | xargs nvim"
+
 # vim:ft=sh
