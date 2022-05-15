@@ -145,3 +145,9 @@
 [submodule "lspsaga.nvim"]
 	path = common/link/.config/nvim/pack/bundle/opt/lspsaga.nvim
 	url = https://github.com/tami5/lspsaga.nvim
+[submodule "smart-pairs"]
+	path = common/link/.config/nvim/pack/bundle/opt/smart-pairs
+	url = https://github.com/ZhiyuanLck/smart-pairs
+[submodule "nvim-treesitter-endwise"]
+	path = common/link/.config/nvim/pack/bundle/opt/nvim-treesitter-endwise
+	url = https://github.com/RRethy/nvim-treesitter-endwise

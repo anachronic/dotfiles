@@ -40,7 +40,7 @@ plug('tcomment_vim')           -- Best comments out there. Don't even wanna try 
 plug('editorconfig-vim')       -- Using this at work
 plug('tabular')                -- :Tab for alignment. Works surprisingly well. also dep for markdown
 plug('loupe')                  -- Better search. I find this plugin beautiful
-plug('nvim-autopairs')         -- I guess this is the best lua one. It's mostly fine
+plug('smart-pairs')            -- Works wonders with double pairs like {{  }}
 plug('nvim-snippy')            -- Lua snippets, finally
 plug('emmet-vim')              -- Emmet
 
@@ -60,7 +60,8 @@ plug('vim-styled-components')  -- Styled components syntax
 plug('vim-gitignore')          -- gitignore syntax. Forked because original has a bunch of snippets
 plug('vim-markdown')           -- Markdown. This one gives expr folding I believe
 
-plug('nvim-treesitter')
+plug('nvim-treesitter')         -- General syntax parsing
+plug('nvim-treesitter-endwise') -- endwise based on treesitter syntax
 
 vim.o.termguicolors = true             -- its 2021, cmon
 vim.o.number = true                    -- show line numbers
