@@ -2,16 +2,16 @@ local configs = require('nvim-treesitter.configs')
 
 configs.setup({
     ensure_installed = {
-        'ruby',
-        'typescript',
-        'tsx',
-        'javascript',
-        'jsonc',
-        'json',
-        'lua',
-        'vue',
         'css',
+        'javascript',
+        'json',
+        'jsonc',
+        'lua',
+        'ruby',
         'scss',
+        'tsx',
+        'typescript',
+        'vue',
     },
     highlight = {
         enable = true
