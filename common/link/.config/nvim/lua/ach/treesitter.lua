@@ -8,6 +8,7 @@ configs.setup({
         'json',
         'jsonc',
         'lua',
+        'python',
         'ruby',
         'scss',
         'tsx',

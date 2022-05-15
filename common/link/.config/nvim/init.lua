@@ -59,9 +59,6 @@ plug('vim-crystal')
 plug('vim-styled-components')  -- Styled components syntax
 plug('vim-gitignore')          -- gitignore syntax. Forked because original has a bunch of snippets
 plug('vim-markdown')           -- Markdown. This one gives expr folding I believe
-plug('vim-python-pep8-indent') -- 21st century python indentation
-plug('SimpylFold')             -- python syntax folding
-plug('python-syntax')          -- Better python syntax highlighting
 
 plug('nvim-treesitter')
 
