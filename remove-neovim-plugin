@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+const cp = require('child_process')
+
+if (process.argv.length !== 3) {
+  console.error('Need exactly one argument, which is the git module to remove')
+  process.exit(1)
+}
+
+const pkg = process.argv[2]
+const path = `common/link/.config/nvim/pack/bundle/opt/${pkg}`
+const gitmodule = `.git/modules/${pkg}`
+
+cp.execSync(`git submodule deinit -f ${path}`)
+cp.execSync(`rm -rf ${gitmodule}`)
+cp.execSync(`git rm -f ${path}`)
+
