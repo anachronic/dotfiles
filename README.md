@@ -3,6 +3,7 @@
 Ok, yet another dotfiles repo. Here's the deal
 
 - I use mostly neovim for **actually editing code**
+- This repo requires neovim >= 0.7.x
 - Terminal is kitty, because it has undercurl. Period
 - I use extensively: python stuff, node stuff and soon ruby stuff
 - I have a Linux machine at home. This repo serves as dotfiles for all my
