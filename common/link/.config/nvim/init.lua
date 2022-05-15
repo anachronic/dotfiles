@@ -63,7 +63,6 @@ plug('vim-markdown')           -- Markdown. This one gives expr folding I believ
 plug('vim-python-pep8-indent') -- 21st century python indentation
 plug('SimpylFold')             -- python syntax folding
 plug('python-syntax')          -- Better python syntax highlighting
-plug('vim-toml')               -- TOML
 
 plug('nvim-treesitter')
 

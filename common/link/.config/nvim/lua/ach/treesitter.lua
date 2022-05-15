@@ -10,6 +10,7 @@ configs.setup({
         'ruby',
         'scss',
         'tsx',
+        'toml',
         'typescript',
         'vue',
     },
