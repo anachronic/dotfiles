@@ -1,14 +1,5 @@
 # -*- mode: sh; -*-
-# vim redefs
-alias vi='nvim'
-alias vim='nvim'
-alias vgs='nvim -c ":Neogit"'
-
-# vim + sudo
-alias sv="sudoedit"
-alias svi="sudoedit"
-alias svim="sudoedit"
-
+# this is basic and needed for ls
 list() {
     os=$(uname)
 
@@ -18,6 +9,21 @@ list() {
         *) ls "$@" ;;
     esac
 }
+
+# one letters
+alias l='list -lhF'
+alias p='pnpm'
+alias v='nvim'
+
+# vim redefs
+alias vi='nvim'
+alias vim='nvim'
+alias vgs='nvim -c ":Neogit"'
+
+# vim + sudo
+alias sv="sudoedit"
+alias svi="sudoedit"
+alias svim="sudoedit"
 
 # TUI shortcuts
 alias lg='lazygit'
@@ -38,7 +44,6 @@ alias ssh='TERM=xterm-256color ssh'
 # --color=auto or -G depending on Linux/Darwin. Could probably be used for BSD
 # but since I don't use that, I'm not gonna worry about it
 alias ls='list'
-alias l='list -lhF'
 alias la='list -alhF'
 alias ..='cd ..'
 
