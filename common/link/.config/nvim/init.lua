@@ -153,6 +153,7 @@ map('n', '<leader>o', ':only<CR>')
 map('n', '<leader>k', ':bdelete<CR>')
 map('n', '<leader>;', ':')
 map('n', '<leader>c', '*Ncgn')
+map('n', '<leader>y', ':let @+ = expand("%")<CR>')
 
 -- Window navigation
 map('n', '<C-h>', '<C-w>h')
