@@ -57,7 +57,6 @@ plug('vim-sort-motion')        -- sorting mostly because of gemfiles
 plug('vala.vim')               -- Vala. I don't think I'll be using this a lot
 plug('vim-crystal')
 plug('vim-styled-components')  -- Styled components syntax
-plug('vim-graphql')            -- Graphql syntax
 plug('vim-gitignore')          -- gitignore syntax. Forked because original has a bunch of snippets
 plug('vim-markdown')           -- Markdown. This one gives expr folding I believe
 plug('vim-python-pep8-indent') -- 21st century python indentation

@@ -108,9 +108,6 @@
 [submodule "vim-styled-components"]
 	path = common/link/.config/nvim/pack/bundle/opt/vim-styled-components
 	url = https://github.com/styled-components/vim-styled-components.git
-[submodule "vim-graphql"]
-	path = common/link/.config/nvim/pack/bundle/opt/vim-graphql
-	url = https://github.com/jparise/vim-graphql.git
 [submodule "vim-gitignore"]
 	path = common/link/.config/nvim/pack/bundle/opt/vim-gitignore
 	url = https://github.com/anachronic/vim-gitignore.git
