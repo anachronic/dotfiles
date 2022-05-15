@@ -82,10 +82,6 @@
 [submodule "loupe"]
 	path = common/link/.config/nvim/pack/bundle/opt/loupe
 	url = https://github.com/wincent/loupe.git
-[submodule "nvim-autopairs"]
-	path = common/link/.config/nvim/pack/bundle/opt/nvim-autopairs
-	url = https://github.com/windwp/nvim-autopairs.git
-	ignore = dirty
 [submodule "emmet-vim"]
 	path = common/link/.config/nvim/pack/bundle/opt/emmet-vim
 	url = https://github.com/mattn/emmet-vim.git
