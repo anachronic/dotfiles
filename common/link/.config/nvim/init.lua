@@ -42,6 +42,7 @@ plug('loupe')                  -- Better search. I find this plugin beautiful
 plug('smart-pairs')            -- Works wonders with double pairs like {{  }}
 plug('nvim-snippy')            -- Lua snippets, finally
 plug('emmet-vim')              -- Emmet
+plug('zen-mode.nvim')          -- Emmet
 
 plug('vimux')                  -- Vim + tmux, seems sensible
 
@@ -135,6 +136,7 @@ require('nvim-web-devicons').setup{}
 require('ach.nvimtree')
 require('ach.completion')
 require('ach.treesitter')
+require('ach.distraction-free')
 
 -- The wincent hack for <Tab> folding
 -- This requires additional term configuration

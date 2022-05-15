@@ -141,3 +141,6 @@
 [submodule "nvim-treesitter-endwise"]
 	path = common/link/.config/nvim/pack/bundle/opt/nvim-treesitter-endwise
 	url = https://github.com/RRethy/nvim-treesitter-endwise
+[submodule "zen-mode.nvim"]
+	path = common/link/.config/nvim/pack/bundle/opt/zen-mode.nvim
+	url = https://github.com/folke/zen-mode.nvim
