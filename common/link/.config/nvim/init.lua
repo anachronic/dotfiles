@@ -24,7 +24,6 @@ plug('terminus')               -- focus report
 
 plug('pinnacle')               -- better highlighting?
 plug('lualine.nvim')           -- great statusline
-plug('seoul256.vim')           -- Not currently being used. TODO: remove?
 plug('vim-nightfly-guicolors') -- Current color scheme, works for me
 
 plug('vim-eunuch')             -- frequently use :Delete and :Rename

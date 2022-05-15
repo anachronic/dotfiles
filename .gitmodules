@@ -43,9 +43,6 @@
 [submodule "lualine.nvim"]
 	path = common/link/.config/nvim/pack/bundle/opt/lualine.nvim
 	url = https://github.com/hoob3rt/lualine.nvim.git
-[submodule "seoul256.vim"]
-	path = common/link/.config/nvim/pack/bundle/opt/seoul256.vim
-	url = https://github.com/junegunn/seoul256.vim.git
 [submodule "vim-nightfly-guicolors"]
 	path = common/link/.config/nvim/pack/bundle/opt/vim-nightfly-guicolors
 	url = https://github.com/bluz71/vim-nightfly-guicolors.git
