@@ -136,46 +136,4 @@ require('ach.completion')
 require('ach.treesitter')
 require('ach.distraction-free')
 require('ach.comments')
-
--- The wincent hack for <Tab> folding
--- This requires additional term configuration
-map('n', '<Tab>', 'za')
-map('n', '<F6>', '<C-i>')
-
--- Regular vim stuff
-map('n', '<leader>w', ':write<CR>')
-map('n', '<leader>q', ':quit<CR>')
-map('n', '<leader>o', ':only<CR>')
-map('n', '<leader>k', ':bdelete<CR>')
-map('n', '<leader>;', ':')
-map('n', '<leader>c', '*Ncgn')
-map('n', '<leader>y', ':let @+ = expand("%")<CR>')
-
--- Window navigation
-map('n', '<C-h>', '<C-w>h')
-map('n', '<C-j>', '<C-w>j')
-map('n', '<C-k>', '<C-w>k')
-map('n', '<C-l>', '<C-w>l')
-
--- swap 0 and ^
-map('n', '0', '^')
-map('n', '^', '0')
-
--- quickfix
-map('n', '<Down>', '<cmd>cnext<CR>')
-map('n', '<Up>', '<cmd>cprevious<CR>')
-
--- j k and Y
-map('n', 'j', 'gj')
-map('n', 'k', 'gk')
-map('n', 'Y', 'y$')
-
--- insert mode
-map('i', '<C-e>', '<End>')
-
--- command
-map('c', '<C-a>', '<Home>')
-map('c', '<C-e>', '<End>')
-
--- get rid of ex mode
-map('n', 'Q', '<nop>')
+require('ach.bindings')
