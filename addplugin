@@ -1,0 +1,9 @@
+#!/bin/sh
+
+pkgname=$(echo "$1" | awk -F '/' '{print $(NF)}')
+
+if [[ "$pkgname" = *.git ]]; then
+    pkgname=${pkgname%.git}
+fi
+
+git submodule add --name $pkgname "$1" "common/link/.config/nvim/pack/bundle/opt/$pkgname"
