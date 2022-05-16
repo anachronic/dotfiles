@@ -9,26 +9,15 @@ require('gitsigns').setup {
     },
     numhl = false,
     linehl = false,
-    keymaps = {
-        -- Default keymap options
-        noremap = true,
-        buffer = true,
-
-        ['n ]c'] = { expr = true, "&diff ? ']c' : '<cmd>lua require\"gitsigns.actions\".next_hunk()<CR>'"},
-        ['n [c'] = { expr = true, "&diff ? '[c' : '<cmd>lua require\"gitsigns.actions\".prev_hunk()<CR>'"},
-
-        -- Text objects
-        ['o ih'] = ':<C-U>lua require"gitsigns.actions".select_hunk()<CR>',
-        ['x ih'] = ':<C-U>lua require"gitsigns.actions".select_hunk()<CR>'
-    },
-    -- watch_index = {
-    --     interval = 1000
-    -- },
-    -- current_line_blame = false,
-    -- current_line_blame_delay = 1000,
-    -- current_line_blame_position = 'eol',
     sign_priority = 6,
     update_debounce = 100,
-    status_formatter = nil, -- Use default
-    -- use_internal_diff = true,  -- If luajit is present
+    status_formatter = nil,
+    on_attach = function(bufnr)
+        local gitsigns = package.loaded.gitsigns
+
+        vim.keymap.set('n', '<leader>gd', gitsigns.preview_hunk)
+        vim.keymap.set('n', ']h', gitsigns.next_hunk)
+        vim.keymap.set('n', '[h', gitsigns.prev_hunk)
+        vim.keymap.set({'o', 'x'}, 'ih', ':<C-U>Gitsigns select_hunk<CR>')
+    end
 }
