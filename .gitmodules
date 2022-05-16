@@ -64,9 +64,6 @@
 [submodule "vim-sneak"]
 	path = common/link/.config/nvim/pack/bundle/opt/vim-sneak
 	url = https://github.com/justinmk/vim-sneak.git
-[submodule "tcomment_vim"]
-	path = common/link/.config/nvim/pack/bundle/opt/tcomment_vim
-	url = https://github.com/tomtom/tcomment_vim.git
 [submodule "editorconfig-vim"]
 	path = common/link/.config/nvim/pack/bundle/opt/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim.git

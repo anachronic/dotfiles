@@ -35,7 +35,7 @@ plug('vim-speeddating')        -- Seems useful but haven't used it
 plug('vim-signature')          -- Marks, haven't been using it but I should
 plug('vim-sneak')              -- TODO: Maybe replace with ggandor/lightspeed.nvim
 
-plug('tcomment_vim')           -- Best comments out there. Don't even wanna try anything else
+-- plug('tcomment_vim')           -- Best comments out there. Don't even wanna try anything else
 plug('editorconfig-vim')       -- Using this at work
 plug('tabular')                -- :Tab for alignment. Works surprisingly well. also dep for markdown
 plug('loupe')                  -- Better search. I find this plugin beautiful
