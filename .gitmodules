@@ -43,9 +43,6 @@
 [submodule "lualine.nvim"]
 	path = common/link/.config/nvim/pack/bundle/opt/lualine.nvim
 	url = https://github.com/hoob3rt/lualine.nvim.git
-[submodule "vim-nightfly-guicolors"]
-	path = common/link/.config/nvim/pack/bundle/opt/vim-nightfly-guicolors
-	url = https://github.com/bluz71/vim-nightfly-guicolors.git
 [submodule "vim-eunuch"]
 	path = common/link/.config/nvim/pack/bundle/opt/vim-eunuch
 	url = https://github.com/tpope/vim-eunuch.git
@@ -138,3 +135,6 @@
 [submodule "Comment.nvim"]
 	path = common/link/.config/nvim/pack/bundle/opt/Comment.nvim
 	url = https://github.com/numToStr/Comment.nvim
+[submodule "vim-nightfly-guicolors"]
+	path = common/link/.config/nvim/pack/bundle/opt/vim-nightfly-guicolors
+	url = git@github.com:anachronic/vim-nightfly-guicolors.git
