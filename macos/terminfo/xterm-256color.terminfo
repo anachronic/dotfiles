@@ -1,3 +1,4 @@
 xterm-256color|xterm with 256 colors and italic,
   sitm=\E[3m, ritm=\E[23m,
+  smxx=\E[9m, rmxx=\E[0m,
   use=xterm-256color,
