@@ -135,3 +135,6 @@
 [submodule "zen-mode.nvim"]
 	path = common/link/.config/nvim/pack/bundle/opt/zen-mode.nvim
 	url = https://github.com/folke/zen-mode.nvim
+[submodule "Comment.nvim"]
+	path = common/link/.config/nvim/pack/bundle/opt/Comment.nvim
+	url = https://github.com/numToStr/Comment.nvim
