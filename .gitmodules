@@ -89,12 +89,6 @@
 	path = common/link/.config/nvim/pack/bundle/opt/orgmode.nvim
 	url = https://github.com/kristijanhusak/orgmode.nvim.git
 	ignore = dirty
-[submodule "vala.vim"]
-	path = common/link/.config/nvim/pack/bundle/opt/vala.vim
-	url = https://github.com/arrufat/vala.vim.git
-[submodule "vim-crystal"]
-	path = common/link/.config/nvim/pack/bundle/opt/vim-crystal
-	url = https://github.com/vim-crystal/vim-crystal.git
 [submodule "vim-styled-components"]
 	path = common/link/.config/nvim/pack/bundle/opt/vim-styled-components
 	url = https://github.com/styled-components/vim-styled-components.git
