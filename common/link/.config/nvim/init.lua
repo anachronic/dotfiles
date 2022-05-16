@@ -35,7 +35,7 @@ plug('vim-speeddating')        -- Seems useful but haven't used it
 plug('vim-signature')          -- Marks, haven't been using it but I should
 plug('vim-sneak')              -- TODO: Maybe replace with ggandor/lightspeed.nvim
 
--- plug('tcomment_vim')           -- Best comments out there. Don't even wanna try anything else
+plug('Comment.nvim')           -- Best comments out there. Don't even wanna try anything else
 plug('editorconfig-vim')       -- Using this at work
 plug('tabular')                -- :Tab for alignment. Works surprisingly well. also dep for markdown
 plug('loupe')                  -- Better search. I find this plugin beautiful
@@ -135,6 +135,7 @@ require('ach.nvimtree')
 require('ach.completion')
 require('ach.treesitter')
 require('ach.distraction-free')
+require('ach.comments')
 
 -- The wincent hack for <Tab> folding
 -- This requires additional term configuration
