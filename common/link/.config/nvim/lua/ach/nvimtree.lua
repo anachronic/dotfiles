@@ -1,5 +1,4 @@
 local util = require('ach.util')
-local map = util.map
 
 require 'nvim-tree'.setup {
     git = {
@@ -14,6 +13,5 @@ require 'nvim-tree'.setup {
     }
 }
 
-map('n', '<A-1>', '<cmd>NvimTreeToggle<CR>')
-map('n', '<leader>j', '<cmd>NvimTreeFindFile<CR>')
-
+vim.keymap.set('n', '<A-1>', '<cmd>NvimTreeToggle<CR>')
+vim.keymap.set('n', '<leader>j', '<cmd>NvimTreeFindFile<CR>')

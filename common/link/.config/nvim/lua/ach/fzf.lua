@@ -1,5 +1,4 @@
 local actions = require "fzf-lua.actions"
-local util = require('ach.util')
 
 -- Will be set by zshenv so it's safe
 local default_skim_cmd = vim.fn.getenv('SKIM_DEFAULT_COMMAND')
@@ -148,7 +147,7 @@ require'fzf-lua'.setup {
   },
 }
 
-util.map('n', '<leader>h', '<cmd>FzfLua help_tags<CR>')
-util.map('n', '<C-p>', "<cmd>FzfLua files<CR>")
-util.map('n', '<leader>b', '<cmd>FzfLua buffers<cr>')
-util.map('n', '<leader>a', "<cmd>FzfLua live_grep<cr>")
+vim.keymap.set('n', '<leader>h', '<cmd>FzfLua help_tags<CR>')
+vim.keymap.set('n', '<C-p>', "<cmd>FzfLua files<CR>")
+vim.keymap.set('n', '<leader>b', '<cmd>FzfLua buffers<cr>')
+vim.keymap.set('n', '<leader>a', "<cmd>FzfLua live_grep<cr>")

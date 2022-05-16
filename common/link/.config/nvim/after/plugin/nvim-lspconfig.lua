@@ -8,47 +8,40 @@ require'lspsaga'.init_lsp_saga {
 }
 
 local on_attach = function(client, bufnr)
-    local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-
     -- Mappings.
-    local opts = { noremap=true, silent=true }
-    buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
-    buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
-    buf_set_keymap('n', 'K', "<Cmd>Lspsaga hover_doc<CR>", opts)
-    buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-    -- buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
-    buf_set_keymap('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
-    buf_set_keymap('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
-    buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
-    -- buf_set_keymap('n', '<space>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
-    buf_set_keymap('n', '[d', "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
-    buf_set_keymap('n', ']d', "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
-    buf_set_keymap('n', '<leader>.', "<cmd>Lspsaga code_action<CR>", opts)
+    vim.keymap.set('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>')
+    vim.keymap.set('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>')
+    vim.keymap.set('n', 'K', "<Cmd>Lspsaga hover_doc<CR>")
+    vim.keymap.set('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>')
+    -- vim.keymap.set('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>')
+    vim.keymap.set('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>')
+    vim.keymap.set('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>')
+    vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>')
+    -- vim.keymap.set('n', '<space>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>')
+    vim.keymap.set('n', '[d', "<cmd>Lspsaga diagnostic_jump_prev<CR>")
+    vim.keymap.set('n', ']d', "<cmd>Lspsaga diagnostic_jump_next<CR>")
+    vim.keymap.set('n', '<leader>.', "<cmd>Lspsaga code_action<CR>")
 
-    -- buf_set_keymap('n', '<space>.', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
+    -- vim.keymap.set('n', '<space>.', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>')
 
     -- Set some keybinds conditional on server capabilities
     if client.resolved_capabilities.document_formatting then
-        buf_set_keymap("n", "<leader><CR>", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+        vim.keymap.set("n", "<leader><CR>", "<cmd>lua vim.lsp.buf.formatting()<CR>")
     elseif client.resolved_capabilities.document_range_formatting then
-        buf_set_keymap("n", "<leader><CR>", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+        vim.keymap.set("n", "<leader><CR>", "<cmd>lua vim.lsp.buf.formatting()<CR>")
     end
 end
 
 local on_attach_efm = function(client, bufnr)
-    local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-
     -- Mappings.
-    local opts = { noremap=true, silent=true }
-
-    buf_set_keymap('n', '[d', "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
-    buf_set_keymap('n', ']d', "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
+    vim.keymap.set('n', '[d', "<cmd>Lspsaga diagnostic_jump_prev<CR>")
+    vim.keymap.set('n', ']d', "<cmd>Lspsaga diagnostic_jump_next<CR>")
 
     -- Set some keybinds conditional on server capabilities
     if client.resolved_capabilities.document_formatting then
-        buf_set_keymap("n", "<leader><CR>", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+        vim.keymap.set("n", "<leader><CR>", "<cmd>lua vim.lsp.buf.formatting()<CR>")
     elseif client.resolved_capabilities.document_range_formatting then
-        buf_set_keymap("n", "<leader><CR>", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+        vim.keymap.set("n", "<leader><CR>", "<cmd>lua vim.lsp.buf.formatting()<CR>")
     end
 end
 

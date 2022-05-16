@@ -1,5 +1,3 @@
-local util = require('ach.util')
-
 require('zen-mode').setup {
     window = {
         options = {
@@ -16,4 +14,4 @@ require('zen-mode').setup {
     }
 }
 
-util.map('n', '<leader>z', ':ZenMode<CR>')
+vim.keymap.set('n', '<leader>z', ':ZenMode<CR>')
