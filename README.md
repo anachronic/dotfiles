@@ -34,9 +34,9 @@ better. But it has some **very** annoying caveats:
 - Trying out new plugins
 - Updating plugins
 
-> For deleting a plugin: [use this](https://stackoverflow.com/a/36593218).
+> For deleting a plugin: `./rmplugin <plugin_name>` ([source](https://stackoverflow.com/a/36593218))
 
-> For trying out: `git submodule add --name <name> <URL> <path>`
+> For trying out: `./addplugin <git url>` (self-made)
 
 > For update: `git submodule foreach "git pull origin main || git pull origin master"`
 
