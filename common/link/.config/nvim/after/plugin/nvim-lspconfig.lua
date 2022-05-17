@@ -1,3 +1,5 @@
+local lspconfig = require('lspconfig')
+
 require'lspsaga'.init_lsp_saga {
     use_saga_diagnostic_sign = false,
     code_action_prompt = {
@@ -53,7 +55,7 @@ end
 -- efm
 -- brew install efm-langserver
 -- will need eslint, flake8 and prettier
-require'lspconfig'.efm.setup{
+lspconfig.efm.setup{
     on_attach = on_attach_efm,
     filetypes = {
         'ruby',
@@ -76,7 +78,7 @@ end
 
 -- tsserver
 -- npm i -g typescript-language-server typescript
-require'lspconfig'.tsserver.setup{
+lspconfig.tsserver.setup{
     on_attach = on_attach_tsserver,
     commands = {
         OrganizeImports = {
@@ -88,17 +90,17 @@ require'lspconfig'.tsserver.setup{
 
 -- jedi language server
 -- pipx install jedi-language-server?
-require'lspconfig'.jedi_language_server.setup{
+lspconfig.jedi_language_server.setup{
     on_attach = on_attach
 }
 
 -- gem install solargraph
-require'lspconfig'.solargraph.setup{
+lspconfig.solargraph.setup{
     on_attach = on_attach
 }
 
 -- npm i -g vuels
-require'lspconfig'.vuels.setup{
+lspconfig.vuels.setup{
     on_attach = on_attach,
     init_options = {
         config = {
@@ -111,4 +113,10 @@ require'lspconfig'.vuels.setup{
             }
         }
     }
+}
+
+-- gopls langserver
+-- go install golang.org/x/tools/gopls@latest
+lspconfig.gopls.setup{
+    on_attach = on_attach,
 }
