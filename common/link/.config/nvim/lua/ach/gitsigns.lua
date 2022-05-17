@@ -15,9 +15,9 @@ require('gitsigns').setup {
     on_attach = function(bufnr)
         local gitsigns = package.loaded.gitsigns
 
-        vim.keymap.set('n', '<leader>gd', gitsigns.preview_hunk)
-        vim.keymap.set('n', ']h', gitsigns.next_hunk)
-        vim.keymap.set('n', '[h', gitsigns.prev_hunk)
-        vim.keymap.set({'o', 'x'}, 'ih', ':<C-U>Gitsigns select_hunk<CR>')
+        vim.keymap.set('n', '<leader>gd', gitsigns.preview_hunk, { buffer = bufnr })
+        vim.keymap.set('n', ']h', gitsigns.next_hunk, { buffer = bufnr })
+        vim.keymap.set('n', '[h', gitsigns.prev_hunk, { buffer = bufnr })
+        vim.keymap.set({'o', 'x'}, 'ih', ':<C-U>Gitsigns select_hunk<CR>', { buffer = bufnr })
     end
 }
