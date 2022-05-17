@@ -27,6 +27,7 @@ typeset -U path
 
 # First party paths
 path+=($HOME/.local/bin)
+path+=($HOME/go/bin)
 
 # Vendor paths
 export WORKON_HOME=$HOME/.virtualenvs
