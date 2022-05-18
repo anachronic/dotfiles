@@ -4,6 +4,7 @@ configs.setup({
     ensure_installed = {
         'css',
         'graphql',
+        'html',
         'javascript',
         'json',
         'jsonc',
