@@ -1,18 +1,18 @@
-local u = require("null-ls.utils")
+local u = require('null-ls.utils')
 
 local overrides = {}
 
 local client_id
 local get_client = function()
     for _, client in ipairs(vim.lsp.get_active_clients()) do
-        if client.name == "tsserver" then
+        if client.name == 'tsserver' then
             return client
         end
     end
 end
 
 function overrides.on_output_tsc(line, params)
-    local name, row, col, err, code, message = line:match("(%g+)%((%d+),(%d+)%): (%a+) (%g+): (.+)")
+    local name, row, col, err, code, message = line:match('(%g+)%((%d+),(%d+)%): (%a+) (%g+): (.+)')
     if not (name and row and col) then
         return
     end
@@ -28,7 +28,7 @@ function overrides.on_output_tsc(line, params)
 
     local filename = u.path.join(params.cwd, name)
 
-    local severity = err == "error" and 1 or 2
+    local severity = err == 'error' and 1 or 2
     return {
         row = row,
         col = col,
