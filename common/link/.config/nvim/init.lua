@@ -1,5 +1,4 @@
 local utils = require('ach.util')
-local map = utils.map
 local plug = utils.plug
 
 plug('popup.nvim') -- Common dependency
@@ -7,6 +6,8 @@ plug('plenary.nvim') -- Common dependency
 
 plug('nvim-lspconfig') -- LSP
 plug('lspsaga.nvim') -- UI Improvements for LSP, not using it much though
+plug("null-ls.nvim") -- Instead of efm
+
 plug('nvim-cmp')
 plug('cmp-nvim-lsp')
 plug('cmp-path')
