@@ -2,6 +2,8 @@ local lspconfig = require('lspconfig')
 local hover = require('lspsaga.hover')
 local diagnostic = require('lspsaga.diagnostic')
 local codeaction = require('lspsaga.codeaction')
+local null_ls = require('null-ls')
+local null_ls_overrides = require('ach.overrides.null-ls')
 
 require('lspsaga').init_lsp_saga({
     use_saga_diagnostic_sign = false,
@@ -33,11 +35,11 @@ local on_attach = function(client, bufnr)
     end
 end
 
-local on_attach_efm = function(client, bufnr)
+local on_attach_null_ls = function(client, bufnr)
     local only_buffer = { buffer = bufnr }
 
-    vim.keymap.set('n', '[d', diagnostic.navigate('next'), only_buffer)
-    vim.keymap.set('n', ']d', diagnostic.navigate('prev'), only_buffer)
+    vim.keymap.set('n', ']d', diagnostic.navigate('next'), only_buffer)
+    vim.keymap.set('n', '[d', diagnostic.navigate('prev'), only_buffer)
 
     if client.resolved_capabilities.document_formatting then
         vim.keymap.set('n', '<leader><CR>', vim.lsp.buf.formatting, only_buffer)
@@ -47,25 +49,39 @@ local on_attach_efm = function(client, bufnr)
 end
 
 local on_attach_tsserver = function(client, bufnr)
-    -- EFM will handle formatting for tsserver.
     client.resolved_capabilities.document_formatting = false
     client.resolved_capabilities.document_range_formatting = false
     on_attach(client, bufnr)
 end
 
--- efm
--- brew install efm-langserver
--- will need eslint, flake8 and prettier
-lspconfig.efm.setup({
-    on_attach = on_attach_efm,
-    filetypes = {
-        'ruby',
-        'javascript',
-        'typescript',
-        'javascriptreact',
-        'typescriptreact',
-        'vue',
+null_ls.setup({
+    sources = {
+        null_ls.builtins.formatting.stylua,
+        null_ls.builtins.formatting.isort, -- not convinced, should be in a separate keystroke
+        null_ls.builtins.formatting.prettier.with({
+            prefer_local = 'node_modules/.bin',
+        }),
+
+        null_ls.builtins.diagnostics.tsc.with({
+            on_output = null_ls_overrides.on_output_tsc,
+        }),
+        null_ls.builtins.diagnostics.eslint_d,
+        null_ls.builtins.diagnostics.flake8,
+        null_ls.builtins.diagnostics.rubocop.with({
+            command = 'bundle',
+            ignore_stderr = true, -- might not need this. required now because of a not-so-good repo
+            args = {
+                'exec',
+                'rubocop',
+                '-f',
+                'json',
+                '--stdin',
+                '$FILENAME',
+            },
+        }),
     },
+    diagnostics_format = '[#{c}] #{m} (#{s})',
+    on_attach = on_attach_null_ls,
 })
 
 local function organize_imports()
@@ -79,8 +95,12 @@ end
 
 -- tsserver
 -- npm i -g typescript-language-server typescript
+-- diagnostics disabled because null ls will handle them
 lspconfig.tsserver.setup({
     on_attach = on_attach_tsserver,
+    handlers = {
+        ['textDocument/publishDiagnostics'] = function() end,
+    },
     commands = {
         OrganizeImports = {
             organize_imports,
