@@ -28,30 +28,23 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', '[d', diagnostic.navigate('prev'), only_buffer)
     vim.keymap.set('n', '<leader>.', codeaction.code_action, only_buffer)
 
-    if client.resolved_capabilities.document_formatting then
-        vim.keymap.set('n', '<leader><CR>', vim.lsp.buf.formatting, only_buffer)
-    elseif client.resolved_capabilities.document_range_formatting then
+    local enabled_formmater_lsps = {
+        ['null-ls'] = true,
+    }
+
+    if not enabled_formmater_lsps[client.name] then
+        client.resolved_capabilities.document_formatting = false
+        client.resolved_capabilities.document_range_formatting = false
+    end
+
+    local formatting_enabled = (
+        client.resolved_capabilities.document_formatting
+        or client.resolved_capabilities.document_range_formatting
+    )
+
+    if formatting_enabled then
         vim.keymap.set('n', '<leader><CR>', vim.lsp.buf.formatting, only_buffer)
     end
-end
-
-local on_attach_null_ls = function(client, bufnr)
-    local only_buffer = { buffer = bufnr }
-
-    vim.keymap.set('n', ']d', diagnostic.navigate('next'), only_buffer)
-    vim.keymap.set('n', '[d', diagnostic.navigate('prev'), only_buffer)
-
-    if client.resolved_capabilities.document_formatting then
-        vim.keymap.set('n', '<leader><CR>', vim.lsp.buf.formatting, only_buffer)
-    elseif client.resolved_capabilities.document_range_formatting then
-        vim.keymap.set('n', '<leader><CR>', vim.lsp.buf.formatting, only_buffer)
-    end
-end
-
-local on_attach_tsserver = function(client, bufnr)
-    client.resolved_capabilities.document_formatting = false
-    client.resolved_capabilities.document_range_formatting = false
-    on_attach(client, bufnr)
 end
 
 null_ls.setup({
@@ -81,7 +74,7 @@ null_ls.setup({
         }),
     },
     diagnostics_format = '[#{c}] #{m} (#{s})',
-    on_attach = on_attach_null_ls,
+    on_attach = on_attach,
 })
 
 local function organize_imports()
@@ -97,7 +90,7 @@ end
 -- npm i -g typescript-language-server typescript
 -- diagnostics disabled because null ls will handle them
 lspconfig.tsserver.setup({
-    on_attach = on_attach_tsserver,
+    on_attach = on_attach,
     handlers = {
         ['textDocument/publishDiagnostics'] = function() end,
     },
