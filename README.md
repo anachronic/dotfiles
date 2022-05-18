@@ -1,5 +1,7 @@
 # dotfiles
 
+![neovim pipeline](https://github.com/anachronic/dotfiles/actions/workflows/neovim.yml/badge.svg)
+
 Ok, yet another dotfiles repo. Here's the deal
 
 - I use mostly neovim for **actually editing code**
