@@ -6,7 +6,7 @@ plug('plenary.nvim') -- Common dependency
 
 plug('nvim-lspconfig') -- LSP
 plug('lspsaga.nvim') -- UI Improvements for LSP, not using it much though
-plug("null-ls.nvim") -- Instead of efm
+plug('null-ls.nvim') -- Instead of efm
 
 plug('nvim-cmp')
 plug('cmp-nvim-lsp')
