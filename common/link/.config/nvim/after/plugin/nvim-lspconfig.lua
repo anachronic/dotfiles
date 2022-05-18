@@ -22,8 +22,8 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, only_buffer)
     vim.keymap.set('n', 'gr', vim.lsp.buf.references, only_buffer)
     vim.keymap.set('n', 'K', hover.render_hover_doc, only_buffer)
-    vim.keymap.set('n', '[d', diagnostic.navigate('next'), only_buffer)
-    vim.keymap.set('n', ']d', diagnostic.navigate('prev'), only_buffer)
+    vim.keymap.set('n', ']d', diagnostic.navigate('next'), only_buffer)
+    vim.keymap.set('n', '[d', diagnostic.navigate('prev'), only_buffer)
     vim.keymap.set('n', '<leader>.', codeaction.code_action, only_buffer)
 
     if client.resolved_capabilities.document_formatting then
