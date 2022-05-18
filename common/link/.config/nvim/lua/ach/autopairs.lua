@@ -1,1 +1,1 @@
-require('pairs'):setup()
+require("pairs"):setup()
