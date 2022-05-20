@@ -27,6 +27,9 @@ fi
 # Force Gtk to Adwaita dark and be done with it
 export GTK_THEME=Adwaita:dark
 
+# Key repetition can be a little annoying
+xset r rate 400 40
+
 # exec i3
 exec launch-dwm
 # vim: set ft=sh ts=2 sw=0 et:
