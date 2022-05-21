@@ -11,6 +11,7 @@ configs.setup({
         'lua',
         'python',
         'ruby',
+        'rust',
         'scss',
         'tsx',
         'toml',
