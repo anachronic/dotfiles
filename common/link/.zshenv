@@ -27,6 +27,7 @@ typeset -U path
 
 # First party paths
 path+=($HOME/.local/bin)
+path+=($HOME/.cargo/bin)
 path+=($HOME/go/bin)
 
 # Vendor paths
