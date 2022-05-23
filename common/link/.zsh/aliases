@@ -14,6 +14,7 @@ list() {
 alias l='list -lhF'
 alias p='pnpm'
 alias v='nvim'
+alias k='kubectl'
 
 # vim redefs
 alias vi='nvim'
