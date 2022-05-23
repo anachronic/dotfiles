@@ -8,7 +8,7 @@ require('pairs'):setup({
             { '"', '"' },
         },
         rust = {
-            { '\'', '\'', { ignore_pre = '&' } },
+            { '\'', '\'', { ignore_pre = '\\v(\\w|\\&)' } },
         },
     },
 })
