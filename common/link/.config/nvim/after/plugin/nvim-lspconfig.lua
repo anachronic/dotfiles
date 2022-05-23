@@ -150,6 +150,12 @@ lspconfig.vuels.setup({
     },
 })
 
+-- pacman -S rust-analyzer
+-- brew install rust-analyzer
+lspconfig.rust_analyzer.setup({
+    on_attach = on_attach,
+})
+
 -- gopls langserver
 -- go install golang.org/x/tools/gopls@latest
 lspconfig.gopls.setup({
