@@ -9,6 +9,7 @@ configs.setup({
         'json',
         'jsonc',
         'lua',
+        'markdown',
         'python',
         'ruby',
         'rust',
