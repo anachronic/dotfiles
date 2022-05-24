@@ -1,0 +1,24 @@
+# With xswitch. Does NOT work.
+# - CMD: mux -c keyboard -c paste -c regular
+# - JOB:
+#     - mux -i paste | /home/nsalas/tests/interception/paste | mux -o keyboard
+#     - mux -i regular | /home/nsalas/tests/interception/mac2linux | mux -o keyboard
+#     - mux -i keyboard | uinput -c /etc/interception/keyboard.yaml
+# - JOB: intercept -g $DEVNODE | xswitch -o regular -a zsh -o paste
+# # - JOB: intercept -g $DEVNODE | xswitch -o regular -a kitty -o paste
+#   DEVICE:
+#     LINK: /dev/input/by-id/usb-Massdrop_Inc._ALT_Keyboard_1551771897-event-kbd
+
+# No xswitch. Works great
+- JOB: intercept -g $DEVNODE | /home/nsalas/tests/interception/swapaltmeta | dual-function-keys -c /etc/interception/caps.yaml | /home/nsalas/tests/interception/mac2linux | uinput -d $DEVNODE
+  DEVICE:
+    LINK: /dev/input/by-id/usb-04d9_USB-HID_Keyboard-event-kbd
+
+# rebinding only in firefox. Testing purposes. Does NOT work
+# - CMD: mux -c keyboard -c mac2linux
+# - JOB:
+#     - mux -i mac2linux | /home/nsalas/tests/interception/mac2linux | mux -o keyboard
+#     - mux -i keyboard | uinput -c /etc/interception/keyboard.yaml
+# - JOB: intercept -g $DEVNODE | xswitch -o keyboard -c firefox -o mac2linux
+#   DEVICE:
+#     LINK: /dev/input/by-id/usb-Massdrop_Inc._ALT_Keyboard_1551771897-event-kbd
