@@ -139,3 +139,6 @@
 	path = common/link/.config/nvim/pack/bundle/opt/null-ls.nvim
 	url = https://github.com/jose-elias-alvarez/null-ls.nvim
 	ignore = dirty
+[submodule "tokyonight.nvim"]
+	path = common/link/.config/nvim/pack/bundle/opt/tokyonight.nvim
+	url = https://github.com/folke/tokyonight.nvim
