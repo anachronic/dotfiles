@@ -1,4 +1,3 @@
--- require('gitsigns').setup()
 require('gitsigns').setup({
     signs = {
         add = { hl = 'GitGutterAdd', text = '┃', numhl = '' },
@@ -7,6 +6,7 @@ require('gitsigns').setup({
         topdelete = { hl = 'GitGutterDelete', text = '‾', numhl = '' },
         changedelete = { hl = 'GitGutterChangeDelete', text = '≃', numhl = '' },
     },
+    signcolumn = true,
     numhl = false,
     linehl = false,
     sign_priority = 6,
