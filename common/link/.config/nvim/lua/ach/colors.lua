@@ -1,5 +1,5 @@
 -- colors
-vim.g.tokyonight_style = "night"
+vim.g.tokyonight_style = 'night'
 vim.cmd('silent! colorscheme tokyonight')
 
 -- 👇 old config and maybe not all that needed
