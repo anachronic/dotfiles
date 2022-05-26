@@ -1,10 +1,10 @@
 require('gitsigns').setup({
     signs = {
-        add = { hl = 'GitGutterAdd', text = '┃', numhl = '' },
-        change = { hl = 'GitGutterChange', text = '┃', numhl = '' },
+        add = { hl = 'GitGutterAdd', text = '▎', numhl = '' },
+        change = { hl = 'GitGutterChange', text = '▎', numhl = '' },
         delete = { hl = 'GitGutterDelete', text = '_', numhl = '' },
         topdelete = { hl = 'GitGutterDelete', text = '‾', numhl = '' },
-        changedelete = { hl = 'GitGutterChangeDelete', text = '≃', numhl = '' },
+        changedelete = { hl = 'GitGutterChangeDelete', text = '▎', numhl = '' },
     },
     signcolumn = true,
     numhl = false,
