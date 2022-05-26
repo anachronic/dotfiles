@@ -78,7 +78,7 @@ enable-ipc = true
 inherit = bar/achbase
 modules-left = dwm
 modules-center =
-modules-right = btsink filesystem pulseaudio xkeyboard memory cpu wlan eth temperature dunst date
+modules-right = btsink pulseaudio xkeyboard memory cpu ach-nm-daemon temperature dunst date
 
 [bar/achi3]
 inherit = bar/achbase
