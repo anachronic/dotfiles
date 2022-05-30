@@ -24,7 +24,7 @@ super + @l
     superl.sh
 
 super + Return
-    kitty
+    alacritty
 
 super + ctrl + q
     xset s activate
