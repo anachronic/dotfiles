@@ -1,5 +1,4 @@
-# With xswitch. Does NOT work.
-# - CMD: mux -c keyboard -c paste -c regular
+# With xswitch. Does NOT work. - CMD: mux -c keyboard -c paste -c regular
 # - JOB:
 #     - mux -i paste | /home/nsalas/tests/interception/paste | mux -o keyboard
 #     - mux -i regular | /home/nsalas/tests/interception/mac2linux | mux -o keyboard
@@ -12,7 +11,7 @@
 # No xswitch. Works great
 - JOB: intercept -g $DEVNODE | /home/nsalas/tests/interception/swapaltmeta | dual-function-keys -c /etc/interception/caps.yaml | /home/nsalas/tests/interception/mac2linux | uinput -d $DEVNODE
   DEVICE:
-    LINK: /dev/input/by-id/usb-04d9_USB-HID_Keyboard-event-kbd
+    KEY: [[KEY_CAPSLOCK, KEY_ESC, KEY_LEFTCTRL, KEY_RIGHTCTRL, KEY_LEFTMETA, KEY_RIGHTMETA, KEY_LEFTALT, KEY_RIGHTALT, KEY_LEFTSHIFT, KEY_RIGHTSHIFT, KEY_T, KEY_W, KEY_F, KEY_G, KEY_Z, KEY_X, KEY_C, KEY_EQUAL, KEY_MINUS, KEY_LEFT, KEY_HOME, KEY_RIGHT, KEY_BACKSPACE]]
 
 # rebinding only in firefox. Testing purposes. Does NOT work
 # - CMD: mux -c keyboard -c mac2linux
