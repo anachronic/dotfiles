@@ -1,0 +1,35 @@
+(defcfg
+    input (device-file "/dev/input/by-id/usb-LEOPOLD_Mini_Keyboard-event-kbd")
+    output (uinput-sink "kmonad output")
+    fallthrough true
+)
+
+(defsrc
+    grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+    tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+    caps a    s    d    f    g    h    j    k    l    ;    '    ret
+    lsft z    x    c    v    b    n    m    ,    .    /    rsft
+    lctl met  lalt           spc            ralt rctl lft  up   down rght
+)
+
+;; Default layout aliases
+(defalias
+    spc (tap-next-release spc (layer-toggle spacefn))
+    ce  (tap-next esc lctl)
+)
+
+(deflayer default
+    grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+    tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+    @ce  a    s    d    f    g    h    j    k    l    ;    '    ret
+    lsft z    x    c    v    b    n    m    ,    .    /    rsft
+    lctl lalt lmet           @spc           ralt rctl lft  up   down rght
+)
+
+(deflayer spacefn
+    _    f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  _
+    _    _    _    _    _    _    del  home ins  end  prev _    _    _
+    _    _    _    _    _    _    lft  down up   rght _    _    _
+    _    _    _    _    _    spc  next pp   vold volu _    _
+    _    _    _              _              _    _    _    _    _    _
+)
