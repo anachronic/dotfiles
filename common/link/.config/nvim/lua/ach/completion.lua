@@ -29,6 +29,9 @@ local select_previous = cmp.mapping(function()
 end, { 'i', 's' })
 
 cmp.setup({
+    -- don't preselect anything for me
+    preselect = cmp.PreselectMode.None,
+    completeopt = 'menuone,noselect,noinsert',
     snippet = {
         expand = function(args)
             snippy.expand_snippet(args.body)
