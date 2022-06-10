@@ -41,10 +41,13 @@ cmp.setup({
         ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
         ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
         ['<Tab>'] = select_next,
-        ['<C-j>'] = select_next,
-
         ['<S-Tab>'] = select_previous,
+
+        ['<C-j>'] = select_next,
         ['<C-k>'] = select_previous,
+
+        ['<down>'] = select_next,
+        ['<up>'] = select_previous,
 
         ['<CR>'] = cmp.mapping.confirm({ select = true }),
     },
