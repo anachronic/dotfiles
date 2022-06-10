@@ -3,6 +3,7 @@ local configs = require('nvim-treesitter.configs')
 configs.setup({
     ensure_installed = {
         'css',
+        'go',
         'graphql',
         'html',
         'javascript',
