@@ -4,9 +4,12 @@ setxkbmap -option ''
 
 # this should be moved to a default config
 setxkbmap -layout us -variant altgr-intl -option shift:both_capslock
-picom -b --experimental-backends --backend glx
 dunst &
 ~/.fehbg
+
+# disabling picom because it seems to cause some bugs
+# it's not that important anyway
+# picom -b --experimental-backends --backend glx
 
 # Use GNOME keyring in i3
 # Read https://wiki.archlinux.org/title/GNOME/Keyring#PAM_method
