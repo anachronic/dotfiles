@@ -28,11 +28,9 @@ rofi
 rofi-emoji
 wget
 curl
-efm-langserver
 lsd
 jre-openjdk-headless
 ruby
-vala
 atool
 graphicsmagick
 ffmpeg
