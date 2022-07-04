@@ -46,8 +46,6 @@ plug('nvim-snippy') -- Lua snippets, finally
 plug('emmet-vim') -- Emmet
 plug('zen-mode.nvim') -- Emmet
 
-plug('vimux') -- Vim + tmux, seems sensible
-
 plug('orgmode.nvim') -- Try orgmode?
 
 plug('vim-textobj-user') -- custom textobjects
