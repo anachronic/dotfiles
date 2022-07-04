@@ -76,9 +76,6 @@
 [submodule "vimux"]
 	path = common/link/.config/nvim/pack/bundle/opt/vimux
 	url = https://github.com/preservim/vimux.git
-[submodule "vim-rails"]
-	path = common/link/.config/nvim/pack/bundle/opt/vim-rails
-	url = https://github.com/tpope/vim-rails.git
 [submodule "orgmode.nvim"]
 	path = common/link/.config/nvim/pack/bundle/opt/orgmode.nvim
 	url = https://github.com/kristijanhusak/orgmode.nvim.git

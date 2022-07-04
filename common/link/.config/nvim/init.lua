@@ -48,7 +48,6 @@ plug('zen-mode.nvim') -- Emmet
 
 plug('vimux') -- Vim + tmux, seems sensible
 
-plug('vim-rails') -- Rails for vim
 plug('orgmode.nvim') -- Try orgmode?
 
 plug('vim-textobj-user') -- custom textobjects
