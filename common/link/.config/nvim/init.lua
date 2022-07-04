@@ -8,9 +8,9 @@ plug('nvim-lspconfig') -- LSP
 plug('lspsaga.nvim') -- UI Improvements for LSP, not using it much though
 plug('null-ls.nvim') -- Instead of efm
 
-plug('nvim-cmp')
-plug('cmp-nvim-lsp')
-plug('cmp-path')
+plug('nvim-cmp') -- general completion
+plug('cmp-nvim-lsp') -- LSP for cmp
+plug('cmp-path') -- path for cmp
 
 plug('neogit') -- finally some magic around git
 plug('vim-fugitive') -- still quite useful despite a little dated
@@ -20,7 +20,7 @@ plug('nvim-tree.lua') -- Great NERDTree replacement
 plug('nvim-web-devicons') -- Required for tree to work, kind of a hassle
 
 plug('fzf-lua') -- Way better than telescope. Requires skim
-plug('nvim-fzf')
+plug('nvim-fzf') -- low level fzf for neovim
 plug('terminus') -- focus report
 
 plug('pinnacle') -- better highlighting?
@@ -44,7 +44,7 @@ plug('loupe') -- Better search. I find this plugin beautiful
 plug('smart-pairs') -- Works wonders with double pairs like {{  }}
 plug('nvim-snippy') -- Lua snippets, finally
 plug('emmet-vim') -- Emmet
-plug('zen-mode.nvim') -- Emmet
+plug('zen-mode.nvim') -- zen-mode. Previously goyo
 
 plug('orgmode.nvim') -- Try orgmode?
 
@@ -59,7 +59,7 @@ plug('vim-gitignore') -- gitignore syntax. Forked because original has a bunch o
 plug('nvim-treesitter') -- General syntax parsing
 plug('nvim-treesitter-endwise') -- endwise based on treesitter syntax
 
-vim.o.termguicolors = true -- its 2021, cmon
+vim.o.termguicolors = true -- its 2022, cmon
 vim.o.number = true -- show line numbers
 vim.o.relativenumber = true -- relative numbers
 vim.o.scrolloff = 3 -- a little room for zt and zb
