@@ -136,3 +136,6 @@
 [submodule "tokyonight.nvim"]
 	path = common/link/.config/nvim/pack/bundle/opt/tokyonight.nvim
 	url = https://github.com/folke/tokyonight.nvim
+[submodule "nvim-autopairs"]
+	path = common/link/.config/nvim/pack/bundle/opt/nvim-autopairs
+	url = https://github.com/windwp/nvim-autopairs
