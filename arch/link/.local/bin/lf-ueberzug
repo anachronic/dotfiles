@@ -1,10 +1,10 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 cleanup() {
-	lf-ueberzug-cleaner
-	kill "$ueberzugpid"
-	pkill -f "tail -f $LF_UEBERZUG_TEMPDIR/fifo" # kill tail zombie
-	rm -rf "$LF_UEBERZUG_TEMPDIR"
+    lf-ueberzug-cleaner
+    kill "$ueberzugpid"
+    pkill -f "tail -f $LF_UEBERZUG_TEMPDIR/fifo" # kill tail zombie
+    rm -rf "$LF_UEBERZUG_TEMPDIR"
 }
 
 trap cleanup INT HUP
