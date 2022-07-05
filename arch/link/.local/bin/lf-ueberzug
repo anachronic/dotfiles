@@ -10,7 +10,7 @@ cleanup() {
 trap cleanup INT HUP
 
 # just call lf if ueberzug is not here
-if ! command -v ueberzug &> /dev/null
+if ! command -v ueberzug > /dev/null 2>/dev/null
 then
     exec lf
 fi

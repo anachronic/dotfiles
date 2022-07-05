@@ -29,7 +29,7 @@ alias svim="sudoedit"
 # TUI shortcuts
 alias lg='lazygit'
 
-alias lf="command lf-ueberzug"
+alias lf="lf-ueberzug"
 
 # SSH. I've been suffering with this lately
 alias ssh='TERM=xterm-256color ssh'
