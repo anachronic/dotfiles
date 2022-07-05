@@ -51,7 +51,8 @@ null_ls.setup({
     sources = {
         null_ls.builtins.formatting.stylua,
         null_ls.builtins.formatting.gofmt,
-        null_ls.builtins.formatting.isort, -- not convinced, should be in a separate keystroke
+        null_ls.builtins.formatting.black,
+        null_ls.builtins.formatting.isort,
         null_ls.builtins.formatting.prettier.with({
             prefer_local = 'node_modules/.bin',
         }),
