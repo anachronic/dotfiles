@@ -55,6 +55,7 @@ null_ls.setup({
         null_ls.builtins.formatting.prettier.with({
             prefer_local = 'node_modules/.bin',
         }),
+        null_ls.builtins.formatting.rustfmt,
 
         null_ls.builtins.diagnostics.tsc.with({
             on_output = null_ls_overrides.on_output_tsc,
