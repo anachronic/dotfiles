@@ -9,6 +9,12 @@ cleanup() {
 
 trap cleanup INT HUP
 
+# just call lf if ueberzug is not here
+if ! command -v ueberzug &> /dev/null
+then
+    exec lf
+fi
+
 LF_UEBERZUG_TEMPDIR="$(mktemp -d -t lf-ueberzug-XXXXXX)"
 export LF_UEBERZUG_TEMPDIR
 mkfifo "$LF_UEBERZUG_TEMPDIR/fifo"
