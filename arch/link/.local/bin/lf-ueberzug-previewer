@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 preview() {
 	cat <<-EOF | paste -sd '' >"$LF_UEBERZUG_TEMPDIR/fifo"
@@ -14,10 +14,7 @@ lf-ueberzug-cleaner # clean active preview
 
 file="$1"; shift
 case "$(basename "$file" | tr '[:upper:]' '[:lower:]')" in
-*.tar*) tar tf "$file" ;;
-*.zip) unzip -l "$file" ;;
-*.rar) unrar l "$file" ;;
-*.7z) 7z l "$file" ;;
+*.tar*|*.zip|*.7z|*.tgz|*.rar) atool --list -- "$file" ;;
 *.avi|*.mp4|*.mkv)
 	thumbnail="$LF_UEBERZUG_TEMPDIR/thumbnail.png"
 	ffmpeg -y -i "$file" -vframes 1 "$thumbnail"
