@@ -6,7 +6,7 @@ super + Escape
 XF86Audio{Raise,Lower}Volume
     pactl set-sink-volume @DEFAULT_SINK@ {+,-}10%
 
-XF86AudioMute 
+XF86AudioMute
     pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 # Playerctl for audio controls
@@ -35,14 +35,20 @@ super + ctrl + space
 super + space
     rofi -show run
 
-super + ctrl + k
-    dmenu-kill
+super + shift + E
+    prompt "Are you sure you want to exit to tty?" "killall xinit"
 
 super + shift + R
     prompt "Are you sure you want to restart dwm?" "killall dwm"
 
-super + shift + E
-    prompt "Are you sure you want to exit to tty?" "killall xinit"
+super + shift + S
+    flameshot gui
+
+super + ctrl + s
+    flameshot full
+
+super + ctrl + k
+    dmenu-kill
 
 super + alt + v
     clipmenuinsert
