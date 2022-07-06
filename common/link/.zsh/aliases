@@ -27,8 +27,6 @@ alias svi="sudoedit"
 alias svim="sudoedit"
 
 # TUI shortcuts
-alias lg='lazygit'
-
 alias lf="lf-ueberzug"
 
 # SSH. I've been suffering with this lately
