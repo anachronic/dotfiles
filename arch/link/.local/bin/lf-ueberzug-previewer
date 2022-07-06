@@ -1,7 +1,8 @@
 #!/bin/sh
 
-set -C -f
-IFS="$(printf '%b_' '\n')"; IFS="${IFS%_}"
+# not sure about these 2. Will keep them for some time
+# set -C -f
+# IFS="$(printf '%b_' '\n')"; IFS="${IFS%_}"
 
 preview() {
 	cat <<-EOF | paste -sd '' >"$LF_UEBERZUG_TEMPDIR/fifo"
@@ -36,17 +37,12 @@ case "$(basename "$file" | tr '[:upper:]' '[:lower:]')" in
 	;;
 *.jpg|*.jpeg|*.png|*.bmp)
 	preview "$file" "$@" ;;
-*.svg)
+*.svg|*.gif)
 	thumbnail="$LF_UEBERZUG_TEMPDIR/thumbnail.png"
 	gm convert "$file" "$thumbnail"
 	preview "$thumbnail" "$@"
 	;;
-*.gif)
-	thumbnail="$LF_UEBERZUG_TEMPDIR/thumbnail.png"
-	gm convert "$file[0]" "$thumbnail"
-	preview "$thumbnail" "$@"
-	;;
-*) cat "$file" ;;
+*) bat -f --style=full "$file" ;;
 esac
 
 return 127 # nonzero retcode required for lf previews to reload
