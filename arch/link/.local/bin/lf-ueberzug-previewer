@@ -1,10 +1,18 @@
 #!/bin/sh
 
+set -C -f
+IFS="$(printf '%b_' '\n')"; IFS="${IFS%_}"
+
 preview() {
 	cat <<-EOF | paste -sd '' >"$LF_UEBERZUG_TEMPDIR/fifo"
 	{
-	"action": "add", "identifier": "lf-preview",
-	"path": "$1", "x": $4, "y": $5, "width": $2, "height": $3,
+	"action": "add",
+	"identifier": "lf-preview",
+	"path": "$1",
+	"x": $4,
+	"y": $5,
+	"width": $2,
+	"height": $3,
 	"scaler": "contain"
 	}
 	EOF
@@ -21,8 +29,9 @@ case "$(basename "$file" | tr '[:upper:]' '[:lower:]')" in
 	preview "$thumbnail" "$@"
 	;;
 *.pdf)
-	thumbnail="$LF_UEBERZUG_TEMPDIR/thumbnail.png"
-	gs -o "$thumbnail" -sDEVICE=pngalpha -dLastPage=1 "$file" >/dev/null
+	thumbnail_no_ext="$LF_UEBERZUG_TEMPDIR/thumbnail"
+	thumbnail="$thumbnail_no_ext.png"
+	pdftoppm -png -f 1 -singlefile "$file" "$thumbnail_no_ext"
 	preview "$thumbnail" "$@"
 	;;
 *.jpg|*.jpeg|*.png|*.bmp)
@@ -39,4 +48,5 @@ case "$(basename "$file" | tr '[:upper:]' '[:lower:]')" in
 	;;
 *) cat "$file" ;;
 esac
+
 return 127 # nonzero retcode required for lf previews to reload
