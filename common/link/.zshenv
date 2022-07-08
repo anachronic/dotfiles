@@ -6,13 +6,10 @@ export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/.ripgreprc"
 # This should be removed soon
 export RANGER_LOAD_DEFAULT_RC=FALSE
 
-# Editor is nvim
+# default terminal apps
 export EDITOR='nvim'
-
-# Pager: less
+export VISUAL='nvim'
 export PAGER='less'
-
-# Terminal is alacritty
 export TERMINAL='alacritty'
 
 # macOS colored ls
