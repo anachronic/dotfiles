@@ -43,3 +43,14 @@ better. But it has some **very** annoying caveats:
 > For update: `git submodule foreach "git pull origin main || git pull origin master"`
 
 That should do it
+
+### Replacing default apps
+
+Install [perl-file-mimeinfo](https://wiki.archlinux.org/title/default_applications#perl-file-mimeinfo)
+
+```sh
+# pacman -S perl-file-mimeinfo
+```
+
+- check a type if needed `mimetype <file>`
+- change default app (and choose): `mimeopen -d <file>`
