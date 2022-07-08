@@ -1,7 +1,14 @@
+# XDG defs. Mostly linux but doesn't hurt macOS
+export XDG_DATA_HOME=${XDG_DATA_HOME:="$HOME/.local/share"}
+export XDG_CACHE_HOME=${XDG_CACHE_HOME:="$HOME/.cache"}
+export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:="$HOME/.config"}
+
 # Application-needed exports
 export FZF_DEFAULT_COMMAND="rg --hidden -g '!.git' -l ''"
 export SKIM_DEFAULT_COMMAND="rg --hidden -g '!.git' -l ''"
 export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/.ripgreprc"
+
+export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtkrc-2.0
 
 # This should be removed soon
 export RANGER_LOAD_DEFAULT_RC=FALSE
