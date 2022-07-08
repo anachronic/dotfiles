@@ -1,2 +1,4 @@
 Xft.dpi: 144
 rofi.dpi: 144
+Nsxiv.window.background: #000000
+Nsxiv.window.foreground: #dddddd
