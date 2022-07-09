@@ -13,16 +13,6 @@ XF86AudioMute
 XF86Audio{Play,Next,Prev}
     playerctl --player=spotify,%any {play-pause,next,previous}
 
-# Super+v emulates macOS paste
-# Commented out because sxhkd is not great with @
-# This was moved to dwm and will be kept in i3 (if I ever come back to it anyway)
-# super + @v
-#     superv.sh
-
-# Super+l is Ctrl+L only in chromium, Super+L otherwise
-# super + @l
-#     superl.sh
-
 super + Return
     alacritty
 
@@ -33,13 +23,16 @@ super + ctrl + space
     ach-emoji
 
 super + space
-    rofi -show run
+    rofi -show combi -combi-modi "drun,run"
 
 super + shift + E
     prompt "Are you sure you want to exit to tty?" "killall xinit"
 
 super + shift + R
     prompt "Are you sure you want to restart dwm?" "killall dwm"
+
+super + p
+    rofi -show run
 
 super + shift + S
     flameshot gui
