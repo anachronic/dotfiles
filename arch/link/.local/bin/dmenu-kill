@@ -3,11 +3,12 @@
 font="NotoSansMono Nerd Font:pixelsize=32"
 _prompt="Kill what >"
 
-selected_process=$(ps -a -u $USER | sed 1d | awk '{print $1" "$4}' | rofi -dmenu -c -i -p "$_prompt" -l 20 -fn "$font")
+selected_process=$(ps -a -u "$USER" | sed 1d | awk '{print $1" "$4}' | rofi -dmenu -c -i -p "$_prompt" -l 20 -fn "$font")
 
-if [[ -z $selected_process ]]; then
+if [ -z "$selected_process" ]; then
     exit 1
 fi
 
-pr=$(printf "You sure you want to kill %s?" $(echo $selected_process | awk '{print $2}'))
-prompt "$pr" "kill $(echo $selected_process | awk '{print $1}')"
+procname=$(echo "$selected_process" | awk '{print $2}')
+pr=$(printf "You sure you want to kill %s?" "$procname")
+prompt "$pr" "kill $(echo "$selected_process" | awk '{print $1}')"
