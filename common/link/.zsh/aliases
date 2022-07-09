@@ -10,6 +10,21 @@ list() {
     esac
 }
 
+lfcd() {
+    tmp="$(mktemp)"
+    lf-ueberzug -last-dir-path="$tmp" "$@"
+
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        rm -f "$tmp"
+        if [ -d "$dir" ]; then
+            if [ "$dir" != "$(pwd)" ]; then
+                cd "$dir" || exit
+            fi
+        fi
+    fi
+}
+
 # one letters
 alias l='list -lhF'
 alias p='pnpm'
@@ -27,7 +42,7 @@ alias svi="sudoedit"
 alias svim="sudoedit"
 
 # TUI shortcuts
-alias lf="lf-ueberzug"
+alias lf="lfcd"
 
 # SSH. I've been suffering with this lately
 alias ssh='TERM=xterm-256color ssh'
