@@ -37,9 +37,14 @@ case "$(basename "$file" | tr '[:upper:]' '[:lower:]')" in
 	;;
 *.jpg|*.jpeg|*.png|*.bmp)
 	preview "$file" "$@" ;;
-*.svg|*.gif)
+*.svg)
 	thumbnail="$LF_UEBERZUG_TEMPDIR/thumbnail.png"
-	gm convert "$file" "$thumbnail"
+	convert "$file" "$thumbnail"
+	preview "$thumbnail" "$@"
+	;;
+*.gif)
+	thumbnail="$LF_UEBERZUG_TEMPDIR/thumbnail.png"
+	convert "$file""[0]" "$thumbnail"
 	preview "$thumbnail" "$@"
 	;;
 *) bat -f --style=full "$file" ;;
