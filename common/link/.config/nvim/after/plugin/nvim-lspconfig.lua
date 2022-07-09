@@ -64,18 +64,6 @@ null_ls.setup({
         null_ls.builtins.diagnostics.eslint_d,
         null_ls.builtins.diagnostics.flake8,
         null_ls.builtins.diagnostics.golangci_lint,
-        null_ls.builtins.diagnostics.rubocop.with({
-            command = 'bundle',
-            ignore_stderr = true, -- might not need this. required now because of a not-so-good repo
-            args = {
-                'exec',
-                'rubocop',
-                '-f',
-                'json',
-                '--stdin',
-                '$FILENAME',
-            },
-        }),
     },
     diagnostics_format = '[#{c}] #{m} (#{s})',
     on_attach = on_attach,
@@ -109,11 +97,6 @@ lspconfig.tsserver.setup({
 -- jedi language server
 -- pipx install jedi-language-server?
 lspconfig.jedi_language_server.setup({
-    on_attach = on_attach,
-})
-
--- gem install solargraph
-lspconfig.solargraph.setup({
     on_attach = on_attach,
 })
 
