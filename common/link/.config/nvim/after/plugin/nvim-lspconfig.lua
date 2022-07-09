@@ -47,6 +47,9 @@ local on_attach = function(client, bufnr)
     end
 end
 
+-- pacman -S stylua
+-- pipx install flake8 black isort
+-- npm i -g prettier eslint_d typescript
 null_ls.setup({
     sources = {
         null_ls.builtins.formatting.stylua,
@@ -95,7 +98,7 @@ lspconfig.tsserver.setup({
 })
 
 -- jedi language server
--- pipx install jedi-language-server?
+-- pipx install jedi-language-server
 lspconfig.jedi_language_server.setup({
     on_attach = on_attach,
 })
