@@ -3,7 +3,7 @@
 # This requires rofi-emoji to be installed
 
 # First reformat this thing so that it's easier to search
-emojis=$(cat /usr/share/rofi-emoji/all_emojis.txt | awk -F '\t' '{print $1 " " $4 " ("$2", "$3", "$5")"}')
+emojis=$(awk -F '\t' '{print $1 " " $4 " ("$2", "$3", "$5")"}' < /usr/share/rofi-emoji/all_emojis.txt)
 
 # Then disable clipmenu so that we don't pollute the clipboard
 clipctl disable
