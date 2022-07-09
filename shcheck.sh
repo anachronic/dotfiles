@@ -15,6 +15,7 @@ lint() {
 }
 
 lint "./arch/link/.local/bin"
+lint "./scripts"
 lint "./addplugin"
 lint "./rmplugin"
 lint "./shcheck.sh"
