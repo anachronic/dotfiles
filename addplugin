@@ -1,9 +1,19 @@
 #!/bin/sh
 
+endswith() {
+    haystack=$1
+    needle=$2
+
+    case "$haystack" in
+        *"$needle") true;;
+        *) false;;
+    esac
+}
+
 pkgname=$(echo "$1" | awk -F '/' '{print $(NF)}')
 
-if [[ "$pkgname" = *.git ]]; then
+if endswith "$pkgname" ".git"; then
     pkgname=${pkgname%.git}
 fi
 
-git submodule add --name $pkgname "$1" "common/link/.config/nvim/pack/bundle/opt/$pkgname"
+git submodule add --name "$pkgname" "$1" "common/link/.config/nvim/pack/bundle/opt/$pkgname"
