@@ -58,6 +58,13 @@ else
 fi
 setopt prompt_subst
 
+if [ -z "${LF_LEVEL+x}" ]
+then
+    local LF_SUFFIX=""
+else
+    local LF_SUFFIX="[LF]"
+fi
+
 # Next is version control
 autoload -Uz vcs_info
 precmd() {
@@ -90,7 +97,7 @@ fi
 # colors from https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg
 # codes from http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html
 # shorten prompt from https://unix.stackexchange.com/a/273567
-PROMPT='%B%F{005}%n@%m%f%b:%F{13}%1~%f ${vcs_info_msg_0_}%B%F{003}%(1j.&.)%f%F{131}%(?..!)%f%F{blue}$SUFFIX%f%b '
+PROMPT='%B%F{005}%n@%m%f%b:%F{13}%1~%f ${vcs_info_msg_0_}%B%F{003}%(1j.&.)%f%F{131}%(?..!)%f%F{red}$LF_SUFFIX%f%F{blue}$SUFFIX%f%b '
 RPROMPT='%F{176}%/%f'
 
 # From wincent's
