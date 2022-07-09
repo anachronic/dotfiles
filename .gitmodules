@@ -139,3 +139,6 @@
 [submodule "nvim-autopairs"]
 	path = common/link/.config/nvim/pack/bundle/opt/nvim-autopairs
 	url = https://github.com/windwp/nvim-autopairs
+[submodule "catppuccin-theme"]
+	path = common/link/.config/nvim/pack/bundle/opt/catppuccin-theme
+	url = https://github.com/catppuccin/nvim.git
