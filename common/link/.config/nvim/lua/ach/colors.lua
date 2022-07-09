@@ -1,6 +1,12 @@
 -- colors
-vim.g.tokyonight_style = 'night'
-vim.cmd('silent! colorscheme tokyonight')
+-- vim.g.tokyonight_style = 'night'
+-- vim.cmd('silent! colorscheme tokyonight')
+
+local catppuccin = require('catppuccin')
+
+catppuccin.setup()
+vim.g.catppuccin_flavour = "mocha"
+vim.cmd('silent! colorscheme catppuccin')
 
 -- 👇 old config and maybe not all that needed
 -- prolly gonna keep tokyo around for a while til I get bored of it
