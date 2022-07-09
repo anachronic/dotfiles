@@ -1,12 +1,10 @@
 #!/bin/sh
 
-# Well, this is ridiculous, sh apparently doesn't take \n unlike zsh, so this
-# stupid syntax hack has to be done for this script to work
-
 # Usage: ./prompt "Are you sure?" "killall xinit"
 # This will execute "killall xinit" if user selects yes.
 
+# Works in both bash and dash
 yesorno="No
 Yes"
 
-echo "$yesorno" | [[ $(rofi -dmenu -i -p "$1") == "Yes" ]] && $2
+echo "$yesorno" | rofi -dmenu -i -p "$1" | xargs test "Yes" "=" && $2
