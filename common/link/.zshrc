@@ -144,10 +144,6 @@ export VIRTUALENVWRAPPER_PYTHON=~/.local/pipx/venvs/virtualenvwrapper/bin/python
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# jumping around with z
-[ -e ~/.z ] || touch ~/.z
-[ -f ~/.zsh/z.sh ] && source ~/.zsh/z.sh
-
 # if [ "$(uname)" = "Darwin" ]; then
 #     export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/opt/openssl/lib/"
 # fi
