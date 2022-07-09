@@ -15,7 +15,16 @@ notify() {
 
 if [ "0" -eq "$volume" ]
 then
-    notify "Volume muted"
+    iconpath="/usr/share/icons/breeze-dark/status/24@3x/audio-volume-muted.svg"
+    notify "Volume muted" -i "$iconpath"
 else
-    notify "$volume%" -h int:value:"$volume"
+    if [ "$volume" -le "30" ]; then
+        iconpath="/usr/share/icons/breeze-dark/status/24@3x/audio-volume-low.svg"
+    elif [ "$volume" -le "80" ]; then
+        iconpath="/usr/share/icons/breeze-dark/status/24@3x/audio-volume-medium.svg"
+    else
+        iconpath="/usr/share/icons/breeze-dark/status/24@3x/audio-volume-high.svg"
+    fi
+
+    notify "$volume%" -h int:value:"$volume" -i "$iconpath"
 fi
