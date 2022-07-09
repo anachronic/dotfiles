@@ -3,105 +3,26 @@
 
     # Which monitor should the notifications be displayed on.
     monitor = 0
-
-    # Display notification on focused monitor.  Possible modes are:
-    #   mouse: follow mouse pointer
-    #   keyboard: follow window with keyboard focus
-    #   none: don't follow anything
-    #
-    # "keyboard" needs a window manager that exports the
-    # _NET_ACTIVE_WINDOW property.
-    # This should be the case for almost all modern window managers.
-    #
-    # If this option is set to mouse or keyboard, the monitor option
-    # will be ignored.
     follow = mouse
-
-    # The geometry of the window:
-    #   [{width}]x{height}[+/-{x}+/-{y}]
-    # The geometry of the message window.
-    # The height is measured in number of notifications everything else
-    # in pixels.  If the width is omitted but the height is given
-    # ("-geometry x2"), the message window expands over the whole screen
-    # (dmenu-like).  If width is 0, the window expands to the longest
-    # message displayed.  A positive x is measured from the left, a
-    # negative from the right side of the screen.  Y is measured from
-    # the top and down respectively.
-    # The width can be negative.  In this case the actual width is the
-    # screen width minus the width defined in within the geometry option.
-
-    # Turn on the progess bar
-    progress_bar = true
-
-    # Set the progress bar height. This includes the frame, so make sure
-    # it's at least twice as big as the frame width.
-    progress_bar_height = 10
-
-    # Set the frame width of the progress bar
-    progress_bar_frame_width = 1
-
-    # Set the minimum width for the progress bar
-    progress_bar_min_width = 150
-
-    # Set the maximum width for the progress bar
-    progress_bar_max_width = 300
-
-
-    # Show how many messages are currently hidden (because of geometry).
+    progress_bar = false
     indicate_hidden = yes
-
-    # Shrink window if it's smaller than the width.  Will be ignored if
-    # width is 0.
     shrink = no
-
-    # The transparency of the window.  Range: [0; 100].
-    # This option will only work if a compositing window manager is
-    # present (e.g. xcompmgr, compiz, etc.).
     transparency = 0
-
-    # Draw a line of "separator_height" pixel height between two
-    # notifications.
-    # Set to 0 to disable.
     separator_height = 2
-
-    # Padding between text and separator.
     padding = 8
-
-    # Horizontal padding.
     horizontal_padding = 8
-
-    # Padding between text and icon.
     text_icon_padding = 0
-
-    # Defines width in pixels of frame around the notification window.
-    # Set to 0 to disable.
-    frame_width = 3
-
-    # Defines color of the frame around the notification window.
+    frame_width = 2
     frame_color = "#aaaaaa"
-
-    # Define a color for the separator.
-    # possible values are:
-    #  * auto: dunst tries to find a color fitting to the background;
-    #  * foreground: use the same color as the foreground;
-    #  * frame: use the same color as the frame;
-    #  * anything else will be interpreted as a X color.
-    separator_color = frame
+    separator_color = auto
 
     # Sort messages by urgency.
     sort = yes
-
-    # Don't remove messages, if the user is idle (no mouse or keyboard input)
-    # for longer than idle_threshold seconds.
-    # Set to 0 to disable.
-    # A client can set the 'transient' hint to bypass this. See the rules
-    # section for how to disable this if necessary
     idle_threshold = 120
 
     ### Text ###
 
     font = NotoSans 12
-
     line_height = 0
     markup = full
     format = "<b>%s</b>\n<span size="smaller">%b</span>"
@@ -310,8 +231,5 @@
 #[stack-volumes]
 #    appname = "some_volume_notifiers"
 #    set_stack_tag = "volume"
-[ELKAKE]
-   appname = ELKAKE
-   urgency = low
 #
 # vim: ft=cfg
