@@ -4,10 +4,10 @@ super + Escape
 
 # Assume pulseaudio/pipewire
 XF86Audio{Raise,Lower}Volume
-    pactl set-sink-volume @DEFAULT_SINK@ {+,-}10%
+    pactl set-sink-volume @DEFAULT_SINK@ {+,-}10% && ach-volume-notify
 
 XF86AudioMute
-    pactl set-sink-mute @DEFAULT_SINK@ toggle
+    pactl set-sink-mute @DEFAULT_SINK@ toggle && ach-volume-notify
 
 # Playerctl for audio controls
 XF86Audio{Play,Next,Prev}

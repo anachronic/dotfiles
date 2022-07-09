@@ -1,0 +1,21 @@
+#!/bin/sh
+
+volume=$(pamixer --get-volume)
+dunst_stack="ach-volume"
+
+notify() {
+    dunstify \
+        -a "ach-volume" \
+        "Volume" \
+        -h string:x-dunst-stack-tag:"$dunst_stack" \
+        -t 1000 \
+        -u low \
+        "$@"
+}
+
+if [ "0" -eq "$volume" ]
+then
+    notify "Volume muted"
+else
+    notify "$volume%" -h int:value:"$volume"
+fi
