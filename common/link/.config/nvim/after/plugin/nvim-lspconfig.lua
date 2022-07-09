@@ -97,6 +97,12 @@ lspconfig.tsserver.setup({
     },
 })
 
+-- bash language server
+-- pacman -S bash-language-server shellcheck
+lspconfig.bashls.setup({
+    on_attach = on_attach,
+})
+
 -- jedi language server
 -- pipx install jedi-language-server
 lspconfig.jedi_language_server.setup({
