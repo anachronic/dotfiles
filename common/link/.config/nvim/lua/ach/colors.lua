@@ -5,7 +5,7 @@
 local catppuccin = require('catppuccin')
 
 catppuccin.setup()
-vim.g.catppuccin_flavour = "mocha"
+vim.g.catppuccin_flavour = 'mocha'
 vim.cmd('silent! colorscheme catppuccin')
 
 -- 👇 old config and maybe not all that needed
