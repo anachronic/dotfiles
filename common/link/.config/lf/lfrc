@@ -12,7 +12,7 @@ cmd yank-path ${{
 
     paths=$(echo "$fx" | wc -l)
     plural=$([ "1" -eq "$paths" ] && echo "path" || echo "paths")
-    dunstify -a lf "lf" "copied $paths $plural to clipboard" -t 1700 -u low
+    dunstify -a lf "lf" "copied $paths $plural to clipboard" -t 1700 -u low -i /usr/share/icons/breeze-dark/apps/48/klipper.svg
 }}
 
 cmd open ${{
