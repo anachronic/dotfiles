@@ -1,4 +1,5 @@
-# -*- mode: sh; -*-
+#!/bin/sh
+
 # this is basic and needed for ls
 list() {
     os=$(uname)
@@ -36,11 +37,6 @@ alias vi='nvim'
 alias vim='nvim'
 alias vgs='nvim -c ":Neogit"'
 
-# vim + sudo
-alias sv="sudoedit"
-alias svi="sudoedit"
-alias svim="sudoedit"
-
 # TUI shortcuts
 alias lf="lfcd"
 
@@ -63,14 +59,6 @@ alias glog='git log --pretty=oneline --abbrev-commit'
 alias ga='git add'
 alias gaa='git add -A'
 
-# pacman & AUR
-alias pacin='sudo pacman -S'
-alias pacrem='sudo pacman -R'
-alias pacloc='pacman -Qs'
-alias pacupg='sudo pacman -Syu'
-alias pacupd='sudo pacman -Sy'
-alias pacq='pacman -Ss'
-
 # configs
 alias dotfiles='cd ~/dotfiles'
 alias forks='cd ~/forks'
@@ -78,12 +66,8 @@ alias forks='cd ~/forks'
 # reloads
 alias so='source ~/.zshrc'
 
-# python shortcuts
-alias pac='source env/bin/activate'
-
 # Node
 alias nls='npm list --depth=0'
-alias rst='BROWSER=none yarn start'
 alias nrt='npm run test -- '
 alias nrd='npm run dev -- '
 
