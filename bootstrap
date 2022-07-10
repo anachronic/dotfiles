@@ -114,6 +114,14 @@ archlinux() {
     echo "Installing dwm"
     sudo -k make clean install
 
+    # install dmenu
+    cd /tmp || return
+    rm -rf /tmp/dmenu
+    git clone https://github.com/anachronic/dmenu.git
+    cd dmenu || return
+    echo "Installing dmenu"
+    sudo -k make clean install
+
     # go back to dotfiles
     cd "$HOME/dotfiles" || return
 }
