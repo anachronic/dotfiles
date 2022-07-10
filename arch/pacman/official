@@ -17,7 +17,6 @@ curl
 dash
 dialog
 discord
-dmenu
 docker
 docker-compose
 dunst
