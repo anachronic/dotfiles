@@ -70,8 +70,12 @@ macos() {
 
 archlinux() {
     # first install deps
-    echo "Installing stow"
-    sudo -k pacman -S stow
+
+    if ! command -V stow > /dev/null 2>&1
+    then
+        echo "Installing stow"
+        sudo -k pacman -S stow
+    fi
 
     common
 
@@ -80,21 +84,31 @@ archlinux() {
     # pacman official
     echo "Installing arch packages"
     # shellcheck disable=SC2024
-    sudo pacman -S - < "$HOME/dotfiles/arch/pacman/official"
+    sudo pacman -S --needed - < "$HOME/dotfiles/arch/pacman/official"
 
     # need rust to build paru
     rustup default stable
 
-    wget "https://aur.archlinux.org/cgit/aur.git/snapshot/paru.tar.gz" -O /tmp/paru.tar.gz
-    sh -c "cd /tmp && tar zxvf paru.tar.gz && cd /tmp/paru && makepkg -si"
+    if ! command -V paru > /dev/null 2>&1
+    then
+        cd /tmp || return
+        rm -rf paru paru.tar.gz
+        wget "https://aur.archlinux.org/cgit/aur.git/snapshot/paru.tar.gz"
+        tar zxvf paru.tar.gz
+        cd paru || return
+        makepkg -si
+    fi
+
+    cd "$HOME/dotfiles" || return
 
     echo "Paru installed"
     echo "Going now with paru packages"
 
-    paru -S - < "$HOME/dotfiles/arch/pacman/aur"
+    paru -S --needed - < "$HOME/dotfiles/arch/pacman/aur"
 
     # install dwm
     cd /tmp || return
+    rm -rf /tmp/dwm
     git clone https://github.com/anachronic/dwm.git
     cd dwm || return
     echo "Installing dwm"
