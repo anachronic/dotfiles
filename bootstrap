@@ -1,0 +1,83 @@
+#!/bin/sh
+
+runperm() {
+    echo "I want to run -> $@"
+    printf "Are you sure? [y/n] "
+    read -r ans
+
+    [ "$ans" = "y" ] && "$@"
+}
+
+common() {
+    echo "Running common setup"
+
+    mkdir -p ~/.config
+    mkdir -p ~/.local/bin
+
+    stow -v -R -t "$HOME" -d "$HOME/dotfiles/common" link
+}
+
+macos() {
+    echo "I want to run -> curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash"
+    printf "Are you sure? [y/n] "
+    read -r ans
+
+    if [ "$ans" = "y" ]
+    then
+        curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
+    else
+        echo "skipping homebrew installation"
+    fi
+
+    # links
+    mkdir -p ~/.config/karabiner
+    stow -v -R -t "$HOME" -d "$HOME/dotfiles/macos" link
+
+    # us-altgr-intl for macos
+    sudo -k mkdir -p "/Library/Keyboard Layouts"
+    kbpath="$PWD/macos/kblayout/us-intl-altgr-dead.bundle"
+
+    sudo -k cp -r "$kbpath" "/Library/Keyboard Layouts/"
+    echo "keyboard okidoki"
+
+    # defaults
+    defaults write com.apple.dock autohide -bool true
+    defaults write com.apple.dock mru-spaces -bool false
+    defaults write -g InitialKeyRepeat -int 20
+    defaults write -g KeyRepeat -int 2
+    defaults write com.apple.finder ShowPathbar -int 1
+
+    defaults write com.apple.menuextra.clock "DateFormat" -string "EEE d MMM  HH:mm"
+
+    killall Dock
+    echo "dock okidoki"
+
+    # terminfo
+    mkdir -p ~/.terminfo
+    for file in "$HOME/dotfiles/macos/terminfo"/*.terminfo
+    do
+        tic -x -o ~/.terminfo "$file"
+    done
+    echo "terminfo okidoki"
+
+    # brewfile should go here sometime
+}
+
+archlinux() {
+    common
+
+    stow -v -R -t "$HOME" -d "$HOME/dotfiles/arch" link
+}
+
+sysname=$(uname)
+if [ "$sysname" = "Linux" ]
+then
+    echo Installing archlinux module
+    archlinux
+fi
+
+if [ "$sysname" = "Darwin" ]
+then
+    echo Installing macOS module
+    macos
+fi
