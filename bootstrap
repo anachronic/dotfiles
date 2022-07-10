@@ -1,11 +1,12 @@
 #!/bin/sh
 
-runperm() {
-    echo "I want to run -> $@"
-    printf "Are you sure? [y/n] "
-    read -r ans
+backupdir=$(mktemp -d "/tmp/ach-install.XXXX")
 
-    [ "$ans" = "y" ] && "$@"
+backupfile() {
+    if [ -e "$1" ] && [ ! -L "$1" ]
+    then
+        mv "$1" "$backupdir/$(basename "$1")"
+    fi
 }
 
 common() {
@@ -13,6 +14,10 @@ common() {
 
     mkdir -p ~/.config
     mkdir -p ~/.local/bin
+
+    backupfile "$HOME/.bashrc"
+    backupfile "$HOME/.bash_logout"
+    backupfile "$HOME/.bash_profile"
 
     stow -v -R -t "$HOME" -d "$HOME/dotfiles/common" link
 }
@@ -65,20 +70,15 @@ macos() {
 
 archlinux() {
     # first install deps
-    doas pacman -S rustup stow wget tar
+    sudo -k pacman -S stow
 
-    # run common hooks
     common
 
-    # move bash files if present
-    mkdir -p /tmp/ach-install
-    [ ! -L "$HOME/.bashrc" ] && mv "$HOME/.bashrc" /tmp/ach-install/.bashrc
-    [ ! -L "$HOME/.bash_profile" ] && mv "$HOME/.bash_profile" /tmp/ach-install/.bash_profile
-    [ ! -L "$HOME/.bash_logout" ] && mv "$HOME/.bash_logout" /tmp/ach-install/.bash_logout
-
-    echo "check /tmp/ach-install for backed up bash files if needed"
-
     stow -v -R -t "$HOME" -d "$HOME/dotfiles/arch" link
+
+    # pacman official
+    # shellcheck disable=SC2024
+    sudo pacman -S - < "$HOME/dotfiles/arch/pacman/official"
 
     # need rust to build paru
     rustup default stable
@@ -86,7 +86,10 @@ archlinux() {
     wget "https://aur.archlinux.org/cgit/aur.git/snapshot/paru.tar.gz" -O /tmp/paru.tar.gz
     sh -c "cd /tmp && tar zxvf paru.tar.gz && cd /tmp/paru && makepkg -si"
 
-    echo "paru installed"
+    echo "Paru installed"
+    echo "Going now with paru packages"
+
+    paru -S - < "$HOME/dotfiles/arch/pacman/aur"
 }
 
 sysname=$(uname)
@@ -101,3 +104,5 @@ then
     echo Installing macOS module
     macos
 fi
+
+echo "Done. Backed up files can be checked in $backupdir"
