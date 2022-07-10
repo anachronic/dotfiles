@@ -70,6 +70,7 @@ macos() {
 
 archlinux() {
     # first install deps
+    echo "Installing stow"
     sudo -k pacman -S stow
 
     common
@@ -77,6 +78,7 @@ archlinux() {
     stow -v -R -t "$HOME" -d "$HOME/dotfiles/arch" link
 
     # pacman official
+    echo "Installing arch packages"
     # shellcheck disable=SC2024
     sudo pacman -S - < "$HOME/dotfiles/arch/pacman/official"
 
