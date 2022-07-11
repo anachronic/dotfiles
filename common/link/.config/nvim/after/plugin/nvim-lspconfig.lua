@@ -65,7 +65,9 @@ null_ls.setup({
             on_output = null_ls_overrides.on_output_tsc,
         }),
         null_ls.builtins.diagnostics.eslint_d,
-        null_ls.builtins.diagnostics.flake8,
+        null_ls.builtins.diagnostics.flake8.with({
+            command = 'pflake8'
+        }),
         null_ls.builtins.diagnostics.golangci_lint,
     },
     diagnostics_format = '[#{c}] #{m} (#{s})',
