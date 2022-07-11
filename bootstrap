@@ -15,6 +15,9 @@ common() {
     mkdir -p ~/.config
     mkdir -p ~/.local/bin
 
+    # btop annoyingly modifies its config file every time
+    mkdir -p ~/.config/btop/themes
+
     backupfile "$HOME/.bashrc"
     backupfile "$HOME/.bash_logout"
     backupfile "$HOME/.bash_profile"
@@ -124,6 +127,9 @@ archlinux() {
 
     # go back to dotfiles
     cd "$HOME/dotfiles" || return
+
+    # make all user dirs so that xdg-user-dirs stop annoying us
+    mkdir -p "$HOME/desktop" "$HOME/downloads" "$HOME/templates" "$HOME/public" "$HOME/documents" "$HOME/music" "$HOME/pictures" "$HOME/videos"
 }
 
 sysname=$(uname)
