@@ -1,6 +1,4 @@
-#
-# ~/.bashrc
-#
+#!/usr/bin/env bash
 
 # If not running interactively, don't do anything
 PS1='[\u@\h \W]\$ '
@@ -8,7 +6,6 @@ PS1='[\u@\h \W]\$ '
 [[ $- != *i* ]] && return
 
 # application specific stuff
-export RANGER_LOAD_DEFAULT_RC=FALSE
 # eval $(keychain --eval --quiet id_rsa ~/.ssh/id_rsa)
 
 # redefs

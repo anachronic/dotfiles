@@ -13,9 +13,6 @@ export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtkrc-2.0
 export QT_QPA_PLATFORMTHEME=qt5ct
 export QT_FONT_DPI=128
 
-# This should be removed soon
-export RANGER_LOAD_DEFAULT_RC=FALSE
-
 # default terminal apps
 export EDITOR='nvim'
 export VISUAL='nvim'
