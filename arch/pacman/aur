@@ -1,8 +1,5 @@
 dashbinsh
 golangci-lint
-google-cloud-sdk
-google-cloud-sdk-gke-gcloud-auth-plugin
-insomnia
 kmonad-git
 lf
 libxft-bgra
@@ -17,4 +14,3 @@ ttf-apple-emoji
 ttf-mplus-git
 ttf-nanum
 zeal
-zoom
