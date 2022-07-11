@@ -41,3 +41,9 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 # I hate to have to do this
 [ -f "$HOME/.zsh/work.sh" ] && source "$HOME/.zsh/work.sh"
+
+# Linux specific env
+if [ "$(uname)" = "Linux" ]
+then
+    export ELECTRON_TRASH="trash-cli"
+fi
