@@ -34,6 +34,14 @@ cmd delete ${{
     dunstify -a lf "lf" "Deleted $files $plural." -i /usr/share/icons/breeze-dark/places/96/user-trash.svg -t 1700 -u low
 }}
 
+cmd movehere ${{
+    mv $fx $PWD
+
+    files=$(echo "$fx" | wc -l)
+    plural=$([ "1" -eq "$files" ] && echo "file" || echo "files")
+    dunstify -a lf "lf" "Moved $files $plural to $PWD" -i /usr/share/icons/breeze-dark/places/96/user-trash.svg -u low
+}}
+
 # extract the current file with the right command
 cmd extract ${{
     set -f
@@ -84,6 +92,7 @@ map D delete
 map gg top
 map . set hidden!
 map Z extract
+map M movehere
 map <enter> open
 
 # locations
