@@ -22,6 +22,7 @@ super + ctrl + q
 super + ctrl + space
     ach-emoji
 
+# Would like to change rofi's theme, or do something else about this
 super + space
     rofi -show combi -combi-modi "drun,run"
 
@@ -32,7 +33,7 @@ super + shift + R
     prompt "Are you sure you want to restart dwm?" "killall dwm"
 
 super + p
-    rofi -show run
+    dmenu_run
 
 super + shift + S
     flameshot gui
@@ -43,5 +44,5 @@ super + ctrl + s
 super + ctrl + k
     dmenu-kill
 
-super + alt + v
-    clipmenuinsert
+# super + alt + v
+#     clipmenuinsert
