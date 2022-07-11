@@ -74,15 +74,6 @@ null_ls.setup({
     on_attach = on_attach,
 })
 
-local function organize_imports()
-    local params = {
-        command = '_typescript.organizeImports',
-        arguments = { vim.api.nvim_buf_get_name(0) },
-        title = '',
-    }
-    vim.lsp.buf.execute_command(params)
-end
-
 -- tsserver
 -- npm i -g typescript-language-server typescript
 -- diagnostics disabled because null ls will handle them
@@ -90,12 +81,6 @@ lspconfig.tsserver.setup({
     on_attach = on_attach,
     handlers = {
         ['textDocument/publishDiagnostics'] = function() end,
-    },
-    commands = {
-        OrganizeImports = {
-            organize_imports,
-            description = 'Organize Imports',
-        },
     },
 })
 
