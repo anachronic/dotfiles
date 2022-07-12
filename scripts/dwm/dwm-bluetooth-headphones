@@ -1,16 +1,51 @@
 #!/bin/sh
 
-case $BUTTON in
-    1) ruby ~/.config/polybar/sink.rb toggle ;;
+toggle_sink() {
+    card=$(pactl list cards | awk -v RS= '/device.alias = "Bose AE2 SoundLink"/ {print $0}')
+    card_name=$(echo "$card" | awk -F "Name: " '/Name: / {print $2}')
+    card_profile=$(echo "$card" | awk -F "Active Profile: " '/Active Profile: / {print $2}')
+
+    case "$card_profile" in
+        "a2dp-sink-sbc_xq")
+            pactl set-card-profile "$card_name" headset-head-unit-msbc
+            echo "HSP/HFP mSBC"
+            exit
+            ;;
+        *)
+            pactl set-card-profile "$card_name" a2dp-sink-sbc_xq
+            echo "A2DP SBC-XQ"
+            exit
+            ;;
+    esac
+}
+
+case $BLOCK_BUTTON in
+    1) toggle_sink ;;
 esac
 
-bluetooth_sink="bluez_output"
+case $(pactl get-default-sink) in
+    "bluez_output".*)
+        card=$(pactl list cards | awk -v RS= '/device.alias = "Bose AE2 SoundLink"/ {print $0}')
+        card_name=$(echo "$card" | awk -F "Name: " '/Name: / {print $2}')
+        card_profile=$(echo "$card" | awk -F "Active Profile: " '/Active Profile: / {print $2}')
 
-if [[ $(pactl get-default-sink) = "$bluetooth_sink"* ]]; then
-    output=$(ruby ~/.config/polybar/sink.rb)
-else
-    output="no bt headphones"
-fi
-
-printf "🎧 ${output}"
+        case "$card_profile" in
+            "a2dp-sink")
+                echo "A2DP";;
+            "headset-head-unit")
+                echo "HSP/HFP";;
+            "a2dp-sink-sbc")
+                echo "A2DP SBC";;
+            "a2dp-sink-sbc_xq")
+                echo "A2DP SBC-XQ";;
+            "headset-head-unit-cvsd")
+                echo "HSP/HFP CVSD";;
+            "headset-head-unit-msbc")
+                echo "HSP/HFP mSBC";;
+        esac
+        ;;
+    *)
+        echo no bt headphones
+        ;;
+esac
 
