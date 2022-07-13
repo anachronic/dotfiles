@@ -7,4 +7,4 @@
 yesorno="No
 Yes"
 
-echo "$yesorno" | rofi -dmenu -i -p "$1" | xargs test "Yes" "=" && $2
+echo "$yesorno" | dmenu -i -c -l 2 -fn "Iosevka Nerd Font Mono:size=24" -p "$1" | xargs test "Yes" "=" && $2
