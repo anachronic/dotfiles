@@ -27,10 +27,13 @@ super + space
     rofi -show combi -combi-modi "drun,run"
 
 super + shift + E
-    prompt "Are you sure you want to exit to tty?" "killall xinit"
+    prompt "Exit to tty?" "killall xinit"
 
 super + shift + R
-    prompt "Are you sure you want to restart dwm?" "killall dwm"
+    ach-reminder
+
+super + ctrl+ R
+    prompt "Restart dwm?" "killall dwm"
 
 super + p
     dmenu_run
