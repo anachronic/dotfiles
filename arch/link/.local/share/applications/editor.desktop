@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=Application
+Name=Default editor
+Exec=alacritty -e nvim %U
