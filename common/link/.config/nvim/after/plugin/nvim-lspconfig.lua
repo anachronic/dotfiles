@@ -3,7 +3,6 @@ local hover = require('lspsaga.hover')
 local diagnostic = require('lspsaga.diagnostic')
 local codeaction = require('lspsaga.codeaction')
 local null_ls = require('null-ls')
-local null_ls_overrides = require('ach.overrides.null-ls')
 
 require('lspsaga').init_lsp_saga({
     use_saga_diagnostic_sign = false,
@@ -56,14 +55,9 @@ null_ls.setup({
         null_ls.builtins.formatting.gofmt,
         null_ls.builtins.formatting.black,
         null_ls.builtins.formatting.isort,
-        null_ls.builtins.formatting.prettier.with({
-            prefer_local = 'node_modules/.bin',
-        }),
+        null_ls.builtins.formatting.prettierd,
         null_ls.builtins.formatting.rustfmt,
 
-        null_ls.builtins.diagnostics.tsc.with({
-            on_output = null_ls_overrides.on_output_tsc,
-        }),
         null_ls.builtins.diagnostics.eslint_d,
         null_ls.builtins.diagnostics.flake8.with({
             command = 'pflake8',
@@ -78,10 +72,7 @@ null_ls.setup({
 -- npm i -g typescript-language-server typescript
 -- diagnostics disabled because null ls will handle them
 lspconfig.tsserver.setup({
-    on_attach = on_attach,
-    handlers = {
-        ['textDocument/publishDiagnostics'] = function() end,
-    },
+    on_attach = on_attach
 })
 
 -- bash language server
@@ -115,21 +106,10 @@ lspconfig.sumneko_lua.setup({
     },
 })
 
--- npm i -g vuels
-lspconfig.vuels.setup({
-    on_attach = on_attach,
-    init_options = {
-        config = {
-            vetur = {
-                completion = {
-                    autoImport = true,
-                    tagCasing = 'kebab',
-                    useScaffoldSnippets = true,
-                },
-            },
-        },
-    },
-})
+-- npm i -g @volar/vue-language-server
+-- lspconfig.volar.setup({
+--     on_attach = on_attach
+-- })
 
 -- pacman -S rust-analyzer
 -- brew install rust-analyzer
