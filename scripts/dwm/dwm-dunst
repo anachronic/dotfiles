@@ -1,11 +1,15 @@
 #!/bin/sh
 
-case $BUTTON in
+icon() {
+    printf "^c#f9e2af^%s^d^" "$1"
+}
+
+case $BLOCK_BUTTON in
     1) dunstctl set-paused toggle ;;
 esac
 
 if [ "$(dunstctl is-paused)" = "false" ]; then
-    echo "🔔"
+    icon "󰂜"
 else
-    echo "🔕"
+    icon "󰪑"
 fi

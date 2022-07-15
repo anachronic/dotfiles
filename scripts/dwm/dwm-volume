@@ -1,6 +1,10 @@
-#!/bin/bash 
+#!/bin/sh
 
-case $BUTTON in 
+icon() {
+    printf "^c#94e2d5^%s^d^" "$1"
+}
+
+case $BLOCK_BUTTON in 
     1) pamixer --toggle-mute ;;
     4) pamixer -i 1 ;;
     5) pamixer -d 1 ;;
@@ -8,14 +12,13 @@ esac
 
 vol="$(pamixer --get-volume)"
 
-[ $(pamixer --get-mute) = true ] && echo "🔇 muted" && exit
-
-if [ "$vol" -gt "70" ]; then
-	icon="🔊"
-elif [ "$vol" -lt "30" ]; then
-	icon="🔈"
+if [ "$(pamixer --get-mute)" = "true" ] || [ "$vol" = "0" ]; then
+    vol="^c#45475a^muted^d^"
+    echo "$(icon 󰖁) $vol"
+elif [ "$vol" -le "30" ]; then
+    echo "$(icon 󰕿) $vol%"
+elif [ "$vol" -le "70" ]; then
+    echo "$(icon 󰖀) $vol%"
 else
-	icon="🔉"
+    echo "$(icon 󰕾) $vol%"
 fi
-
-echo "${icon} ${vol}%"

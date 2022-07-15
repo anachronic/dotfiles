@@ -1,5 +1,17 @@
 #!/bin/sh
 
+icon() {
+    printf "^c#f38ba8^%s^d^" "$1"
+}
+
+text() {
+    echo "$1"
+}
+
+barformat() {
+    echo "$(icon "󰂰") $(text "$1")"
+}
+
 toggle_sink() {
     card=$(pactl list cards | awk -v RS= '/device.alias = "Bose AE2 SoundLink"/ {print $0}')
     card_name=$(echo "$card" | awk -F "Name: " '/Name: / {print $2}')
@@ -8,12 +20,12 @@ toggle_sink() {
     case "$card_profile" in
         "a2dp-sink-sbc_xq")
             pactl set-card-profile "$card_name" headset-head-unit-msbc
-            echo "HSP/HFP mSBC"
+            barformat "HSP/HFP mSBC"
             exit
             ;;
         *)
             pactl set-card-profile "$card_name" a2dp-sink-sbc_xq
-            echo "A2DP SBC-XQ"
+            barformat "A2DP SBC-XQ"
             exit
             ;;
     esac
@@ -31,21 +43,21 @@ case $(pactl get-default-sink) in
 
         case "$card_profile" in
             "a2dp-sink")
-                echo "A2DP";;
+                barformat "A2DP";;
             "headset-head-unit")
-                echo "HSP/HFP";;
+                barformat "HSP/HFP";;
             "a2dp-sink-sbc")
-                echo "A2DP SBC";;
+                barformat "A2DP SBC";;
             "a2dp-sink-sbc_xq")
-                echo "A2DP SBC-XQ";;
+                barformat "A2DP SBC-XQ";;
             "headset-head-unit-cvsd")
-                echo "HSP/HFP CVSD";;
+                barformat "HSP/HFP CVSD";;
             "headset-head-unit-msbc")
-                echo "HSP/HFP mSBC";;
+                barformat "HSP/HFP mSBC";;
         esac
         ;;
     *)
-        echo no bt headphones
+        echo "$(icon "󰟎") $(text "No headphones")"
         ;;
 esac
 
