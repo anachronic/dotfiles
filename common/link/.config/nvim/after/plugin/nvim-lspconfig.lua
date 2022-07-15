@@ -72,7 +72,7 @@ null_ls.setup({
 -- npm i -g typescript-language-server typescript
 -- diagnostics disabled because null ls will handle them
 lspconfig.tsserver.setup({
-    on_attach = on_attach
+    on_attach = on_attach,
 })
 
 -- bash language server
