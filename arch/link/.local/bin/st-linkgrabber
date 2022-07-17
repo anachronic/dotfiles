@@ -1,0 +1,8 @@
+#!/bin/sh
+
+url=$(cat | xurls | uniq | dmenu -c -w "$WINDOWID" -l 20 -i -p "Open what? >")
+
+[ -z "$url" ] && exit 1
+dunstify -a st st "selected $url"
+
+setsid xdg-open "$url"
