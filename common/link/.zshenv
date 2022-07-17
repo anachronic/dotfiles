@@ -18,6 +18,7 @@ export EDITOR='nvim'
 export VISUAL='nvim'
 export PAGER='less'
 export TERMINAL='alacritty'
+export BROWSER='firefox'
 
 # macOS colored ls
 export CLICOLOR=1
