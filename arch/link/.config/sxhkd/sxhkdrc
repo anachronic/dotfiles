@@ -14,7 +14,7 @@ XF86Audio{Play,Next,Prev}
     playerctl --player=spotify,%any {play-pause,next,previous}
 
 super + Return
-    alacritty
+    st
 
 super + ctrl + q
     xset s activate

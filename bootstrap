@@ -125,6 +125,14 @@ archlinux() {
     echo "Installing dmenu"
     sudo -k make clean install
 
+    # install st
+    cd /tmp || return
+    rm -rf /tmp/st
+    git clone https://github.com/anachronic/st.git
+    cd st || return
+    echo "Installing st"
+    sudo -k make clean install
+
     # go back to dotfiles
     cd "$HOME/dotfiles" || return
 
