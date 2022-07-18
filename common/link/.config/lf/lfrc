@@ -3,6 +3,7 @@ set previewer lf-ueberzug-previewer
 set cleaner lf-ueberzug-cleaner
 
 set shell sh
+set icons true
 set shellopts '-eu'
 set ifs "\n"
 set scrolloff 10
