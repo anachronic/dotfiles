@@ -100,8 +100,9 @@ map <enter> open
 map gh cd ~
 map g. cd ~/dotfiles
 map gs cd ~/sawa
-map gd cd ~/Downloads
-map gv cd ~/Videos
+map gd cd ~/downloads
+map gv cd ~/videos
 map gc cd ~/.config
 map gb cd ~/.local/bin
 map gf cd ~/forks
+map gi cd ~/pictures
