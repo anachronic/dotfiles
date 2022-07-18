@@ -126,9 +126,6 @@
 [submodule "Comment.nvim"]
 	path = common/link/.config/nvim/pack/bundle/opt/Comment.nvim
 	url = https://github.com/numToStr/Comment.nvim
-[submodule "vim-nightfly-guicolors"]
-	path = common/link/.config/nvim/pack/bundle/opt/vim-nightfly-guicolors
-	url = git@github.com:anachronic/vim-nightfly-guicolors.git
 [submodule "null-ls.nvim"]
 	path = common/link/.config/nvim/pack/bundle/opt/null-ls.nvim
 	url = https://github.com/jose-elias-alvarez/null-ls.nvim

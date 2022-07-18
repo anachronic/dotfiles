@@ -25,7 +25,6 @@ plug('terminus') -- focus report
 
 plug('pinnacle') -- better highlighting?
 plug('lualine.nvim') -- great statusline
-plug('vim-nightfly-guicolors') -- Current color scheme, works for me
 plug('tokyonight.nvim') -- Current color scheme, works for me
 plug('catppuccin-theme') -- The new kid on the block
 
