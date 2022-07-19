@@ -24,7 +24,8 @@ super + ctrl + space
 
 # Would like to change rofi's theme, or do something else about this
 super + space
-    rofi -show combi -combi-modi "drun,run"
+    dmenu_run -bw 3 -i -l 20 -c -p "Run >" -fn "JetBrains Mono Nerd Font:size=24:antialias=true"
+    # rofi -show combi -combi-modi "drun,run"
 
 super + shift + E
     prompt "Exit to tty?" "killall xinit"
