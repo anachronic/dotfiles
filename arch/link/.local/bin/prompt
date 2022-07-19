@@ -7,4 +7,4 @@
 yesorno="No
 Yes"
 
-echo "$yesorno" | dmenu -i -c -l 2 -fn "Iosevka Nerd Font Mono:size=24" -p "$1" | xargs test "Yes" "=" && $2
+echo "$yesorno" | dmenu -bw 3 -i -c -l 2 -fn "Iosevka Nerd Font Mono:size=24" -p "$1" | xargs test "Yes" "=" && $2
