@@ -1,9 +1,9 @@
 #!/bin/sh
 
-font="NotoSansMono Nerd Font:pixelsize=32"
+font="JetBrains Mono Nerd Font:pixelsize=24"
 _prompt="Kill what >"
 
-selected_process=$(ps -a -u "$USER" | sed 1d | awk '{print $1" "$4}' | rofi -dmenu -c -i -p "$_prompt" -l 20 -fn "$font")
+selected_process=$(ps -a -u "$USER" | sed 1d | awk '{print $1" "$4}' | dmenu -bw 3 -c -i -p "$_prompt" -l 20 -fn "$font")
 
 if [ -z "$selected_process" ]; then
     exit 1
