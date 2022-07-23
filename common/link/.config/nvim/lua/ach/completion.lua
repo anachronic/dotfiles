@@ -43,8 +43,8 @@ cmp.setup({
         ['<Tab>'] = select_next,
         ['<S-Tab>'] = select_previous,
 
-        ['<C-j>'] = select_next,
-        ['<C-k>'] = select_previous,
+        -- ['<C-j>'] = select_next,
+        -- ['<C-k>'] = select_previous,
 
         ['<down>'] = select_next,
         ['<up>'] = select_previous,
