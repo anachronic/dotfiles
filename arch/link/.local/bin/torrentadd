@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# A MIME handler for magnets and torrent files
+
+! pidof transmission-daemon > /dev/null && exit 1
+
+transmission-remote --add "$@"
+dunstify -a torrentadd -u low Transmission "Torrent added"

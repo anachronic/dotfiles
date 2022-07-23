@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=Application
+Name=Default torrent handler
+Exec=/usr/bin/env torrentadd %U
