@@ -14,6 +14,7 @@ common() {
 
     mkdir -p ~/.config
     mkdir -p ~/.local/bin
+    mkdir -p ~/.local/share/applications
 
     # btop annoyingly modifies its config file every time
     mkdir -p ~/.config/btop/themes
