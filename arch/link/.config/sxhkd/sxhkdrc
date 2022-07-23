@@ -45,6 +45,9 @@ super + shift + S
 super + ctrl + s
     flameshot full
 
+super + f
+    st -e lf
+
 super + ctrl + k
     dmenu-kill
 
