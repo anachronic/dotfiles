@@ -35,7 +35,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 # Clipboard manager
 # clipmenud &
 
-picom -b --backend glx --experimental-backends
+#picom -b --backend glx --experimental-backends
 dunst &
 nm-applet &
 blueman-applet &
