@@ -28,3 +28,5 @@ else
 
     notify "$volume%" -h int:value:"$volume" -i "$iconpath"
 fi
+
+pkill -RTMIN+22 dwmblocks
