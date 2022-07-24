@@ -1,18 +1,18 @@
 #!/bin/sh
 
-# This requires rofi-emoji to be installed
+windowid=$(xdotool getactivewindow)
 
-# First reformat this thing so that it's easier to search
-emojis=$(awk -F '\t' '{print $1 " " $4 " ("$2", "$3", "$5")"}' < /usr/share/rofi-emoji/all_emojis.txt)
+# file should just contain searchable emoji:
+# https://raw.githubusercontent.com/valeriangalliat/dmenumoji/master/emoji.txt
+emojipath="$HOME/.local/share/emoji.txt"
+[ -e "$emojipath" ] || exit 1
 
-# Then disable clipmenu so that we don't pollute the clipboard
-clipctl disable
+# don't -c dmenu. For some reason large files make it really slow
+emoji=$(dmenu -l 20 -i < "$emojipath" | awk '{print $1}')
 
-# Show the rofi window and copy emoji to clipboard
-echo "$emojis" | rofi -dmenu -i -p "Emoji" | cut -d' ' -f1 | tr -d '\n' | xsel --clipboard
+[ "$emoji" = "" ] && exit 1
 
-# Then PASTE (not quite the same as typing, mostly because of vim)
-superv.sh
+printf "%s" "$emoji" | xsel --clipboard
+xdotool windowactivate "$windowid"
 
-# Finally turn clipmenu back on
-clipctl enable
+dunstify -a ach-emoji "Emoji" "Copied emoji" -u low
