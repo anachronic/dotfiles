@@ -15,9 +15,6 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-# This should be Breeze
-# export GTK_THEME=Adwaita:dark
-
 # Key repetition can be a little annoying
 # This should be moved to a default config
 xset r rate 400 40
