@@ -127,6 +127,14 @@ man() {
 # Aliases
 source ~/.zsh/aliases
 
+# syntax highlighting: pacman -S zsh-syntax-highlighting
+function () {
+    # path might change in macOS, haven't figured it out yet
+    local pluginpath="/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh"
+
+    [ -e "$pluginpath" ] && source "$pluginpath"
+}
+
 if [ $(uname) = "Linux" ]; then
     # Use GPG for ssh key caching. This is crazy
     export GPG_TTY=$(tty)
