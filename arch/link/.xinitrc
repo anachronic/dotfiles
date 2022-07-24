@@ -37,8 +37,8 @@ dunst &
 nm-applet &
 blueman-applet &
 sxhkd &
-command -V achbar > /dev/null 2>&1 && achbar &
-hsetroot -extend "$HOME/Pictures/wall.jpg"
+dwmblocks &
+hsetroot -extend "$HOME/pictures/wall.jpg" &
 
 while :; do
   dwm 2> ~/.dwm.log
