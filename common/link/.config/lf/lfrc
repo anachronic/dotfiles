@@ -106,3 +106,5 @@ map gc cd ~/.config
 map gb cd ~/.local/bin
 map gf cd ~/forks
 map gi cd ~/pictures
+map gn cd ~/dotfiles/common/link/.config/nvim
+map gl cd ~/dotfiles/common/link/.config/lf
