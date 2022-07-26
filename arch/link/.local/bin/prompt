@@ -4,7 +4,6 @@
 # This will execute "killall xinit" if user selects yes.
 
 # Works in both bash and dash
-yesorno="No
-Yes"
+yesorno=$(printf "No\nYes")
 
 echo "$yesorno" | dmenu -bw 3 -i -c -l 2 -fn "Iosevka Nerd Font Mono:size=24" -p "$1" | xargs test "Yes" "=" && $2
