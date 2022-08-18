@@ -130,9 +130,11 @@ source ~/.zsh/aliases
 # syntax highlighting: pacman -S zsh-syntax-highlighting
 function () {
     # path might change in macOS, haven't figured it out yet
-    local pluginpath="/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh"
+    local linuxpluginpath="/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh"
+    local macospluginpath="/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
-    [ -e "$pluginpath" ] && source "$pluginpath"
+    [ "$(uname)" = "Linux" ] && [ -e "$linuxpluginpath" ] && source "$linuxpluginpath"
+    [ "$(uname)" = "Darwin" ] && [ -e "$macospluginpath" ] && source "$macospluginpath"
 }
 
 if [ $(uname) = "Linux" ]; then
