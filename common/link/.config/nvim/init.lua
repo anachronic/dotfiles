@@ -45,7 +45,7 @@ plug('nvim-snippy') -- Lua snippets, finally
 plug('emmet-vim') -- Emmet
 plug('zen-mode.nvim') -- zen-mode. Previously goyo
 
-plug('orgmode.nvim') -- Try orgmode?
+--plug('orgmode.nvim') -- Try orgmode?
 
 plug('vim-textobj-user') -- custom textobjects
 plug('vim-textobj-entire') -- "entire" textobject. Like yae would copy the entire file
