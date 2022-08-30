@@ -1,9 +1,9 @@
 # Don't exclude hidden paths
 --hidden
 
-# Exclude lock filed
+# Exclude lockfiles
 --glob
-!{package-lock.json,yarn.lock,poetry.lock,Gemfile.lock}
+!{package-lock.json,yarn.lock,poetry.lock,Gemfile.lock,pnpm-lock.yaml}
 
 # Exclude annoying pycache folders
 --glob
@@ -12,6 +12,10 @@
 # Exclude more annoying python files
 --glob
 !*.pyc
+
+# Not really interested in svgs
+--glob
+!*.svg
 
 # Exclude git folder
 --glob
