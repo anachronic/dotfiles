@@ -136,3 +136,6 @@
 [submodule "catppuccin-theme"]
 	path = common/link/.config/nvim/pack/bundle/opt/catppuccin-theme
 	url = https://github.com/catppuccin/nvim.git
+[submodule "vim-yaml-folds"]
+	path = common/link/.config/nvim/pack/bundle/opt/vim-yaml-folds
+	url = https://github.com/pedrohdz/vim-yaml-folds
