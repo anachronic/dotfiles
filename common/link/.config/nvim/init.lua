@@ -54,6 +54,7 @@ plug('vim-sort-motion') -- sorting mostly because of gemfiles
 
 plug('vim-styled-components') -- Styled components syntax
 plug('vim-gitignore') -- gitignore syntax. Forked because original has a bunch of snippets
+plug('vim-yaml-folds') -- got fed up with treesitter yaml indenting
 
 plug('nvim-treesitter') -- General syntax parsing
 plug('nvim-treesitter-endwise') -- endwise based on treesitter syntax
