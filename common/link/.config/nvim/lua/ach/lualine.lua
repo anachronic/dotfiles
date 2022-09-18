@@ -27,5 +27,7 @@ require('lualine').setup({
         'fzf',
         'nvim-tree',
         'quickfix',
+        'man',
+        'fugitive',
     },
 })
