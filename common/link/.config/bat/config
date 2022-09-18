@@ -1,2 +1,3 @@
 # I just want colored output, no grid, header and line number nonsense
 --style "plain"
+--theme="catppuccin-mocha"
