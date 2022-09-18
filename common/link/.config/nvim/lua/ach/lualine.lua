@@ -23,4 +23,9 @@ require('lualine').setup({
     sections = {
         lualine_c = { relativepath },
     },
+    extensions = {
+        'fzf',
+        'nvim-tree',
+        'quickfix',
+    },
 })
