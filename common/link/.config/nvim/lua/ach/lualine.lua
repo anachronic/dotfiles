@@ -16,7 +16,7 @@ end
 
 require('lualine').setup({
     options = {
-        theme = 'seoul256',
+        theme = 'catppuccin',
         section_separators = '',
         component_separators = '',
     },
