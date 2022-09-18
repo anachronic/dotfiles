@@ -45,6 +45,11 @@ alias ssh='TERM=xterm-256color ssh'
 
 alias igrep='grep -i'
 
+# docker
+alias dcu="docker compose up"
+alias dcs="docker compose stop"
+alias dce="docker compose exec"
+
 # Navigation
 # This uses the "list" function defined above that determines if we should use
 # --color=auto or -G depending on Linux/Darwin. Could probably be used for BSD
