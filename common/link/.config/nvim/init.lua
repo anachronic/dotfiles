@@ -25,6 +25,7 @@ plug('terminus') -- focus report
 
 plug('pinnacle') -- better highlighting?
 plug('lualine.nvim') -- great statusline
+plug('bufferline.nvim') -- been using the tabline lately
 plug('catppuccin-theme') -- The new kid on the block
 plug('nvim-colorizer.lua') -- Need to see colors some times
 
@@ -129,6 +130,7 @@ vim.g.mapleader = ' ' -- leader is space
 
 -- configs
 require('ach.lualine')
+require('ach.bufferline')
 require('ach.fzf')
 require('ach.autopairs')
 require('ach.gitsigns')
