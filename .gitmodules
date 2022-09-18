@@ -142,3 +142,6 @@
 [submodule "nvim-colorizer.lua"]
 	path = common/link/.config/nvim/pack/bundle/opt/nvim-colorizer.lua
 	url = https://github.com/NvChad/nvim-colorizer.lua
+[submodule "bufferline.nvim"]
+	path = common/link/.config/nvim/pack/bundle/opt/bufferline.nvim
+	url = https://github.com/akinsho/bufferline.nvim
