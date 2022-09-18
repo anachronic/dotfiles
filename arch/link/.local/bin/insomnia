@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Annoying AUR doesn't set the binary in /usr/bin
+
+if [ -e /opt/insomnia/insomnia ]; then
+    /opt/insomnia/insomnia
+else
+    dunstify "Insomnia" "/opt/insomnia/insomnia does not exist. Cannot run insomnia"
+fi
