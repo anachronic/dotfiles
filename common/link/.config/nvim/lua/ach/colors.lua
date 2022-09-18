@@ -8,15 +8,28 @@ colorizer.setup({
 
 vim.keymap.set('n', '<leader>mc', ':ColorizerToggle<CR>')
 
+-- catppuccin
 local catppuccin = require('catppuccin')
+local palette = require('catppuccin.palettes').get_palette()
+
+vim.g.catppuccin_flavour = 'mocha'
 
 catppuccin.setup({
+    dim_inactive = {
+        enabled = true,
+    },
     integrations = {
         vim_sneak = true,
         nvimtree = true,
         gitsigns = true,
         cmp = true,
     },
+    custom_highlights = {
+        LoupeCurrentHighlight = {
+            fg = palette.surface1,
+            bg = palette.blue,
+        },
+    },
 })
-vim.g.catppuccin_flavour = 'mocha'
+
 vim.cmd('silent! colorscheme catppuccin')
