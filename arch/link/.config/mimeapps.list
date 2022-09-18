@@ -4,7 +4,7 @@ x-scheme-handler/http=firefox.desktop;
 x-scheme-handler/https=firefox.desktop;
 x-scheme-handler/mailto=org.kde.kmail2.desktop;userapp-Thunderbird-TOR8O1.desktop;
 x-scheme-handler/tel=org.kde.kdeconnect.handler.desktop;
-x-scheme-handler/tg=userapp-Telegram Desktop-250UO1.desktop;
+x-scheme-handler/tg=userapp-Telegram Desktop-250UO1.desktop;userapp-Telegram Desktop-FKKKR1.desktop;
 x-scheme-handler/magnet=torrent.desktop;
 
 [Default Applications]
@@ -15,7 +15,7 @@ x-scheme-handler/https=firefox.desktop;
 x-scheme-handler/insomnia=insomnia.desktop
 x-scheme-handler/mailto=userapp-Thunderbird-TOR8O1.desktop
 x-scheme-handler/tel=org.kde.kdeconnect.handler.desktop;
-x-scheme-handler/tg=userapp-Telegram Desktop-250UO1.desktop
+x-scheme-handler/tg=userapp-Telegram Desktop-FKKKR1.desktop
 x-scheme-handler/mid=userapp-Thunderbird-TOR8O1.desktop
 message/rfc822=userapp-Thunderbird-TOR8O1.desktop
 application/x.bittorrent=torrent.desktop;
