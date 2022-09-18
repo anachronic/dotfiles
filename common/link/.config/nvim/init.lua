@@ -26,6 +26,7 @@ plug('terminus') -- focus report
 plug('pinnacle') -- better highlighting?
 plug('lualine.nvim') -- great statusline
 plug('catppuccin-theme') -- The new kid on the block
+plug('nvim-colorizer.lua') -- Need to see colors some times
 
 plug('vim-eunuch') -- frequently use :Delete and :Rename
 plug('vim-abolish') -- coerce casing
