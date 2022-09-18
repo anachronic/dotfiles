@@ -11,7 +11,7 @@ XF86AudioMute
 
 # Playerctl for audio controls
 XF86Audio{Play,Next,Prev}
-    playerctl --player=spotify,%any {play-pause,next,previous}
+    playerctl --player=spotify,mpd,%any {play-pause,next,previous}
 
 super + Return
     st
