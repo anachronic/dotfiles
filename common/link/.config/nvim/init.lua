@@ -61,6 +61,8 @@ plug('vim-twig') -- Working on a php-symfony project atm :(
 plug('nvim-treesitter') -- General syntax parsing
 plug('nvim-treesitter-endwise') -- endwise based on treesitter syntax
 
+plug('NeoNoName.lua')
+
 vim.o.termguicolors = true -- its 2022, cmon
 vim.o.number = true -- show line numbers
 vim.o.relativenumber = true -- relative numbers
