@@ -33,7 +33,6 @@ plug('vim-repeat') -- dot repetitions
 plug('vim-surround') -- ysiw and cs'. I use this a lot
 plug('vim-unimpaired') -- Haven't been using qf a lot lately. TODO: check if should be removed
 plug('vim-speeddating') -- Seems useful but haven't used it
-plug('vim-signature') -- Marks, haven't been using it but I should
 plug('vim-sneak') -- TODO: Gonna try sneak-{f,F,t,T}. Remove?
 
 plug('Comment.nvim') -- Best comments out there. Don't even wanna try anything else

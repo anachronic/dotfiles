@@ -55,9 +55,6 @@
 [submodule "vim-speeddating"]
 	path = common/link/.config/nvim/pack/bundle/opt/vim-speeddating
 	url = https://github.com/tpope/vim-speeddating.git
-[submodule "vim-signature"]
-	path = common/link/.config/nvim/pack/bundle/opt/vim-signature
-	url = https://github.com/kshenoy/vim-signature.git
 [submodule "vim-sneak"]
 	path = common/link/.config/nvim/pack/bundle/opt/vim-sneak
 	url = https://github.com/justinmk/vim-sneak.git
