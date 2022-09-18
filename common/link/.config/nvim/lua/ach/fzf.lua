@@ -15,13 +15,10 @@ require('fzf-lua').setup({
     },
     grep = {
         previewer = false,
-        -- rg_opts = '--hidden --column --line-number --no-heading ' ..
-        --     "--color=always --smart-case -g '!{.git,node_modules}/*' " ..
-        --     "-g '!{poetry.lock,package-lock.json,yarn.lock,Gemfile.lock}'",
     },
 })
 
 vim.keymap.set('n', '<leader>h', fzf.help_tags)
 vim.keymap.set('n', '<C-p>', fzf.files)
 vim.keymap.set('n', '<leader>b', fzf.buffers)
-vim.keymap.set('n', '<leader>a', fzf.live_grep_native)
+vim.keymap.set('n', '<leader>a', fzf.grep_project)
