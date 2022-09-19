@@ -107,9 +107,9 @@ lspconfig.sumneko_lua.setup({
 })
 
 -- npm i -g @volar/vue-language-server
--- lspconfig.volar.setup({
---     on_attach = on_attach
--- })
+lspconfig.volar.setup({
+    on_attach = on_attach,
+})
 
 -- pacman -S rust-analyzer
 -- brew install rust-analyzer
