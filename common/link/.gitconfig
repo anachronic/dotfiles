@@ -7,6 +7,9 @@
     root = rev-parse --show-toplevel
     cl = clone
     amend = commit --amend --verbose
+    force = push --force-with-lease
+    z = stash
+    zp = stash pop
     oneline = log --pretty='format:%C(auto)%h%Creset %s%C(auto)%d%Creset %C(magenta bold)(%cr)%Creset %C(cyan)<%aN>%Creset'
 [commit]
     verbose = true
