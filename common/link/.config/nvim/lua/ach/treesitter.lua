@@ -12,7 +12,6 @@ configs.setup({
         'jsonc',
         'lua',
         'markdown',
-        'python',
         'ruby',
         'rust',
         'scss',

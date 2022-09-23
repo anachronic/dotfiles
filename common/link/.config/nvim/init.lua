@@ -58,6 +58,10 @@ plug('vim-gitignore') -- gitignore syntax. Forked because original has a bunch o
 plug('vim-yaml-folds') -- got fed up with treesitter yaml indenting
 plug('vim-twig') -- Working on a php-symfony project atm :(
 
+plug('vim-python-pep8-indent') -- correct indentation for python
+plug('SimpylFold') -- python syntax folding
+plug('python-syntax') -- Better python syntax highlighting
+
 plug('nvim-treesitter') -- General syntax parsing
 plug('nvim-treesitter-endwise') -- endwise based on treesitter syntax
 
