@@ -1,5 +1,3 @@
-local util = require('ach.util')
-
 require('nvim-tree').setup({
     git = {
         enable = false,
@@ -9,6 +7,11 @@ require('nvim-tree').setup({
             window_picker = {
                 enable = false,
             },
+        },
+    },
+    filters = {
+        custom = {
+            '__pycache__',
         },
     },
 })
