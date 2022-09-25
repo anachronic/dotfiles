@@ -43,9 +43,6 @@
 [submodule "vim-surround"]
 	path = common/link/.config/nvim/pack/bundle/opt/vim-surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule "vim-speeddating"]
-	path = common/link/.config/nvim/pack/bundle/opt/vim-speeddating
-	url = https://github.com/tpope/vim-speeddating.git
 [submodule "vim-sneak"]
 	path = common/link/.config/nvim/pack/bundle/opt/vim-sneak
 	url = https://github.com/justinmk/vim-sneak.git
