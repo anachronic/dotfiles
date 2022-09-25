@@ -28,12 +28,6 @@
 [submodule "nvim-web-devicons"]
 	path = common/link/.config/nvim/pack/bundle/opt/nvim-web-devicons
 	url = https://github.com/kyazdani42/nvim-web-devicons.git
-[submodule "fzf-lua"]
-	path = common/link/.config/nvim/pack/bundle/opt/fzf-lua
-	url = https://github.com/ibhagwan/fzf-lua.git
-[submodule "nvim-fzf"]
-	path = common/link/.config/nvim/pack/bundle/opt/nvim-fzf
-	url = https://github.com/vijaymarupudi/nvim-fzf.git
 [submodule "terminus"]
 	path = common/link/.config/nvim/pack/bundle/opt/terminus
 	url = https://github.com/wincent/terminus.git
