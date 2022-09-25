@@ -42,8 +42,6 @@ plug('nvim-snippy') -- Lua snippets, finally
 plug('emmet-vim') -- Emmet
 plug('zen-mode.nvim') -- zen-mode. Previously goyo
 
---plug('orgmode.nvim') -- Try orgmode?
-
 plug('vim-textobj-user') -- custom textobjects
 plug('vim-textobj-entire') -- "entire" textobject. Like yae would copy the entire file
 plug('vim-textobj-rubyblock') -- a ruby block. Been doing rails a lot lately
@@ -138,7 +136,6 @@ require('ach.autopairs')
 require('ach.gitsigns')
 require('ach.colors')
 require('ach.emmet')
-require('ach.orgmode')
 require('nvim-web-devicons').setup({})
 require('ach.nvimtree')
 require('ach.completion')
