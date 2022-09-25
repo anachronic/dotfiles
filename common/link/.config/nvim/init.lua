@@ -22,7 +22,6 @@ plug('nvim-web-devicons') -- Required for tree to work, kind of a hassle
 plug('telescope.nvim') -- trying again. I might be a little bit of a masochist
 plug('terminus') -- focus report
 
-plug('pinnacle') -- better highlighting?
 plug('lualine.nvim') -- great statusline
 plug('bufferline.nvim') -- been using the tabline lately
 plug('catppuccin-theme') -- The new kid on the block
