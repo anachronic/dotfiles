@@ -41,6 +41,7 @@ plug('nvim-autopairs') -- back 2 basics i guess
 plug('nvim-snippy') -- Lua snippets, finally
 plug('emmet-vim') -- Emmet
 plug('zen-mode.nvim') -- zen-mode. Previously goyo
+plug('nvim-bqf') -- Better quickfix
 
 plug('vim-textobj-user') -- custom textobjects
 plug('vim-textobj-entire') -- "entire" textobject. Like yae would copy the entire file
@@ -147,3 +148,4 @@ require('ach.sneak')
 require('ach.lspconfig')
 require('ach.loupe')
 require('ach.fkups')
+require('ach.quickfix')
