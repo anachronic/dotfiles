@@ -20,8 +20,6 @@ plug('nvim-tree.lua') -- Great NERDTree replacement
 plug('nvim-web-devicons') -- Required for tree to work, kind of a hassle
 
 plug('telescope.nvim') -- trying again. I might be a little bit of a masochist
--- plug('fzf-lua') -- Way better than telescope. Requires skim
--- plug('nvim-fzf') -- low level fzf for neovim
 plug('terminus') -- focus report
 
 plug('pinnacle') -- better highlighting?
