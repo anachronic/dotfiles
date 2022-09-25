@@ -148,3 +148,6 @@
 [submodule "nvim-bqf"]
 	path = common/link/.config/nvim/pack/bundle/opt/nvim-bqf
 	url = https://github.com/kevinhwang91/nvim-bqf
+[submodule "diffview.nvim"]
+	path = common/link/.config/nvim/pack/bundle/opt/diffview.nvim
+	url = https://github.com/sindrets/diffview.nvim
