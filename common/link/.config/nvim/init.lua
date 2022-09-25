@@ -28,7 +28,6 @@ plug('catppuccin-theme') -- The new kid on the block
 plug('nvim-colorizer.lua') -- Need to see colors some times
 
 plug('vim-eunuch') -- frequently use :Delete and :Rename
-plug('vim-abolish') -- coerce casing
 plug('vim-repeat') -- dot repetitions
 plug('vim-surround') -- ysiw and cs'. I use this a lot
 plug('vim-unimpaired') -- Haven't been using qf a lot lately. TODO: check if should be removed

@@ -1,6 +1,3 @@
-[submodule "vim-abolish"]
-	path = common/link/.config/nvim/pack/bundle/opt/vim-abolish
-	url = https://github.com/tpope/vim-abolish.git
 [submodule "vim-unimpaired"]
 	path = common/link/.config/nvim/pack/bundle/opt/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
