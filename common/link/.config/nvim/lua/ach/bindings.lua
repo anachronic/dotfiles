@@ -9,6 +9,7 @@ vim.keymap.set('n', '<leader>q', ':quit<CR>')
 vim.keymap.set('n', '<leader>o', ':only<CR>')
 vim.keymap.set('n', '<leader>k', ':lua require("neo-no-name").neo_no_name()<CR>')
 vim.keymap.set('n', '<leader>;', ':')
+vim.keymap.set('n', '\\', ':')
 vim.keymap.set('n', '<leader>c', '*Ncgn')
 vim.keymap.set('n', '<leader>y', ':let @+ = expand("%")<CR>')
 
