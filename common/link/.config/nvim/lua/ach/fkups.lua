@@ -12,3 +12,5 @@ alias('Qa', 'qa')
 -- annoying writings
 alias('T', 'Telescope')
 alias('gs', 'Telescope git_commits')
+alias('fh', 'DiffviewFileHistory %')
+alias('FileHistory', 'DiffviewFileHistory %')
