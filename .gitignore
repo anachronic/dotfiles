@@ -10,3 +10,5 @@ common/link/.zsh/work.sh
 
 !common/link/.config/btop/themes
 common/link/.config/btop/*
+
+.luarc.json
