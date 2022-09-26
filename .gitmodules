@@ -151,3 +151,6 @@
 [submodule "diffview.nvim"]
 	path = common/link/.config/nvim/pack/bundle/opt/diffview.nvim
 	url = https://github.com/sindrets/diffview.nvim
+[submodule "indent-blankline.nvim"]
+	path = common/link/.config/nvim/pack/bundle/opt/indent-blankline.nvim
+	url = https://github.com/lukas-reineke/indent-blankline.nvim
