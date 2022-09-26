@@ -1,6 +1,8 @@
 local utils = require('ach.util')
 local plug = utils.plug
 
+vim.g.python_highlight_all = 1
+
 plug('popup.nvim') -- Common dependency
 plug('plenary.nvim') -- Common dependency
 
