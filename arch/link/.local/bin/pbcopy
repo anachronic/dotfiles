@@ -1,4 +1,8 @@
 #!/bin/sh
 
 # Copy on linux
-exec xsel --clipboard
+if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
+    exec wl-copy
+else
+    exec xsel --clipboard
+fi

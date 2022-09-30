@@ -1,4 +1,8 @@
 #!/bin/sh
 
 # Paste on linux
-exec xsel --clipboard
+if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
+    exec wl-paste
+else
+    exec xsel --clipboard
+fi
