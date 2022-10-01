@@ -52,7 +52,6 @@ plug('vim-textobj-rubyblock') -- a ruby block. Been doing rails a lot lately
 plug('vim-sort-motion') -- sorting mostly because of gemfiles
 
 plug('vim-styled-components') -- Styled components syntax
-plug('vim-gitignore') -- gitignore syntax. Forked because original has a bunch of snippets
 plug('vim-yaml-folds') -- got fed up with treesitter yaml indenting
 plug('vim-twig') -- Working on a php-symfony project atm :(
 
