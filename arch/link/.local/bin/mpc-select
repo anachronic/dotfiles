@@ -1,0 +1,8 @@
+#!/bin/sh
+
+choice=$(mpc -f "%artist% ----- %title%" playlist | dmenu -c -l 40 -i)
+
+artist=$(echo "$choice" | awk -F " ----- " '{print $1}')
+title=$(echo "$choice" | awk -F " ----- " '{print $2}')
+
+mpc searchplay Artist "$artist" Title "$title"
