@@ -45,7 +45,6 @@ plug('emmet-vim') -- Emmet
 plug('zen-mode.nvim') -- zen-mode. Previously goyo
 plug('nvim-bqf') -- Better quickfix
 plug('diffview.nvim') -- should be self-explanatory
-plug('indent-blankline.nvim') -- supposed to work better than plain vim alternatives
 
 plug('vim-textobj-user') -- custom textobjects
 plug('vim-textobj-entire') -- "entire" textobject. Like yae would copy the entire file
@@ -153,4 +152,3 @@ require('ach.lspconfig')
 require('ach.loupe')
 require('ach.fkups')
 require('ach.quickfix')
-require('ach.indentguides')
