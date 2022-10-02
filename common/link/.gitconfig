@@ -12,8 +12,6 @@
     zp = stash pop
     oneline = log --pretty='format:%C(auto)%h%Creset %s%C(auto)%d%Creset %C(magenta bold)(%cr)%Creset %C(cyan)<%aN>%Creset'
 [commit]
-    verbose = true
-[commit]
     excludesfile = ~/.gitignore
 [user]
     name = Nicolás Salas
