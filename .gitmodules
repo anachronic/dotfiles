@@ -148,3 +148,6 @@
 [submodule "diffview.nvim"]
 	path = common/link/.config/nvim/pack/bundle/opt/diffview.nvim
 	url = https://github.com/sindrets/diffview.nvim
+[submodule "neorg"]
+	path = common/link/.config/nvim/pack/bundle/opt/neorg
+	url = https://github.com/nvim-neorg/neorg.git
