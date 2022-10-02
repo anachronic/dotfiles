@@ -54,6 +54,7 @@ plug('vim-sort-motion') -- sorting mostly because of gemfiles
 plug('vim-styled-components') -- Styled components syntax
 plug('vim-yaml-folds') -- got fed up with treesitter yaml indenting
 plug('vim-twig') -- Working on a php-symfony project atm :(
+plug('neorg') -- Next gen orgmode?
 
 plug('vim-python-pep8-indent') -- correct indentation for python
 plug('SimpylFold') -- python syntax folding
@@ -152,3 +153,4 @@ require('ach.loupe')
 require('ach.fkups')
 require('ach.quickfix')
 require('ach.yank-highlight')
+require('ach.neorg')
