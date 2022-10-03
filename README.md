@@ -5,7 +5,7 @@
 Ok, yet another dotfiles repo. Here's the deal
 
 - I use mostly neovim for **actually editing code**
-- This repo requires neovim >= 0.7.x
+- This repo requires neovim >= 0.8
 - Terminal is shaky right now: st in Linux, Alacritty in macOS (being reconsidered)
 - I use extensively: python, yaml, node and lua
 - I have a Linux machine at home. This repo serves as dotfiles for all my
