@@ -23,6 +23,8 @@ catppuccin.setup({
         nvimtree = true,
         gitsigns = true,
         cmp = true,
+        neogit = true,
+        treesitter = true,
     },
     custom_highlights = {
         LoupeCurrentHighlight = {
