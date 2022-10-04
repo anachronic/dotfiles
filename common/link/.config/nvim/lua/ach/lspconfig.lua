@@ -27,11 +27,11 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', '[d', diagnostic.navigate('prev'), only_buffer)
     vim.keymap.set('n', '<leader>.', codeaction.code_action, only_buffer)
 
-    local enabled_formmater_lsps = {
+    local enabled_formatter_lsps = {
         ['null-ls'] = true,
     }
 
-    if not enabled_formmater_lsps[client.name] then
+    if not enabled_formatter_lsps[client.name] then
         client.server_capabilities.documentFormattingProvider = nil
         client.server_capabilities.documentRangeFormattingProvider = nil
     end
