@@ -38,7 +38,6 @@ plug('vim-sneak') -- TODO: Gonna try sneak-{f,F,t,T}. Remove?
 plug('Comment.nvim') -- Best comments out there. Don't even wanna try anything else
 plug('editorconfig-vim') -- Using this at work
 plug('tabular') -- :Tab for alignment. Works surprisingly well. also dep for markdown
-plug('loupe') -- Better search. I find this plugin beautiful
 plug('nvim-autopairs') -- back 2 basics i guess
 plug('nvim-snippy') -- Lua snippets, finally
 plug('emmet-vim') -- Emmet
@@ -149,7 +148,6 @@ require('ach.comments')
 require('ach.bindings')
 require('ach.sneak')
 require('ach.lspconfig')
-require('ach.loupe')
 require('ach.fkups')
 require('ach.quickfix')
 require('ach.yank-highlight')

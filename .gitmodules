@@ -49,9 +49,6 @@
 [submodule "tabular"]
 	path = common/link/.config/nvim/pack/bundle/opt/tabular
 	url = https://github.com/godlygeek/tabular.git
-[submodule "loupe"]
-	path = common/link/.config/nvim/pack/bundle/opt/loupe
-	url = https://github.com/wincent/loupe.git
 [submodule "emmet-vim"]
 	path = common/link/.config/nvim/pack/bundle/opt/emmet-vim
 	url = https://github.com/mattn/emmet-vim.git

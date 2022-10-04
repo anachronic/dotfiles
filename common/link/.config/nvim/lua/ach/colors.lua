@@ -26,12 +26,6 @@ catppuccin.setup({
         neogit = true,
         treesitter = true,
     },
-    custom_highlights = {
-        LoupeCurrentHighlight = {
-            fg = palette.surface1,
-            bg = palette.blue,
-        },
-    },
 })
 
 vim.cmd('silent! colorscheme catppuccin')
