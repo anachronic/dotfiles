@@ -32,17 +32,19 @@ local on_attach = function(client, bufnr)
     }
 
     if not enabled_formmater_lsps[client.name] then
-        client.resolved_capabilities.document_formatting = false
-        client.resolved_capabilities.document_range_formatting = false
+        client.server_capabilities.documentFormattingProvider = nil
+        client.server_capabilities.documentRangeFormattingProvider = nil
     end
 
     local formatting_enabled = (
-        client.resolved_capabilities.document_formatting
-        or client.resolved_capabilities.document_range_formatting
+        client.server_capabilities.documentFormattingProvider
+        or client.server_capabilities.documentRangeFormattingProvider
     )
 
     if formatting_enabled then
-        vim.keymap.set('n', '<leader><CR>', vim.lsp.buf.formatting, only_buffer)
+        vim.keymap.set('n', '<leader><CR>', function()
+            vim.lsp.buf.format({ async = true })
+        end, only_buffer)
     end
 end
 
