@@ -26,6 +26,7 @@ configs.setup({
         'sxhkdrc',
         'tsx',
         'toml',
+        'twig',
         'typescript',
         'vue',
     },

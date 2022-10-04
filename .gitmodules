@@ -112,9 +112,6 @@
 [submodule "vim-yaml-folds"]
 	path = common/link/.config/nvim/pack/bundle/opt/vim-yaml-folds
 	url = https://github.com/pedrohdz/vim-yaml-folds
-[submodule "vim-twig"]
-	path = common/link/.config/nvim/pack/bundle/opt/vim-twig
-	url = https://github.com/lumiliet/vim-twig
 [submodule "nvim-colorizer.lua"]
 	path = common/link/.config/nvim/pack/bundle/opt/nvim-colorizer.lua
 	url = https://github.com/NvChad/nvim-colorizer.lua
