@@ -10,7 +10,7 @@ configs.setup({
         'go',
         'gomod',
         'graphql',
-        'help',
+        -- 'help', -- Broken for some reason
         'html',
         'javascript',
         'json',
