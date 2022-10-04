@@ -1,0 +1,20 @@
+#!/bin/bash
+
+copy-region() {
+    grim -g "$(slurp)" - | pbcopy
+
+    dunstify -a screenshot "Screenshot" "Copied to clipboard" -u low
+}
+
+save-region() {
+    grim -g "$(slurp)"
+}
+
+if [ "$1" = "" ]; then
+    echo "Need an argument to"
+fi
+
+case "$1" in
+    copy-region) copy-region;;
+    save-region) save-region;;
+esac
