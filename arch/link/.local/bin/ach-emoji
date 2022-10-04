@@ -28,3 +28,7 @@ emoji=$(selector < "$emojipath" | awk '{print $1}')
 
 printf "%s" "$emoji" | clipboard
 dunstify -a ach-emoji "Emoji" "Copied emoji" -u low
+
+if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
+    wtype "$emoji"
+fi
