@@ -1,9 +1,17 @@
 #!/bin/sh
 
-reminder=$(echo | dmenu -i -p "Remind what? >")
+selector() {
+    if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
+        bemenu -i -p "$1"
+    else
+        dmenu -i -p "$1"
+    fi
+}
+
+reminder=$(echo | selector "Remind what? >")
 [ "$reminder" = "" ] && exit 1
 
-when=$(echo | dmenu -i -p "When? (at format) >")
+when=$(echo | selector "When? (at format) >")
 [ "$when" = "" ] && exit 1
 
 output=$(echo "dunstify -a reminders Reminder \"$reminder\" -u critical" | at "$when" 2>&1)
