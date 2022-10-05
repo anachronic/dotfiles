@@ -1,0 +1,70 @@
+@document.meta
+title: wayland
+description: Notes about wayland
+authors: nsalas
+created: 2022-10-03
+updated: 2022-10-04
+version: 0.0.15
+@end
+
+* Impressions
+
+  Tried it first with gnome. LOVED IT. Everything is butter smooth. I'm kind of
+  excited about wayland right now.
+
+** Replacements
+
+   - Hyprland for dwm. Close enough
+   - bemenu for dmenu
+   - foot for st/Alacritty (more like the latter)
+   - Haven't really explored anything else
+
+** Working fine
+
+   - foot. Wayland native. Nothing to set up
+   - Firefox. Needs MOZ_ENABLE_WAYLAND=1 as env variable
+   - bemenu. Probably better to `bemenu --help` rather than `man bemenu`
+   - dunst. Amazing that it didn't need any setting to work
+
+** Needed fixes
+
+*** Hyprland
+
+    Has really good ideas, but some things are a bit annoying
+
+    - binding jump to previous workspace works 2 times only
+    - doesn't expose all workflows to waybar (or any bar)
+
+    I can live with those, I don't think they are very important. They're there
+    though
+
+    Over the course of 2 days I've found a couple of rough patches though, it
+    sometimes glitches window positions. I feel like it still has work to do.
+    I'll just try out sway I think. More stable. If that doesn't work out, then
+    idk, maybe gnome, maybe go back to xorg for a while
+
+*** All dmenu scripts
+
+    Hah... not much to say here, having to `if` everywhere to see if
+    wayland/x11 is not a big deal. I already set up bemenu so it shouldn't be
+    too much of a pain, just long work
+
+*** Flameshot
+
+    This looks like it's broken beyond repair for the following reasons
+
+    - Everything needs to be pointing at sway (why?)
+    - Doesn't respect desktop fractional scaling
+    - Clipboard doesn't work
+
+    I don't think I'll be trying it out any further. Will probably try out
+    swappy https://github.com/jtheoof/swappy
+
+*** Screen sharing
+
+    I usually share my screen at work and I heard screen could be shared with
+    xdg-desktop-portal and some combination of packages. So I set out to do
+    that but no dice, didn't work until I found this issue on github
+    https://github.com/flatpak/xdg-desktop-portal/issues/861. Downgrading
+    xdg-desktop-portal to 1.14 did the trick. I can only share my entire
+    screen, but I always do that anyway so I don't see any downside there
