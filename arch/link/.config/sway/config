@@ -61,8 +61,13 @@ bindsym $mod+q kill
 
 bindsym $mod+Shift+e exec prompt "Exit sway?" "swaymsg exit"
 
-# Start your launcher
+bindsym $mod+Shift+r exec ach-reminder
+
 bindsym $mod+p exec $menu
+
+bindsym $mod+Shift+s exec ach-screenshot copy-region
+
+bindsym $mod+f exec $term -e lf
 
 bindsym $mod+h focus left
 bindsym $mod+Shift+h move left
@@ -76,7 +81,6 @@ bindsym $mod+Shift+k move up
 bindsym $mod+l focus right
 bindsym $mod+Shift+l move right
 
-
 bindsym $mod+Shift+c reload
 
 bindsym $mod+b fullscreen
@@ -85,6 +89,7 @@ bindsym $mod+Shift+space floating toggle
 
 # Swap focus between the tiling area and the floating area
 bindsym $mod+space focus mode_toggle
+bindsym $mod+Control+space exec ach-emoji
 
 # Move your focus around
 bindsym $mod+Left focus left
