@@ -1,5 +1,5 @@
 {
-    "layer": "top",
+    "layer": "bottom",
     // hyprland
     // "modules-left": ["wlr/workspaces", "hyprland/window"],
     // sway
