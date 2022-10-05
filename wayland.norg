@@ -12,59 +12,87 @@ version: 0.0.15
   Tried it first with gnome. LOVED IT. Everything is butter smooth. I'm kind of
   excited about wayland right now.
 
-** Replacements
+* Replacements
 
-   - Hyprland for dwm. Close enough
-   - bemenu for dmenu
-   - foot for st/Alacritty (more like the latter)
-   - Haven't really explored anything else
+  - dwm -> Hyprland
+  - dmenu -> bemenu
+  - st/Alacritty -> foot
+  - flameshot -> grim + slurp + wl-clipboard
+  - xsel/xclip -> wl-clipboard
+  - dwmblocks-async -> waybar
+  - xdotool -> wtype
 
-** Working fine
+  Have used those replacements for a while now. I *really* miss flameshot. A
+  shame that there's no viable alternative.
 
-   - foot. Wayland native. Nothing to set up
-   - Firefox. Needs MOZ_ENABLE_WAYLAND=1 as env variable
-   - bemenu. Probably better to `bemenu --help` rather than `man bemenu`
-   - dunst. Amazing that it didn't need any setting to work
+  I feel like there are other apps that I haven't considered here, like
+  datagrip or vscode (lol). I should make sure those work too and annotate them
+  here
 
-** Needed fixes
+* Don't need replacement
 
-*** Hyprland
+  - Firefox. Needs MOZ_ENABLE_WAYLAND=1 as env variable
+  - dunst. Amazing that it didn't need any setting to work
 
-    Has really good ideas, but some things are a bit annoying
+* Things to consider if going back to xorg
 
-    - binding jump to previous workspace works 2 times only
-    - doesn't expose all workflows to waybar (or any bar)
+** bemenu
 
-    I can live with those, I don't think they are very important. They're there
-    though
+   Might be useful to go all in on `bemenu`. It /almost/ does the same and
+   would simplify *a lot* of my current scripts. I don't feel like dmenu does
+   enough to keep me using it and changing would imply one less tool to compile
+   on the xorg side
 
-    Over the course of 2 days I've found a couple of rough patches though, it
-    sometimes glitches window positions. I feel like it still has work to do.
-    I'll just try out sway I think. More stable. If that doesn't work out, then
-    idk, maybe gnome, maybe go back to xorg for a while
+** Electron / Chromium
 
-*** All dmenu scripts
+   These need a setting inside config files to work and I don't intend to stop
+   supporting my xorg config at least for another year. I'm not exactly sure
+   how to proceed here because I would need to append to files on login in
+   wayland and delete lines from lines on login in xorg. It's doable, totally,
+   and maybe I should, but feels like a hassle. I don't use electron that much
 
-    Hah... not much to say here, having to `if` everywhere to see if
-    wayland/x11 is not a big deal. I already set up bemenu so it shouldn't be
-    too much of a pain, just long work
+* General commentary on moving to wayland
 
-*** Flameshot
+** Hyprland
 
-    This looks like it's broken beyond repair for the following reasons
+   Has really good ideas, but some things are a bit annoying
 
-    - Everything needs to be pointing at sway (why?)
-    - Doesn't respect desktop fractional scaling
-    - Clipboard doesn't work
+   - binding jump to previous workspace works 2 times only
+   - doesn't expose all workflows to waybar (or any bar)
 
-    I don't think I'll be trying it out any further. Will probably try out
-    swappy https://github.com/jtheoof/swappy
+   I can live with those, I don't think they are very important. They're there
+   though
 
-*** Screen sharing
+   Over the course of 2 days I've found a couple of rough patches though, it
+   sometimes glitches window positions. I feel like it still has work to do.
+   I'll just try out sway I think. More stable. If that doesn't work out, then
+   idk, maybe gnome, maybe go back to xorg for a while
 
-    I usually share my screen at work and I heard screen could be shared with
-    xdg-desktop-portal and some combination of packages. So I set out to do
-    that but no dice, didn't work until I found this issue on github
-    https://github.com/flatpak/xdg-desktop-portal/issues/861. Downgrading
-    xdg-desktop-portal to 1.14 did the trick. I can only share my entire
-    screen, but I always do that anyway so I don't see any downside there
+** All dmenu scripts
+
+   Hah... not much to say here, having to `if` everywhere to see if
+   wayland/x11 is not a big deal. I already set up bemenu so it shouldn't be
+   too much of a pain, just long work.
+
+   Basically, always check for the value of `XDG_SESSION_TYPE` being equal to
+   `wayland`.
+
+** Flameshot
+
+   This looks like it's broken beyond repair for the following reasons
+
+   - Everything needs to be pointing at sway (why?)
+   - Doesn't respect desktop fractional scaling
+   - Clipboard doesn't work
+
+   I don't think I'll be trying it out any further. Will probably try out
+   swappy https://github.com/jtheoof/swappy
+
+** Screen sharing
+
+   I usually share my screen at work and I heard screen could be shared with
+   xdg-desktop-portal and some combination of packages. So I set out to do
+   that but no dice, didn't work until I found this issue on github
+   https://github.com/flatpak/xdg-desktop-portal/issues/861. Downgrading
+   xdg-desktop-portal to 1.14 did the trick. I can only share my entire
+   screen, but I always do that anyway so I don't see any downside there
