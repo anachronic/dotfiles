@@ -3,7 +3,7 @@ title: wayland
 description: Notes about wayland
 authors: nsalas
 created: 2022-10-03
-updated: 2022-10-04
+updated: 2022-10-05
 version: 0.0.15
 @end
 
@@ -33,6 +33,16 @@ version: 0.0.15
 
   - Firefox. Needs MOZ_ENABLE_WAYLAND=1 as env variable
   - dunst. Amazing that it didn't need any setting to work
+
+* New apps
+
+** Gammastep
+
+   I always liked Night Light in GNOME and the thingy in macOS which I can't
+   remember the name. I set up
+   {https://gitlab.com/chinstrap/gammastep}[gammastep] using rough coordinates
+   here in Santiago and worked wonders. The Arch Linux package also has a
+   systemd user unit. Also nice!
 
 * Things to consider if going back to xorg
 
