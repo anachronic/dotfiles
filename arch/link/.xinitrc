@@ -21,6 +21,7 @@ xset r rate 400 40
 
 # some java.awt (like intellij) apps need this fix
 export _JAVA_AWT_WM_NONREPARENTING=1
+export BEMENU_OPTS='--fn "Iosevka Nerd Font Mono 20" --hp 20 --tf "#cba6f7" --hb "#89dceb" --hf "#1e1e2e"'
 
 # Clipmenu env variables
 # Theoretically this shouldn't be here because clipmenu should run in all WMs
