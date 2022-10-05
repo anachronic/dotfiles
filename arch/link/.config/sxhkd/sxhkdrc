@@ -22,10 +22,8 @@ super + ctrl + q
 super + ctrl + space
     ach-emoji
 
-# Would like to change rofi's theme, or do something else about this
 super + space
-    dmenu_run -bw 3 -i -l 20 -c -p "Run >" -fn "JetBrains Mono Nerd Font:size=24:antialias=true"
-    # rofi -show combi -combi-modi "drun,run"
+    bemenu-run -W 0.6 -i -l 20 -c -p "Run >" --fn "JetBrains Mono Nerd Font 32"
 
 super + shift + E
     prompt "Exit to tty?" "killall xinit"
@@ -37,7 +35,7 @@ super + ctrl+ R
     prompt "Restart dwm?" "killall dwm"
 
 super + p
-    dmenu_run
+    bemenu-run
 
 super + shift + S
     flameshot gui
