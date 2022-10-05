@@ -6,14 +6,4 @@
 # Works in both bash and dash
 yesorno=$(printf "No\nYes")
 
-selector() {
-    if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
-        # bemenu
-        bemenu -c -i -W 0.4 -l 2 --fn "Iosevka Nerd Font Mono 24" -p "$1"
-    else
-        # dmenu
-        dmenu -bw 3 -i -c -l 2 -fn "Iosevka Nerd Font Mono:size=24" -p "$1"
-    fi
-}
-
-echo "$yesorno" | selector "$1" | xargs test "Yes" "=" && $2
+echo "$yesorno" | bemenu -c -i -W 0.4 -l 2 --fn "Iosevka Nerd Font Mono 24" -p "$1" | xargs test "Yes" "=" && $2

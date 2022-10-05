@@ -1,13 +1,5 @@
 #!/bin/sh
 
-selector() {
-    if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
-        bemenu -l 20 -i
-    else
-        dmenu -l 20 -i
-    fi
-}
-
 clipboard() {
     if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
         wl-copy
@@ -22,7 +14,7 @@ emojipath="$HOME/.local/share/emoji.txt"
 [ -e "$emojipath" ] || exit 1
 
 # don't -c dmenu. For some reason large files make it really slow
-emoji=$(selector < "$emojipath" | awk '{print $1}')
+emoji=$(bemenu -l 20 -i -p "Emoji >" < "$emojipath" | awk '{print $1}')
 
 [ "$emoji" = "" ] && exit 1
 

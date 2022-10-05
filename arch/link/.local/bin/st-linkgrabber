@@ -1,6 +1,6 @@
 #!/bin/sh
 
-url=$(cat | xurls | uniq | dmenu -c -w "$WINDOWID" -l 20 -i -p "Open what? >")
+url=$(cat | xurls | uniq | bemenu -W 0.4 -c -w "$WINDOWID" -l 20 -i -p "Open what? >")
 
 [ -z "$url" ] && exit 1
 dunstify -a st st "selected $url"
