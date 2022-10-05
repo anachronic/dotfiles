@@ -1,0 +1,33 @@
+{
+    "layer": "top",
+    "modules-left": ["wlr/workspaces", "hyprland/window"],
+    "modules-right": ["pulseaudio", "custom/dunst", "clock"],
+    "hyprland/window": {
+        "format": "{}"
+    },
+    "clock": {
+        "format": "<span background='#cba6f7' color='#1e1e2e'> 󱛡 </span> {:%a %d %b  %H:%M}"
+    },
+    "wlr/workspaces": {
+        "all-outputs": true,
+        "on-click": "activate"
+    },
+    "pulseaudio": {
+        "format": "<span background='#94e2d5' color='#1e1e1e'> {icon} </span> {volume}%",
+        "scroll-step": 1,
+        "format-muted": "<span background='#94e2d5' color='#1e1e1e'> 󰖁 </span> muted",
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "pamixer --toggle-mute",
+        "on-click-right": "pavucontrol"
+    },
+    "custom/dunst": {
+        "format": " {} ",
+        "exec": "dwm-dunst",
+        "interval": "once",
+        "on-click": "dunstctl set-paused toggle && pkill -RTMIN+1 waybar",
+        "exec-on-event": false,
+        "signal": 1
+    }
+}
