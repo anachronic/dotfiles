@@ -2,6 +2,9 @@ alacritty
 atool
 bash-language-server
 bat
+bemenu
+bemenu-wayland
+bemenu-x11
 bitwarden
 blueman
 bluez-utils
