@@ -47,7 +47,7 @@ super + f
     st -e lf
 
 super + ctrl + k
-    dmenu-kill
+    ach-kill
 
 # super + alt + v
 #     clipmenuinsert
