@@ -1,0 +1,48 @@
+[options]
+suppress_default_binds = true
+overlay = true
+overlay_font = Iosevka Nerd Font Mono:14
+
+[aliases]
+copy = exec pbcopy < "$imv_current_file"
+copy-path = exec printf "%s" "$imv_current_file" | pbcopy
+
+[binds]
+# j and k to view images. Rely on window title to show number
+j = next
+k = prev
+
+# panning with arrow keys
+<Down> = pan 0 -50
+<Up> = pan 0 50
+<Left> = pan 50 0
+<Right> = pan -50 0
+
+# rotate
+<Ctrl+r> = rotate by 90
+
+# Other commands
+q = quit
+x = close
+f = fullscreen
+d = overlay
+c = center
+s = scaling next
+<Shift+S> = upscaling next
+a = zoom actual
+r = reset
+
+<equal> = zoom 1
+<minus> = zoom -1
+
+# Gif playback
+<period> = next_frame
+<space> = toggle_playing
+
+# Slideshow control
+t = slideshow +1
+<Shift+T> = slideshow -1
+
+# clipboard
+y = copy
+<Shift+Y> = copy-path
