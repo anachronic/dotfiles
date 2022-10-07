@@ -52,10 +52,10 @@ bindsym $mod+backslash splith
 bindsym $mod+Shift+equal move scratchpad
 bindsym $mod+equal scratchpad show
 
-# Start a terminal
 bindsym $mod+Return exec $term
 
-# Kill focused window
+bindsym $mod+Tab workspace back_and_forth
+
 bindsym $mod+Shift+q kill
 bindsym $mod+q kill
 
