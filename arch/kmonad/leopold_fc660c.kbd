@@ -23,7 +23,7 @@
     tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
     @ce  a    s    d    f    g    h    j    k    l    ;    '    ret
     lsft z    x    c    v    b    n    m    ,    .    /    rsft
-    lctl lalt lmet           @spc           ralt rctl lft  up   down rght
+    lctl lmet lalt           @spc           ralt rctl lft  up   down rght
 )
 
 (deflayer spacefn
