@@ -27,6 +27,8 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', '[d', diagnostic.navigate('prev'), only_buffer)
     vim.keymap.set('n', '<leader>.', codeaction.code_action, only_buffer)
 
+    vim.api.nvim_buf_create_user_command(0, "Dia", vim.diagnostic.setqflist, {})
+
     local enabled_formatter_lsps = {
         ['null-ls'] = true,
     }
