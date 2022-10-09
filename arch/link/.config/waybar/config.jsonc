@@ -9,7 +9,7 @@
         "format": "{}"
     },
     "clock": {
-        "format": "<span background='#cba6f7' color='#1e1e2e'> 󱛡 </span> {:%a %d %b  %H:%M}"
+        "format": "<span color='#cba6f7'> 󱛡 </span>{:%a %d %b  %H:%M}"
     },
     "wlr/workspaces": {
         "all-outputs": true,
@@ -31,9 +31,9 @@
         }
     },
     "pulseaudio": {
-        "format": "<span background='#94e2d5' color='#1e1e1e'> {icon} </span> {volume}%",
+        "format": "<span color='#94e2d5'> {icon} </span>{volume}%",
         "scroll-step": 1,
-        "format-muted": "<span background='#94e2d5' color='#1e1e1e'> 󰖁 </span> muted",
+        "format-muted": "<span color='#94e2d5'> 󰖁 </span>muted",
         "format-icons": {
             "default": ["󰕿", "󰖀", "󰕾"]
         },
