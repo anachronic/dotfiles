@@ -55,6 +55,7 @@ bindsym $mod+equal scratchpad show
 bindsym $mod+Return exec $term
 
 bindsym $mod+Tab workspace back_and_forth
+bindsym Mod1+Tab workspace back_and_forth
 
 bindsym $mod+Shift+q kill
 bindsym $mod+q kill
@@ -136,12 +137,8 @@ bindsym --locked XF86AudioPlay exec "playerctl --player=spotify,mpd,%any play-pa
 bindsym --locked XF86AudioNext exec "playerctl --player=spotify,mpd,%any next"
 bindsym --locked XF86AudioPrev exec "playerctl --player=spotify,mpd,%any previous"
 
-# Make the current focus fullscreen
-
-# Move focus to the parent container
-bindsym $mod+a focus parent
-#
-# Scratchpad:
+# Don't know what this is supposed to do...
+# bindsym $mod+a focus parent
 
 # borders and window titles
 hide_edge_borders smart
