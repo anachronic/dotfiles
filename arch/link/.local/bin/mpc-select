@@ -1,6 +1,10 @@
 #!/bin/sh
 
-choice=$(mpc -f "%artist% ----- %title%" playlist | dmenu -c -l 40 -i)
+choice=$(mpc -f "%artist% ----- %title%" playlist | bemenu -W 0.7 -l 40 -i)
+
+if [ "$choice" = "" ]; then
+    exit 1
+fi
 
 artist=$(echo "$choice" | awk -F " ----- " '{print $1}')
 title=$(echo "$choice" | awk -F " ----- " '{print $2}')
