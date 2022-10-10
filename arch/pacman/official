@@ -26,8 +26,11 @@ firefox
 fish
 flameshot
 flex
+foot
+foot-terminfo
 fuse2
 fuseiso
+gammastep
 gcc
 gettext
 ghostscript
@@ -35,10 +38,12 @@ git
 gnupg
 go
 graphicsmagick
+grim
 gvfs
 gvfs-smb
 gzip
 hsetroot
+imv
 jo
 jq
 kitty
@@ -99,12 +104,13 @@ rust-analyzer
 screenkey
 shellcheck
 skim
+slurp
 sshfs
 stow
 stylua
 sudo
+sway
 sxhkd
-sxiv
 sysstat
 telegram-desktop
 tmux
@@ -121,6 +127,7 @@ unrar
 unzip
 vim
 vulkan-radeon
+waybar
 wget
 which
 xclip
@@ -132,6 +139,7 @@ xorg-xinit
 xsel
 xterm
 youtube-dl
+yq
 zathura
 zathura-pdf-poppler
 zathura-ps
