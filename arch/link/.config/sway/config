@@ -88,7 +88,7 @@ bindsym $mod+b fullscreen
 
 bindsym $mod+m exec mpc-select
 bindsym $mod+Shift+m exec $term -e ncmpcpp
-
+bindsym $mod+Control+m exec mpc-random
 
 bindsym $mod+space focus mode_toggle
 bindsym $mod+Shift+space floating toggle

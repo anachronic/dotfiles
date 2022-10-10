@@ -1,0 +1,5 @@
+#!/bin/sh
+
+mpc random
+
+dunstify -a mpc "mpc" "Random is $(mpc status "%random%")"
