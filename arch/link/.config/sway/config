@@ -64,6 +64,8 @@ bindsym $mod+Shift+r exec ach-reminder
 bindsym $mod+p exec $menu
 
 bindsym $mod+Shift+s exec ach-screenshot copy-region
+# bindsym $mod+s exec flameshot gui
+# ^ broken because of HiDPI setting in sway :(
 
 bindsym $mod+f exec $term -e lf
 
@@ -148,9 +150,15 @@ smart_gaps on
 for_window [app_id="firefox" title="^Picture-in-Picture$"] floating enable, sticky enable, border none
 for_window [app_id="firefox" title="Sharing Indicator$"] floating enable
 for_window [app_id="pavucontrol"] floating enable
+for_window [app_id="flameshot"] floating enable, fullscreen disable, move absolute position 0 0, border pixel 0
 
 # waybar
 bar swaybar_command waybar
+
+# seriously, wtf is up with all this flameshot setup... JESUS
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec hash dbus-update-activation-environment 2>/dev/null && \
+     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 
 # OS, dbus, who knows...
 include /etc/sway/config.d/*

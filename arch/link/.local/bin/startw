@@ -1,8 +1,19 @@
 #!/bin/sh
 
+# java apps. Who uses these anyway?!??!
 export _JAVA_AWT_WM_NONREPARENTING=1
+
+# Firefox
 export MOZ_ENABLE_WAYLAND=1
+
+# Bemenu
 export BEMENU_OPTS='--fn "Iosevka Nerd Font Mono 14" --hp 10 --tf "#cba6f7" --hb "#89dceb" --hf "#1e1e2e"'
+
+# God flameshot.. why so much stuff...
+export SDL_VIDEODRIVER=wayland
+export QT_QPA_PLATFORM=wayland
+export XDG_CURRENT_DESKTOP=sway
+export XDG_SESSION_DESKTOP=sway
 
 exec sway
 # exec Hyprland
