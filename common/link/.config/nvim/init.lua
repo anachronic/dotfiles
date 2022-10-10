@@ -84,6 +84,7 @@ vim.o.showmode = false -- Don't show "INSERT" below. It's in the statusline
 vim.o.inccommand = 'split' -- Preview replacements in a split!
 vim.o.foldmethod = 'syntax' -- treesitter needs expr folding, but should be like syntax
 vim.opt.list = true -- show whitespace
+vim.opt.smartcase = true -- just :h it. Loupe was setting this before
 
 vim.opt.listchars = { -- Fails if using vim.o, I think vim.opt is better overall
     nbsp = '⦸', -- CIRCLED REVERSE SOLIDUS (U+29B8, UTF-8: E2 A6 B8)
