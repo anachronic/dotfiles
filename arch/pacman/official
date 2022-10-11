@@ -110,6 +110,8 @@ stow
 stylua
 sudo
 sway
+swayidle
+swaylock
 sxhkd
 sysstat
 telegram-desktop
