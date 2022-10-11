@@ -2,6 +2,14 @@ local lspconfig = require('lspconfig')
 local saga = require('lspsaga')
 local null_ls = require('null-ls')
 local fidget = require('fidget')
+local aerial = require('aerial')
+
+aerial.setup({
+    backends = { 'lsp', 'treesitter' },
+})
+
+vim.api.nvim_create_user_command("AO", "AerialOpen", {})
+vim.api.nvim_create_user_command("AC", "AerialClose", {})
 
 fidget.setup({
     window = {
@@ -52,6 +60,9 @@ local on_attach = function(client, bufnr)
             vim.lsp.buf.format({ async = true })
         end, only_buffer)
     end
+
+    -- this should only be done with supported languages
+    aerial.on_attach(client, bufnr)
 end
 
 -- pacman -S stylua

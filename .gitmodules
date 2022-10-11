@@ -145,3 +145,6 @@
 [submodule "fidget.nvim"]
 	path = common/link/.config/nvim/pack/bundle/opt/fidget.nvim
 	url = https://github.com/j-hui/fidget.nvim
+[submodule "aerial.nvim"]
+	path = common/link/.config/nvim/pack/bundle/opt/aerial.nvim
+	url = https://github.com/stevearc/aerial.nvim

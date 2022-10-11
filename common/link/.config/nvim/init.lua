@@ -45,6 +45,7 @@ plug('emmet-vim') -- Emmet
 plug('zen-mode.nvim') -- zen-mode. Previously goyo
 plug('nvim-bqf') -- Better quickfix
 plug('diffview.nvim') -- should be self-explanatory
+plug('aerial.nvim') -- outlining.. maybe I'll get used to it?
 
 plug('vim-textobj-user') -- custom textobjects
 plug('vim-textobj-entire') -- "entire" textobject. Like yae would copy the entire file
