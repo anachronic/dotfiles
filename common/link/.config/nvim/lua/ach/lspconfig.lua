@@ -1,6 +1,13 @@
 local lspconfig = require('lspconfig')
 local saga = require('lspsaga')
 local null_ls = require('null-ls')
+local fidget = require('fidget')
+
+fidget.setup({
+    window = {
+        blend = 0,
+    },
+})
 
 saga.init_lsp_saga({
     code_action_lightbulb = {

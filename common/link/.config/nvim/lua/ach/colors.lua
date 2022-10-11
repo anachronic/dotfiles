@@ -10,7 +10,6 @@ vim.keymap.set('n', '<leader>mc', ':ColorizerToggle<CR>')
 
 -- catppuccin
 local catppuccin = require('catppuccin')
-local palette = require('catppuccin.palettes').get_palette()
 
 vim.g.catppuccin_flavour = 'mocha'
 
@@ -25,6 +24,7 @@ catppuccin.setup({
         cmp = true,
         neogit = true,
         treesitter = true,
+        fidget = true,
     },
 })
 

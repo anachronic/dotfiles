@@ -142,3 +142,6 @@
 [submodule "lspsaga.nvim"]
 	path = common/link/.config/nvim/pack/bundle/opt/lspsaga.nvim
 	url = https://github.com/glepnir/lspsaga.nvim
+[submodule "fidget.nvim"]
+	path = common/link/.config/nvim/pack/bundle/opt/fidget.nvim
+	url = https://github.com/j-hui/fidget.nvim

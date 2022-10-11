@@ -28,6 +28,7 @@ plug('lualine.nvim') -- great statusline
 plug('bufferline.nvim') -- been using the tabline lately
 plug('catppuccin-theme') -- The new kid on the block
 plug('nvim-colorizer.lua') -- Need to see colors some times
+plug('fidget.nvim') -- lsp indexing or w/e
 
 plug('vim-eunuch') -- frequently use :Delete and :Rename
 plug('vim-repeat') -- dot repetitions
