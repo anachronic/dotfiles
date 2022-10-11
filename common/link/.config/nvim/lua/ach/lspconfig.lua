@@ -1,15 +1,12 @@
 local lspconfig = require('lspconfig')
-local hover = require('lspsaga.hover')
-local diagnostic = require('lspsaga.diagnostic')
-local codeaction = require('lspsaga.codeaction')
+local saga = require('lspsaga')
 local null_ls = require('null-ls')
 
-require('lspsaga').init_lsp_saga({
-    use_saga_diagnostic_sign = false,
-    code_action_prompt = {
-        enable = true, -- do want code actions
-        sign = false, -- don't hint code actions in sign column
-        virtual_text = false, -- don't hint code actions in virtual text
+saga.init_lsp_saga({
+    code_action_lightbulb = {
+        enable = true,
+        enable_in_insert = false,
+        virtual_text = false,
     },
 })
 
@@ -22,10 +19,10 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, only_buffer)
     vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, only_buffer)
     vim.keymap.set('n', 'gr', vim.lsp.buf.references, only_buffer)
-    vim.keymap.set('n', 'K', hover.render_hover_doc, only_buffer)
-    vim.keymap.set('n', ']d', diagnostic.navigate('next'), only_buffer)
-    vim.keymap.set('n', '[d', diagnostic.navigate('prev'), only_buffer)
-    vim.keymap.set('n', '<leader>.', codeaction.code_action, only_buffer)
+    vim.keymap.set('n', 'K', '<cmd>Lspsaga hover_doc<CR>', only_buffer)
+    vim.keymap.set('n', ']d', '<cmd>Lspsaga diagnostic_jump_next<CR>', only_buffer)
+    vim.keymap.set('n', '[d', '<cmd>Lspsaga diagnostic_jump_prev<CR>', only_buffer)
+    vim.keymap.set('n', '<leader>.', '<cmd>Lspsaga code_action<CR>', only_buffer)
 
     vim.api.nvim_buf_create_user_command(0, 'Dia', vim.diagnostic.setqflist, {})
 
