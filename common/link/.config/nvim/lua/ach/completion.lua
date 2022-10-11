@@ -32,7 +32,7 @@ local select_previous = cmp.mapping(function()
     end
 end, { 'i', 's' })
 
-local accept_regardless = cmp.mapping(function (fallback)
+local accept_regardless = cmp.mapping(function(fallback)
     if cmp.visible() then
         cmp.confirm({ select = true })
     else
@@ -40,7 +40,7 @@ local accept_regardless = cmp.mapping(function (fallback)
     end
 end, { 'i', 's' })
 
-local accept_if_selected = cmp.mapping(function (fallback)
+local accept_if_selected = cmp.mapping(function(fallback)
     if not cmp.get_selected_entry() then
         fallback()
     else

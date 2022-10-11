@@ -8,8 +8,8 @@ aerial.setup({
     backends = { 'lsp', 'treesitter' },
 })
 
-vim.api.nvim_create_user_command("AO", "AerialOpen", {})
-vim.api.nvim_create_user_command("AC", "AerialClose", {})
+vim.api.nvim_create_user_command('AO', 'AerialOpen', {})
+vim.api.nvim_create_user_command('AC', 'AerialClose', {})
 
 fidget.setup({
     window = {
