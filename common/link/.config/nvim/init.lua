@@ -32,7 +32,6 @@ plug('fidget.nvim') -- lsp indexing or w/e
 
 plug('vim-eunuch') -- frequently use :Delete and :Rename
 plug('vim-repeat') -- dot repetitions
-plug('vim-surround') -- ysiw and cs'. I use this a lot
 plug('vim-unimpaired') -- Haven't been using qf a lot lately. TODO: check if should be removed
 plug('vim-sneak') -- TODO: Gonna try sneak-{f,F,t,T}. Remove?
 

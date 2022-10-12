@@ -37,9 +37,6 @@
 [submodule "vim-repeat"]
 	path = common/link/.config/nvim/pack/bundle/opt/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
-[submodule "vim-surround"]
-	path = common/link/.config/nvim/pack/bundle/opt/vim-surround
-	url = https://github.com/tpope/vim-surround.git
 [submodule "vim-sneak"]
 	path = common/link/.config/nvim/pack/bundle/opt/vim-sneak
 	url = https://github.com/justinmk/vim-sneak.git
