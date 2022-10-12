@@ -145,3 +145,6 @@
 [submodule "aerial.nvim"]
 	path = common/link/.config/nvim/pack/bundle/opt/aerial.nvim
 	url = https://github.com/stevearc/aerial.nvim
+[submodule "nvim-surround"]
+	path = common/link/.config/nvim/pack/bundle/opt/nvim-surround
+	url = https://github.com/kylechui/nvim-surround
