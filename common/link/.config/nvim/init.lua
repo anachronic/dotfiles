@@ -40,8 +40,8 @@ plug('Comment.nvim') -- Best comments out there. Don't even wanna try anything e
 plug('editorconfig-vim') -- Using this at work
 plug('tabular') -- :Tab for alignment. Works surprisingly well. also dep for markdown
 plug('nvim-autopairs') -- back 2 basics i guess
-plug('nvim-snippy') -- Lua snippets, finally
 plug('emmet-vim') -- Emmet
+plug('LuaSnip') -- Seems like the most maintained
 plug('zen-mode.nvim') -- zen-mode. Previously goyo
 plug('nvim-bqf') -- Better quickfix
 plug('diffview.nvim') -- should be self-explanatory

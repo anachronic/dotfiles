@@ -1,16 +1,19 @@
 local cmp = require('cmp')
-local snippy = require('snippy')
+local luasnip = require('luasnip')
+local luasnipmate = require('luasnip.loaders.from_snipmate')
+
+luasnipmate.lazy_load({ paths = './snippets' })
 
 local has_words_before = function()
-    local line, col = table.unpack(vim.api.nvim_win_get_cursor(0))
+    local line, col = unpack(vim.api.nvim_win_get_cursor(0))
     return col ~= 0
         and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match('%s')
             == nil
 end
 
 local select_next = cmp.mapping(function(fallback)
-    if snippy.can_expand_or_advance() then
-        snippy.expand_or_advance()
+    if luasnip.expand_or_jumpable() then
+        luasnip.expand_or_jump()
     elseif cmp.visible() then
         if #cmp.get_entries() == 1 then
             cmp.confirm({ select = true })
@@ -27,8 +30,8 @@ end, { 'i', 's' })
 local select_previous = cmp.mapping(function()
     if cmp.visible() then
         cmp.select_prev_item()
-    elseif snippy.can_jump(-1) then
-        snippy.previous()
+    elseif luasnip.jumpable(-1) then
+        luasnip.jump(-1)
     end
 end, { 'i', 's' })
 
@@ -54,7 +57,7 @@ cmp.setup({
     completeopt = 'menuone,noselect,noinsert',
     snippet = {
         expand = function(args)
-            snippy.expand_snippet(args.body)
+            luasnip.lsp_expand(args.body)
         end,
     },
     mapping = {
