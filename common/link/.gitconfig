@@ -8,9 +8,19 @@
     cl = clone
     amend = commit --amend --verbose
     force = push --force-with-lease
+    oneline = log --pretty='format:%C(auto)%h%Creset %s%C(auto)%d%Creset %C(magenta bold)(%cr)%Creset %C(cyan)<%aN>%Creset'
+
+    # cherry-pick
+    cp = cherry-pick
+
+    # stash
     z = stash
     zp = stash pop
-    oneline = log --pretty='format:%C(auto)%h%Creset %s%C(auto)%d%Creset %C(magenta bold)(%cr)%Creset %C(cyan)<%aN>%Creset'
+
+    # rebasing
+    rb = rebase
+    rbc = rebase --continue
+    rba = rebase --abort
 [commit]
     excludesfile = ~/.gitignore
 [user]
