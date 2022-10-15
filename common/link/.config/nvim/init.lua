@@ -133,6 +133,7 @@ end
 vim.g.mapleader = ' ' -- leader is space
 
 -- configs
+require('ach.filetypes')
 require('ach.lualine')
 require('ach.bufferline')
 require('ach.telescope')
