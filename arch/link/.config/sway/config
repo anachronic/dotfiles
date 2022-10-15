@@ -16,6 +16,9 @@ set $menu bemenu-run
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 output DP-3 scale 1.5
 
+### Background: might require swaybg
+output "*" bg ~/pictures/wall.jpg fill
+
 ### Screen locking
 exec swayidle -w \
          timeout 300 'loginctl lock-session' \
