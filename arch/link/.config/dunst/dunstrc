@@ -13,8 +13,8 @@
     horizontal_padding = 8
     text_icon_padding = 0
     frame_width = 2
-    frame_color = "#aaaaaa"
-    separator_color = auto
+    frame_color = "#89b4fa"
+    separator_color = frame
 
     # Sort messages by urgency.
     sort = yes
@@ -99,21 +99,21 @@
     # context = ctrl+shift+period
 
 [urgency_low]
-    background = "#222222"
-    foreground = "#888888"
+    background = "#1e1e2e"
+    foreground = "#cdd6f4"
     timeout = 2
     #icon = /path/to/icon
 
 [urgency_normal]
-    background = "#555577"
-    foreground = "#ffffff"
+    background = "#1e1e2e"
+    foreground = "#cdd6f4"
     timeout = 5
     #icon = /path/to/icon
 
 [urgency_critical]
-    background = "#895555"
-    foreground = "#ffffff"
-    frame_color = "#ba2f2f"
+    background = "#1e1e2e"
+    foreground = "#cdd6f4"
+    frame_color = "#fab387"
     timeout = 0
     #icon = /path/to/icon
 
