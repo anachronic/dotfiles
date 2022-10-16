@@ -1,6 +1,3 @@
-[submodule "vim-unimpaired"]
-	path = common/link/.config/nvim/pack/bundle/opt/vim-unimpaired
-	url = https://github.com/tpope/vim-unimpaired.git
 [submodule "popup.nvim"]
 	path = common/link/.config/nvim/pack/bundle/opt/popup.nvim
 	url = https://github.com/nvim-lua/popup.nvim.git
@@ -145,3 +142,6 @@
 [submodule "LuaSnip"]
 	path = common/link/.config/nvim/pack/bundle/opt/LuaSnip
 	url = https://github.com/L3MON4D3/LuaSnip
+[submodule "nvim-luadev"]
+	path = common/link/.config/nvim/pack/bundle/opt/nvim-luadev
+	url = https://github.com/bfredl/nvim-luadev

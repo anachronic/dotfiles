@@ -33,7 +33,6 @@ plug('fidget.nvim') -- lsp indexing or w/e
 plug('vim-eunuch') -- frequently use :Delete and :Rename
 plug('vim-repeat') -- dot repetitions
 plug('nvim-surround') -- next gen surround, better surrounding tags did it for me
-plug('vim-unimpaired') -- Haven't been using qf a lot lately. TODO: check if should be removed
 plug('vim-sneak') -- TODO: Gonna try sneak-{f,F,t,T}. Remove?
 
 plug('Comment.nvim') -- Best comments out there. Don't even wanna try anything else
