@@ -8,7 +8,7 @@ function unimpaired.find_next_file()
     local first = nil
 
     for file, type in vim.fs.dir(dirname) do
-        if type == "file" then
+        if type == 'file' then
             local this_file = dirname .. '/' .. file
 
             if not first then
@@ -35,7 +35,7 @@ function unimpaired.find_prev_file()
     local last = nil
 
     for file, type in vim.fs.dir(dirname) do
-        if type == "file" then
+        if type == 'file' then
             local this_file = dirname .. '/' .. file
 
             if last and this_file == bufname then
