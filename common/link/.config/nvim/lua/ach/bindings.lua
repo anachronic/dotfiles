@@ -1,7 +1,8 @@
--- The wincent hack for <Tab> folding
--- This requires additional term configuration
 vim.keymap.set('n', '<Tab>', 'za')
-vim.keymap.set('n', '<F6>', '<C-i>')
+
+-- This is really stupid, but necessary to disambiguate C-i and Tab given that
+-- we're using a decent terminal (like foot, or kitty)
+vim.keymap.set('n', '<C-i>', '<C-i>')
 
 -- Regular vim stuff
 vim.keymap.set('n', '<leader>w', ':write<CR>')
