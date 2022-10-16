@@ -1,3 +1,5 @@
 local surround = require('nvim-surround')
 
-surround.setup({})
+surround.setup({
+    move_cursor = false,
+})
