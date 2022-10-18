@@ -127,6 +127,19 @@ man() {
 # Aliases
 source ~/.zsh/aliases
 
+# OSC7: cwd reporting for new shells. Mostly needed by foot. Dunno about kitty
+autoload -U add-zsh-hook
+function osc7 {
+    local LC_ALL=C
+    export LC_ALL
+
+    setopt localoptions extendedglob
+    input=( ${(s::)PWD} )
+    uri=${(j::)input/(#b)([^A-Za-z0-9_.\!~*\'\(\)-\/])/%${(l:2::0:)$(([##16]#match))}}
+    print -n "\e]7;file://${HOSTNAME}${uri}\e\\"
+}
+add-zsh-hook -Uz chpwd osc7
+
 # syntax highlighting: pacman -S zsh-syntax-highlighting
 function () {
     # path might change in macOS, haven't figured it out yet
