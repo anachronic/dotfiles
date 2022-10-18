@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# bash because of https://unix.stackexchange.com/a/608872
+# I really don't want to deal with nohup and std{err,out}
+
+# xorg just go ahead and exec st. Honeslty could use the trick below but I
+# don't care too much about xorg right now
+if [ "$XDG_SESSION_TYPE" != "wayland" ]; then
+    exec st "$@"
+fi
+
+# on wayland try to guess current path
+# from reddit: https://www.reddit.com/r/swaywm/comments/xw49qv/a_system_to_open_new_terminals_in_the_same/?utm_source=share&utm_medium=web2x&context=3
+if FOCUSED=$(swaymsg -t get_tree | jq -e '.. | select(.type?) | select(.focused) | .pid') && [ -n "$FOCUSED" ]; then
+    # cwd of first-level child is usually more useful (e.g. shell proc forked from terminal emulator)
+    # but fallback to the cwd of the focused app if no children procs
+    for pid in $(cat "/proc/$FOCUSED/task"/*/children) $FOCUSED; do
+        if cwd=$(readlink -e "/proc/$pid/cwd") && [ -n "$cwd" ]; then
+            foot -D "$cwd" "$@" &
+            exec disown
+        fi
+    done
+fi
+
+foot "$@" &
+disown
