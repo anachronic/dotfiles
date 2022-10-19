@@ -1,6 +1,7 @@
 #!/bin/sh
 
-volume=$(pamixer --get-volume)
+sink=$(pactl list sinks | grep -B 1 RUNNING | awk -F "#" '/^Sink/ {print $2}')
+volume=$(pactl get-sink-volume "$sink" | awk -F '/' '{print $2}' | xargs)
 dunst_stack="ach-volume"
 
 notify() {
@@ -13,10 +14,10 @@ notify() {
         "$@"
 }
 
-if [ "0" -eq "$volume" ]
+if [ "0" = "$volume" ] || [ "0%" = "$volume" ]
 then
     iconpath="/usr/share/icons/breeze-dark/status/24@3x/audio-volume-muted.svg"
-    notify "Volume muted" -i "$iconpath"
+    notify "Volume muted" -i "$iconpath" -h int:value:0
 else
     if [ "$volume" -le "30" ]; then
         iconpath="/usr/share/icons/breeze-dark/status/24@3x/audio-volume-low.svg"
@@ -26,7 +27,8 @@ else
         iconpath="/usr/share/icons/breeze-dark/status/24@3x/audio-volume-high.svg"
     fi
 
-    notify "$volume%" -h int:value:"$volume" -i "$iconpath"
+    notify "$volume" -h int:value:"$volume" -i "$iconpath"
 fi
 
-pkill -RTMIN+22 dwmblocks
+# don't care if this fails
+pkill -RTMIN+22 dwmblocks || true
