@@ -153,6 +153,8 @@ for_window [app_id="firefox" title="Sharing Indicator$"] floating enable
 for_window [app_id="pavucontrol"] floating enable
 for_window [app_id="flameshot"] floating enable, fullscreen disable, move absolute position 0 0, border pixel 0
 
+for_window [shell="xwayland"] title_format "[Xwayland] %title"
+
 # waybar
 bar swaybar_command waybar
 
