@@ -140,6 +140,11 @@ function osc7 {
 }
 add-zsh-hook -Uz chpwd osc7
 
+# ti: set window title
+function ti() {
+    printf "\e];$1\e\\"
+}
+
 # syntax highlighting: pacman -S zsh-syntax-highlighting
 function () {
     # path might change in macOS, haven't figured it out yet
