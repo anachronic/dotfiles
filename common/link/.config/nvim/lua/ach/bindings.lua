@@ -2,7 +2,11 @@ vim.keymap.set('n', '<Tab>', 'za')
 
 -- This is really stupid, but necessary to disambiguate C-i and Tab given that
 -- we're using a decent terminal (like foot, or kitty)
-vim.keymap.set('n', '<C-i>', '<C-i>')
+-- Uncomment this line if tmux gets it shit together and implements modifyOtherKeys 2
+-- vim.keymap.set('n', '<C-i>', '<C-i>')
+
+-- Good old hack for disambiguating C-i and TAB
+vim.keymap.set('n', '<F6>', '<C-i>')
 
 -- Regular vim stuff
 vim.keymap.set('n', '<leader>w', ':write<CR>')
