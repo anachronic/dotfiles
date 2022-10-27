@@ -1,0 +1,12 @@
+snippet fix
+	@pytest.fixture
+	def ${1:fixture}(${2:deps}):
+		$0
+
+snippet t
+	def test_${1:what}(${2:fixtures}):
+		$0
+
+snippet tc
+	def test_${1:what}(self, ${2:fixtures}):
+		$0
