@@ -35,7 +35,7 @@ alias k='kubectl'
 # vim redefs
 alias vi='nvim'
 alias vim='nvim'
-alias vgs='nvim -c ":Neogit"'
+alias vgs='nvim -c ":lua require(\"neogit\").open()"'
 
 # TUI shortcuts
 alias lf="lfcd"
