@@ -19,7 +19,7 @@ fidget.setup({
 
 saga.init_lsp_saga({
     code_action_lightbulb = {
-        enable = true,
+        enable = false,
         enable_in_insert = false,
         virtual_text = false,
     },
