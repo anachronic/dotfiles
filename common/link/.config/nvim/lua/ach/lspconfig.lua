@@ -60,9 +60,6 @@ local on_attach = function(client, bufnr)
             vim.lsp.buf.format({ async = true })
         end, only_buffer)
     end
-
-    -- this should only be done with supported languages
-    aerial.on_attach(client, bufnr)
 end
 
 -- pacman -S stylua
