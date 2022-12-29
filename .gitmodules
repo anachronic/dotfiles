@@ -127,9 +127,6 @@
 [submodule "neorg"]
 	path = common/link/.config/nvim/pack/bundle/opt/neorg
 	url = https://github.com/nvim-neorg/neorg.git
-[submodule "lspsaga.nvim"]
-	path = common/link/.config/nvim/pack/bundle/opt/lspsaga.nvim
-	url = https://github.com/glepnir/lspsaga.nvim
 [submodule "fidget.nvim"]
 	path = common/link/.config/nvim/pack/bundle/opt/fidget.nvim
 	url = https://github.com/j-hui/fidget.nvim
@@ -145,3 +142,6 @@
 [submodule "nvim-luadev"]
 	path = common/link/.config/nvim/pack/bundle/opt/nvim-luadev
 	url = https://github.com/bfredl/nvim-luadev
+[submodule "lspsaga.nvim"]
+	path = common/link/.config/nvim/pack/bundle/opt/lspsaga.nvim
+	url = https://github.com/glepnir/lspsaga.nvim
