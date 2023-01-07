@@ -70,14 +70,11 @@ null_ls.setup({
         null_ls.builtins.formatting.stylua,
         null_ls.builtins.formatting.gofmt,
         null_ls.builtins.formatting.black,
-        null_ls.builtins.formatting.isort,
         null_ls.builtins.formatting.prettierd,
         null_ls.builtins.formatting.rustfmt,
 
         null_ls.builtins.diagnostics.eslint,
-        null_ls.builtins.diagnostics.flake8.with({
-            command = 'pflake8',
-        }),
+        null_ls.builtins.diagnostics.ruff,
         null_ls.builtins.diagnostics.golangci_lint,
     },
     diagnostics_format = '[#{c}] #{m} (#{s})',
