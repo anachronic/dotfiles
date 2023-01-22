@@ -17,11 +17,10 @@ fidget.setup({
     },
 })
 
-saga.init_lsp_saga({
-    code_action_lightbulb = {
-        enable = false,
-        enable_in_insert = false,
-        virtual_text = false,
+saga.setup({
+    symbol_in_winbar = {
+        enabled = false,
+        show_file = false,
     },
 })
 
