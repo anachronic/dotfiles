@@ -18,6 +18,14 @@ machines, that means it installs both Linux and macOS dotfiles
 - Installer script should be started after having stow in the system
 - Extra devtools: `npm i -g`, `pipx install` and so on and so forth
 
+## A short note about this repository
+
+This repository has a very ad-hoc workflow to me and it's based on a couple of
+shell scripts that install the stuff I use. If you're cloning please be aware
+
+Also, I do frequent force pushes with no same and no intention of apologizing
+at all.
+
 ## Notes without a place
 
 ### Neovim submodules
