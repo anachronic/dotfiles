@@ -24,7 +24,7 @@ plug('nvim-web-devicons') -- Required for tree to work, kind of a hassle
 plug('telescope.nvim') -- trying again. I might be a little bit of a masochist
 plug('terminus') -- focus report
 
-plug('lualine.nvim') -- great statusline
+plug('feline.nvim') -- a statusline with the control i need
 plug('bufferline.nvim') -- been using the tabline lately
 plug('catppuccin-theme') -- The new kid on the block
 plug('nvim-colorizer.lua') -- Need to see colors some times
@@ -133,7 +133,7 @@ vim.g.mapleader = ' ' -- leader is space
 
 -- configs
 require('ach.filetypes')
-require('ach.lualine')
+require('ach.feline')
 require('ach.bufferline')
 require('ach.telescope')
 require('ach.autopairs')
