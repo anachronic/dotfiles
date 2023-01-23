@@ -97,6 +97,36 @@ table.insert(components.active[1], {
     right_sep = ' ',
 })
 
+table.insert(components.active[1], {
+    provider = "diagnostic_errors",
+    hl = function()
+        return {
+            fg = palette.red,
+            style = 'bold',
+        }
+    end,
+})
+
+table.insert(components.active[1], {
+    provider = "diagnostic_warnings",
+    hl = function()
+        return {
+            fg = palette.yellow,
+            style = 'bold',
+        }
+    end,
+})
+
+table.insert(components.active[1], {
+    provider = "diagnostic_info",
+    hl = function()
+        return {
+            fg = palette.blue,
+            style = 'bold',
+        }
+    end,
+})
+
 -- RHS (eol?) (encoding?) filetype position
 table.insert(components.active[2], {
     provider = function()
@@ -166,7 +196,7 @@ table.insert(components.active[2], {
     end,
 })
 
--- LHS active: only filename
+-- LHS inactive: only filename
 table.insert(components.inactive[1], {
     provider = {
         name = 'file_info',
