@@ -25,7 +25,6 @@ catppuccin.setup({
         neogit = true,
         treesitter = true,
         fidget = true,
-        lsp_saga = true,
         telescope = true,
     },
 })
