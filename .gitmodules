@@ -145,3 +145,6 @@
 [submodule "lspsaga.nvim"]
 	path = common/link/.config/nvim/pack/bundle/opt/lspsaga.nvim
 	url = https://github.com/glepnir/lspsaga.nvim
+[submodule "feline.nvim"]
+	path = common/link/.config/nvim/pack/bundle/opt/feline.nvim
+	url = https://github.com/feline-nvim/feline.nvim
