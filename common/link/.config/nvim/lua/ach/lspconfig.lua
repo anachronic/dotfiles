@@ -1,5 +1,4 @@
 local lspconfig = require('lspconfig')
-local saga = require('lspsaga')
 local null_ls = require('null-ls')
 local fidget = require('fidget')
 local aerial = require('aerial')
@@ -17,13 +16,6 @@ fidget.setup({
     },
 })
 
-saga.setup({
-    symbol_in_winbar = {
-        enabled = false,
-        show_file = false,
-    },
-})
-
 local on_attach = function(client, bufnr)
     local only_buffer = { buffer = bufnr }
 
@@ -33,10 +25,10 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, only_buffer)
     vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, only_buffer)
     vim.keymap.set('n', 'gr', vim.lsp.buf.references, only_buffer)
-    vim.keymap.set('n', 'K', '<cmd>Lspsaga hover_doc<CR>', only_buffer)
-    vim.keymap.set('n', ']d', '<cmd>Lspsaga diagnostic_jump_next<CR>', only_buffer)
-    vim.keymap.set('n', '[d', '<cmd>Lspsaga diagnostic_jump_prev<CR>', only_buffer)
-    vim.keymap.set('n', '<leader>.', '<cmd>Lspsaga code_action<CR>', only_buffer)
+    vim.keymap.set('n', 'K', vim.lsp.buf.hover, only_buffer)
+    vim.keymap.set('n', ']d', vim.diagnostic.goto_next, only_buffer)
+    vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, only_buffer)
+    vim.keymap.set('n', '<leader>.', '<Cmd>CodeActionMenu<CR>', only_buffer)
 
     vim.api.nvim_buf_create_user_command(0, 'Dia', vim.diagnostic.setqflist, {})
 
@@ -64,6 +56,7 @@ end
 -- pacman -S stylua
 -- pipx install flake8 black isort
 -- npm i -g prettier eslint_d typescript
+
 null_ls.setup({
     sources = {
         null_ls.builtins.formatting.stylua,

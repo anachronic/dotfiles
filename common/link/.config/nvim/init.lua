@@ -7,7 +7,7 @@ plug('popup.nvim') -- Common dependency
 plug('plenary.nvim') -- Common dependency
 
 plug('nvim-lspconfig') -- LSP
-plug('lspsaga.nvim') -- UI Improvements for LSP, not using it much though
+plug('nvim-code-action-menu') -- The code action menu that beats the horrible default ui
 plug('null-ls.nvim') -- Instead of efm
 
 plug('nvim-cmp') -- general completion
