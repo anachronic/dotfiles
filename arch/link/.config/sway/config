@@ -72,6 +72,7 @@ bindsym $mod+Shift+s exec ach-screenshot copy-region
 # ^ broken because of HiDPI setting in sway :(
 
 bindsym $mod+f exec $term -e lf
+bindsym $mod+Shift+f exec pcmanfm
 
 bindsym $mod+h focus left
 bindsym $mod+Shift+h move left
