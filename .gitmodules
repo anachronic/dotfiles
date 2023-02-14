@@ -145,3 +145,6 @@
 [submodule "nvim-code-action-menu"]
 	path = common/link/.config/nvim/pack/bundle/opt/nvim-code-action-menu
 	url = https://github.com/weilbith/nvim-code-action-menu
+[submodule "gitlinker.nvim"]
+	path = common/link/.config/nvim/pack/bundle/opt/gitlinker.nvim
+	url = https://github.com/ruifm/gitlinker.nvim
