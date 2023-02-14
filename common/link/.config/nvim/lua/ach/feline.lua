@@ -98,7 +98,7 @@ table.insert(components.active[1], {
 })
 
 table.insert(components.active[1], {
-    provider = "diagnostic_errors",
+    provider = 'diagnostic_errors',
     hl = function()
         return {
             fg = palette.red,
@@ -108,7 +108,7 @@ table.insert(components.active[1], {
 })
 
 table.insert(components.active[1], {
-    provider = "diagnostic_warnings",
+    provider = 'diagnostic_warnings',
     hl = function()
         return {
             fg = palette.yellow,
@@ -118,7 +118,7 @@ table.insert(components.active[1], {
 })
 
 table.insert(components.active[1], {
-    provider = "diagnostic_info",
+    provider = 'diagnostic_info',
     hl = function()
         return {
             fg = palette.blue,
