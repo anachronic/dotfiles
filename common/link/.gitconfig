@@ -16,6 +16,7 @@
     # stash
     z = stash
     zp = stash pop
+    zl = stash list
 
     # rebasing
     rb = rebase
