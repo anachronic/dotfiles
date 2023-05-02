@@ -94,10 +94,13 @@ lspconfig.jedi_language_server.setup({
 
 -- brew install lua-language-server
 -- pacman -S lua-language-server
-lspconfig.sumneko_lua.setup({
+lspconfig.lua_ls.setup({
     on_attach = on_attach,
     settings = {
         Lua = {
+            runtime = {
+                version = 'LuaJIT',
+            },
             diagnostics = {
                 globals = { 'vim', 'awesome' },
             },
