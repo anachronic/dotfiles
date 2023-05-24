@@ -57,6 +57,8 @@ plug('vim-python-pep8-indent') -- correct indentation for python
 plug('SimpylFold') -- python syntax folding
 plug('python-syntax') -- Better python syntax highlighting
 
+plug('hyprland-vim-syntax')
+
 plug('nvim-treesitter') -- General syntax parsing
 plug('nvim-treesitter-endwise') -- endwise based on treesitter syntax
 

@@ -142,3 +142,6 @@
 [submodule "gitlinker.nvim"]
 	path = common/link/.config/nvim/pack/bundle/opt/gitlinker.nvim
 	url = https://github.com/ruifm/gitlinker.nvim
+[submodule "hyprland-vim-syntax"]
+	path = common/link/.config/nvim/pack/bundle/opt/hyprland-vim-syntax
+	url = https://github.com/theRealCarneiro/hyprland-vim-syntax
