@@ -37,9 +37,6 @@
 [submodule "vim-sneak"]
 	path = common/link/.config/nvim/pack/bundle/opt/vim-sneak
 	url = https://github.com/justinmk/vim-sneak.git
-[submodule "editorconfig-vim"]
-	path = common/link/.config/nvim/pack/bundle/opt/editorconfig-vim
-	url = https://github.com/editorconfig/editorconfig-vim.git
 [submodule "tabular"]
 	path = common/link/.config/nvim/pack/bundle/opt/tabular
 	url = https://github.com/godlygeek/tabular.git

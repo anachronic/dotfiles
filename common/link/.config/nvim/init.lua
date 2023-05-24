@@ -37,7 +37,6 @@ plug('nvim-surround') -- next gen surround, better surrounding tags did it for m
 plug('vim-sneak') -- TODO: Gonna try sneak-{f,F,t,T}. Remove?
 
 plug('Comment.nvim') -- Best comments out there. Don't even wanna try anything else
-plug('editorconfig-vim') -- Using this at work
 plug('tabular') -- :Tab for alignment. Works surprisingly well. also dep for markdown
 plug('nvim-autopairs') -- back 2 basics i guess
 plug('LuaSnip') -- Seems like the most maintained
