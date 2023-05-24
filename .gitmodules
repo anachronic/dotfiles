@@ -103,9 +103,6 @@
 [submodule "bufferline.nvim"]
 	path = common/link/.config/nvim/pack/bundle/opt/bufferline.nvim
 	url = https://github.com/akinsho/bufferline.nvim
-[submodule "NeoNoName.lua"]
-	path = common/link/.config/nvim/pack/bundle/opt/NeoNoName.lua
-	url = https://github.com/nyngwang/NeoNoName.lua
 [submodule "python-syntax"]
 	path = common/link/.config/nvim/pack/bundle/opt/python-syntax
 	url = https://github.com/vim-python/python-syntax
