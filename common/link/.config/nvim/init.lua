@@ -17,6 +17,7 @@ plug('cmp-path') -- path for cmp
 plug('neogit') -- finally some magic around git
 plug('vim-fugitive') -- still quite useful despite a little dated
 plug('gitsigns.nvim') -- git gutter signs
+plug('gitlinker.nvim') -- permalink generation
 
 plug('nvim-tree.lua') -- Great NERDTree replacement
 plug('nvim-web-devicons') -- Required for tree to work, kind of a hassle
@@ -153,6 +154,7 @@ require('ach.quickfix')
 require('ach.yank-highlight')
 require('ach.neorg')
 require('ach.surround')
+require('ach.gitlinker')
 
 vim.keymap.set('n', ']f', "<Cmd>lua require('ach.unimpaired').edit_next_file_dir()<CR>")
 vim.keymap.set('n', '[f', "<Cmd>lua require('ach.unimpaired').edit_prev_file_dir()<CR>")
