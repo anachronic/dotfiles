@@ -19,6 +19,12 @@
         "on-click": "activate",
         "disable-scroll": true
     },
+    "sway/window": {
+        "format": " [{shell}] {title} "
+    },
+    "hyprland/window": {
+        "format": " {} "
+    },
     "pulseaudio": {
         "format": "<span color='#94e2d5'> {icon} </span>{volume}%",
         "scroll-step": 1,
@@ -30,7 +36,7 @@
         "on-click-right": "pavucontrol"
     },
     "custom/dunst": {
-        "format": " {}",
+        "format": " {} ",
         "exec": "dwm-dunst",
         "interval": "once",
         "on-click": "dunstctl set-paused toggle && pkill -RTMIN+1 waybar",
