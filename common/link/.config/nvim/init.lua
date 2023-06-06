@@ -44,6 +44,7 @@ plug('zen-mode.nvim') -- zen-mode. Previously goyo
 plug('nvim-bqf') -- Better quickfix
 plug('diffview.nvim') -- should be self-explanatory
 plug('aerial.nvim') -- outlining.. maybe I'll get used to it?
+plug('harpoon') -- Lately I've been jumping thru buffers like crazy
 
 plug('vim-textobj-user') -- custom textobjects
 plug('vim-textobj-entire') -- "entire" textobject. Like yae would copy the entire file
@@ -154,6 +155,7 @@ require('ach.yank-highlight')
 require('ach.neorg')
 require('ach.surround')
 require('ach.gitlinker')
+require('ach.harpoon')
 
 vim.keymap.set('n', ']f', "<Cmd>lua require('ach.unimpaired').edit_next_file_dir()<CR>")
 vim.keymap.set('n', '[f', "<Cmd>lua require('ach.unimpaired').edit_prev_file_dir()<CR>")
