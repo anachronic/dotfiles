@@ -7,7 +7,14 @@ copy-region() {
 }
 
 save-region() {
-    grim -g "$(slurp)"
+    screenshots_dir="$HOME/pictures/screenshots/grabbed"
+    
+    mkdir -p "$screenshots_dir"
+
+    screenshot_path="$HOME/pictures/screenshots/grabbed/$(date --iso-8601=minutes).png"
+    grim -g "$(slurp)" "$screenshot_path"
+
+    dunstify -a screenshot "Screenshot" "Saved to $screenshot_path" -u low
 }
 
 if [ "$1" = "" ]; then

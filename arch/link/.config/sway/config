@@ -68,6 +68,7 @@ bindsym $mod+a focus parent
 bindsym $mod+Shift+a focus child
 
 bindsym $mod+Shift+s exec ach-screenshot copy-region
+bindsym $mod+Control+s exec ach-screenshot save-region
 # bindsym $mod+s exec flameshot gui
 # ^ broken because of HiDPI setting in sway :(
 

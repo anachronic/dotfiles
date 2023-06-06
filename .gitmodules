@@ -145,3 +145,6 @@
 [submodule "hyprland-vim-syntax"]
 	path = common/link/.config/nvim/pack/bundle/opt/hyprland-vim-syntax
 	url = https://github.com/theRealCarneiro/hyprland-vim-syntax
+[submodule "harpoon"]
+	path = common/link/.config/nvim/pack/bundle/opt/harpoon
+	url = https://github.com/ThePrimeagen/harpoon
