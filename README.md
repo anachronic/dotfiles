@@ -38,6 +38,13 @@ A tiny reminder of submodules and neovim in this repo:
 
 > For update: `git submodule foreach "git pull origin main || git pull origin master"`. Or update them separately
 
+### Choosing an icon for bar/tmux/whatever
+
+I'm just using [this MaterialDesign
+font](https://github.com/Templarian/MaterialDesign-Font). There's a link inside
+the repository that has a page where glyphs can be searched and copied. It's
+also on my starred repos
+
 ### Replacing default apps
 
 Install [perl-file-mimeinfo](https://wiki.archlinux.org/title/default_applications#perl-file-mimeinfo)
