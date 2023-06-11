@@ -4,12 +4,19 @@
     // "modules-left": ["wlr/workspaces", "hyprland/window"],
     // sway
     "modules-left": ["sway/workspaces", "sway/window"],
-    "modules-right": ["pulseaudio", "custom/dunst", "clock"],
+    "modules-right": ["idle_inhibitor", "pulseaudio", "custom/dunst", "clock"],
     "hyprland/window": {
         "format": "{}"
     },
     "clock": {
         "format": "<span color='#cba6f7'> 󱛡 </span>{:%a %d %b  %H:%M}"
+    },
+    "idle_inhibitor" : {
+        "format": " <span color='#eba0ac'>{icon}</span> ",
+        "format-icons": {
+            "activated": "󰛊",
+            "deactivated": "󰾫"
+        }
     },
     "wlr/workspaces": {
         "all-outputs": true,
