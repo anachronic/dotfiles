@@ -80,4 +80,7 @@ alias nrd='npm run dev -- '
 alias gitconflicts="git diff --name-status --diff-filter=U"
 alias gresolve="git diff --name-status --diff-filter=U | awk '{print \$2}' | xargs nvim"
 
+# trash
+alias tp="trash-put"
+
 # vim:ft=sh
