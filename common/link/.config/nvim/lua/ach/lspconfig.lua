@@ -42,7 +42,7 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', 'K', vim.lsp.buf.hover, only_buffer)
     vim.keymap.set('n', ']d', vim.diagnostic.goto_next, only_buffer)
     vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, only_buffer)
-    vim.keymap.set('n', '<leader>.', '<Cmd>CodeActionMenu<CR>', only_buffer)
+    vim.keymap.set('n', '<leader>.', vim.lsp.buf.code_action, only_buffer)
 
     vim.api.nvim_buf_create_user_command(0, 'Dia', vim.diagnostic.setqflist, {})
 

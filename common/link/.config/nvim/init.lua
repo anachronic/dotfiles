@@ -23,6 +23,7 @@ plug('nvim-tree.lua') -- Great NERDTree replacement
 plug('nvim-web-devicons') -- Required for tree to work, kind of a hassle
 
 plug('telescope.nvim') -- trying again. I might be a little bit of a masochist
+plug('telescope-ui-select.nvim') -- For the horrible "select action" popup
 plug('terminus') -- focus report
 
 plug('feline.nvim') -- a statusline with the control i need
