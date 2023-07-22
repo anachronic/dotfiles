@@ -34,6 +34,7 @@ local on_attach = function(client, bufnr)
 
     local enabled_formatter_lsps = {
         ['null-ls'] = true,
+        ['rust_analyzer'] = true,
     }
 
     if not enabled_formatter_lsps[client.name] then
@@ -63,7 +64,7 @@ null_ls.setup({
         null_ls.builtins.formatting.gofmt,
         null_ls.builtins.formatting.black,
         null_ls.builtins.formatting.prettierd,
-        null_ls.builtins.formatting.rustfmt,
+        -- null_ls.builtins.formatting.rustfmt,
 
         null_ls.builtins.diagnostics.eslint,
         null_ls.builtins.diagnostics.ruff,
