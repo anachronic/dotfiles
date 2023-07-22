@@ -75,4 +75,10 @@ cmp.setup({
         { name = 'path' },
         { name = 'neorg' },
     }),
+    window = {
+        documentation = cmp.config.window.bordered(),
+        completion = cmp.config.window.bordered({
+            winhighlight = 'Normal:CmpPmenu,CursorLine:PmenuSel,Search:None',
+        }),
+    },
 })
