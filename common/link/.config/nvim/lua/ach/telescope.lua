@@ -13,8 +13,8 @@ telescope.setup({
         },
     },
     extensions = {
-        ["ui-select"] = themes.get_cursor({})
-    }
+        ['ui-select'] = themes.get_cursor({}),
+    },
 })
 
 vim.keymap.set('n', '<leader>h', builtins.help_tags)
