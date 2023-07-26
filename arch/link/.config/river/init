@@ -21,6 +21,9 @@ riverctl map normal Super+Shift R spawn ~/.config/river/init
 
 riverctl map normal Super P spawn bemenu-run
 
+riverctl map normal Super+Shift S spawn "ach-screenshot copy-region"
+riverctl map normal Super+Control S spawn "ach-screenshot save-region"
+
 # Super+J and Super+K to focus the next/previous view in the layout stack
 riverctl map normal Super J focus-view next
 riverctl map normal Super K focus-view previous
