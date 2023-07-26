@@ -1,5 +1,7 @@
 {
     "layer": "bottom",
+    // river
+    // "modules-left": ["river/tags", "river/window"],
     // hyprland
     // "modules-left": ["wlr/workspaces", "hyprland/window"],
     // sway
@@ -28,6 +30,9 @@
     },
     "sway/window": {
         "format": " [{shell}] {title} "
+    },
+    "river/window": {
+        "format": " {} "
     },
     "hyprland/window": {
         "format": " {} "
