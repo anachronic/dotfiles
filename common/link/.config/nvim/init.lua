@@ -88,6 +88,7 @@ vim.o.foldmethod = 'syntax' -- treesitter needs expr folding, but should be like
 vim.opt.list = true -- show whitespace
 vim.opt.ignorecase = true -- Needed so that smartcase works. Also what one would expect
 vim.opt.smartcase = true -- just :h it. Loupe was setting this before
+vim.opt.path:append({ '**' }) -- this should help :find. Also useful when debugging
 
 vim.opt.listchars = { -- Fails if using vim.o, I think vim.opt is better overall
     nbsp = '⦸', -- CIRCLED REVERSE SOLIDUS (U+29B8, UTF-8: E2 A6 B8)
