@@ -152,14 +152,28 @@ riverctl rule-add csd -app-id "bar"
 # riverctl rule-add float -app-id 'firefox' -title="^Picture-in-Picture$" floating enable, sticky enable, border none
 
 # riverctl rule-add float -app-id 'float*' -title 'foo'
-riverctl rule-add float -app-id 'firefox' -title 'Picture-in-Picture'
-riverctl rule-add float -app-id 'firefox' -title 'Firefox - Sharing Indicator'
-riverctl rule-add float -app-id 'firefox' -title 'Firefox — Sharing Indicator'
-riverctl rule-add float -app-id 'pcmanfm'
-riverctl rule-add float -app-id 'pavucontrol'
-riverctl rule-add float -app-id 'mpv'
-riverctl rule-add float -app-id 'imv'
-riverctl rule-add ssd   -app-id firefox
+# river 0.3
+# riverctl rule-add float -app-id 'firefox' -title 'Picture-in-Picture'
+# riverctl rule-add float -app-id 'firefox' -title 'Firefox - Sharing Indicator'
+# riverctl rule-add float -app-id 'firefox' -title 'Firefox — Sharing Indicator'
+# riverctl rule-add float -app-id 'pcmanfm'
+# riverctl rule-add float -app-id 'pavucontrol'
+# riverctl rule-add float -app-id 'mpv'
+# riverctl rule-add float -app-id 'imv'
+# riverctl rule-add ssd   -app-id firefox
+# riverctl rule-add ssd   -app-id emacs
+
+
+# river 0.2
+riverctl float-filter-add title 'Picture-in-Picture'
+riverctl float-filter-add title 'Firefox - Sharing Indicator'
+riverctl float-filter-add title 'Firefox — Sharing Indicator'
+riverctl float-filter-add app-id 'pcmanfm'
+riverctl float-filter-add app-id 'pavucontrol'
+riverctl float-filter-add app-id 'mpv'
+riverctl float-filter-add app-id 'imv'
+# riverctl rule-add ssd   -app-id firefox
+# riverctl rule-add ssd   -app-id emacs
 # riverctl rule-add float -app-id 'flameshot' floating enable, fullscreen disable, move absolute position 0 0, border pixel 0
 
 # Set the default layout generator to be rivertile and start it.
