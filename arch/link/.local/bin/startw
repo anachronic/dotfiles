@@ -13,7 +13,9 @@ export BEMENU_OPTS='--fn "Iosevka Nerd Font Mono 14" --hp 10 --tf "#cba6f7" --hb
 export SDL_VIDEODRIVER=wayland
 export QT_QPA_PLATFORM=wayland
 export XDG_CURRENT_DESKTOP=sway
+# export XDG_CURRENT_DESKTOP=river
 export XDG_SESSION_DESKTOP=sway
 
 exec sway
 # exec Hyprland
+# exec dbus-launch river
