@@ -31,10 +31,9 @@ exec swayidle -w \
 input * {
   xkb_layout "us"
   xkb_variant "altgr-intl"
-  repeat_delay 400
-  repeat_rate 40
+  repeat_delay 300
+  repeat_rate 50
 }
-#
 
 ### Key bindings
 # drag/resize like dwm
