@@ -11,9 +11,10 @@ vim.keymap.set('n', '<leader>mc', ':ColorizerToggle<CR>')
 -- catppuccin
 local catppuccin = require('catppuccin')
 
-vim.g.catppuccin_flavour = 'mocha'
+vim.g.catppuccin_flavour = 'macchiato'
 
 catppuccin.setup({
+    transparent_background = true,
     dim_inactive = {
         enabled = true,
     },
