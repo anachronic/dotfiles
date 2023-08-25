@@ -22,9 +22,6 @@
 [submodule "nvim-web-devicons"]
 	path = common/link/.config/nvim/pack/bundle/opt/nvim-web-devicons
 	url = https://github.com/kyazdani42/nvim-web-devicons.git
-[submodule "terminus"]
-	path = common/link/.config/nvim/pack/bundle/opt/terminus
-	url = https://github.com/wincent/terminus.git
 [submodule "lualine.nvim"]
 	path = common/link/.config/nvim/pack/bundle/opt/lualine.nvim
 	url = https://github.com/hoob3rt/lualine.nvim.git
