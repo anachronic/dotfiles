@@ -3,7 +3,7 @@
 
 # Exclude lockfiles
 --glob
-!{package-lock.json,yarn.lock,poetry.lock,Gemfile.lock,pnpm-lock.yaml}
+!{package-lock.json,yarn.lock,poetry.lock,Gemfile.lock,pnpm-lock.yaml,composer.lock}
 
 # Exclude annoying pycache folders
 --glob
