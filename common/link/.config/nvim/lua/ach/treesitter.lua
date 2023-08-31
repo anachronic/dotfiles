@@ -18,6 +18,7 @@ configs.setup({
         'lua',
         'markdown',
         'php',
+        'python',
         'rasi',
         'ruby',
         'rust',

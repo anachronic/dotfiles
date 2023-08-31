@@ -54,9 +54,9 @@ plug('vim-sort-motion') -- sorting mostly because of gemfiles
 plug('vim-yaml-folds') -- got fed up with treesitter yaml indenting
 plug('neorg') -- Next gen orgmode?
 
-plug('vim-python-pep8-indent') -- correct indentation for python
-plug('SimpylFold') -- python syntax folding
-plug('python-syntax') -- Better python syntax highlighting
+-- plug('vim-python-pep8-indent') -- correct indentation for python
+-- plug('SimpylFold') -- python syntax folding
+-- plug('python-syntax') -- Better python syntax highlighting
 
 plug('hyprland-vim-syntax')
 
