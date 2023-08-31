@@ -1,0 +1,3 @@
+#!/bin/sh
+
+echo "spotify --enable-features=UseOzonePlatform --ozone-platform=wayland" | ${SHELL:-"/bin/sh"} &
