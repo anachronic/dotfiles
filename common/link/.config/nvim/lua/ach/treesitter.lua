@@ -3,6 +3,8 @@ local configs = require('nvim-treesitter.configs')
 configs.setup({
     ensure_installed = {
         'bash',
+        'c',
+        'cpp',
         'css',
         'dockerfile',
         'fish',
@@ -10,13 +12,15 @@ configs.setup({
         'go',
         'gomod',
         'graphql',
-        -- 'help', -- Broken for some reason
         'html',
         'javascript',
         'json',
         'jsonc',
         'lua',
+        'make',
         'markdown',
+        'meson',
+        'ninja',
         'php',
         'python',
         'rasi',
@@ -25,11 +29,12 @@ configs.setup({
         'scss',
         'sql',
         'sxhkdrc',
-        'tsx',
         'toml',
+        'tsx',
         'twig',
         'typescript',
         'vue',
+        -- 'help', -- Broken for some reason
     },
     highlight = {
         enable = true,
