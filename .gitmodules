@@ -97,15 +97,6 @@
 [submodule "bufferline.nvim"]
 	path = common/link/.config/nvim/pack/bundle/opt/bufferline.nvim
 	url = https://github.com/akinsho/bufferline.nvim
-[submodule "python-syntax"]
-	path = common/link/.config/nvim/pack/bundle/opt/python-syntax
-	url = https://github.com/vim-python/python-syntax
-[submodule "SimpylFold"]
-	path = common/link/.config/nvim/pack/bundle/opt/SimpylFold
-	url = https://github.com/tmhedberg/SimpylFold
-[submodule "vim-python-pep8-indent"]
-	path = common/link/.config/nvim/pack/bundle/opt/vim-python-pep8-indent
-	url = https://github.com/Vimjas/vim-python-pep8-indent
 [submodule "telescope.nvim"]
 	path = common/link/.config/nvim/pack/bundle/opt/telescope.nvim
 	url = https://github.com/nvim-telescope/telescope.nvim
