@@ -130,9 +130,6 @@
 [submodule "LuaSnip"]
 	path = common/link/.config/nvim/pack/bundle/opt/LuaSnip
 	url = https://github.com/L3MON4D3/LuaSnip
-[submodule "feline.nvim"]
-	path = common/link/.config/nvim/pack/bundle/opt/feline.nvim
-	url = https://github.com/feline-nvim/feline.nvim
 [submodule "nvim-code-action-menu"]
 	path = common/link/.config/nvim/pack/bundle/opt/nvim-code-action-menu
 	url = https://github.com/weilbith/nvim-code-action-menu
@@ -148,3 +145,6 @@
 [submodule "telescope-ui-select.nvim"]
 	path = common/link/.config/nvim/pack/bundle/opt/telescope-ui-select.nvim
 	url = https://github.com/nvim-telescope/telescope-ui-select.nvim
+[submodule "feline.nvim"]
+	path = common/link/.config/nvim/pack/bundle/opt/feline.nvim
+	url = https://github.com/freddiehaddad/feline.nvim
