@@ -10,6 +10,7 @@ local mode_names = {
     ['n'] = { 'NORMAL', palette.lavender },
     ['no'] = { 'N-PENDING', palette.lavender },
     ['i'] = { 'INSERT', palette.green },
+    ['niI'] = { 'NORM-INS', palette.peach },
     ['ic'] = { 'INSERT', palette.green },
     ['t'] = { 'TERMINAL', palette.green },
     ['v'] = { 'VISUAL', palette.flamingo },
