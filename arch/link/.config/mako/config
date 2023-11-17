@@ -1,0 +1,14 @@
+background-color=#24273a
+text-color=#cad3f5
+border-color=#8aadf4
+progress-color=over #363a4f
+font=NotoSans 12
+default-timeout=5000
+border-radius=5
+
+[urgency=low]
+default-timeout=2000
+
+[urgency=high]
+border-color=#f5a97f
+default-timeout=0
