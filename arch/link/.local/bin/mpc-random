@@ -2,4 +2,4 @@
 
 mpc random
 
-dunstify -a mpc "mpc" "Random is $(mpc status "%random%")"
+notify-send -a mpc "mpc" "Random is $(mpc status "%random%")"

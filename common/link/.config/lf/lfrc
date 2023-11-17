@@ -13,7 +13,7 @@ cmd yank-path ${{
 
     paths=$(echo "$fx" | wc -l)
     plural=$([ "1" -eq "$paths" ] && echo "path" || echo "paths")
-    dunstify -a lf "lf" "copied $paths $plural to clipboard" -t 1700 -u low -i /usr/share/icons/breeze-dark/apps/48/klipper.svg
+    notify-send -a lf "lf" "copied $paths $plural to clipboard" -t 1700 -u low -i /usr/share/icons/breeze-dark/apps/48/klipper.svg
 }}
 
 cmd open ${{
@@ -32,7 +32,7 @@ cmd delete ${{
 
     files=$(echo "$fx" | wc -l)
     plural=$([ "1" -eq "$files" ] && echo "file" || echo "files")
-    dunstify -a lf "lf" "Deleted $files $plural." -i /usr/share/icons/breeze-dark/places/96/user-trash.svg -t 1700 -u low
+    notify-send -a lf "lf" "Deleted $files $plural." -i /usr/share/icons/breeze-dark/places/96/user-trash.svg -t 1700 -u low
 }}
 
 cmd movehere ${{
@@ -40,7 +40,7 @@ cmd movehere ${{
 
     files=$(echo "$fx" | wc -l)
     plural=$([ "1" -eq "$files" ] && echo "file" || echo "files")
-    dunstify -a lf "lf" "Moved $files $plural to $PWD" -i /usr/share/icons/breeze-dark/places/96/user-trash.svg -u low
+    notify-send -a lf "lf" "Moved $files $plural to $PWD" -i /usr/share/icons/breeze-dark/places/96/user-trash.svg -u low
 }}
 
 # extract the current file with the right command

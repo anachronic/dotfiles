@@ -19,7 +19,7 @@ emoji=$(bemenu -l 20 -i -p "Emoji >" < "$emojipath" | awk '{print $1}')
 [ "$emoji" = "" ] && exit 1
 
 printf "%s" "$emoji" | clipboard
-dunstify -a ach-emoji "Emoji" "Copied emoji" -u low
+notify-send -a ach-emoji "Emoji" "Copied emoji" -u low
 
 if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
     wtype "$emoji"

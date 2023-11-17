@@ -5,7 +5,7 @@ volume=$(pactl get-sink-volume "$sink" | awk -F '/' '{print $2}' | xargs)
 dunst_stack="ach-volume"
 
 notify() {
-    dunstify \
+    notify-send \
         -a "ach-volume" \
         "Volume" \
         -h string:x-dunst-stack-tag:"$dunst_stack" \

@@ -1,9 +1,11 @@
 #!/bin/bash
 
+set -e
+
 copy-region() {
     grim -g "$(slurp)" - | pbcopy
 
-    dunstify -a screenshot "Screenshot" "Copied to clipboard" -u low
+    notify-send -a screenshot "Screenshot" "Copied to clipboard" -u low
 }
 
 save-region() {
@@ -14,7 +16,7 @@ save-region() {
     screenshot_path="$HOME/pictures/screenshots/grabbed/$(date --iso-8601=minutes).png"
     grim "$screenshot_path"
 
-    dunstify -a screenshot "Screenshot" "Saved to $screenshot_path" -u low
+    notify-send -a screenshot "Screenshot" "Saved to $screenshot_path" -u low
 }
 
 if [ "$1" = "" ]; then

@@ -6,10 +6,10 @@ reminder=$(echo | bemenu -i -p "Remind what? >")
 when=$(echo | bemenu -i -p "When? (at format) >")
 [ "$when" = "" ] && exit 1
 
-output=$(echo "dunstify -a reminders Reminder \"$reminder\" -u critical" | at "$when" 2>&1)
+output=$(echo "notify-send -a reminders Reminder \"$reminder\" -u critical" | at "$when" 2>&1)
 
 if echo "$output" | grep -i garbled > /dev/null; then
-    dunstify -a reminders "Reminder failed" "at command reported garbled time"
+    notify-send -a reminders "Reminder failed" "at command reported garbled time"
 else
-    dunstify -a reminders "Reminders" "Reminder set for $when" -u low
+    notify-send -a reminders "Reminders" "Reminder set for $when" -u low
 fi
