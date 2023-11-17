@@ -33,3 +33,4 @@ application/x-shellscript=editor.desktop;
 text/vnd.trolltech.linguist=editor.desktop;
 text/plain=editor.desktop;
 text/rust=editor.desktop;
+text/csv=libreoffice-calc.desktop
