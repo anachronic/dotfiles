@@ -1,5 +1,4 @@
 # Default config for sway
-exec dunst
 
 ### Variables
 set $mod Mod4
