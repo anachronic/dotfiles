@@ -1,0 +1,12 @@
+#!/bin/sh
+
+icon() {
+    # waybar allows pango
+    echo "<span color='#f9e2af'>$1</span>"
+}
+
+if makoctl mode | grep do-not-disturb > /dev/null ; then
+    icon "󰪑"
+else
+    icon "󰂜"
+fi
