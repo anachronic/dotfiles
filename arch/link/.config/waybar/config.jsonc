@@ -57,9 +57,9 @@
     },
     "custom/dunst": {
         "format": " {} ",
-        "exec": "dwm-dunst",
+        "exec": "ach-mako",
         "interval": "once",
-        "on-click": "dunstctl set-paused toggle && pkill -RTMIN+1 waybar",
+        "on-click": "ach-mako-toggle && pkill -RTMIN+1 waybar",
         "exec-on-event": false,
         "signal": 1
     }
