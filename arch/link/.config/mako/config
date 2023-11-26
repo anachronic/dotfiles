@@ -5,6 +5,7 @@ progress-color=over #363a4f
 font=NotoSans 12
 default-timeout=5000
 border-radius=5
+layer=overlay
 
 [urgency=low]
 default-timeout=2000
