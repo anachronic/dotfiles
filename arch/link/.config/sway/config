@@ -75,6 +75,7 @@ bindsym $mod+Shift+f exec pcmanfm
 
 bindsym $mod+h focus left
 bindsym $mod+Shift+h move left
+bindsym $mod+Control+h move workspace to output left
 
 bindsym $mod+j focus down
 bindsym $mod+Shift+j move down
@@ -85,6 +86,7 @@ bindsym $mod+Control+k exec ach-kill
 
 bindsym $mod+l focus right
 bindsym $mod+Shift+l move right
+bindsym $mod+Control+l move workspace to output right
 
 bindsym $mod+Shift+c reload
 
