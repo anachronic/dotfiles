@@ -139,3 +139,6 @@
 [submodule "feline.nvim"]
 	path = common/link/.config/nvim/pack/bundle/opt/feline.nvim
 	url = https://github.com/freddiehaddad/feline.nvim
+[submodule "vim-caddyfile"]
+	path = common/link/.config/nvim/pack/bundle/opt/vim-caddyfile
+	url = https://github.com/isobit/vim-caddyfile
