@@ -55,6 +55,7 @@ plug('vim-yaml-folds') -- got fed up with treesitter yaml indenting
 plug('neorg') -- Next gen orgmode?
 
 plug('hyprland-vim-syntax')
+plug('vim-caddyfile') -- Been using caddy lately
 
 plug('nvim-treesitter') -- General syntax parsing
 plug('nvim-treesitter-endwise') -- endwise based on treesitter syntax
