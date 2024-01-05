@@ -34,6 +34,12 @@ input * {
   repeat_rate 50
 }
 
+input "type:touchpad" {
+  # simulates macOS-like touchpad
+  click_method clickfinger
+  middle_emulation disabled
+}
+
 ### Key bindings
 # drag/resize like dwm
 floating_modifier $mod normal
