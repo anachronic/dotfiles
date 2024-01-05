@@ -36,6 +36,7 @@ alias k='kubectl'
 alias vi='nvim'
 alias vim='nvim'
 alias vgs='nvim -c ":Neogit"'
+alias vimdiff='nvim -d'
 
 # TUI shortcuts
 alias lf="lfcd"
