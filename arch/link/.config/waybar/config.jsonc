@@ -6,9 +6,17 @@
     // "modules-left": ["wlr/workspaces", "hyprland/window"],
     // sway
     "modules-left": ["sway/workspaces", "sway/window"],
-    "modules-right": ["idle_inhibitor", "pulseaudio", "custom/dunst", "clock"],
+    "modules-right": ["battery", "idle_inhibitor", "pulseaudio", "custom/dunst", "clock"],
     "hyprland/window": {
         "format": "{}"
+    },
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-full": "󱟢 {capacity}%",
+        "format-charging": "{icon}󱐋 {capacity}%",
+        // "format-not charging": "󱟢 {capacity}%",
+        "full-at": 98,
+        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
     "clock": {
         "format": "<span color='#cba6f7'> 󱛡 </span>{:%a %d %b  %H:%M}"
