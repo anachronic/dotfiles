@@ -130,9 +130,6 @@
 [submodule "hyprland-vim-syntax"]
 	path = common/link/.config/nvim/pack/bundle/opt/hyprland-vim-syntax
 	url = https://github.com/theRealCarneiro/hyprland-vim-syntax
-[submodule "harpoon"]
-	path = common/link/.config/nvim/pack/bundle/opt/harpoon
-	url = https://github.com/ThePrimeagen/harpoon
 [submodule "telescope-ui-select.nvim"]
 	path = common/link/.config/nvim/pack/bundle/opt/telescope-ui-select.nvim
 	url = https://github.com/nvim-telescope/telescope-ui-select.nvim
