@@ -175,3 +175,7 @@ bar swaybar_command waybar
 # OS, dbus, who knows...
 include /etc/sway/config.d/*
 exec_always "systemctl --user import-environment; systemctl --user start sway-session.target"
+
+# turn built-in display off on lid close
+bindswitch --reload --locked lid:on exec "[ $(swaymsg -t get_outputs | jq '. | length') -gt 1 ] && swaymsg output eDP-1 disable"
+bindswitch --reload --locked lid:off output eDP-1 enable
