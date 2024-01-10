@@ -15,6 +15,7 @@ export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtkrc-2.0
 export EDITOR='nvim'
 export VISUAL='nvim'
 export PAGER='less'
+export LESS='--mouse'
 export TERMINAL='alacritty'
 export BROWSER='firefox'
 
