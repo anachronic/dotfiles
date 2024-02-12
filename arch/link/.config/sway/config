@@ -12,8 +12,10 @@ set $term ach-terminal
 set $menu bemenu-run
 
 ### Output configuration
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output DP-3 scale 1.5
+# output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+# output DP-3 scale 1.5
+output eDP-1 scale 1.25
+output HDMI-A-1 scale 2
 
 ### Background: might require swaybg
 output "*" bg ~/pictures/wall.jpg fill
@@ -77,7 +79,7 @@ bindsym $mod+Control+s exec ach-screenshot save-region
 # ^ broken because of HiDPI setting in sway :(
 
 bindsym $mod+f exec $term -e lf
-bindsym $mod+Shift+f exec pcmanfm
+bindsym $mod+Shift+f exec nautilus
 
 bindsym $mod+h focus left
 bindsym $mod+Shift+h move left
@@ -95,6 +97,9 @@ bindsym $mod+Shift+l move right
 bindsym $mod+Control+l move workspace to output right
 
 bindsym $mod+Shift+c reload
+# bindsym Mod1+c exec wtype -M ctrl c -m ctrl
+
+# bindsym Mod1+v exec wtype -M ctrl v -m ctrl
 
 bindsym $mod+b fullscreen
 
@@ -158,6 +163,7 @@ smart_gaps on
 # might be useful: https://github.com/jjquin/swayarch/blob/master/.config/sway/config.d/window_rules
 for_window [app_id="firefox" title="^Picture-in-Picture$"] floating enable, sticky enable, border none
 for_window [app_id="firefox" title="Sharing Indicator$"] floating enable
+for_window [app_id="thunderbird" title=".*Reminders?$"] floating enable
 for_window [app_id="pcmanfm"] floating enable
 for_window [app_id="pavucontrol"] floating enable
 for_window [app_id="(?i)mpv"] floating enable
@@ -175,7 +181,12 @@ bar swaybar_command waybar
 # OS, dbus, who knows...
 include /etc/sway/config.d/*
 exec_always "systemctl --user import-environment; systemctl --user start sway-session.target"
+exec_always "dbus-update-activation-environment --all"
 
 # turn built-in display off on lid close
+# see https://github.com/swaywm/sway/issues/3137
 bindswitch --reload --locked lid:on exec "[ $(swaymsg -t get_outputs | jq '. | length') -gt 1 ] && swaymsg output eDP-1 disable"
 bindswitch --reload --locked lid:off output eDP-1 enable
+
+# polkit gnome
+exec "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"

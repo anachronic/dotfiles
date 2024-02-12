@@ -1,71 +1,16 @@
-{
+[
+  {
     "layer": "bottom",
-    // river
-    // "modules-left": ["river/tags", "river/window"],
-    // hyprland
-    // "modules-left": ["wlr/workspaces", "hyprland/window"],
-    // sway
     "modules-left": ["sway/workspaces", "sway/window"],
     "modules-right": ["backlight", "battery", "idle_inhibitor", "pulseaudio", "custom/dunst", "clock"],
-    "hyprland/window": {
-        "format": "{}"
-    },
-    "backlight": {
-        "device": "intel_backlight",
-        "format": "{icon} {percent}%",
-        "format-icons": ["󰃞", "󰃟", "󰃠"]
-    },
-    "battery": {
-        "format": "{icon} {capacity}%",
-        "format-full": "󱟢 {capacity}%",
-        "format-charging": "{icon}󱐋 {capacity}%",
-        // "format-not charging": "󱟢 {capacity}%",
-        "full-at": 98,
-        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
-    },
-    "clock": {
-        "format": "<span color='#cba6f7'> 󱛡 </span>{:%a %d %b  %H:%M}"
-    },
-    "idle_inhibitor" : {
-        "format": " <span color='#eba0ac'>{icon}</span> ",
-        "format-icons": {
-            "activated": "󰛊",
-            "deactivated": "󰾫"
-        }
-    },
-    "wlr/workspaces": {
-        "all-outputs": true,
-        "on-click": "activate"
-    },
-    "sway/workspaces": {
-        "on-click": "activate",
-        "disable-scroll": true
-    },
-    "sway/window": {
-        "format": " [{shell}] {title} "
-    },
-    "river/window": {
-        "format": " {} "
-    },
-    "hyprland/window": {
-        "format": " {} "
-    },
-    "pulseaudio": {
-        "format": "<span color='#94e2d5'> {icon} </span>{volume}%",
-        "scroll-step": 1,
-        "format-muted": "<span color='#94e2d5'> 󰖁 </span>muted",
-        "format-icons": {
-            "default": ["󰕿", "󰖀", "󰕾"]
-        },
-        "on-click": "pamixer --toggle-mute",
-        "on-click-right": "pavucontrol"
-    },
-    "custom/dunst": {
-        "format": " {} ",
-        "exec": "ach-mako",
-        "interval": "once",
-        "on-click": "ach-mako-toggle && pkill -RTMIN+1 waybar",
-        "exec-on-event": false,
-        "signal": 1
-    }
-}
+    "include": ["~/.config/waybar/defaults.jsonc"],
+    "output": "eDP-1"
+  },
+  {
+    "layer": "bottom",
+    "modules-left": ["sway/workspaces", "sway/window"],
+    "modules-right": ["battery", "idle_inhibitor", "pulseaudio", "custom/dunst", "clock"],
+    "include": ["~/.config/waybar/defaults.jsonc"],
+    "output": "!eDP-1"
+  },
+]
