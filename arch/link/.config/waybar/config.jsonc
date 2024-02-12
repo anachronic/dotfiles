@@ -6,9 +6,14 @@
     // "modules-left": ["wlr/workspaces", "hyprland/window"],
     // sway
     "modules-left": ["sway/workspaces", "sway/window"],
-    "modules-right": ["battery", "idle_inhibitor", "pulseaudio", "custom/dunst", "clock"],
+    "modules-right": ["backlight", "battery", "idle_inhibitor", "pulseaudio", "custom/dunst", "clock"],
     "hyprland/window": {
         "format": "{}"
+    },
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon} {percent}%",
+        "format-icons": ["󰃞", "󰃟", "󰃠"]
     },
     "battery": {
         "format": "{icon} {capacity}%",
