@@ -9,5 +9,8 @@ export MOZ_ENABLE_WAYLAND=1
 # Bemenu
 export BEMENU_OPTS='--fn "Iosevka Nerd Font Mono 14" --hp 10 --tf "#cba6f7" --hb "#89dceb" --hf "#1e1e2e"'
 
+# Electron hints
+export ELECTRON_OZONE_PLATFORM_HINT=wayland
+
 exec sway
 # exec Hyprland
