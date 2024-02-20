@@ -178,6 +178,9 @@ for_window [app_id="pcmanfm"] resize set width 1280 px height 1024 px
 # waybar
 bar swaybar_command waybar
 
+# notification daemon -> mako
+exec mako
+
 # OS, dbus, who knows...
 include /etc/sway/config.d/*
 exec_always "systemctl --user import-environment; systemctl --user start sway-session.target"
