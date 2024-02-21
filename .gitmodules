@@ -139,3 +139,6 @@
 [submodule "vim-caddyfile"]
 	path = common/link/.config/nvim/pack/bundle/opt/vim-caddyfile
 	url = https://github.com/isobit/vim-caddyfile
+[submodule "bigfile.nvim"]
+	path = common/link/.config/nvim/pack/bundle/opt/bigfile.nvim
+	url = https://github.com/LunarVim/bigfile.nvim

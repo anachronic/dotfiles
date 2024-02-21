@@ -56,6 +56,8 @@ plug('neorg') -- Next gen orgmode?
 plug('hyprland-vim-syntax')
 plug('vim-caddyfile') -- Been using caddy lately
 
+plug('bigfile.nvim') -- mostly database dumps...
+
 plug('nvim-treesitter') -- General syntax parsing
 plug('nvim-treesitter-endwise') -- endwise based on treesitter syntax
 
@@ -152,6 +154,7 @@ require('ach.yank-highlight')
 require('ach.neorg')
 require('ach.surround')
 require('ach.gitlinker')
+require('ach.bigfile')
 
 vim.keymap.set('n', ']f', "<Cmd>lua require('ach.unimpaired').edit_next_file_dir()<CR>")
 vim.keymap.set('n', '[f', "<Cmd>lua require('ach.unimpaired').edit_prev_file_dir()<CR>")
