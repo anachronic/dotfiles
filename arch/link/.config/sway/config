@@ -79,7 +79,7 @@ bindsym $mod+Control+s exec ach-screenshot save-region
 # ^ broken because of HiDPI setting in sway :(
 
 bindsym $mod+f exec $term -e lf
-bindsym $mod+Shift+f exec nautilus
+bindsym $mod+Shift+f exec xdg-open ~
 
 bindsym $mod+h focus left
 bindsym $mod+Shift+h move left
