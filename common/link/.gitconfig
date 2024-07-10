@@ -22,6 +22,9 @@
     rb = rebase
     rbc = rebase --continue
     rba = rebase --abort
+
+    # push
+    pup = !git push -u origin $(git rev-parse --abbrev-ref HEAD)
 [commit]
     excludesfile = ~/.gitignore
 [user]
