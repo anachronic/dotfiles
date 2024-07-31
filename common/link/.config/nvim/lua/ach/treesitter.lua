@@ -6,7 +6,7 @@ configs.setup({
         'c',
         'cpp',
         'css',
-        'dockerfile',
+        -- 'dockerfile', -- Broken coloring :(
         'fish',
         'gitignore',
         'go',
