@@ -37,6 +37,7 @@ alias vi='nvim'
 alias vim='nvim'
 alias vgs='nvim -c ":Neogit"'
 alias vimdiff='nvim -d'
+alias vy='nvim -c "set ft=yaml"'
 
 # TUI shortcuts
 alias lf="lfcd"
