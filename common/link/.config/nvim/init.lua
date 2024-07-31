@@ -63,7 +63,7 @@ plug('nvim-treesitter-endwise') -- endwise based on treesitter syntax
 
 vim.o.termguicolors = true -- its 2022, cmon
 vim.o.number = true -- show line numbers
-vim.o.relativenumber = true -- relative numbers
+vim.o.relativenumber = false -- haven't been using these...
 vim.o.scrolloff = 3 -- a little room for zt and zb
 vim.o.clipboard = 'unnamedplus' -- Use global clipboard, I don't mind
 vim.o.hidden = true -- allow hiding buffers with unsaved changes
