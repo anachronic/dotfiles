@@ -161,7 +161,8 @@ if [ $(uname) = "Linux" ]; then
     gpg-connect-agent updatestartuptty /bye >/dev/null
 fi
 
-export VIRTUALENVWRAPPER_PYTHON=~/.local/pipx/venvs/virtualenvwrapper/bin/python3
+# Might need tuning
+export VIRTUALENVWRAPPER_PYTHON=~/.local/share/pipx/venvs/virtualenvwrapper/bin/python
 [ -f ~/.local/bin/virtualenvwrapper.sh ] && source ~/.local/bin/virtualenvwrapper.sh
 
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
