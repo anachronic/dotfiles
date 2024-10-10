@@ -95,7 +95,7 @@ vim.opt.listchars = { -- Fails if using vim.o, I think vim.opt is better overall
     trail = '•', -- BULLET (U+2022, UTF-8: E2 80 A2)
 }
 -- 	x
--- ★ 
+-- ★
 vim.opt.fillchars = {
     diff = '∙', -- BULLET OPERATOR (U+2219, UTF-8: E2 88 99)
     eob = ' ', -- NO-BREAK SPACE (U+00A0, UTF-8: C2 A0) to suppress ~ at EndOfBuffer
@@ -170,3 +170,4 @@ vim.keymap.set('n', ']l', '<Cmd>lnext<CR>')
 vim.keymap.set('n', '[l', '<Cmd>lprevious<CR>')
 vim.keymap.set('n', 'yor', "<Cmd>lua require('ach.unimpaired').toggle_relativenumber()<CR>")
 vim.keymap.set('n', 'yow', '<Cmd>set wrap!<CR>')
+vim.keymap.set('n', 'yoy', '<Cmd>set ft=yaml<CR>')
