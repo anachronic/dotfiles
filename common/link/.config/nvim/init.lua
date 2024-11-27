@@ -61,6 +61,9 @@ plug('bigfile.nvim') -- mostly database dumps...
 plug('nvim-treesitter') -- General syntax parsing
 plug('nvim-treesitter-endwise') -- endwise based on treesitter syntax
 
+-- surrendering to copilot because of work
+plug('copilot.lua') -- :(
+
 vim.o.termguicolors = true -- its 2022, cmon
 vim.o.number = true -- show line numbers
 vim.o.relativenumber = false -- haven't been using these...
@@ -157,6 +160,7 @@ require('ach.neorg')
 require('ach.surround')
 require('ach.gitlinker')
 require('ach.bigfile')
+require('ach.copilot')
 
 vim.keymap.set('n', ']f', "<Cmd>lua require('ach.unimpaired').edit_next_file_dir()<CR>")
 vim.keymap.set('n', '[f', "<Cmd>lua require('ach.unimpaired').edit_prev_file_dir()<CR>")
