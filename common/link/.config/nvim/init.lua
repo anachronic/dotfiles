@@ -79,6 +79,7 @@ vim.wo.cursorline = true -- highlight cursor line
 vim.o.backspace = 'indent,eol,start' -- allow unrestricted backspacing
 vim.wo.foldlevel = 99 -- don't let folding get in the way
 vim.o.completeopt = 'menuone,noselect' -- nvim-cmp requires completeopt to be set to these
+vim.opt.complete = {'.', 'w', 'b', 'u'} -- the default option, but without tags
 vim.wo.signcolumn = 'yes:1' -- only 1 space for signs
 vim.g.vimsyn_embed = 'lPr' -- support embed python lua and ruby
 vim.o.whichwrap = 'b,h,l,s,<,>,[,],~' -- allow <BS>/h/l/<Left>/<Right>/<Space>, ~ to cross line boundaries
@@ -175,3 +176,4 @@ vim.keymap.set('n', '[l', '<Cmd>lprevious<CR>')
 vim.keymap.set('n', 'yor', "<Cmd>lua require('ach.unimpaired').toggle_relativenumber()<CR>")
 vim.keymap.set('n', 'yow', '<Cmd>set wrap!<CR>')
 vim.keymap.set('n', 'yoy', '<Cmd>set ft=yaml<CR>')
+vim.keymap.set('i', '<A-/>', '<C-p><C-p><C-y>') -- close to emacs' hippie expand
