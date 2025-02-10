@@ -24,3 +24,13 @@ vim.api.nvim_create_user_command('Permalink', function(opts)
     end
     linker.get_buf_range_url(mode, callback_opts)
 end, { bang = true, range = true })
+
+vim.api.nvim_create_user_command('BrowseAtRemote', function(opts)
+    local mode = vim.api.nvim_get_mode().mode
+
+    local callback_opts = {}
+    if opts.bang then
+        callback_opts['action_callback'] = actions.open_in_browser
+    end
+    linker.get_buf_range_url(mode, callback_opts)
+end, { bang = true, range = true })
