@@ -158,7 +158,6 @@ require('ach.neorg')
 require('ach.surround')
 require('ach.gitlinker')
 require('ach.bigfile')
-require('ach.copilot')
 
 vim.keymap.set('n', ']f', "<Cmd>lua require('ach.unimpaired').edit_next_file_dir()<CR>")
 vim.keymap.set('n', '[f', "<Cmd>lua require('ach.unimpaired').edit_prev_file_dir()<CR>")
