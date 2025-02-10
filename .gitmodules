@@ -142,6 +142,3 @@
 [submodule "bigfile.nvim"]
 	path = common/link/.config/nvim/pack/bundle/opt/bigfile.nvim
 	url = https://github.com/LunarVim/bigfile.nvim
-[submodule "copilot.lua"]
-	path = common/link/.config/nvim/pack/bundle/opt/copilot.lua
-	url = https://github.com/zbirenbaum/copilot.lua
