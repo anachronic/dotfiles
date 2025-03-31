@@ -16,6 +16,16 @@ fidget.setup({
     },
 })
 
+vim.diagnostic.config({
+    virtual_text = {
+        prefix = '●',
+    },
+    severity_sort = true,
+    float = {
+        source = 'always',
+    },
+})
+
 -- Rounded diagnostic borders
 vim.diagnostic.config({
     float = { border = 'rounded' },
@@ -80,9 +90,9 @@ null_ls.setup({
         null_ls.builtins.formatting.prettierd,
         -- null_ls.builtins.formatting.rustfmt,
 
-        null_ls.builtins.diagnostics.eslint,
-        null_ls.builtins.diagnostics.ruff,
-        null_ls.builtins.diagnostics.golangci_lint,
+        -- null_ls.builtins.diagnostics.eslint,
+        -- null_ls.builtins.diagnostics.ruff,
+        -- null_ls.builtins.diagnostics.golangci_lint,
     },
     diagnostics_format = '[#{c}] #{m} (#{s})',
     on_attach = on_attach,
@@ -90,8 +100,7 @@ null_ls.setup({
 
 -- tsserver
 -- npm i -g typescript-language-server typescript
--- diagnostics disabled because null ls will handle them
-lspconfig.tsserver.setup({
+lspconfig.ts_ls.setup({
     on_attach = on_attach,
 })
 
@@ -104,6 +113,12 @@ lspconfig.bashls.setup({
 -- jedi language server
 -- pipx install jedi-language-server
 lspconfig.jedi_language_server.setup({
+    on_attach = on_attach,
+})
+
+-- ruff language server
+-- pipx install ruff
+lspconfig.ruff.setup({
     on_attach = on_attach,
 })
 
@@ -129,8 +144,15 @@ lspconfig.lua_ls.setup({
     },
 })
 
+-- volar. Seems like no longer supported
 -- npm i -g @volar/vue-language-server
 lspconfig.volar.setup({
+    on_attach = on_attach,
+})
+
+-- eslint
+-- npm i -g vscode-langservers-extracted
+lspconfig.eslint.setup({
     on_attach = on_attach,
 })
 
