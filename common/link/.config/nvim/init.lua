@@ -8,7 +8,8 @@ plug('plenary.nvim') -- Common dependency
 
 plug('nvim-lspconfig') -- LSP
 plug('nvim-code-action-menu') -- The code action menu that beats the horrible default ui
-plug('null-ls.nvim') -- Instead of efm
+-- plug('null-ls.nvim') -- Instead of efm
+plug('none-ls.nvim')
 
 plug('nvim-cmp') -- general completion
 plug('cmp-nvim-lsp') -- LSP for cmp
