@@ -35,6 +35,7 @@ configs.setup({
         'typescript',
         'vue',
         -- 'help', -- Broken for some reason
+        'comment', -- sadly I'm working on projects with many FIXME and TODO comments
     },
     highlight = {
         enable = true,
