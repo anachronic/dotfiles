@@ -1,5 +1,4 @@
 local lspconfig = require('lspconfig')
-local null_ls = require('null-ls')
 local fidget = require('fidget')
 local aerial = require('aerial')
 
@@ -53,50 +52,16 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', ']d', vim.diagnostic.goto_next, only_buffer)
     vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, only_buffer)
     vim.keymap.set('n', '<leader>.', vim.lsp.buf.code_action, only_buffer)
+    vim.keymap.set('n', '<leader><CR>', function()
+        vim.lsp.buf.format({ async = true })
+    end, only_buffer)
 
     vim.api.nvim_buf_create_user_command(0, 'Dia', vim.diagnostic.setqflist, {})
-
-    local enabled_formatter_lsps = {
-        ['null-ls'] = true,
-        ['rust_analyzer'] = true,
-    }
-
-    if not enabled_formatter_lsps[client.name] then
-        client.server_capabilities.documentFormattingProvider = nil
-        client.server_capabilities.documentRangeFormattingProvider = nil
-    end
-
-    local formatting_enabled = (
-        client.server_capabilities.documentFormattingProvider
-        or client.server_capabilities.documentRangeFormattingProvider
-    )
-
-    if formatting_enabled then
-        vim.keymap.set('n', '<leader><CR>', function()
-            vim.lsp.buf.format({ async = true })
-        end, only_buffer)
-    end
 end
 
 -- pacman -S stylua
 -- pipx install flake8 black isort
 -- npm i -g prettier eslint_d typescript
-
-null_ls.setup({
-    sources = {
-        null_ls.builtins.formatting.stylua,
-        null_ls.builtins.formatting.gofmt,
-        null_ls.builtins.formatting.black,
-        null_ls.builtins.formatting.prettierd,
-        -- null_ls.builtins.formatting.rustfmt,
-
-        -- null_ls.builtins.diagnostics.eslint,
-        -- null_ls.builtins.diagnostics.ruff,
-        -- null_ls.builtins.diagnostics.golangci_lint,
-    },
-    diagnostics_format = '[#{c}] #{m} (#{s})',
-    on_attach = on_attach,
-})
 
 -- tsserver
 -- npm i -g typescript-language-server typescript
