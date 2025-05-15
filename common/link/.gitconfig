@@ -25,7 +25,7 @@
 
     # push
     pup = !git push -u origin $(git rev-parse --abbrev-ref HEAD)
-[commit]
+[core]
     excludesfile = ~/.gitignore
 [user]
     name = Nicolás Salas
