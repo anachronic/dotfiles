@@ -193,3 +193,8 @@ bindswitch --reload --locked lid:off output eDP-1 enable
 
 # polkit gnome
 exec "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+
+# move fractional scaling to kanshi instead of directly into sway.
+# This should keep this conf cleaner between work/home machines,
+# because they need separate configs and scaling values
+exec kanshi
