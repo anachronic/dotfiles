@@ -132,3 +132,6 @@
 [submodule "none-ls.nvim"]
 	path = common/link/.config/nvim/pack/bundle/opt/none-ls.nvim
 	url = https://github.com/nvimtools/none-ls.nvim
+[submodule "quicker.nvim"]
+	path = common/link/.config/nvim/pack/bundle/opt/quicker.nvim
+	url = https://github.com/stevearc/quicker.nvim
