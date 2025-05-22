@@ -1,6 +1,7 @@
 [alias]
     co = checkout
     br = branch
+    cbr = rev-parse --abbrev-ref HEAD
     up = pull --rebase
     ci = commit
     st = status
