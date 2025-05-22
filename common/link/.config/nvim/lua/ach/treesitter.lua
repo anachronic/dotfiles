@@ -33,6 +33,7 @@ treesitter.install({
     'twig',
     'typescript',
     'vue',
+    'yaml',
     -- 'help', -- Broken for some reason
     'comment', -- sadly I'm working on projects with many FIXME and TODO comments
 })
