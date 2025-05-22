@@ -40,7 +40,6 @@ plug('tabular') -- :Tab for alignment. Works surprisingly well. also dep for mar
 plug('nvim-autopairs') -- back 2 basics i guess
 plug('LuaSnip') -- Seems like the most maintained
 plug('zen-mode.nvim') -- zen-mode. Previously goyo
-plug('nvim-bqf') -- Better quickfix
 plug('diffview.nvim') -- should be self-explanatory
 plug('aerial.nvim') -- outlining.. maybe I'll get used to it?
 
@@ -149,7 +148,7 @@ require('ach.bindings')
 require('ach.sneak')
 require('ach.lspconfig')
 require('ach.fkups')
-require('ach.quickfix')
+-- require('ach.quickfix')
 require('ach.yank-highlight')
 require('ach.surround')
 require('ach.gitlinker')
