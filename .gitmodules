@@ -69,9 +69,6 @@
 [submodule "smart-pairs"]
 	path = common/link/.config/nvim/pack/bundle/opt/smart-pairs
 	url = https://github.com/ZhiyuanLck/smart-pairs
-[submodule "nvim-treesitter-endwise"]
-	path = common/link/.config/nvim/pack/bundle/opt/nvim-treesitter-endwise
-	url = https://github.com/RRethy/nvim-treesitter-endwise
 [submodule "zen-mode.nvim"]
 	path = common/link/.config/nvim/pack/bundle/opt/zen-mode.nvim
 	url = https://github.com/folke/zen-mode.nvim
@@ -102,9 +99,6 @@
 [submodule "diffview.nvim"]
 	path = common/link/.config/nvim/pack/bundle/opt/diffview.nvim
 	url = https://github.com/sindrets/diffview.nvim
-[submodule "neorg"]
-	path = common/link/.config/nvim/pack/bundle/opt/neorg
-	url = https://github.com/nvim-neorg/neorg.git
 [submodule "fidget.nvim"]
 	path = common/link/.config/nvim/pack/bundle/opt/fidget.nvim
 	url = https://github.com/j-hui/fidget.nvim

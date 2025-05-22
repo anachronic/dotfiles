@@ -11,7 +11,7 @@ end
 
 function util.ts_folding()
     vim.wo.foldmethod = 'expr'
-    vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
+    vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 end
 
 return util

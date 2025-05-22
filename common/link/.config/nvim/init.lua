@@ -50,7 +50,6 @@ plug('vim-textobj-rubyblock') -- a ruby block. Been doing rails a lot lately
 plug('vim-sort-motion') -- sorting mostly because of gemfiles
 
 plug('vim-yaml-folds') -- got fed up with treesitter yaml indenting
-plug('neorg') -- Next gen orgmode?
 
 plug('hyprland-vim-syntax')
 plug('vim-caddyfile') -- Been using caddy lately
@@ -58,7 +57,6 @@ plug('vim-caddyfile') -- Been using caddy lately
 plug('bigfile.nvim') -- mostly database dumps...
 
 plug('nvim-treesitter') -- General syntax parsing
-plug('nvim-treesitter-endwise') -- endwise based on treesitter syntax
 
 vim.o.termguicolors = true -- its 2022, cmon
 vim.o.number = true -- show line numbers
@@ -153,7 +151,6 @@ require('ach.lspconfig')
 require('ach.fkups')
 require('ach.quickfix')
 require('ach.yank-highlight')
-require('ach.neorg')
 require('ach.surround')
 require('ach.gitlinker')
 require('ach.bigfile')
