@@ -163,6 +163,8 @@ smart_gaps on
 # might be useful: https://github.com/jjquin/swayarch/blob/master/.config/sway/config.d/window_rules
 for_window [app_id="firefox" title="^Picture-in-Picture$"] floating enable, sticky enable, border none
 for_window [app_id="firefox" title="Sharing Indicator$"] floating enable
+for_window [app_id="librewolf" title="^Picture-in-Picture$"] floating enable, sticky enable, border none
+for_window [app_id="librewolf" title="Sharing Indicator$"] floating enable
 for_window [app_id="thunderbird" title=".*Reminders?$"] floating enable
 for_window [app_id="pcmanfm"] floating enable
 for_window [app_id="pavucontrol"] floating enable
