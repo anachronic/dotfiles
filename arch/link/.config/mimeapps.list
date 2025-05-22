@@ -1,7 +1,7 @@
 [Added Associations]
 x-scheme-handler/geo=openstreetmap-geo-handler.desktop;
-x-scheme-handler/http=firefox.desktop;
-x-scheme-handler/https=firefox.desktop;
+x-scheme-handler/http=librewolf.desktop;
+x-scheme-handler/https=librewolf.desktop;
 x-scheme-handler/mailto=org.kde.kmail2.desktop;userapp-Thunderbird-TOR8O1.desktop;
 x-scheme-handler/tel=org.kde.kdeconnect.handler.desktop;
 x-scheme-handler/tg=userapp-Telegram Desktop-250UO1.desktop;userapp-Telegram Desktop-FKKKR1.desktop;
@@ -10,8 +10,8 @@ x-scheme-handler/magnet=torrent.desktop;
 [Default Applications]
 x-scheme-handler/bitwarden=Electron.desktop
 x-scheme-handler/geo=openstreetmap-geo-handler.desktop;
-x-scheme-handler/http=firefox.desktop;
-x-scheme-handler/https=firefox.desktop;
+x-scheme-handler/http=librewolf.desktop;
+x-scheme-handler/https=librewolf.desktop;
 x-scheme-handler/insomnia=insomnia.desktop
 x-scheme-handler/mailto=userapp-Thunderbird-TOR8O1.desktop
 x-scheme-handler/tel=org.kde.kdeconnect.handler.desktop;
