@@ -1,7 +1,7 @@
 local treesitter = require('nvim-treesitter')
 
 treesitter.setup({
-    install_dir = vim.fs.joinpath(vim.fn.stdpath("data"), "treesitter")
+    install_dir = vim.fs.joinpath(vim.fn.stdpath('data'), 'treesitter'),
 })
 
 treesitter.install({
