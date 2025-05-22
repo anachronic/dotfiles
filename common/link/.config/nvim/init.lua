@@ -7,7 +7,6 @@ plug('popup.nvim') -- Common dependency
 plug('plenary.nvim') -- Common dependency
 
 plug('nvim-lspconfig') -- LSP
-plug('nvim-code-action-menu') -- The code action menu that beats the horrible default ui
 
 plug('nvim-cmp') -- general completion
 plug('cmp-nvim-lsp') -- LSP for cmp
