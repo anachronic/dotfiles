@@ -2,7 +2,7 @@
 local util = require('ach.util')
 
 vim.bo.expandtab = false
-vim.bo.shiftwidth = 4
-vim.bo.tabstop = 4
 
+vim.treesitter.start()
 util.ts_folding()
+vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
