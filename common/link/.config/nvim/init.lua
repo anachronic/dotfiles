@@ -19,6 +19,7 @@ plug('gitlinker.nvim') -- permalink generation
 
 plug('nvim-tree.lua') -- Great NERDTree replacement
 plug('nvim-web-devicons') -- Required for tree to work, kind of a hassle
+plug('oil.nvim') -- I think I like emacs' dired way too much
 
 plug('telescope.nvim') -- trying again. I might be a little bit of a masochist
 plug('telescope-ui-select.nvim') -- For the horrible "select action" popup
@@ -139,7 +140,7 @@ require('ach.autopairs')
 require('ach.gitsigns')
 require('ach.colors')
 require('nvim-web-devicons').setup({})
-require('ach.nvimtree')
+require('ach.files')
 require('ach.completion')
 require('ach.treesitter')
 require('ach.distraction-free')

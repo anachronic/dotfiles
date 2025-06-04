@@ -16,6 +16,10 @@ require('nvim-tree').setup({
     },
 })
 
+require('oil').setup()
+
+
 vim.keymap.set('n', '<A-1>', '<cmd>NvimTreeToggle<CR>')
 vim.keymap.set('n', '<leader>f', '<cmd>NvimTreeToggle<CR>')
 vim.keymap.set('n', '<leader>j', '<cmd>NvimTreeFindFile<CR>')
+vim.keymap.set('n', '-', '<cmd>Oil<CR>')

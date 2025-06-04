@@ -132,3 +132,6 @@
 [submodule "quicker.nvim"]
 	path = common/link/.config/nvim/pack/bundle/opt/quicker.nvim
 	url = https://github.com/stevearc/quicker.nvim
+[submodule "oil.nvim"]
+	path = common/link/.config/nvim/pack/bundle/opt/oil.nvim
+	url = https://github.com/stevearc/oil.nvim.git
