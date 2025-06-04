@@ -131,6 +131,12 @@ end
 -- MAPPINGS
 vim.g.mapleader = ' ' -- leader is space
 
+-- :h grn/gra, etc. Don't use those
+vim.keymap.del('n', 'grn')
+vim.keymap.del('n', 'gra')
+vim.keymap.del('n', 'grr')
+vim.keymap.del('n', 'gri')
+
 -- configs
 require('ach.filetypes')
 require('ach.feline')
