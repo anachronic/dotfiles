@@ -19,6 +19,7 @@ treesitter.install({
     'javascript',
     'json',
     'jsonc',
+    'kdl',
     'lua',
     'make',
     'markdown',
