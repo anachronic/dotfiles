@@ -2,12 +2,6 @@
 # bash because of https://unix.stackexchange.com/a/608872
 # I really don't want to deal with nohup and std{err,out}
 
-# xorg just go ahead and exec st. Honeslty could use the trick below but I
-# don't care too much about xorg right now
-if [ "$XDG_SESSION_TYPE" != "wayland" ]; then
-    exec st "$@"
-fi
-
 # on wayland try to guess current path
 # from reddit: https://www.reddit.com/r/swaywm/comments/xw49qv/a_system_to_open_new_terminals_in_the_same/?utm_source=share&utm_medium=web2x&context=3
 if FOCUSED=$(swaymsg -t get_tree | jq -e '.. | select(.type?) | select(.focused) | .pid') && [ -n "$FOCUSED" ]; then

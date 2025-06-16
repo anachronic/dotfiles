@@ -1,8 +1,0 @@
-#!/bin/sh
-
-url=$(cat | xurls | uniq | bemenu -W 0.4 -c -w "$WINDOWID" -l 20 -i -p "Open what? >")
-
-[ -z "$url" ] && exit 1
-notify-send -a st st "selected $url"
-
-setsid xdg-open "$url"

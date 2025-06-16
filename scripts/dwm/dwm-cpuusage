@@ -1,6 +1,0 @@
-#!/bin/sh
-
-idle=$(mpstat -o JSON 1 1 | jq '.sysstat.hosts[0].statistics[0]."cpu-load"[0].idle')
-usage=$(awk -v idle=$idle 'BEGIN {print 100 - idle}')
-
-printf "🖥️ ${usage}%%"
