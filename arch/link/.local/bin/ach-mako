@@ -5,7 +5,7 @@ icon() {
     echo "<span color='#f9e2af'>$1</span>"
 }
 
-if makoctl mode | grep do-not-disturb > /dev/null ; then
+if [ "$(dunstctl is-paused)" = "true" ] ; then
     icon "󰪑"
 else
     icon "󰂜"
