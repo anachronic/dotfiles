@@ -1,7 +1,6 @@
 #!/bin/sh
 
-sink=$(pactl list sinks | grep -B 1 RUNNING | awk -F "#" '/^Sink/ {print $2}')
-volume=$(pactl get-sink-volume "$sink" | awk -F '/' '{print $2}' | xargs)
+volume=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print 100*$2"%"}')
 dunst_stack="ach-volume"
 
 notify() {
