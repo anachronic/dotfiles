@@ -39,9 +39,6 @@ alias vgs='nvim -c ":Neogit"'
 alias vimdiff='nvim -d'
 alias vy='nvim -c "set ft=yaml"'
 
-# TUI shortcuts
-alias lf="lfcd"
-
 # SSH. I've been suffering with this lately
 alias ssh='TERM=xterm-256color ssh'
 

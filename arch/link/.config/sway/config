@@ -78,7 +78,7 @@ bindsym $mod+Control+s exec ach-screenshot save-region
 # bindsym $mod+s exec flameshot gui
 # ^ broken because of HiDPI setting in sway :(
 
-bindsym $mod+f exec $term -e lf
+bindsym $mod+f exec $term -e yazi
 bindsym $mod+Shift+f exec xdg-open ~
 
 bindsym $mod+h focus left
