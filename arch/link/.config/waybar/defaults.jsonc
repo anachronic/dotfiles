@@ -53,6 +53,16 @@
         "on-click": "pamixer --toggle-mute",
         "on-click-right": "pavucontrol"
     },
+    "wireplumber": {
+        "format": "<span color='#94e2d5'> {icon} </span>{volume}%",
+        "scroll-step": 1,
+        "format-muted": "<span color='#94e2d5'> 󰖁 </span>muted",
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-click-right": "helvum"
+    },
     "custom/dunst": {
         "format": " {} ",
         "exec": "ach-mako",
