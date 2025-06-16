@@ -1,8 +1,0 @@
-#!/bin/sh
-
-icon() {
-    printf "^c#cba6f7^%s^d^" "$1"
-}
-
-
-echo "$(icon 󱛡) $(date +"%a, %d %b %H:%M:%S") CLST"
