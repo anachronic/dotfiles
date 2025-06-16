@@ -1,16 +1,27 @@
 [
-  {
-    "layer": "bottom",
-    "modules-left": ["sway/workspaces", "sway/window"],
-    "modules-right": ["backlight", "battery", "idle_inhibitor", "pulseaudio", "custom/dunst", "clock"],
-    "include": ["~/.config/waybar/defaults.jsonc"],
-    "output": "eDP-1"
-  },
-  {
-    "layer": "bottom",
-    "modules-left": ["sway/workspaces", "sway/window"],
-    "modules-right": ["battery", "idle_inhibitor", "pulseaudio", "custom/dunst", "clock"],
-    "include": ["~/.config/waybar/defaults.jsonc"],
-    "output": "!eDP-1"
-  },
+    // sway on work laptop display
+    {
+        "layer": "bottom",
+        "modules-left": ["sway/workspaces", "sway/window"],
+        "modules-right": ["backlight", "battery", "idle_inhibitor", "pulseaudio", "custom/dunst", "clock"],
+        "include": ["~/.config/waybar/defaults.jsonc"],
+        "output": "eDP-1"
+    },
+    // sway on non-laptop displays
+    {
+        "layer": "bottom",
+        "modules-left": ["sway/workspaces", "sway/window"],
+        "modules-right": ["battery", "idle_inhibitor", "wireplumber", "custom/dunst", "clock"],
+        "include": ["~/.config/waybar/defaults.jsonc"],
+        "output": "!eDP-1"
+    }
+
+    // NIRI
+    // {
+    //     "layer": "bottom",
+    //     "modules-left": ["niri/workspaces", "niri/window"],
+    //     "modules-right": ["battery", "idle_inhibitor", "wireplumber", "custom/dunst", "clock"],
+    //     "include": ["~/.config/waybar/defaults.jsonc"],
+    //     "output": "!eDP-1"
+    // },
 ]
