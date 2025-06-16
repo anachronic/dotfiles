@@ -177,8 +177,6 @@ for_window [app_id="(?i)mpv"] floating enable
 for_window [app_id="imv"] floating enable
 for_window [app_id="flameshot"] floating enable, fullscreen disable, move absolute position 0 0, border pixel 0
 
-for_window [shell="xwayland"] title_format "[Xwayland] %title"
-
 # window sizes (because some rules are kinda small)
 for_window [app_id="pcmanfm"] resize set width 1280 px height 1024 px
 
