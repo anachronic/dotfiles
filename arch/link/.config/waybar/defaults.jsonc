@@ -43,6 +43,9 @@
     "hyprland/window": {
         "format": " {} "
     },
+    "dwl/window": {
+        "format": " [{layout}] {title} "
+    },
     "pulseaudio": {
         "format": "<span color='#94e2d5'> {icon} </span>{volume}%",
         "scroll-step": 1,
