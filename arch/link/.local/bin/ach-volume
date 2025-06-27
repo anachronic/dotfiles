@@ -1,3 +1,5 @@
 #!/bin/sh
 
 wpctl set-volume @DEFAULT_AUDIO_SINK@ "$@"
+
+ach-volume-notify
