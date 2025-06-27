@@ -139,8 +139,8 @@ bindsym $mod+Shift+9 move container to workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10
 
 # media
-bindsym --locked XF86AudioLowerVolume exec "ach-volume 10%- && ach-volume-notify"
-bindsym --locked XF86AudioRaiseVolume exec "ach-volume 10%+ && ach-volume-notify"
+bindsym --locked XF86AudioLowerVolume exec "ach-volume 10%-"
+bindsym --locked XF86AudioRaiseVolume exec "ach-volume 10%+"
 bindsym --locked XF86AudioMute exec "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
 bindsym --locked XF86AudioPlay exec "playerctl --player=spotify,mpd,%any play-pause"
 bindsym --locked XF86AudioNext exec "playerctl --player=spotify,mpd,%any next"
