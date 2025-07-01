@@ -1,0 +1,8 @@
+#!/bin/sh
+
+mons=$(wlr-randr --json | jq -r ".[] | .name")
+
+echo "$mons" | while read -r monitor;
+do
+    echo wlr-randr --output "$monitor" "$@"
+done
