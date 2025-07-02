@@ -3,7 +3,7 @@
 set -e
 
 copy-region() {
-    grim -g "$(slurp)" - | pbcopy
+    slurp | grim -g - - | wl-copy
 
     notify-send -a screenshot "Screenshot" "Copied to clipboard" -u low
 }
