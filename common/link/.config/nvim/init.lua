@@ -85,6 +85,8 @@ vim.opt.ignorecase = true -- Needed so that smartcase works. Also what one would
 vim.opt.smartcase = true -- just :h it. Loupe was setting this before
 vim.opt.path:append({ '**' }) -- this should help :find. Also useful when debugging
 
+vim.cmd('filetype indent off') -- indent messes with treesitter. Prefer the latter
+
 vim.opt.listchars = { -- Fails if using vim.o, I think vim.opt is better overall
     nbsp = '⦸', -- CIRCLED REVERSE SOLIDUS (U+29B8, UTF-8: E2 A6 B8)
     extends = '»', -- RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK (U+00BB, UTF-8: C2 BB)
