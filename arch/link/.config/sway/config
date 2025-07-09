@@ -19,6 +19,8 @@ output HDMI-A-1 scale 2
 ### Background: might require swaybg
 output "*" bg ~/pictures/wall.jpg fill
 
+### fonts
+font Iosevka Nerd Font 11
 
 # Input
 input * {
