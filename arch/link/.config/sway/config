@@ -9,7 +9,6 @@ set $up k
 set $right l
 
 set $term ach-terminal
-set $menu bemenu-run
 
 ### Output configuration
 # output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
@@ -61,7 +60,7 @@ bindsym $mod+Shift+e exec prompt "Exit sway?" "swaymsg exit"
 
 bindsym $mod+Shift+r exec ach-reminder
 
-bindsym $mod+p exec $menu
+bindsym $mod+p exec bemenu-run -i
 
 bindsym $mod+a focus parent
 bindsym $mod+Shift+a focus child
