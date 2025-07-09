@@ -152,11 +152,6 @@ default_border pixel 2
 gaps inner 10
 smart_gaps on
 
-# SwayFX
-default_dim_inactive 0.3
-corner_radius 10
-shadows enable
-
 # window rules
 # might be useful: https://github.com/jjquin/swayarch/blob/master/.config/sway/config.d/window_rules
 for_window [app_id="firefox" title="^Picture-in-Picture$"] floating enable, sticky enable, border none, dim_inactive 0
