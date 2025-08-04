@@ -17,6 +17,7 @@ require('nvim-tree').setup({
 })
 
 require('oil').setup({
+    default_file_explorer = true,
     use_default_keymaps = false,
     keymaps = {
         ['g?'] = { 'actions.show_help', mode = 'n' },
