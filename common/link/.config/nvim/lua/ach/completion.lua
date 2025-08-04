@@ -12,8 +12,8 @@ local has_words_before = function()
 end
 
 local select_next = cmp.mapping(function(fallback)
-    if luasnip.expand_or_jumpable() then
-        luasnip.expand_or_jump()
+    if luasnip.expandable() then
+        luasnip.expand()
     elseif cmp.visible() then
         if #cmp.get_entries() == 1 then
             cmp.confirm({ select = true })
