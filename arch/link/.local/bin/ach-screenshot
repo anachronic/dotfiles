@@ -3,9 +3,15 @@
 set -e
 
 copy-region() {
-    slurp | grim -g - - | wl-copy
+    if command -v wayfreeze; then
+        wayfreeze &
+        sleep .1
+    fi
 
+    slurp | grim -g - - | wl-copy
     notify-send -a screenshot "Screenshot" "Copied to clipboard" -u low
+
+    killall wayfreeze || true
 }
 
 save-region() {
