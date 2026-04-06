@@ -105,8 +105,7 @@ layout {
     }
 }
 
-// spawn-sh-at-startup "waybar -c ~/.config/waybar/niri.jsonc";
-spawn-at-startup "qs" "-c" "noctalia-shell";
+spawn-sh-at-startup "waybar -c ~/.config/waybar/niri.jsonc";
 spawn-sh-at-startup "swayidle -w timeout 300 'loginctl lock-session' timeout 600 'swaymsg \"output * dpms off\"' resume 'swaymsg \"output * dpms on\"' before-sleep 'loginctl lock-session' lock 'swaylock -f -c 000000'";
 
 hotkey-overlay {
