@@ -1,0 +1,16 @@
+[
+    {
+        "layer": "bottom",
+        "modules-left": ["niri/workspaces", "niri/window"],
+        "modules-right": ["backlight", "battery", "idle_inhibitor", "wireplumber", "custom/dunst", "clock"],
+        "include": ["~/.config/waybar/defaults.jsonc"],
+        "output": "eDP-1"
+    },
+    {
+        "layer": "bottom",
+        "modules-left": ["niri/workspaces", "niri/window"],
+        "modules-right": ["battery", "idle_inhibitor", "wireplumber", "custom/dunst", "clock"],
+        "include": ["~/.config/waybar/defaults.jsonc"],
+        "output": "!eDP-1"
+    }
+]
