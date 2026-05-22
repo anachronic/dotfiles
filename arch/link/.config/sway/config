@@ -183,6 +183,10 @@ bindsym --locked XF86AudioPlay exec "playerctl --player=spotify,mpd,%any play-pa
 bindsym --locked XF86AudioNext exec "playerctl --player=spotify,mpd,%any next"
 bindsym --locked XF86AudioPrev exec "playerctl --player=spotify,mpd,%any previous"
 
+# gestures for laptop
+bindgesture swipe:left workspace prev
+bindgesture swipe:right workspace next
+
 # borders and window titles
 hide_edge_borders smart
 default_border pixel 2
