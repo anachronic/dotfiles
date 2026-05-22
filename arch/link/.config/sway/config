@@ -182,6 +182,8 @@ bindsym --locked XF86AudioMute exec "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
 bindsym --locked XF86AudioPlay exec "playerctl --player=spotify,mpd,%any play-pause"
 bindsym --locked XF86AudioNext exec "playerctl --player=spotify,mpd,%any next"
 bindsym --locked XF86AudioPrev exec "playerctl --player=spotify,mpd,%any previous"
+bindsym --locked XF86MonBrightnessDown exec "brightnessctl set 5%-"
+bindsym --locked XF86MonBrightnessUp exec "brightnessctl set +5%"
 
 # gestures for laptop
 bindgesture swipe:left workspace prev
